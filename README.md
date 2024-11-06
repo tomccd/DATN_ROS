@@ -5,7 +5,7 @@
 -    [x] Hoàn thành
 ### 2. Module Scanning&Interface
 -    [x] Tạo khung giao diện
--    [ ] Bổ sung thêm phần Camera phân loại QR
+-    [x] Bổ sung thêm phần Camera phân loại QR
 -    [ ] Bổ sung phần kết nối CSDL
 -    [ ] Phần bổ sung khác
 ### 3. Module Motor

@@ -2,9 +2,15 @@ from custom_interfaces.srv import InitSys
 from custom_interfaces.msg import TerminateSys
 import tkinter as tk
 from tkinter import StringVar
+from tkinter import messagebox
 import rclpy
 from rclpy.node import Node
 import threading
+import cv2 as cv
+import numpy as np
+from PIL import ImageTk,Image
+from pyzbar.pyzbar import decode
+import time
 #Class Node
 class myNode(Node):
     def __init__(self,name:str):
@@ -147,7 +153,40 @@ class myApp(tk.Tk):
         self.frame_table_display_tb = tk.Frame(self.frame_table,width=int(self.window_width/2),height=int((((self.window_height/5)*3)/6)*5),relief='solid',borderwidth=2)
         self.frame_table_display_tb.pack()
         self.frame_table_display_tb.pack_propagate(False)
-        #-Phần chứa camera 
+        
+        #-Phần chứa camera
+        #Camera
+        self.deleteEvent = threading.Event()
+        self.previous_data = None
+        self.camera = cv.VideoCapture(0)
+        #Label chứa hình ảnh
+        self.label_camera = tk.Label(self.frame_camera,image='')
+        self.label_camera.pack()
+        self.openCameraAndIdentifyCode()
+    def openCameraAndIdentifyCode(self):
+        status, frame = self.camera.read()
+        if status == True:
+            arr = np.copy(frame)
+            height,width,_ = frame.shape
+            #Tạo Instance của Class detect_QRCode
+            instance_detect_QrCode = detect_QRCode(arr,frame,width,height)
+            #Kết quả
+            status_detect,result_detect,data_detect = instance_detect_QrCode.detect_qrcode()
+            result = cv.cvtColor(result_detect,cv.COLOR_BGR2RGB)
+            image = Image.fromarray(result).resize((int(self.window_width/2),int((self.window_height/5)*3)))
+            imageTk = ImageTk.PhotoImage(image=image)
+            self.label_camera.configure(
+                image=imageTk
+            )
+            self.label_camera.image = imageTk
+            self.label_camera.pack()
+            if status_detect and self.previous_data != data_detect:
+                ToastNotification(self,data_detect,3000)
+                self.previous_data = data_detect
+            self.label_camera.after(10,self.openCameraAndIdentifyCode)
+        else:
+            messagebox.showerror("Error","Cannot detect your camera")
+            self.on_closing()
     def on_closing(self,msg=None):
         if msg is None:
             self.node.get_logger().info("---- Server Module_Scanning_Interfaces: Shutdown ----")
@@ -156,6 +195,71 @@ class myApp(tk.Tk):
         rclpy.shutdown()
         self.destroy()
         exit(-1)
+#Thông báo nổi
+class ToastNotification:
+    def __init__(self,master,data,duration):
+        #Take the image from the path, resize it and convert it into tkinter version
+        self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_1.png').resize((30,20))
+        self.imgTk = ImageTk.PhotoImage(self.img)
+        message = f"Kết quả đọc được: {data}"
+        #Create a lable
+        self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+        
+        #Để nhãn dán ở phía bên góc phải        
+        self.label.place(relx=1.0,rely=0,anchor="ne")
+        
+        #Tham chiếu lại tham số image phòng nó tự động garbage collect
+        self.label.image = self.imgTk
+        
+        #Đặt thời gian tự động đóng thông báo
+        master.after(duration,self.label.destroy)
+#Class dùng để nhận biết được QRCode
+class detect_QRCode:
+    def __init__(self,analyzed_arr,dest_arr,width_analyzed_arr,height_analyzed_arr):
+        #-Bắt lỗi
+        if isinstance(analyzed_arr,np.ndarray) == False or isinstance(dest_arr,np.ndarray) == False:
+            raise ValueError("Sai ma trận đầu vào")
+        elif width_analyzed_arr <=0 or height_analyzed_arr <=0:
+            raise ValueError("Sai giá trị đầu vào")
+        else:
+            #-Khai báo các thuộc tính cần thiết
+            self.analyzed_arr = analyzed_arr
+            self.dest_arr = dest_arr
+            self.height_analyzed_arr = height_analyzed_arr
+            self.width_analyzed_arr = width_analyzed_arr
+    def detect_qrcode(self):
+        analyzed_arr = self.analyzed_arr
+        recognize_status = False
+        data = ''
+        #Lấy dữ liệu
+        info = decode(analyzed_arr)
+        if len(info)>0:
+            recognize_status = True
+            DecodedObject = info[0]
+            print(DecodedObject)
+            GeometryOfQrCode = DecodedObject.polygon
+            #--Hướng của mã QR Code dựa trên 3 đỉnh
+            # có 4 trường hợp:
+            # 1 .LEFT, 2. RIGHT, 3. UP, 4. DOWN
+            directionOfQrCode = DecodedObject.orientation
+            dimensionofQrCode = DecodedObject.rect
+            # print(directionOfQrCode)
+            # print(DirectionOfQrCode)
+            #Vẽ đa giác ABCD bằng tọa độ các đỉnh
+            point_A = [GeometryOfQrCode[0].x,GeometryOfQrCode[0].y]
+            point_B = [GeometryOfQrCode[1].x,GeometryOfQrCode[1].y]
+            point_C = [GeometryOfQrCode[2].x,GeometryOfQrCode[2].y]
+            point_D = [GeometryOfQrCode[3].x,GeometryOfQrCode[3].y]
+            
+            pts = np.array([point_A,point_B,point_C,point_D],dtype=np.int32)
+            #Mỗi không gian chứa 2 điểm, do đó cần reshape
+            pts = pts.reshape((-1,1,2))
+            #Vẽ đa giác trên frame
+            cv.polylines(self.dest_arr,[pts],True,color=(0,255,0),thickness=2)
+            #Lấy dữ liệu, chuyển dữ liệu gốc về dạng UTF-8
+            data = DecodedObject.data.decode('utf-8')
+        return recognize_status,self.dest_arr,data
+
 def main(args=None):
     #Initialize ROS2 Communication
     rclpy.init(args=args)
