@@ -1,0 +1,904 @@
+[0.000000] (-) TimerEvent: {}
+[0.003370] (custom_interfaces) JobQueued: {'identifier': 'custom_interfaces', 'dependencies': OrderedDict()}
+[0.004749] (module_weigh) JobQueued: {'identifier': 'module_weigh', 'dependencies': OrderedDict()}
+[0.005006] (module_input) JobQueued: {'identifier': 'module_input', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.005170] (module_scanning_interface) JobQueued: {'identifier': 'module_scanning_interface', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.005339] (module_supervisor) JobQueued: {'identifier': 'module_supervisor', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.005459] (launch_system) JobQueued: {'identifier': 'launch_system', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces', 'module_input': '/home/tomccd/Documents/Code/Python/DATN/install/module_input', 'module_scanning_interface': '/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface', 'module_supervisor': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor'})}
+[0.011250] (custom_interfaces) JobStarted: {'identifier': 'custom_interfaces'}
+[0.053662] (module_weigh) JobStarted: {'identifier': 'module_weigh'}
+[0.099586] (-) TimerEvent: {}
+[0.109126] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'cmake'}
+[0.114132] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'build'}
+[0.118429] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/Packages', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/opt/ros/jazzy'}), 'shell': False}
+[0.199794] (-) TimerEvent: {}
+[0.307654] (-) TimerEvent: {}
+[0.408855] (-) TimerEvent: {}
+[0.511230] (-) TimerEvent: {}
+[0.525978] (custom_interfaces) StdoutLine: {'line': b'[  1%] Built target custom_interfaces__rosidl_generator_type_description\n'}
+[0.613270] (-) TimerEvent: {}
+[0.715684] (-) TimerEvent: {}
+[0.817708] (-) TimerEvent: {}
+[0.839342] (custom_interfaces) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_copy_custom_interfaces\n'}
+[0.918803] (-) TimerEvent: {}
+[1.020737] (custom_interfaces) StdoutLine: {'line': b'[  3%] Built target custom_interfaces__cpp\n'}
+[1.021868] (-) TimerEvent: {}
+[1.123834] (-) TimerEvent: {}
+[1.225655] (-) TimerEvent: {}
+[1.328399] (-) TimerEvent: {}
+[1.431201] (-) TimerEvent: {}
+[1.536633] (-) TimerEvent: {}
+[1.637654] (-) TimerEvent: {}
+[1.738651] (-) TimerEvent: {}
+[1.841647] (-) TimerEvent: {}
+[1.944337] (-) TimerEvent: {}
+[2.049166] (-) TimerEvent: {}
+[2.155656] (-) TimerEvent: {}
+[2.256669] (-) TimerEvent: {}
+[2.361460] (-) TimerEvent: {}
+[2.464362] (-) TimerEvent: {}
+[2.570668] (-) TimerEvent: {}
+[2.673981] (-) TimerEvent: {}
+[2.779018] (-) TimerEvent: {}
+[2.882708] (-) TimerEvent: {}
+[2.984336] (-) TimerEvent: {}
+[3.089820] (-) TimerEvent: {}
+[3.194665] (-) TimerEvent: {}
+[3.303016] (-) TimerEvent: {}
+[3.409643] (-) TimerEvent: {}
+[3.510611] (-) TimerEvent: {}
+[3.613365] (-) TimerEvent: {}
+[3.718660] (-) TimerEvent: {}
+[3.827676] (-) TimerEvent: {}
+[3.946664] (-) TimerEvent: {}
+[4.071691] (-) TimerEvent: {}
+[4.178996] (-) TimerEvent: {}
+[4.292664] (-) TimerEvent: {}
+[4.346793] (custom_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[4.400664] (-) TimerEvent: {}
+[4.503669] (-) TimerEvent: {}
+[4.586227] (custom_interfaces) StdoutLine: {'line': b'writing custom_interfaces.egg-info/PKG-INFO\n'}
+[4.595620] (custom_interfaces) StdoutLine: {'line': b'writing dependency_links to custom_interfaces.egg-info/dependency_links.txt\n'}
+[4.604051] (-) TimerEvent: {}
+[4.608795] (custom_interfaces) StdoutLine: {'line': b'writing top-level names to custom_interfaces.egg-info/top_level.txt\n'}
+[4.704652] (-) TimerEvent: {}
+[4.809549] (-) TimerEvent: {}
+[4.918658] (-) TimerEvent: {}
+[5.019833] (-) TimerEvent: {}
+[5.124059] (-) TimerEvent: {}
+[5.225828] (-) TimerEvent: {}
+[5.334681] (-) TimerEvent: {}
+[5.441678] (-) TimerEvent: {}
+[5.544712] (-) TimerEvent: {}
+[5.646200] (-) TimerEvent: {}
+[5.754446] (-) TimerEvent: {}
+[5.856968] (-) TimerEvent: {}
+[5.964678] (-) TimerEvent: {}
+[5.996811] (custom_interfaces) StdoutLine: {'line': b"reading manifest file 'custom_interfaces.egg-info/SOURCES.txt'\n"}
+[6.034582] (custom_interfaces) StdoutLine: {'line': b"writing manifest file 'custom_interfaces.egg-info/SOURCES.txt'\n"}
+[6.067690] (-) TimerEvent: {}
+[6.171659] (-) TimerEvent: {}
+[6.273797] (-) TimerEvent: {}
+[6.378301] (-) TimerEvent: {}
+[6.490661] (-) TimerEvent: {}
+[6.593689] (-) TimerEvent: {}
+[6.689905] (custom_interfaces) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_build_custom_interfaces_egg\n'}
+[6.697637] (-) TimerEvent: {}
+[6.803047] (-) TimerEvent: {}
+[6.913019] (-) TimerEvent: {}
+[7.015017] (-) TimerEvent: {}
+[7.118164] (-) TimerEvent: {}
+[7.147276] (custom_interfaces) StdoutLine: {'line': b'[ 25%] Built target custom_interfaces__rosidl_generator_c\n'}
+[7.223695] (-) TimerEvent: {}
+[7.330714] (-) TimerEvent: {}
+[7.437907] (-) TimerEvent: {}
+[7.546018] (-) TimerEvent: {}
+[7.660158] (-) TimerEvent: {}
+[7.766055] (-) TimerEvent: {}
+[7.874350] (-) TimerEvent: {}
+[7.906745] (custom_interfaces) StdoutLine: {'line': b'[ 34%] Built target custom_interfaces__rosidl_typesupport_cpp\n'}
+[7.989924] (-) TimerEvent: {}
+[8.093609] (-) TimerEvent: {}
+[8.198851] (-) TimerEvent: {}
+[8.313659] (-) TimerEvent: {}
+[8.415969] (-) TimerEvent: {}
+[8.528713] (-) TimerEvent: {}
+[8.648776] (-) TimerEvent: {}
+[8.756675] (-) TimerEvent: {}
+[8.871608] (-) TimerEvent: {}
+[8.986821] (-) TimerEvent: {}
+[9.061190] (custom_interfaces) StdoutLine: {'line': b'[ 43%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[9.091027] (-) TimerEvent: {}
+[9.204065] (-) TimerEvent: {}
+[9.316617] (-) TimerEvent: {}
+[9.375207] (custom_interfaces) StdoutLine: {'line': b'[ 53%] Built target custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[9.421078] (-) TimerEvent: {}
+[9.526713] (-) TimerEvent: {}
+[9.636699] (custom_interfaces) StdoutLine: {'line': b'[ 62%] Built target custom_interfaces__rosidl_typesupport_c\n'}
+[9.644327] (-) TimerEvent: {}
+[9.751141] (-) TimerEvent: {}
+[9.857284] (-) TimerEvent: {}
+[9.960992] (-) TimerEvent: {}
+[10.069161] (-) TimerEvent: {}
+[10.177686] (-) TimerEvent: {}
+[10.283341] (-) TimerEvent: {}
+[10.387702] (-) TimerEvent: {}
+[10.503671] (custom_interfaces) StdoutLine: {'line': b'[ 71%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[10.504949] (-) TimerEvent: {}
+[10.639654] (-) TimerEvent: {}
+[10.742297] (-) TimerEvent: {}
+[10.849281] (-) TimerEvent: {}
+[10.952650] (-) TimerEvent: {}
+[11.064146] (-) TimerEvent: {}
+[11.169408] (-) TimerEvent: {}
+[11.275732] (-) TimerEvent: {}
+[11.345277] (custom_interfaces) StdoutLine: {'line': b'[ 81%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[11.383947] (-) TimerEvent: {}
+[11.489863] (-) TimerEvent: {}
+[11.518582] (custom_interfaces) StdoutLine: {'line': b'[ 81%] Built target custom_interfaces\n'}
+[11.595703] (-) TimerEvent: {}
+[11.712687] (-) TimerEvent: {}
+[11.738416] (custom_interfaces) StdoutLine: {'line': b'[ 82%] Built target custom_interfaces__py\n'}
+[11.812689] (-) TimerEvent: {}
+[11.918678] (-) TimerEvent: {}
+[12.023215] (-) TimerEvent: {}
+[12.130886] (-) TimerEvent: {}
+[12.225679] (custom_interfaces) StdoutLine: {'line': b'[ 90%] Built target custom_interfaces__rosidl_generator_py\n'}
+[12.237850] (-) TimerEvent: {}
+[12.357663] (-) TimerEvent: {}
+[12.459670] (-) TimerEvent: {}
+[12.569217] (-) TimerEvent: {}
+[12.682378] (-) TimerEvent: {}
+[12.801711] (-) TimerEvent: {}
+[12.912769] (-) TimerEvent: {}
+[13.000131] (custom_interfaces) StdoutLine: {'line': b'[ 93%] Built target custom_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[13.015407] (-) TimerEvent: {}
+[13.134394] (-) TimerEvent: {}
+[13.236698] (-) TimerEvent: {}
+[13.350681] (-) TimerEvent: {}
+[13.465902] (-) TimerEvent: {}
+[13.567657] (-) TimerEvent: {}
+[13.674670] (-) TimerEvent: {}
+[13.748597] (module_weigh) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/module_weigh', 'build', '--build-base', '/home/tomccd/Documents/Code/Python/DATN/build/module_weigh/build', 'install', '--record', '/home/tomccd/Documents/Code/Python/DATN/build/module_weigh/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/Packages/module_weigh', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/Packages', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/module_weigh', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/build/module_weigh/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[13.792770] (-) TimerEvent: {}
+[13.901572] (-) TimerEvent: {}
+[14.010671] (custom_interfaces) StdoutLine: {'line': b'[ 96%] Built target custom_interfaces_s__rosidl_typesupport_c\n'}
+[14.016384] (-) TimerEvent: {}
+[14.135660] (-) TimerEvent: {}
+[14.259718] (-) TimerEvent: {}
+[14.360730] (-) TimerEvent: {}
+[14.468792] (-) TimerEvent: {}
+[14.574758] (-) TimerEvent: {}
+[14.681909] (-) TimerEvent: {}
+[14.737735] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[14.788683] (-) TimerEvent: {}
+[14.897729] (-) TimerEvent: {}
+[14.999690] (-) TimerEvent: {}
+[15.110560] (-) TimerEvent: {}
+[15.211703] (-) TimerEvent: {}
+[15.226853] (custom_interfaces) CommandEnded: {'returncode': 0}
+[15.340776] (-) TimerEvent: {}
+[15.444814] (-) TimerEvent: {}
+[15.563276] (-) TimerEvent: {}
+[15.669665] (-) TimerEvent: {}
+[15.796605] (-) TimerEvent: {}
+[15.897956] (-) TimerEvent: {}
+[16.008726] (-) TimerEvent: {}
+[16.118751] (-) TimerEvent: {}
+[16.232714] (-) TimerEvent: {}
+[16.333618] (-) TimerEvent: {}
+[16.447621] (-) TimerEvent: {}
+[16.559142] (-) TimerEvent: {}
+[16.672760] (-) TimerEvent: {}
+[16.786666] (-) TimerEvent: {}
+[16.889213] (-) TimerEvent: {}
+[16.993895] (-) TimerEvent: {}
+[17.095448] (-) TimerEvent: {}
+[17.201036] (-) TimerEvent: {}
+[17.308131] (-) TimerEvent: {}
+[17.418689] (-) TimerEvent: {}
+[17.525711] (-) TimerEvent: {}
+[17.630836] (-) TimerEvent: {}
+[17.742696] (-) TimerEvent: {}
+[17.845422] (-) TimerEvent: {}
+[17.957656] (-) TimerEvent: {}
+[18.059358] (-) TimerEvent: {}
+[18.164804] (-) TimerEvent: {}
+[18.218965] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'install'}
+[18.268831] (-) TimerEvent: {}
+[18.370694] (-) TimerEvent: {}
+[18.461962] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/Packages', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/opt/ros/jazzy'}), 'shell': False}
+[18.491144] (-) TimerEvent: {}
+[18.605215] (-) TimerEvent: {}
+[18.709719] (-) TimerEvent: {}
+[18.786781] (custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.796921] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces\n'}
+[18.800839] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/msg/TerminateSys.json\n'}
+[18.811074] (-) TimerEvent: {}
+[18.811668] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/srv/InitSys.json\n'}
+[18.817734] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/msg/SetWeighIO.json\n'}
+[18.818943] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/msg/WeighValue.json\n'}
+[18.819932] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[18.833803] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[18.834976] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/initialize_system.h\n'}
+[18.836010] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/init_sys.h\n'}
+[18.856732] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[18.869142] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__type_support.c\n'}
+[18.911338] (-) TimerEvent: {}
+[18.933697] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__functions.c\n'}
+[18.944042] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__type_support.h\n'}
+[18.960787] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__struct.h\n'}
+[18.973075] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__struct.h\n'}
+[19.001720] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__type_support.c\n'}
+[19.020359] (-) TimerEvent: {}
+[19.033178] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__functions.h\n'}
+[19.065275] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__functions.c\n'}
+[19.098693] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__type_support.h\n'}
+[19.100227] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__description.c\n'}
+[19.117751] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__functions.h\n'}
+[19.118740] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__description.c\n'}
+[19.128742] (-) TimerEvent: {}
+[19.129320] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[19.139810] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/set_weigh_io.h\n'}
+[19.140947] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/terminate_sys.h\n'}
+[19.151246] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[19.152384] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/terminate.h\n'}
+[19.153358] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[19.182046] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__description.c\n'}
+[19.193276] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__functions.h\n'}
+[19.200156] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__functions.c\n'}
+[19.208276] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__functions.h\n'}
+[19.209247] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__description.c\n'}
+[19.221062] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__functions.c\n'}
+[19.235553] (-) TimerEvent: {}
+[19.242238] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__functions.h\n'}
+[19.243283] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__struct.h\n'}
+[19.259060] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__functions.h\n'}
+[19.260090] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__type_support.h\n'}
+[19.287005] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__type_support.c\n'}
+[19.288199] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__struct.h\n'}
+[19.289821] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__type_support.h\n'}
+[19.290870] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__description.c\n'}
+[19.291922] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__functions.c\n'}
+[19.293003] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__type_support.c\n'}
+[19.293993] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__description.c\n'}
+[19.295777] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__type_support.c\n'}
+[19.296664] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__struct.h\n'}
+[19.298869] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__type_support.h\n'}
+[19.300157] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__functions.c\n'}
+[19.301314] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__struct.h\n'}
+[19.302804] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__type_support.h\n'}
+[19.307524] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__type_support.c\n'}
+[19.309685] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/weigh_value.h\n'}
+[19.310953] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/environment/library_path.sh\n'}
+[19.312205] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/environment/library_path.dsv\n'}
+[19.314028] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so\n'}
+[19.315952] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[19.317224] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[19.318021] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[19.319055] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__rosidl_typesupport_fastrtps_c.h\n'}
+[19.320819] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__rosidl_typesupport_fastrtps_c.h\n'}
+[19.322210] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[19.323438] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[19.324784] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[19.329172] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__rosidl_typesupport_fastrtps_c.h\n'}
+[19.331176] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__rosidl_typesupport_fastrtps_c.h\n'}
+[19.335300] (-) TimerEvent: {}
+[19.336737] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_fastrtps_c.h\n'}
+[19.337960] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__rosidl_typesupport_fastrtps_c.h\n'}
+[19.338943] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[19.342006] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[19.343927] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[19.346410] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[19.351404] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__rosidl_typesupport_introspection_c.h\n'}
+[19.353166] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__type_support.c\n'}
+[19.354580] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__type_support.c\n'}
+[19.356724] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__rosidl_typesupport_introspection_c.h\n'}
+[19.358768] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[19.359934] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[19.366349] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[19.367285] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__rosidl_typesupport_introspection_c.h\n'}
+[19.374889] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__rosidl_typesupport_introspection_c.h\n'}
+[19.379721] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__type_support.c\n'}
+[19.391927] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__rosidl_typesupport_introspection_c.h\n'}
+[19.393268] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__type_support.c\n'}
+[19.403732] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__type_support.c\n'}
+[19.412876] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h\n'}
+[19.414123] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__type_support.c\n'}
+[19.432677] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[19.436107] (-) TimerEvent: {}
+[19.442636] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so\n'}
+[19.472683] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[19.477037] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[19.478119] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/initialize_system.hpp\n'}
+[19.487679] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[19.502622] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__struct.hpp\n'}
+[19.518722] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__builder.hpp\n'}
+[19.519857] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__type_support.hpp\n'}
+[19.528103] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__type_support.hpp\n'}
+[19.529518] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__traits.hpp\n'}
+[19.538467] (-) TimerEvent: {}
+[19.544076] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__struct.hpp\n'}
+[19.560161] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__builder.hpp\n'}
+[19.561479] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__traits.hpp\n'}
+[19.565594] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/init_sys.hpp\n'}
+[19.576623] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[19.577910] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/weigh_value.hpp\n'}
+[19.579299] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[19.584659] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/terminate_sys.hpp\n'}
+[19.587147] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/set_weigh_io.hpp\n'}
+[19.594761] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[19.596020] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__traits.hpp\n'}
+[19.610676] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__builder.hpp\n'}
+[19.626872] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__builder.hpp\n'}
+[19.641196] (-) TimerEvent: {}
+[19.664743] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__traits.hpp\n'}
+[19.668125] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__type_support.hpp\n'}
+[19.669412] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__traits.hpp\n'}
+[19.677994] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__builder.hpp\n'}
+[19.684846] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__struct.hpp\n'}
+[19.692109] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__traits.hpp\n'}
+[19.696779] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__struct.hpp\n'}
+[19.703833] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__type_support.hpp\n'}
+[19.705117] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__struct.hpp\n'}
+[19.745595] (-) TimerEvent: {}
+[19.748144] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__type_support.hpp\n'}
+[19.773787] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__type_support.hpp\n'}
+[19.775264] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__struct.hpp\n'}
+[19.828758] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__builder.hpp\n'}
+[19.830069] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/terminate.hpp\n'}
+[19.856056] (-) TimerEvent: {}
+[19.863942] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[19.882639] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[19.897913] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[19.945240] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.948438] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.949351] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/dds_fastrtps\n'}
+[20.002005] (-) TimerEvent: {}
+[20.019648] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[20.031994] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[20.033118] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[20.048454] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[20.058604] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/dds_fastrtps\n'}
+[20.093436] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[20.094413] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[20.095477] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[20.121017] (-) TimerEvent: {}
+[20.143400] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[20.146830] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[20.151943] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[20.161993] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[20.162944] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__type_support.cpp\n'}
+[20.177058] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__type_support.cpp\n'}
+[20.178154] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/init_sys__rosidl_typesupport_introspection_cpp.hpp\n'}
+[20.195596] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/initialize_system__rosidl_typesupport_introspection_cpp.hpp\n'}
+[20.196664] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[20.209903] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[20.210957] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__rosidl_typesupport_introspection_cpp.hpp\n'}
+[20.211796] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__rosidl_typesupport_introspection_cpp.hpp\n'}
+[20.225584] (-) TimerEvent: {}
+[20.234455] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate__type_support.cpp\n'}
+[20.246014] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/set_weigh_io__type_support.cpp\n'}
+[20.257475] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_cpp.hpp\n'}
+[20.274837] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/terminate_sys__type_support.cpp\n'}
+[20.275926] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__rosidl_typesupport_introspection_cpp.hpp\n'}
+[20.289328] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/weigh_value__type_support.cpp\n'}
+[20.299440] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[20.307453] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so\n'}
+[20.313353] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.sh\n'}
+[20.324426] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.dsv\n'}
+[20.333444] (-) TimerEvent: {}
+[20.341402] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info\n'}
+[20.345329] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[20.351894] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[20.361093] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[20.404079] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[20.425813] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces\n'}
+[20.426941] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[20.462800] (-) TimerEvent: {}
+[20.465308] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so\n'}
+[20.471385] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/__init__.py\n'}
+[20.472755] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[20.492080] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[20.511988] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv\n'}
+[20.532953] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/__init__.py\n'}
+[20.543353] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_initialize_system_s.c\n'}
+[20.556264] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_initialize_system.py\n'}
+[20.560883] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_init_sys_s.c\n'}
+[20.576668] (-) TimerEvent: {}
+[20.580112] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv/_init_sys.py\n'}
+[20.593585] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg\n'}
+[20.594409] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_terminate.py\n'}
+[20.597813] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_weigh_value.py\n'}
+[20.598967] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/__init__.py\n'}
+[20.604075] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_terminate_s.c\n'}
+[20.628466] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_terminate_sys.py\n'}
+[20.631145] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_terminate_sys_s.c\n'}
+[20.635869] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_weigh_value_s.c\n'}
+[20.636895] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_set_weigh_io_s.c\n'}
+[20.637854] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg/_set_weigh_io.py\n'}
+[20.638904] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[20.643141] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[20.644144] (custom_interfaces) StdoutLine: {'line': b"Listing '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces'...\n"}
+[20.644938] (custom_interfaces) StdoutLine: {'line': b"Listing '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/msg'...\n"}
+[20.649038] (custom_interfaces) StdoutLine: {'line': b"Listing '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/srv'...\n"}
+[20.650165] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[20.651240] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[20.655048] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.so\n'}
+[20.658749] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so\n'}
+[20.659774] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/msg/TerminateSys.idl\n'}
+[20.663698] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/srv/InitSys.idl\n'}
+[20.664743] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/msg/SetWeighIO.idl\n'}
+[20.665588] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/msg/WeighValue.idl\n'}
+[20.666727] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/msg/TerminateSys.msg\n'}
+[20.683165] (-) TimerEvent: {}
+[20.685889] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/srv/InitSys.srv\n'}
+[20.687190] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/msg/SetWeighIO.msg\n'}
+[20.690722] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/msg/WeighValue.msg\n'}
+[20.691924] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/ament_index/resource_index/package_run_dependencies/custom_interfaces\n'}
+[20.697078] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/ament_index/resource_index/parent_prefix_path/custom_interfaces\n'}
+[20.701427] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.sh\n'}
+[20.718022] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[20.719244] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/environment/path.sh\n'}
+[20.722936] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/environment/path.dsv\n'}
+[20.724143] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/local_setup.bash\n'}
+[20.727469] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/local_setup.sh\n'}
+[20.728354] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/local_setup.zsh\n'}
+[20.729249] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/local_setup.dsv\n'}
+[20.733573] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/package.dsv\n'}
+[20.734624] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/ament_index/resource_index/packages/custom_interfaces\n'}
+[20.744296] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[20.745460] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[20.783999] (-) TimerEvent: {}
+[20.797843] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[20.803801] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[20.810981] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[20.812188] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[20.822273] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[20.832255] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[20.836360] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[20.846698] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[20.848035] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[20.849129] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[20.859999] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[20.868577] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[20.869820] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[20.871061] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport.cmake\n'}
+[20.881315] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[20.885505] (-) TimerEvent: {}
+[20.895096] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[20.896363] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[20.897387] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[20.914040] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[20.915137] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[20.922359] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[20.941195] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[20.959916] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig.cmake\n'}
+[20.968304] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig-version.cmake\n'}
+[20.972753] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/share/custom_interfaces/package.xml\n'}
+[20.973626] (custom_interfaces) CommandEnded: {'returncode': 0}
+[20.996308] (-) TimerEvent: {}
+[21.119373] (-) TimerEvent: {}
+[21.247075] (-) TimerEvent: {}
+[21.364221] (-) TimerEvent: {}
+[21.471468] (-) TimerEvent: {}
+[21.574659] (-) TimerEvent: {}
+[21.684942] (-) TimerEvent: {}
+[21.748725] (module_weigh) StdoutLine: {'line': b'running egg_info\n'}
+[21.786643] (-) TimerEvent: {}
+[21.895991] (-) TimerEvent: {}
+[21.973262] (module_weigh) StdoutLine: {'line': b'writing ../../build/module_weigh/module_weigh.egg-info/PKG-INFO\n'}
+[21.983590] (module_weigh) StdoutLine: {'line': b'writing dependency_links to ../../build/module_weigh/module_weigh.egg-info/dependency_links.txt\n'}
+[21.987679] (module_weigh) StdoutLine: {'line': b'writing requirements to ../../build/module_weigh/module_weigh.egg-info/requires.txt\n'}
+[21.992121] (module_weigh) StdoutLine: {'line': b'writing top-level names to ../../build/module_weigh/module_weigh.egg-info/top_level.txt\n'}
+[21.999244] (-) TimerEvent: {}
+[22.103015] (-) TimerEvent: {}
+[22.218266] (-) TimerEvent: {}
+[22.321685] (-) TimerEvent: {}
+[22.429527] (-) TimerEvent: {}
+[22.539345] (-) TimerEvent: {}
+[22.644759] (-) TimerEvent: {}
+[22.751374] (-) TimerEvent: {}
+[22.859417] (-) TimerEvent: {}
+[22.973360] (-) TimerEvent: {}
+[22.986772] (custom_interfaces) JobEnded: {'identifier': 'custom_interfaces', 'rc': 0}
+[23.030744] (module_input) JobStarted: {'identifier': 'module_input'}
+[23.057647] (module_weigh) StdoutLine: {'line': b"reading manifest file '../../build/module_weigh/module_weigh.egg-info/SOURCES.txt'\n"}
+[23.067994] (module_weigh) StdoutLine: {'line': b"writing manifest file '../../build/module_weigh/module_weigh.egg-info/SOURCES.txt'\n"}
+[23.084445] (-) TimerEvent: {}
+[23.085125] (module_weigh) StdoutLine: {'line': b'running build\n'}
+[23.104783] (module_weigh) StdoutLine: {'line': b'running build_py\n'}
+[23.124985] (module_weigh) StdoutLine: {'line': b'running install\n'}
+[23.160065] (module_weigh) StdoutLine: {'line': b'running install_lib\n'}
+[23.190478] (-) TimerEvent: {}
+[23.268430] (module_scanning_interface) JobStarted: {'identifier': 'module_scanning_interface'}
+[23.291288] (-) TimerEvent: {}
+[23.403658] (-) TimerEvent: {}
+[23.508107] (-) TimerEvent: {}
+[23.589627] (module_supervisor) JobStarted: {'identifier': 'module_supervisor'}
+[23.612923] (-) TimerEvent: {}
+[23.718087] (-) TimerEvent: {}
+[23.787250] (module_weigh) StdoutLine: {'line': b'running install_data\n'}
+[23.789383] (module_weigh) StdoutLine: {'line': b'running install_egg_info\n'}
+[23.821850] (-) TimerEvent: {}
+[23.928760] (-) TimerEvent: {}
+[24.036468] (-) TimerEvent: {}
+[24.145252] (-) TimerEvent: {}
+[24.163740] (module_weigh) StdoutLine: {'line': b"removing '/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/python3.12/site-packages/module_weigh-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[24.168733] (module_weigh) StdoutLine: {'line': b'Copying ../../build/module_weigh/module_weigh.egg-info to /home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/python3.12/site-packages/module_weigh-0.0.0-py3.12.egg-info\n'}
+[24.180694] (module_weigh) StdoutLine: {'line': b'running install_scripts\n'}
+[24.251697] (-) TimerEvent: {}
+[24.356905] (-) TimerEvent: {}
+[24.461748] (-) TimerEvent: {}
+[24.571663] (-) TimerEvent: {}
+[24.677793] (-) TimerEvent: {}
+[24.782579] (-) TimerEvent: {}
+[24.895407] (-) TimerEvent: {}
+[24.996876] (-) TimerEvent: {}
+[25.101654] (-) TimerEvent: {}
+[25.204190] (-) TimerEvent: {}
+[25.310859] (-) TimerEvent: {}
+[25.416865] (-) TimerEvent: {}
+[25.520335] (-) TimerEvent: {}
+[25.631118] (-) TimerEvent: {}
+[25.743639] (-) TimerEvent: {}
+[25.788358] (module_weigh) StdoutLine: {'line': b"writing list of installed files to '/home/tomccd/Documents/Code/Python/DATN/build/module_weigh/install.log'\n"}
+[25.844117] (-) TimerEvent: {}
+[25.949929] (-) TimerEvent: {}
+[26.051389] (-) TimerEvent: {}
+[26.152384] (-) TimerEvent: {}
+[26.254994] (-) TimerEvent: {}
+[26.356572] (-) TimerEvent: {}
+[26.459682] (-) TimerEvent: {}
+[26.560900] (-) TimerEvent: {}
+[26.662647] (-) TimerEvent: {}
+[26.764690] (-) TimerEvent: {}
+[26.867655] (-) TimerEvent: {}
+[26.968639] (-) TimerEvent: {}
+[27.070011] (-) TimerEvent: {}
+[27.174460] (-) TimerEvent: {}
+[27.277390] (-) TimerEvent: {}
+[27.383903] (-) TimerEvent: {}
+[27.487045] (-) TimerEvent: {}
+[27.590786] (-) TimerEvent: {}
+[27.702655] (-) TimerEvent: {}
+[27.812598] (-) TimerEvent: {}
+[27.927864] (-) TimerEvent: {}
+[28.030735] (-) TimerEvent: {}
+[28.136659] (-) TimerEvent: {}
+[28.160072] (module_weigh) CommandEnded: {'returncode': 0}
+[28.237901] (-) TimerEvent: {}
+[28.288387] (module_weigh) JobEnded: {'identifier': 'module_weigh', 'rc': 0}
+[28.339676] (-) TimerEvent: {}
+[28.441921] (-) TimerEvent: {}
+[28.546101] (-) TimerEvent: {}
+[28.655098] (-) TimerEvent: {}
+[28.761902] (-) TimerEvent: {}
+[28.866644] (-) TimerEvent: {}
+[28.980277] (-) TimerEvent: {}
+[29.085759] (-) TimerEvent: {}
+[29.194103] (-) TimerEvent: {}
+[29.303643] (-) TimerEvent: {}
+[29.405230] (-) TimerEvent: {}
+[29.508620] (-) TimerEvent: {}
+[29.616469] (-) TimerEvent: {}
+[29.729631] (-) TimerEvent: {}
+[29.832844] (-) TimerEvent: {}
+[29.938770] (-) TimerEvent: {}
+[30.042973] (-) TimerEvent: {}
+[30.151404] (-) TimerEvent: {}
+[30.262389] (-) TimerEvent: {}
+[30.365152] (-) TimerEvent: {}
+[30.469287] (-) TimerEvent: {}
+[30.581730] (-) TimerEvent: {}
+[30.683650] (-) TimerEvent: {}
+[30.799668] (-) TimerEvent: {}
+[30.905682] (-) TimerEvent: {}
+[31.012289] (-) TimerEvent: {}
+[31.123111] (-) TimerEvent: {}
+[31.227130] (-) TimerEvent: {}
+[31.343676] (-) TimerEvent: {}
+[31.451662] (-) TimerEvent: {}
+[31.565640] (-) TimerEvent: {}
+[31.671112] (-) TimerEvent: {}
+[31.780386] (-) TimerEvent: {}
+[31.884688] (-) TimerEvent: {}
+[31.991993] (-) TimerEvent: {}
+[32.094289] (-) TimerEvent: {}
+[32.198652] (-) TimerEvent: {}
+[32.303078] (-) TimerEvent: {}
+[32.408935] (-) TimerEvent: {}
+[32.518692] (-) TimerEvent: {}
+[32.622703] (-) TimerEvent: {}
+[32.731561] (-) TimerEvent: {}
+[32.833043] (-) TimerEvent: {}
+[32.939672] (-) TimerEvent: {}
+[33.048034] (-) TimerEvent: {}
+[33.151643] (-) TimerEvent: {}
+[33.263633] (-) TimerEvent: {}
+[33.365343] (-) TimerEvent: {}
+[33.470717] (-) TimerEvent: {}
+[33.580679] (-) TimerEvent: {}
+[33.689611] (-) TimerEvent: {}
+[33.793180] (-) TimerEvent: {}
+[33.901099] (-) TimerEvent: {}
+[34.007681] (-) TimerEvent: {}
+[34.118619] (-) TimerEvent: {}
+[34.229345] (-) TimerEvent: {}
+[34.330307] (-) TimerEvent: {}
+[34.436696] (-) TimerEvent: {}
+[34.540827] (-) TimerEvent: {}
+[34.646894] (-) TimerEvent: {}
+[34.756685] (-) TimerEvent: {}
+[34.865625] (-) TimerEvent: {}
+[34.968640] (-) TimerEvent: {}
+[35.075248] (-) TimerEvent: {}
+[35.179654] (-) TimerEvent: {}
+[35.289629] (-) TimerEvent: {}
+[35.390603] (-) TimerEvent: {}
+[35.498661] (-) TimerEvent: {}
+[35.602273] (-) TimerEvent: {}
+[35.706670] (-) TimerEvent: {}
+[35.819952] (-) TimerEvent: {}
+[35.922627] (-) TimerEvent: {}
+[36.029733] (-) TimerEvent: {}
+[36.132862] (-) TimerEvent: {}
+[36.238965] (-) TimerEvent: {}
+[36.345093] (-) TimerEvent: {}
+[36.456654] (-) TimerEvent: {}
+[36.558158] (-) TimerEvent: {}
+[36.660657] (-) TimerEvent: {}
+[36.767673] (-) TimerEvent: {}
+[36.869922] (-) TimerEvent: {}
+[36.974948] (-) TimerEvent: {}
+[37.077873] (-) TimerEvent: {}
+[37.184361] (-) TimerEvent: {}
+[37.291705] (-) TimerEvent: {}
+[37.396126] (-) TimerEvent: {}
+[37.501671] (-) TimerEvent: {}
+[37.613463] (-) TimerEvent: {}
+[37.724681] (-) TimerEvent: {}
+[37.828694] (-) TimerEvent: {}
+[37.933654] (-) TimerEvent: {}
+[38.039710] (-) TimerEvent: {}
+[38.146436] (-) TimerEvent: {}
+[38.252652] (-) TimerEvent: {}
+[38.354092] (-) TimerEvent: {}
+[38.457704] (-) TimerEvent: {}
+[38.566662] (-) TimerEvent: {}
+[38.678460] (-) TimerEvent: {}
+[38.790426] (-) TimerEvent: {}
+[38.892258] (-) TimerEvent: {}
+[39.003376] (-) TimerEvent: {}
+[39.075432] (module_input) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/module_input', 'build', '--build-base', '/home/tomccd/Documents/Code/Python/DATN/build/module_input/build', 'install', '--record', '/home/tomccd/Documents/Code/Python/DATN/build/module_input/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/Packages/module_input', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/Packages', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/module_input', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/build/module_input/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[39.105620] (-) TimerEvent: {}
+[39.206710] (-) TimerEvent: {}
+[39.310431] (-) TimerEvent: {}
+[39.412340] (-) TimerEvent: {}
+[39.526678] (-) TimerEvent: {}
+[39.631924] (-) TimerEvent: {}
+[39.736954] (-) TimerEvent: {}
+[39.840137] (-) TimerEvent: {}
+[39.946946] (-) TimerEvent: {}
+[40.050628] (-) TimerEvent: {}
+[40.157033] (-) TimerEvent: {}
+[40.262096] (-) TimerEvent: {}
+[40.367801] (-) TimerEvent: {}
+[40.472990] (-) TimerEvent: {}
+[40.582669] (-) TimerEvent: {}
+[40.685605] (-) TimerEvent: {}
+[40.794680] (-) TimerEvent: {}
+[40.872889] (module_supervisor) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/module_supervisor', 'build', '--build-base', '/home/tomccd/Documents/Code/Python/DATN/build/module_supervisor/build', 'install', '--record', '/home/tomccd/Documents/Code/Python/DATN/build/module_supervisor/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/Packages/module_supervisor', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/Packages', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/module_supervisor', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/build/module_supervisor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[40.908743] (-) TimerEvent: {}
+[41.015839] (-) TimerEvent: {}
+[41.127699] (-) TimerEvent: {}
+[41.232948] (-) TimerEvent: {}
+[41.341682] (-) TimerEvent: {}
+[41.459673] (-) TimerEvent: {}
+[41.562839] (-) TimerEvent: {}
+[41.671529] (-) TimerEvent: {}
+[41.774933] (-) TimerEvent: {}
+[41.880650] (-) TimerEvent: {}
+[41.986099] (-) TimerEvent: {}
+[42.095270] (-) TimerEvent: {}
+[42.206705] (-) TimerEvent: {}
+[42.279586] (module_scanning_interface) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/module_scanning_interface', 'build', '--build-base', '/home/tomccd/Documents/Code/Python/DATN/build/module_scanning_interface/build', 'install', '--record', '/home/tomccd/Documents/Code/Python/DATN/build/module_scanning_interface/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/Packages/module_scanning_interface', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/Packages', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/module_scanning_interface', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/build/module_scanning_interface/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[42.320648] (-) TimerEvent: {}
+[42.426829] (-) TimerEvent: {}
+[42.538681] (-) TimerEvent: {}
+[42.647694] (-) TimerEvent: {}
+[42.754959] (-) TimerEvent: {}
+[42.862673] (-) TimerEvent: {}
+[42.970873] (-) TimerEvent: {}
+[43.076693] (-) TimerEvent: {}
+[43.182732] (-) TimerEvent: {}
+[43.289094] (-) TimerEvent: {}
+[43.397235] (-) TimerEvent: {}
+[43.502639] (-) TimerEvent: {}
+[43.606575] (-) TimerEvent: {}
+[43.640760] (module_input) StdoutLine: {'line': b'running egg_info\n'}
+[43.708556] (-) TimerEvent: {}
+[43.816746] (-) TimerEvent: {}
+[43.853291] (module_input) StdoutLine: {'line': b'writing ../../build/module_input/module_input.egg-info/PKG-INFO\n'}
+[43.856094] (module_input) StdoutLine: {'line': b'writing dependency_links to ../../build/module_input/module_input.egg-info/dependency_links.txt\n'}
+[43.867180] (module_input) StdoutLine: {'line': b'writing entry points to ../../build/module_input/module_input.egg-info/entry_points.txt\n'}
+[43.874146] (module_input) StdoutLine: {'line': b'writing requirements to ../../build/module_input/module_input.egg-info/requires.txt\n'}
+[43.883563] (module_input) StdoutLine: {'line': b'writing top-level names to ../../build/module_input/module_input.egg-info/top_level.txt\n'}
+[43.933706] (-) TimerEvent: {}
+[44.038784] (-) TimerEvent: {}
+[44.163868] (-) TimerEvent: {}
+[44.274998] (-) TimerEvent: {}
+[44.388713] (-) TimerEvent: {}
+[44.493350] (-) TimerEvent: {}
+[44.600645] (-) TimerEvent: {}
+[44.705289] (module_input) StdoutLine: {'line': b"reading manifest file '../../build/module_input/module_input.egg-info/SOURCES.txt'\n"}
+[44.706518] (-) TimerEvent: {}
+[44.714844] (module_input) StdoutLine: {'line': b"writing manifest file '../../build/module_input/module_input.egg-info/SOURCES.txt'\n"}
+[44.756667] (module_input) StdoutLine: {'line': b'running build\n'}
+[44.757579] (module_input) StdoutLine: {'line': b'running build_py\n'}
+[44.758429] (module_input) StdoutLine: {'line': b'running install\n'}
+[44.798641] (module_input) StdoutLine: {'line': b'running install_lib\n'}
+[44.818668] (-) TimerEvent: {}
+[44.924706] (-) TimerEvent: {}
+[45.034932] (-) TimerEvent: {}
+[45.127522] (module_input) StdoutLine: {'line': b'running install_data\n'}
+[45.134661] (module_input) StdoutLine: {'line': b'running install_egg_info\n'}
+[45.142011] (-) TimerEvent: {}
+[45.247961] (-) TimerEvent: {}
+[45.356730] (-) TimerEvent: {}
+[45.461066] (-) TimerEvent: {}
+[45.564635] (module_input) StdoutLine: {'line': b"removing '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/python3.12/site-packages/module_input-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[45.570113] (-) TimerEvent: {}
+[45.581812] (module_input) StdoutLine: {'line': b'Copying ../../build/module_input/module_input.egg-info to /home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/python3.12/site-packages/module_input-0.0.0-py3.12.egg-info\n'}
+[45.588208] (module_input) StdoutLine: {'line': b'running install_scripts\n'}
+[45.686650] (-) TimerEvent: {}
+[45.787560] (-) TimerEvent: {}
+[45.891659] (-) TimerEvent: {}
+[45.999010] (-) TimerEvent: {}
+[46.106671] (-) TimerEvent: {}
+[46.209545] (-) TimerEvent: {}
+[46.323702] (-) TimerEvent: {}
+[46.425685] (-) TimerEvent: {}
+[46.537761] (-) TimerEvent: {}
+[46.644705] (-) TimerEvent: {}
+[46.751634] (-) TimerEvent: {}
+[46.763352] (module_supervisor) StdoutLine: {'line': b'running egg_info\n'}
+[46.855659] (-) TimerEvent: {}
+[46.956788] (-) TimerEvent: {}
+[46.989861] (module_supervisor) StdoutLine: {'line': b'writing ../../build/module_supervisor/module_supervisor.egg-info/PKG-INFO\n'}
+[46.993425] (module_supervisor) StdoutLine: {'line': b'writing dependency_links to ../../build/module_supervisor/module_supervisor.egg-info/dependency_links.txt\n'}
+[47.012603] (module_supervisor) StdoutLine: {'line': b'writing entry points to ../../build/module_supervisor/module_supervisor.egg-info/entry_points.txt\n'}
+[47.067674] (module_supervisor) StdoutLine: {'line': b'writing requirements to ../../build/module_supervisor/module_supervisor.egg-info/requires.txt\n'}
+[47.068737] (-) TimerEvent: {}
+[47.069277] (module_supervisor) StdoutLine: {'line': b'writing top-level names to ../../build/module_supervisor/module_supervisor.egg-info/top_level.txt\n'}
+[47.196697] (-) TimerEvent: {}
+[47.301671] (-) TimerEvent: {}
+[47.410567] (-) TimerEvent: {}
+[47.474271] (module_supervisor) StdoutLine: {'line': b"reading manifest file '../../build/module_supervisor/module_supervisor.egg-info/SOURCES.txt'\n"}
+[47.480682] (module_supervisor) StdoutLine: {'line': b"writing manifest file '../../build/module_supervisor/module_supervisor.egg-info/SOURCES.txt'\n"}
+[47.482345] (module_supervisor) StdoutLine: {'line': b'running build\n'}
+[47.491083] (module_supervisor) StdoutLine: {'line': b'running build_py\n'}
+[47.492265] (module_supervisor) StdoutLine: {'line': b'running install\n'}
+[47.513673] (-) TimerEvent: {}
+[47.520284] (module_supervisor) StdoutLine: {'line': b'running install_lib\n'}
+[47.619648] (-) TimerEvent: {}
+[47.721181] (-) TimerEvent: {}
+[47.789660] (module_supervisor) StdoutLine: {'line': b'running install_data\n'}
+[47.792032] (module_supervisor) StdoutLine: {'line': b'running install_egg_info\n'}
+[47.821439] (-) TimerEvent: {}
+[47.922375] (-) TimerEvent: {}
+[48.025243] (module_supervisor) StdoutLine: {'line': b"removing '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages/module_supervisor-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[48.038468] (-) TimerEvent: {}
+[48.040081] (module_supervisor) StdoutLine: {'line': b'Copying ../../build/module_supervisor/module_supervisor.egg-info to /home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages/module_supervisor-0.0.0-py3.12.egg-info\n'}
+[48.042277] (module_supervisor) StdoutLine: {'line': b'running install_scripts\n'}
+[48.139098] (-) TimerEvent: {}
+[48.251322] (-) TimerEvent: {}
+[48.530627] (-) TimerEvent: {}
+[48.633902] (-) TimerEvent: {}
+[48.738660] (-) TimerEvent: {}
+[48.840243] (-) TimerEvent: {}
+[48.868946] (module_input) StdoutLine: {'line': b'Installing node_io_weigh script to /home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input\n'}
+[48.887545] (module_input) StdoutLine: {'line': b"writing list of installed files to '/home/tomccd/Documents/Code/Python/DATN/build/module_input/install.log'\n"}
+[48.949323] (-) TimerEvent: {}
+[49.051989] (-) TimerEvent: {}
+[49.155192] (-) TimerEvent: {}
+[49.179725] (module_scanning_interface) StdoutLine: {'line': b'running egg_info\n'}
+[49.218649] (module_input) CommandEnded: {'returncode': 0}
+[49.274574] (-) TimerEvent: {}
+[49.383782] (-) TimerEvent: {}
+[49.454795] (module_input) JobEnded: {'identifier': 'module_input', 'rc': 0}
+[49.484696] (-) TimerEvent: {}
+[49.588800] (-) TimerEvent: {}
+[49.690586] (-) TimerEvent: {}
+[49.798676] (-) TimerEvent: {}
+[49.838554] (module_scanning_interface) StdoutLine: {'line': b'writing ../../build/module_scanning_interface/module_scanning_interface.egg-info/PKG-INFO\n'}
+[49.845979] (module_scanning_interface) StdoutLine: {'line': b'writing dependency_links to ../../build/module_scanning_interface/module_scanning_interface.egg-info/dependency_links.txt\n'}
+[49.852432] (module_scanning_interface) StdoutLine: {'line': b'writing entry points to ../../build/module_scanning_interface/module_scanning_interface.egg-info/entry_points.txt\n'}
+[49.867088] (module_scanning_interface) StdoutLine: {'line': b'writing requirements to ../../build/module_scanning_interface/module_scanning_interface.egg-info/requires.txt\n'}
+[49.880184] (module_scanning_interface) StdoutLine: {'line': b'writing top-level names to ../../build/module_scanning_interface/module_scanning_interface.egg-info/top_level.txt\n'}
+[49.904678] (-) TimerEvent: {}
+[50.010288] (-) TimerEvent: {}
+[50.118556] (-) TimerEvent: {}
+[50.219428] (-) TimerEvent: {}
+[50.327979] (-) TimerEvent: {}
+[50.392276] (module_supervisor) StdoutLine: {'line': b'Installing module_supervisor script to /home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/module_supervisor\n'}
+[50.395833] (module_supervisor) StdoutLine: {'line': b"writing list of installed files to '/home/tomccd/Documents/Code/Python/DATN/build/module_supervisor/install.log'\n"}
+[50.435724] (-) TimerEvent: {}
+[50.438248] (module_scanning_interface) StdoutLine: {'line': b"reading manifest file '../../build/module_scanning_interface/module_scanning_interface.egg-info/SOURCES.txt'\n"}
+[50.450787] (module_scanning_interface) StdoutLine: {'line': b"writing manifest file '../../build/module_scanning_interface/module_scanning_interface.egg-info/SOURCES.txt'\n"}
+[50.461253] (module_scanning_interface) StdoutLine: {'line': b'running build\n'}
+[50.484830] (module_scanning_interface) StdoutLine: {'line': b'running build_py\n'}
+[50.487087] (module_scanning_interface) StdoutLine: {'line': b'running install\n'}
+[50.501899] (module_scanning_interface) StdoutLine: {'line': b'running install_lib\n'}
+[50.535844] (-) TimerEvent: {}
+[50.638332] (-) TimerEvent: {}
+[50.714876] (module_supervisor) CommandEnded: {'returncode': 0}
+[50.741007] (-) TimerEvent: {}
+[50.845348] (-) TimerEvent: {}
+[50.861641] (module_scanning_interface) StdoutLine: {'line': b'running install_data\n'}
+[50.883572] (module_scanning_interface) StdoutLine: {'line': b'running install_egg_info\n'}
+[50.898866] (module_supervisor) JobEnded: {'identifier': 'module_supervisor', 'rc': 0}
+[50.945693] (-) TimerEvent: {}
+[51.063809] (-) TimerEvent: {}
+[51.100897] (module_scanning_interface) StdoutLine: {'line': b"removing '/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[51.102696] (module_scanning_interface) StdoutLine: {'line': b'Copying ../../build/module_scanning_interface/module_scanning_interface.egg-info to /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface-0.0.0-py3.12.egg-info\n'}
+[51.129833] (module_scanning_interface) StdoutLine: {'line': b'running install_scripts\n'}
+[51.164012] (-) TimerEvent: {}
+[51.264885] (-) TimerEvent: {}
+[51.368084] (-) TimerEvent: {}
+[51.473108] (-) TimerEvent: {}
+[51.575532] (-) TimerEvent: {}
+[51.677539] (-) TimerEvent: {}
+[51.783855] (-) TimerEvent: {}
+[51.888640] (-) TimerEvent: {}
+[51.991641] (-) TimerEvent: {}
+[52.100632] (-) TimerEvent: {}
+[52.202057] (-) TimerEvent: {}
+[52.308659] (-) TimerEvent: {}
+[52.410397] (-) TimerEvent: {}
+[52.512556] (-) TimerEvent: {}
+[52.613718] (-) TimerEvent: {}
+[52.696142] (module_scanning_interface) StdoutLine: {'line': b'Installing module_scanning_interface script to /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/module_scanning_interface\n'}
+[52.698917] (module_scanning_interface) StdoutLine: {'line': b"writing list of installed files to '/home/tomccd/Documents/Code/Python/DATN/build/module_scanning_interface/install.log'\n"}
+[52.713967] (-) TimerEvent: {}
+[52.815305] (-) TimerEvent: {}
+[52.869913] (module_scanning_interface) CommandEnded: {'returncode': 0}
+[52.915430] (-) TimerEvent: {}
+[52.917366] (module_scanning_interface) JobEnded: {'identifier': 'module_scanning_interface', 'rc': 0}
+[52.923999] (launch_system) JobStarted: {'identifier': 'launch_system'}
+[53.015747] (-) TimerEvent: {}
+[53.022445] (launch_system) JobProgress: {'identifier': 'launch_system', 'progress': 'cmake'}
+[53.028300] (launch_system) JobProgress: {'identifier': 'launch_system', 'progress': 'build'}
+[53.033661] (launch_system) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tomccd/Documents/Code/Python/DATN/build/launch_system', '--', '-j4', '-l4'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/build/launch_system', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/Packages', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/launch_system', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/opt/ros/jazzy'}), 'shell': False}
+[53.115954] (-) TimerEvent: {}
+[53.216843] (-) TimerEvent: {}
+[53.293137] (launch_system) CommandEnded: {'returncode': 0}
+[53.317035] (-) TimerEvent: {}
+[53.418040] (-) TimerEvent: {}
+[53.451020] (launch_system) JobProgress: {'identifier': 'launch_system', 'progress': 'install'}
+[53.467882] (launch_system) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/tomccd/Documents/Code/Python/DATN/build/launch_system'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/build/launch_system', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/Packages', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/launch_system', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/opt/ros/jazzy'}), 'shell': False}
+[53.505033] (launch_system) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[53.506825] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/launch\n'}
+[53.509057] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/launch/launch_system.launch.xml\n'}
+[53.512007] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/ament_index/resource_index/package_run_dependencies/launch_system\n'}
+[53.515254] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/ament_index/resource_index/parent_prefix_path/launch_system\n'}
+[53.527371] (-) TimerEvent: {}
+[53.529287] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/environment/ament_prefix_path.sh\n'}
+[53.532424] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/environment/ament_prefix_path.dsv\n'}
+[53.533178] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/environment/path.sh\n'}
+[53.533959] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/environment/path.dsv\n'}
+[53.535603] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/local_setup.bash\n'}
+[53.536479] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/local_setup.sh\n'}
+[53.537730] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/local_setup.zsh\n'}
+[53.538746] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/local_setup.dsv\n'}
+[53.540554] (launch_system) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/package.dsv\n'}
+[53.541625] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/ament_index/resource_index/packages/launch_system\n'}
+[53.542635] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/cmake/launch_systemConfig.cmake\n'}
+[53.543843] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/cmake/launch_systemConfig-version.cmake\n'}
+[53.549966] (launch_system) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/launch_system/share/launch_system/package.xml\n'}
+[53.559560] (launch_system) CommandEnded: {'returncode': 0}
+[53.627651] (-) TimerEvent: {}
+[53.728588] (-) TimerEvent: {}
+[53.830416] (-) TimerEvent: {}
+[53.846942] (launch_system) JobEnded: {'identifier': 'launch_system', 'rc': 0}
+[53.852960] (-) EventReactorShutdown: {}

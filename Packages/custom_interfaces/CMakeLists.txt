@@ -12,7 +12,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 #Generator ROS2 Interface
 rosidl_generate_interfaces(
-  ${PROJECT_NAME} "msg/TerminateSys.msg" "srv/InitSys.srv"
+  ${PROJECT_NAME} "msg/TerminateSys.msg" "srv/InitSys.srv" "msg/SetWeighIO.msg" "msg/WeighValue.msg"
 )
 
 #Setup stuff for all packages that need it

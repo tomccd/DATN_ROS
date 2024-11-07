@@ -71,10 +71,14 @@ include /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_i
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_terminate_sys.py
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_init_sys.py
+/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_weigh_io.py
+/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_weigh_value.py
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/__init__.py
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/__init__.py
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_terminate_sys_s.c
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_init_sys_s.c
+/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_weigh_io_s.c
+/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_weigh_value_s.c
 
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -91,6 +95,8 @@ rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/msg/TerminateSys.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/srv/InitSys.idl
+rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/msg/SetWeighIO.idl
+rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/msg/WeighValue.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -109,6 +115,12 @@ rosidl_generator_py/custom_interfaces/msg/_terminate_sys.py: rosidl_generator_py
 rosidl_generator_py/custom_interfaces/srv/_init_sys.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/srv/_init_sys.py
 
+rosidl_generator_py/custom_interfaces/msg/_set_weigh_io.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_set_weigh_io.py
+
+rosidl_generator_py/custom_interfaces/msg/_weigh_value.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_weigh_value.py
+
 rosidl_generator_py/custom_interfaces/msg/__init__.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/__init__.py
 
@@ -121,13 +133,23 @@ rosidl_generator_py/custom_interfaces/msg/_terminate_sys_s.c: rosidl_generator_p
 rosidl_generator_py/custom_interfaces/srv/_init_sys_s.c: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/srv/_init_sys_s.c
 
+rosidl_generator_py/custom_interfaces/msg/_set_weigh_io_s.c: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_set_weigh_io_s.c
+
+rosidl_generator_py/custom_interfaces/msg/_weigh_value_s.c: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_weigh_value_s.c
+
 custom_interfaces__py: /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/__init__.py
+custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_weigh_io.py
+custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_weigh_io_s.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_terminate_sys.py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_terminate_sys_s.c
+custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_weigh_value.py
+custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_weigh_value_s.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/__init__.py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_init_sys.py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/_init_sys_s.c

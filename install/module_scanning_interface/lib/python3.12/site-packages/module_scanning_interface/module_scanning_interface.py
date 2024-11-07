@@ -1,5 +1,5 @@
 from custom_interfaces.srv import InitSys
-from custom_interfaces.msg import TerminateSys
+from custom_interfaces.msg import TerminateSys, WeighValue
 import tkinter as tk
 from tkinter import StringVar
 from tkinter import messagebox
@@ -10,6 +10,9 @@ import cv2 as cv
 import numpy as np
 from PIL import ImageTk,Image
 from pyzbar.pyzbar import decode
+import pypyodbc as odbc
+import pandas as pd
+import sys
 import time
 #Class Node
 class myNode(Node):
@@ -33,9 +36,10 @@ class myApp(tk.Tk):
         self.node = myNode('module_scanning_interface')
         #Tạo 1 Terminating Subcriber
         self.subcriber_terminate = self.node.create_subscription(TerminateSys,"terminate",self.on_closing,10)
+        #Tạo 1 Subcriber cho việc lấy dữ liệu cân
+        self.subcriber_weigh = self.node.create_subscription(WeighValue,"module_weigh",self.addWeightToList,10)
         #Tạo 1 Thread chịu trách nhiệm cho việc luôn spin
         self.thread_spin = threading.Thread(target=rclpy.spin,args=(self.node,))
-        
         #-- Thiết kế giao diện  --
         self.title = title
         #Giao diện có kích thước là 800x480
@@ -154,15 +158,47 @@ class myApp(tk.Tk):
         self.frame_table_display_tb.pack()
         self.frame_table_display_tb.pack_propagate(False)
         
+        #c) Kết nối CSDL (Điều kiện tiên quyết)
+        DRIVER_NAME = 'ODBC Driver 18 for SQL Server'
+        SERVER_NAME = '100.118.255.2'
+        PORT = '1433'
+        DATABASE_NAME = 'DATN'
+        UID = 'nv_1'
+        password = '18012002'
+        connection_string = f"""
+            DRIVER={DRIVER_NAME};
+            SERVER={SERVER_NAME};
+            PORT={PORT}
+            DATABASE={DATABASE_NAME};
+            UID={UID};
+            PWD={password};
+            TrustServerCertificate=YES;
+        """
+        try:
+            self.conn = odbc.connect(connection_string)
+        except Exception as e:
+            self.node.get_logger().error(f"---- Server Module_Scanning&Interface: Can't connect to DB with error: {e}")
+            messagebox.showerror("Error",f"Can't connect to DataBase: {e}")
+            self.on_closing()
+        else:
+            self.node.get_logger().info("----  Server Module_Scanning&Interface: Connect to DB Successfully ----")
+        #Queue chứa dữ liệu dạng ["ID_san_pham","Kieu_san_pham","Can_Nang"]
+        self.data_queue = []
+
         #-Phần chứa camera
         #Camera
-        self.deleteEvent = threading.Event()
         self.previous_data = None
         self.camera = cv.VideoCapture(0)
         #Label chứa hình ảnh
         self.label_camera = tk.Label(self.frame_camera,image='')
         self.label_camera.pack()
         self.openCameraAndIdentifyCode()
+    def addWeightToList(self,msg):
+        if len(self.data_queue) > 0:
+            for block_data in self.data_queue:
+                if len(block_data) == 2:
+                    block_data.append(msg.value)
+                    break
     def openCameraAndIdentifyCode(self):
         status, frame = self.camera.read()
         if status == True:
@@ -180,39 +216,92 @@ class myApp(tk.Tk):
             )
             self.label_camera.image = imageTk
             self.label_camera.pack()
-            if status_detect and self.previous_data != data_detect:
-                ToastNotification(self,data_detect,3000)
-                self.previous_data = data_detect
+            valid = False
+            if status_detect:
+                valid = self.is_Valid_Data_DB(data_detect)
+                if valid and self.previous_data != data_detect:
+                    ToastNotification(self,"valid data",data_detect,3000)
+                    #Cho vào Queue
+                    self.data_queue.append([data_detect,valid])
+                    self.previous_data = data_detect
+                elif valid is False and self.previous_data != data_detect:
+                    ToastNotification(self,"non valid data",data_detect,3000)
+                    #Cho vào Queue
+                    self.data_queue.append([data_detect,"Khac"])
+                    self.previous_data = data_detect
+                self.node.get_logger().info(f"Data Collect: {self.data_queue}")
             self.label_camera.after(10,self.openCameraAndIdentifyCode)
         else:
             messagebox.showerror("Error","Cannot detect your camera")
+            self.on_closing()
+    def is_Valid_Data_DB(self,data):
+        sql_query = f"SELECT * FROM [DATN].[dbo].Products WHERE ID_Product = '{data}'"
+        try:
+            df = pd.read_sql(sql_query,self.conn)
+            #Lấy tất cả dữ liệu từ cột id_products
+            list_id_products = df['id_product'].values.tolist()
+            id_type_product = df['id_type_product'].values.tolist()
+            if len(list_id_products)>0:
+                #Collect Name_Type_Product
+                sql_query = f"SELECT * FROM [DATN].[dbo].Type_Product WHERE ID_Type_Product = '{id_type_product[0]}'"
+                try:
+                    df = pd.read_sql(sql_query,self.conn)
+                    #Lấy danh sách tên loại sản phẩm
+                    list_name_products = df['name_type_product'].values.tolist()
+                    return list_name_products[0]
+                except Exception as e:
+                    self.node.get_logger().error(f"Can't send data to DataBase with error: {e}")
+                    messagebox.showerror("Error",f"---- Server Module_Scanning&Interface: Can't send data to DataBase {e} ----")
+                    self.on_closing()
+            else:
+                return False
+        except Exception as e:
+            self.node.get_logger().error(f"Can't send data to DataBase with error: {e}")
+            messagebox.showerror("Error",f"---- Server Module_Scanning&Interface: Can't send data to DataBase {e} ----")
             self.on_closing()
     def on_closing(self,msg=None):
         if msg is None:
             self.node.get_logger().info("---- Server Module_Scanning_Interfaces: Shutdown ----")
         else:
-            self.node.get_logger().info(f"---- Server Module_Scanning_Interfaces: Receive Message: {msg.a}. Bye Bye....")
+            self.node.get_logger().info(f"---- Server Module_Scanning_Interfaces: Receive Message: {msg.a}. Bye Bye.... ----")
         rclpy.shutdown()
         self.destroy()
         exit(-1)
 #Thông báo nổi
 class ToastNotification:
-    def __init__(self,master,data,duration):
-        #Take the image from the path, resize it and convert it into tkinter version
-        self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_1.png').resize((30,20))
-        self.imgTk = ImageTk.PhotoImage(self.img)
-        message = f"Kết quả đọc được: {data}"
-        #Create a lable
-        self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
-        
-        #Để nhãn dán ở phía bên góc phải        
-        self.label.place(relx=1.0,rely=0,anchor="ne")
-        
-        #Tham chiếu lại tham số image phòng nó tự động garbage collect
-        self.label.image = self.imgTk
-        
-        #Đặt thời gian tự động đóng thông báo
-        master.after(duration,self.label.destroy)
+    def __init__(self,master,type,data,duration):
+        if type == "valid data":
+            #Take the image from the path, resize it and convert it into tkinter version
+            self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_1.png').resize((30,20))
+            self.imgTk = ImageTk.PhotoImage(self.img)
+            message = f"Sản phẩm với ID : {data} hợp lệ"
+            #Create a lable
+            self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+            
+            #Để nhãn dán ở phía bên góc phải        
+            self.label.place(relx=1.0,rely=0,anchor="ne")
+            
+            #Tham chiếu lại tham số image phòng nó tự động garbage collect
+            self.label.image = self.imgTk
+            
+            #Đặt thời gian tự động đóng thông báo
+            master.after(duration,self.label.destroy)
+        elif type == "non valid data":
+            #Take the image from the path, resize it and convert it into tkinter version
+            self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_2.png').resize((30,20))
+            self.imgTk = ImageTk.PhotoImage(self.img)
+            message = f"Sản phẩm với ID : {data} không hợp lệ"
+            #Create a lable
+            self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+            
+            #Để nhãn dán ở phía bên góc phải        
+            self.label.place(relx=1.0,rely=0,anchor="ne")
+            
+            #Tham chiếu lại tham số image phòng nó tự động garbage collect
+            self.label.image = self.imgTk
+            
+            #Đặt thời gian tự động đóng thông báo
+            master.after(duration,self.label.destroy)
 #Class dùng để nhận biết được QRCode
 class detect_QRCode:
     def __init__(self,analyzed_arr,dest_arr,width_analyzed_arr,height_analyzed_arr):

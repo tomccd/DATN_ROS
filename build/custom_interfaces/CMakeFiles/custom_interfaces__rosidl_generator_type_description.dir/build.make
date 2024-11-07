@@ -68,19 +68,31 @@ include CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/prog
 
 CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json
 CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/InitSys.json
+CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/SetWeighIO.json
+CMakeFiles/custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/WeighValue.json
 
 rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
 rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
 rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json: rosidl_adapter/custom_interfaces/msg/TerminateSys.idl
 rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json: rosidl_adapter/custom_interfaces/srv/InitSys.idl
+rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json: rosidl_adapter/custom_interfaces/msg/SetWeighIO.idl
+rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json: rosidl_adapter/custom_interfaces/msg/WeighValue.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_type_description__arguments.json
 
 rosidl_generator_type_description/custom_interfaces/srv/InitSys.json: rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/custom_interfaces/srv/InitSys.json
 
+rosidl_generator_type_description/custom_interfaces/msg/SetWeighIO.json: rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/custom_interfaces/msg/SetWeighIO.json
+
+rosidl_generator_type_description/custom_interfaces/msg/WeighValue.json: rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/custom_interfaces/msg/WeighValue.json
+
 custom_interfaces__rosidl_generator_type_description: CMakeFiles/custom_interfaces__rosidl_generator_type_description
+custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/SetWeighIO.json
 custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json
+custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/msg/WeighValue.json
 custom_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/custom_interfaces/srv/InitSys.json
 custom_interfaces__rosidl_generator_type_description: CMakeFiles/custom_interfaces__rosidl_generator_type_description.dir/build.make
 .PHONY : custom_interfaces__rosidl_generator_type_description

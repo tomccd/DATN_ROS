@@ -232,6 +232,12 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/terminate_sys__struct.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/terminate_sys__functions.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__type_support.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__struct.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__functions.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__type_support.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__struct.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__functions.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/init_sys__type_support.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/init_sys__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \

@@ -76,6 +76,16 @@ CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/de
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/init_sys__struct.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/init_sys__traits.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/init_sys__type_support.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/set_weigh_io.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__builder.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__struct.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__traits.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__type_support.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/weigh_value.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__builder.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__struct.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__traits.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__type_support.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -99,6 +109,8 @@ rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/sha
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: rosidl_adapter/custom_interfaces/msg/TerminateSys.idl
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: rosidl_adapter/custom_interfaces/srv/InitSys.idl
+rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: rosidl_adapter/custom_interfaces/msg/SetWeighIO.idl
+rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: rosidl_adapter/custom_interfaces/msg/WeighValue.idl
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -132,16 +144,56 @@ rosidl_generator_cpp/custom_interfaces/srv/detail/init_sys__traits.hpp: rosidl_g
 rosidl_generator_cpp/custom_interfaces/srv/detail/init_sys__type_support.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/srv/detail/init_sys__type_support.hpp
 
+rosidl_generator_cpp/custom_interfaces/msg/set_weigh_io.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/set_weigh_io.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__builder.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__builder.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__struct.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__struct.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__traits.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__traits.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__type_support.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__type_support.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/weigh_value.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/weigh_value.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__builder.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__builder.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__struct.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__struct.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__traits.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__traits.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__type_support.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__type_support.hpp
+
 rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 custom_interfaces__cpp: CMakeFiles/custom_interfaces__cpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__builder.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__struct.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__traits.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__type_support.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/terminate_sys__builder.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/terminate_sys__struct.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/terminate_sys__traits.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/terminate_sys__type_support.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__builder.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__struct.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__traits.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/weigh_value__type_support.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/set_weigh_io.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/weigh_value.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/init_sys__builder.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/init_sys__struct.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/srv/detail/init_sys__traits.hpp

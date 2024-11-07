@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/custom_interfaces__rosidl_generator_type_description"
+  "rosidl_generator_type_description/custom_interfaces/msg/SetWeighIO.json"
   "rosidl_generator_type_description/custom_interfaces/msg/TerminateSys.json"
+  "rosidl_generator_type_description/custom_interfaces/msg/WeighValue.json"
   "rosidl_generator_type_description/custom_interfaces/srv/InitSys.json"
 )
 

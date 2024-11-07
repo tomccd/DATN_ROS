@@ -1,0 +1,137 @@
+[0.000000] (-) TimerEvent: {}
+[0.001155] (custom_interfaces) JobQueued: {'identifier': 'custom_interfaces', 'dependencies': OrderedDict()}
+[0.002306] (module_weigh) JobQueued: {'identifier': 'module_weigh', 'dependencies': OrderedDict()}
+[0.002559] (module_input) JobQueued: {'identifier': 'module_input', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.002691] (module_scanning_interface) JobQueued: {'identifier': 'module_scanning_interface', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.002800] (module_supervisor) JobQueued: {'identifier': 'module_supervisor', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.002908] (launch_system) JobQueued: {'identifier': 'launch_system', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces', 'module_input': '/home/tomccd/Documents/Code/Python/DATN/install/module_input', 'module_scanning_interface': '/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface', 'module_supervisor': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor'})}
+[0.003062] (custom_interfaces) JobStarted: {'identifier': 'custom_interfaces'}
+[0.040411] (module_weigh) JobStarted: {'identifier': 'module_weigh'}
+[0.091015] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'cmake'}
+[0.097654] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'build'}
+[0.097958] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/Packages', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/opt/ros/jazzy'}), 'shell': False}
+[0.113517] (-) TimerEvent: {}
+[0.214613] (-) TimerEvent: {}
+[0.318372] (-) TimerEvent: {}
+[0.325627] (custom_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.418552] (-) TimerEvent: {}
+[0.504553] (custom_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.518708] (-) TimerEvent: {}
+[0.619516] (-) TimerEvent: {}
+[0.720343] (-) TimerEvent: {}
+[0.821810] (-) TimerEvent: {}
+[0.923319] (-) TimerEvent: {}
+[1.025299] (-) TimerEvent: {}
+[1.101726] (custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.125844] (-) TimerEvent: {}
+[1.141391] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.226056] (-) TimerEvent: {}
+[1.334619] (-) TimerEvent: {}
+[1.437293] (-) TimerEvent: {}
+[1.541378] (-) TimerEvent: {}
+[1.642311] (-) TimerEvent: {}
+[1.739135] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.742453] (-) TimerEvent: {}
+[1.843376] (-) TimerEvent: {}
+[1.944691] (-) TimerEvent: {}
+[2.046744] (-) TimerEvent: {}
+[2.148073] (-) TimerEvent: {}
+[2.151271] (custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[2.249359] (-) TimerEvent: {}
+[2.354375] (-) TimerEvent: {}
+[2.455432] (-) TimerEvent: {}
+[2.558791] (-) TimerEvent: {}
+[2.662351] (-) TimerEvent: {}
+[2.763308] (-) TimerEvent: {}
+[2.865327] (-) TimerEvent: {}
+[2.966393] (-) TimerEvent: {}
+[3.069163] (-) TimerEvent: {}
+[3.172763] (-) TimerEvent: {}
+[3.273904] (-) TimerEvent: {}
+[3.378637] (-) TimerEvent: {}
+[3.480862] (-) TimerEvent: {}
+[3.582924] (-) TimerEvent: {}
+[3.684998] (custom_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):\n'}
+[3.686094] (-) TimerEvent: {}
+[3.686580] (custom_interfaces) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[3.687323] (custom_interfaces) StderrLine: {'line': b'  custom_interfaces --arguments-file\n'}
+[3.688095] (custom_interfaces) StderrLine: {'line': b'  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_adapter__arguments__custom_interfaces.json\n'}
+[3.688856] (custom_interfaces) StderrLine: {'line': b'  --output-dir\n'}
+[3.689588] (custom_interfaces) StderrLine: {'line': b'  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_adapter/custom_interfaces\n'}
+[3.690350] (custom_interfaces) StderrLine: {'line': b'  --output-file\n'}
+[3.691091] (custom_interfaces) StderrLine: {'line': b'  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_adapter/custom_interfaces.idls)\n'}
+[3.692094] (custom_interfaces) StderrLine: {'line': b'  returned error code 1:\n'}
+[3.692802] (custom_interfaces) StderrLine: {'line': b'\n'}
+[3.693461] (custom_interfaces) StderrLine: {'line': b"  Error processing 'bool isSet' of 'custom_interfaces/setWeighIO': ''isSet'\n"}
+[3.694065] (custom_interfaces) StderrLine: {'line': b'  is an invalid field name.  It should have the pattern\n'}
+[3.694882] (custom_interfaces) StderrLine: {'line': b"  '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''\n"}
+[3.695657] (custom_interfaces) StderrLine: {'line': b'\n'}
+[3.699653] (custom_interfaces) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[3.700703] (custom_interfaces) StderrLine: {'line': b'\n'}
+[3.701532] (custom_interfaces) StderrLine: {'line': b'    File "<frozen runpy>", line 198, in _run_module_as_main\n'}
+[3.705313] (custom_interfaces) StderrLine: {'line': b'    File "<frozen runpy>", line 88, in _run_code\n'}
+[3.706340] (custom_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[3.707073] (custom_interfaces) StderrLine: {'line': b'      sys.exit(main())\n'}
+[3.707861] (custom_interfaces) StderrLine: {'line': b'               ^^^^^^\n'}
+[3.711922] (custom_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[3.712808] (custom_interfaces) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[3.713666] (custom_interfaces) StderrLine: {'line': b'                     ^^^^^^^^^^^^^^^\n'}
+[3.720998] (custom_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl\n'}
+[3.721969] (custom_interfaces) StderrLine: {'line': b'      return convert_msg_to_idl(\n'}
+[3.722935] (custom_interfaces) StderrLine: {'line': b'             ^^^^^^^^^^^^^^^^^^^\n'}
+[3.726630] (custom_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl\n'}
+[3.727689] (custom_interfaces) StderrLine: {'line': b'      msg = parse_message_string(package_name, input_file.stem, content)\n'}
+[3.728414] (custom_interfaces) StderrLine: {'line': b'            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[3.731001] (custom_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 520, in parse_message_string\n'}
+[3.731977] (custom_interfaces) StderrLine: {'line': b'      fields.append(Field(\n'}
+[3.735025] (custom_interfaces) StderrLine: {'line': b'                    ^^^^^^\n'}
+[3.735756] (custom_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 355, in __init__\n'}
+[3.736517] (custom_interfaces) StderrLine: {'line': b'      raise NameError(\n'}
+[3.737110] (custom_interfaces) StderrLine: {'line': b'\n'}
+[3.740107] (custom_interfaces) StderrLine: {'line': b"  NameError: 'isSet' is an invalid field name.  It should have the pattern\n"}
+[3.741012] (custom_interfaces) StderrLine: {'line': b"  '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'\n"}
+[3.741879] (custom_interfaces) StderrLine: {'line': b'\n'}
+[3.742789] (custom_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[3.743614] (custom_interfaces) StderrLine: {'line': b'  /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)\n'}
+[3.744455] (custom_interfaces) StderrLine: {'line': b'  CMakeLists.txt:14 (rosidl_generate_interfaces)\n'}
+[3.745381] (custom_interfaces) StderrLine: {'line': b'\n'}
+[3.746373] (custom_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[3.747256] (custom_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.748728] (custom_interfaces) StderrLine: {'line': b'gmake: *** [Makefile:1085: cmake_check_build_system] Error 1\n'}
+[3.758858] (custom_interfaces) CommandEnded: {'returncode': 2}
+[3.786387] (-) TimerEvent: {}
+[3.889938] (-) TimerEvent: {}
+[3.991741] (-) TimerEvent: {}
+[4.092544] (-) TimerEvent: {}
+[4.193863] (-) TimerEvent: {}
+[4.294697] (-) TimerEvent: {}
+[4.395461] (-) TimerEvent: {}
+[4.496288] (-) TimerEvent: {}
+[4.568870] (custom_interfaces) JobEnded: {'identifier': 'custom_interfaces', 'rc': 2}
+[4.596449] (-) TimerEvent: {}
+[4.697113] (-) TimerEvent: {}
+[4.797896] (-) TimerEvent: {}
+[4.899335] (-) TimerEvent: {}
+[5.000067] (-) TimerEvent: {}
+[5.100853] (-) TimerEvent: {}
+[5.202028] (-) TimerEvent: {}
+[5.302798] (-) TimerEvent: {}
+[5.403605] (-) TimerEvent: {}
+[5.504500] (-) TimerEvent: {}
+[5.605265] (-) TimerEvent: {}
+[5.705986] (-) TimerEvent: {}
+[5.806816] (-) TimerEvent: {}
+[5.907569] (-) TimerEvent: {}
+[6.008303] (-) TimerEvent: {}
+[6.109037] (-) TimerEvent: {}
+[6.212339] (-) TimerEvent: {}
+[6.313583] (-) TimerEvent: {}
+[6.415242] (-) TimerEvent: {}
+[6.516047] (-) TimerEvent: {}
+[6.617278] (-) TimerEvent: {}
+[6.647703] (module_weigh) JobEnded: {'identifier': 'module_weigh', 'rc': 'SIGINT'}
+[6.660708] (module_input) JobSkipped: {'identifier': 'module_input'}
+[6.661028] (module_scanning_interface) JobSkipped: {'identifier': 'module_scanning_interface'}
+[6.661273] (module_supervisor) JobSkipped: {'identifier': 'module_supervisor'}
+[6.661461] (launch_system) JobSkipped: {'identifier': 'launch_system'}
+[6.661587] (-) EventReactorShutdown: {}

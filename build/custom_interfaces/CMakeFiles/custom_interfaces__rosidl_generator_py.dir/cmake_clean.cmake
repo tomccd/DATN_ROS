@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_weigh_io_s.c.o"
+  "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_weigh_io_s.c.o.d"
   "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_terminate_sys_s.c.o"
   "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_terminate_sys_s.c.o.d"
+  "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_weigh_value_s.c.o"
+  "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_weigh_value_s.c.o.d"
   "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/srv/_init_sys_s.c.o"
   "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/srv/_init_sys_s.c.o.d"
   "libcustom_interfaces__rosidl_generator_py.pdb"

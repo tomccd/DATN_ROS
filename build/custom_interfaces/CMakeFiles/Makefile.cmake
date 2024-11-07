@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/CMakeLists.txt"
+  "/home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/msg/SetWeighIO.msg"
   "/home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/msg/TerminateSys.msg"
+  "/home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/msg/WeighValue.msg"
   "/home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/package.xml"
   "/home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/srv/InitSys.srv"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
@@ -445,6 +447,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CTestConfiguration.ini"
   "ament_cmake_core/stamps/TerminateSys.msg.stamp"
   "ament_cmake_core/stamps/InitSys.srv.stamp"
+  "ament_cmake_core/stamps/SetWeighIO.msg.stamp"
+  "ament_cmake_core/stamps/WeighValue.msg.stamp"
   "ament_cmake_core/stamps/package.xml.stamp"
   "ament_cmake_core/stamps/package_xml_2_cmake.py.stamp"
   "rosidl_generator_c/custom_interfaces/msg/rosidl_generator_c__visibility_control.h"

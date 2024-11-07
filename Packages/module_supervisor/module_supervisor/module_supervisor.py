@@ -8,6 +8,8 @@ class myNode(Node):
         super().__init__(name)
         #Initialize Client
         self.client_mci = self.create_client(InitSys,"module_scanning_interface")
+        self.client_io_weigh = self.create_client(InitSys,"node_io_weigh")
+        self.client_mw = self.create_client(InitSys,"module_weigh")
         #Init Publisher
         self.publisher_terminate = self.create_publisher(TerminateSys,"terminate",10)
         #Init status
@@ -30,8 +32,30 @@ class myNode(Node):
             self.get_logger().error("---- Supervisor: Can't connect to server Module_Scanning&Interface ----")
             return -1
         else:
-            #To be continue (May be we will have some modules)
-            return 0
+            self.get_logger().info("---- Supervisor: Connect to Server Module_Scanning&Interface Successfully ----")
+            time_counter = 0 #rest time_counter
+            #Connect to server_node_io_weigh (Try to connect for 2 seconds)
+            while not self.client_io_weigh.wait_for_service(1):
+                self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Input.node_io_weigh ----")
+                if time_counter > 2:
+                    break
+                time_counter+=1
+            if time_counter > 2:
+                self.get_logger().error("---- Supervisor: Can't connect to server Module_Input.node_io_weigh ----")
+                return -1
+            else:
+                self.get_logger().info("---- Supervisor: Connect to Server Module_Input.node_io_weigh Successfully ----")
+                time_counter = 0 #rest time_counter
+                while not self.client_mw.wait_for_service(1):
+                    self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Weigh ----")
+                    if time_counter > 2:
+                        break
+                    time_counter+=1
+                if time_counter > 2:
+                    self.get_logger().error("---- Supervisor: Can't connect to server Module_Weigh ----")
+                    return -1
+                #To be continue (May be we will have some modules)
+                self.get_logger().info("---- Supervisor: Connect to Server Module_Weigh Successfully ----")
     def sendTerminate(self):
         msg = TerminateSys()
         msg.a = "Terminate"
@@ -48,11 +72,35 @@ class myNode(Node):
             self.get_logger().error("---- Supervisor: Can't connect to Module Scanning&Interface ----")
             self.sendTerminate()
             rclpy.shutdown()
-            return -1
+            exit(-1)
         else:
-            #To be continue (May be we will have some modules)
-            self.get_logger().info("---- Supervisor: Connect to Module_Scanning&Interface ----")
-      
+            self.get_logger().info("---- Supervisor: Connect to Module_Scanning&Interface Successfully----")
+            time_counter = 0
+            while not self.client_io_weigh.wait_for_service(1):
+                self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Input.node_io_weigh ----")
+                if time_counter > 2:
+                    break
+                time_counter +=1
+            if time_counter > 2:
+                self.get_logger().error("---- Supervisor: Can't connect to server Module_Input.node_io_weigh ----")
+                self.sendTerminate()
+                rclpy.shutdown()
+                exit(-1)
+            else:
+                self.get_logger().info("---- Supervisor: Connect to Module_Input.node Successfully----")
+                time_counter = 0 #rest time_counter
+                while not self.client_mw.wait_for_service(1):
+                    self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Weigh ----")
+                    if time_counter > 2:
+                        break
+                    time_counter +=1
+                if time_counter > 2:
+                    self.get_logger().error("---- Supervisor: Can't connect to server Module_Weigh ----")
+                    self.sendTerminate()
+                    rclpy.shutdown()
+                    exit(-1)
+                #To be continue (May be we will have some modules)
+                self.get_logger().info("---- Supervisor: Connect to Module_Weigh Successfully----")
 def main(args=None):
     #Initlize ROS2 Communication
     rclpy.init(args=args)

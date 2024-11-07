@@ -1,0 +1,104 @@
+[0.000000] (-) TimerEvent: {}
+[0.001068] (custom_interfaces) JobQueued: {'identifier': 'custom_interfaces', 'dependencies': OrderedDict()}
+[0.001338] (module_weigh) JobQueued: {'identifier': 'module_weigh', 'dependencies': OrderedDict()}
+[0.001490] (module_input) JobQueued: {'identifier': 'module_input', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.001613] (module_scanning_interface) JobQueued: {'identifier': 'module_scanning_interface', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.001722] (module_supervisor) JobQueued: {'identifier': 'module_supervisor', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.001828] (launch_system) JobQueued: {'identifier': 'launch_system', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces', 'module_input': '/home/tomccd/Documents/Code/Python/DATN/install/module_input', 'module_scanning_interface': '/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface', 'module_supervisor': '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor'})}
+[0.002956] (custom_interfaces) JobStarted: {'identifier': 'custom_interfaces'}
+[0.042069] (module_weigh) JobStarted: {'identifier': 'module_weigh'}
+[0.088529] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'cmake'}
+[0.095984] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'build'}
+[0.096315] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 54748 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/install', 'TERM_PROGRAM_VERSION': '1.95.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-701bd154-c346-4833-a8d3-c1036ff97aa5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-65edc4939843c90c34d61f4ce11704f09d3e5cb6/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/module_weigh:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces', 'SSH_CONNECTION': '100.118.255.2 54748 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/opt/ros/jazzy'}), 'shell': False}
+[0.104397] (-) TimerEvent: {}
+[0.206458] (-) TimerEvent: {}
+[0.311039] (-) TimerEvent: {}
+[0.412543] (-) TimerEvent: {}
+[0.514008] (-) TimerEvent: {}
+[0.556494] (custom_interfaces) StdoutLine: {'line': b'[  1%] Built target custom_interfaces__rosidl_generator_type_description\n'}
+[0.622136] (-) TimerEvent: {}
+[0.726027] (-) TimerEvent: {}
+[0.747377] (custom_interfaces) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_copy_custom_interfaces\n'}
+[0.826310] (-) TimerEvent: {}
+[0.836642] (custom_interfaces) StdoutLine: {'line': b'[ 23%] Built target custom_interfaces__rosidl_generator_c\n'}
+[0.878822] (custom_interfaces) StdoutLine: {'line': b'[ 25%] Built target custom_interfaces__cpp\n'}
+[0.931378] (-) TimerEvent: {}
+[1.034376] (-) TimerEvent: {}
+[1.137517] (-) TimerEvent: {}
+[1.243534] (-) TimerEvent: {}
+[1.298838] (custom_interfaces) StdoutLine: {'line': b'[ 34%] Built target custom_interfaces__rosidl_typesupport_c\n'}
+[1.336057] (custom_interfaces) StdoutLine: {'line': b'[ 43%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[1.367064] (-) TimerEvent: {}
+[1.474045] (-) TimerEvent: {}
+[1.590545] (-) TimerEvent: {}
+[1.699811] (-) TimerEvent: {}
+[1.709032] (custom_interfaces) StdoutLine: {'line': b'[ 53%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[1.802081] (-) TimerEvent: {}
+[1.860175] (custom_interfaces) StdoutLine: {'line': b'[ 62%] Built target custom_interfaces__rosidl_typesupport_cpp\n'}
+[1.905419] (-) TimerEvent: {}
+[1.999065] (custom_interfaces) StdoutLine: {'line': b'[ 71%] Built target custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[2.006325] (-) TimerEvent: {}
+[2.110715] (custom_interfaces) StdoutLine: {'line': b'[ 81%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[2.117613] (-) TimerEvent: {}
+[2.222205] (-) TimerEvent: {}
+[2.326138] (-) TimerEvent: {}
+[2.424271] (custom_interfaces) StdoutLine: {'line': b'[ 81%] Built target custom_interfaces\n'}
+[2.440696] (-) TimerEvent: {}
+[2.547111] (-) TimerEvent: {}
+[2.609781] (custom_interfaces) StdoutLine: {'line': b'[ 82%] Built target custom_interfaces__py\n'}
+[2.656046] (-) TimerEvent: {}
+[2.761043] (-) TimerEvent: {}
+[2.812048] (custom_interfaces) StdoutLine: {'line': b'[ 90%] Built target custom_interfaces__rosidl_generator_py\n'}
+[2.898410] (-) TimerEvent: {}
+[3.035144] (-) TimerEvent: {}
+[3.123424] (custom_interfaces) StdoutLine: {'line': b'[ 93%] Built target custom_interfaces_s__rosidl_typesupport_c\n'}
+[3.138051] (-) TimerEvent: {}
+[3.225145] (custom_interfaces) StdoutLine: {'line': b'[ 96%] Built target custom_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[3.241446] (-) TimerEvent: {}
+[3.344145] (-) TimerEvent: {}
+[3.453476] (-) TimerEvent: {}
+[3.504260] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[3.555347] (-) TimerEvent: {}
+[3.595757] (module_weigh) JobEnded: {'identifier': 'module_weigh', 'rc': 0}
+[3.629764] (custom_interfaces) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[3.644550] (custom_interfaces) StderrLine: {'line': b'  File "/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/ament_cmake_python/custom_interfaces/setup.py", line 4, in <module>\n'}
+[3.645810] (custom_interfaces) StderrLine: {'line': b'    setup(\n'}
+[3.647020] (custom_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 107, in setup\n'}
+[3.647828] (custom_interfaces) StderrLine: {'line': b'    return distutils.core.setup(**attrs)\n'}
+[3.648716] (custom_interfaces) StderrLine: {'line': b'           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[3.650100] (custom_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 147, in setup\n'}
+[3.653613] (custom_interfaces) StderrLine: {'line': b'    _setup_distribution = dist = klass(attrs)\n'}
+[3.661079] (-) TimerEvent: {}
+[3.661658] (custom_interfaces) StderrLine: {'line': b'                                 ^^^^^^^^^^^^\n'}
+[3.673096] (custom_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 485, in __init__\n'}
+[3.674499] (custom_interfaces) StderrLine: {'line': b'    _Distribution.__init__(\n'}
+[3.709393] (custom_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 283, in __init__\n'}
+[3.734172] (custom_interfaces) StderrLine: {'line': b'    self.finalize_options()\n'}
+[3.747271] (custom_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 922, in finalize_options\n'}
+[3.769719] (-) TimerEvent: {}
+[3.778824] (custom_interfaces) StderrLine: {'line': b'    defined = metadata.entry_points(group=group)\n'}
+[3.783401] (custom_interfaces) StderrLine: {'line': b'              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[3.800240] (custom_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 913, in entry_points\n'}
+[3.801566] (custom_interfaces) StderrLine: {'line': b'    return EntryPoints(eps).select(**params)\n'}
+[3.814571] (custom_interfaces) StderrLine: {'line': b'           ^^^^^^^^^^^^^^^^\n'}
+[3.825023] (custom_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 910, in <genexpr>\n'}
+[3.839068] (custom_interfaces) StderrLine: {'line': b'    eps = itertools.chain.from_iterable(\n'}
+[3.846936] (custom_interfaces) StderrLine: {'line': b'                                       ^\n'}
+[3.848034] (custom_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3.12/importlib/metadata/_itertools.py", line 16, in unique_everseen\n'}
+[3.851641] (custom_interfaces) StderrLine: {'line': b'    k = key(element)\n'}
+[3.855088] (custom_interfaces) StderrLine: {'line': b'        ^^^^^^^^^^^^\n'}
+[3.862653] (custom_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 832, in _normalized_name\n'}
+[3.863647] (custom_interfaces) StderrLine: {'line': b'    stem = os.path.basename(str(self._path))\n'}
+[3.865501] (custom_interfaces) StderrLine: {'line': b'           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[3.866507] (custom_interfaces) StderrLine: {'line': b'  File "<frozen posixpath>", line 173, in basename\n'}
+[3.870834] (-) TimerEvent: {}
+[3.872244] (custom_interfaces) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[3.874567] (custom_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_build_custom_interfaces_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_custom_interfaces_egg] Interrupt\n'}
+[3.887808] (custom_interfaces) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:478: CMakeFiles/ament_cmake_python_build_custom_interfaces_egg.dir/all] Interrupt\n'}
+[3.892198] (custom_interfaces) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Interrupt\n'}
+[3.893609] (custom_interfaces) JobEnded: {'identifier': 'custom_interfaces', 'rc': 'SIGINT'}
+[3.920457] (module_input) JobSkipped: {'identifier': 'module_input'}
+[3.920800] (module_scanning_interface) JobSkipped: {'identifier': 'module_scanning_interface'}
+[3.921018] (module_supervisor) JobSkipped: {'identifier': 'module_supervisor'}
+[3.924512] (launch_system) JobSkipped: {'identifier': 'launch_system'}
+[3.925106] (-) EventReactorShutdown: {}
