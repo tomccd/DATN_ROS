@@ -11,8 +11,8 @@
 -    [ ] Phần bổ sung khác
 ### 3. Module Motor
 ### 4. Module Input
--    [ ] Đặt trạng thái Enable, Disable cân thông qua 2 cảm biến
+-    [x] Đặt trạng thái Enable, Disable cân thông qua 2 cảm biến
 -    [ ] Lấy dữ liệu cảm biến IO
 ### 5. Module Weigh
--    [ ] Kích hoạt cân khi có trạng thái Enable
+-    [x] Kích hoạt cân khi có trạng thái Enable
 -    [ ] Gửi dữ liệu cân
