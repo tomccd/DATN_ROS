@@ -25,7 +25,7 @@ class myNode(Node):
         # Define the GPIO_DISABLE (PIN 27)
         self.GPIO_DISABLE = 27
         #Create a timer
-        self.timer_ = self.create_timer(0.1,self.checkIOStatus)
+        self.timer_ = self.create_timer(0.35,self.checkIOStatus)
     def checkIOStatus(self):
         msg = SetWeighIO()
         try:
@@ -33,11 +33,13 @@ class myNode(Node):
             enable_status = self.pi.read(self.GPIO_EN)
             #Trạng thái cảm biến ngừng kích hoạt cân
             disable_status = self.pi.read(self.GPIO_DISABLE)
-            if enable_status == 1 and disable_status == 0:
+            # time.sleep(0.5)
+            self.get_logger().info(f"---- Server Server Module_Input.node_io_weigh: Enable PIN: {enable_status}. Disable PIN: {disable_status} ----")
+            if enable_status == 0 and disable_status == 1:
                 msg.status = True
                 self.publisher_weigh.publish(msg)
                 self.weigh_status = True
-            elif self.weigh_status == True and enable_status == 0 and disable_status == 1:
+            elif self.weigh_status == True and enable_status == 1 and disable_status == 0:
                 msg.status = False
                 self.publisher_weigh.publish(msg)
                 self.weigh_status = False #Reset
@@ -52,6 +54,7 @@ class myNode(Node):
     def terminateMsg(self,msg):
         self.get_logger().info(f"---- Server Module_Input.node_io_weigh: Receive Message: {msg.a}. Bye Bye.... ----")
         rclpy.shutdown()
+        self.pi.stop()
         exit(-1)
 def main(args=None):
     rclpy.init(args=args)

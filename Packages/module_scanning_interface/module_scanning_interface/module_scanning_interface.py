@@ -37,7 +37,7 @@ class myApp(tk.Tk):
         #Tạo 1 Terminating Subcriber
         self.subcriber_terminate = self.node.create_subscription(TerminateSys,"terminate",self.on_closing,10)
         #Tạo 1 Subcriber cho việc lấy dữ liệu cân
-        self.subcriber_weigh = self.node.create_subscription(WeighValue,"module_weigh",self.addWeightToList,10)
+        self.subcriber_weigh = self.node.create_subscription(WeighValue,"get_weigh",self.addWeightToList,10)
         #Tạo 1 Thread chịu trách nhiệm cho việc luôn spin
         self.thread_spin = threading.Thread(target=rclpy.spin,args=(self.node,))
         #-- Thiết kế giao diện  --
@@ -194,11 +194,13 @@ class myApp(tk.Tk):
         self.label_camera.pack()
         self.openCameraAndIdentifyCode()
     def addWeightToList(self,msg):
-        if len(self.data_queue) > 0:
-            for block_data in self.data_queue:
-                if len(block_data) == 2:
-                    block_data.append(msg.value)
-                    break
+        # if len(self.data_queue) > 0:
+        #     for block_data in self.data_queue:
+        #         if len(block_data) == 2:
+        #             block_data.append(msg.value)
+        #             break
+            # self.node.get_logger().info(f"----Server Module_Scanning_Interfaces: {self.data_queue}----")
+        ToastNotification(self,"weigh",msg.value,3000)
     def openCameraAndIdentifyCode(self):
         status, frame = self.camera.read()
         if status == True:
@@ -291,6 +293,22 @@ class ToastNotification:
             self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_2.png').resize((30,20))
             self.imgTk = ImageTk.PhotoImage(self.img)
             message = f"Sản phẩm với ID : {data} không hợp lệ"
+            #Create a lable
+            self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+            
+            #Để nhãn dán ở phía bên góc phải        
+            self.label.place(relx=1.0,rely=0,anchor="ne")
+            
+            #Tham chiếu lại tham số image phòng nó tự động garbage collect
+            self.label.image = self.imgTk
+            
+            #Đặt thời gian tự động đóng thông báo
+            master.after(duration,self.label.destroy)
+        elif type=="weigh":
+            #Take the image from the path, resize it and convert it into tkinter version
+            self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_2.png').resize((30,20))
+            self.imgTk = ImageTk.PhotoImage(self.img)
+            message = f"Khối lượng nhận được {data} g"
             #Create a lable
             self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
             
