@@ -8,6 +8,7 @@
 -    [x] Bổ sung thêm phần Camera phân loại QR
 -    [x] Bổ sung phần kết nối CSDL
 -    [x] Kiểm tra CSDL
+-    [x] Hiển thị bảng với thông tin sản phẩm
 -    [ ] Phần bổ sung khác
 ### 3. Module Motor
 -    [ ] Bật Motor_DC và tắt Motor_DC khi hệ thống làm việc với trạng thái tương ứng

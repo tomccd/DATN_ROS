@@ -52,7 +52,7 @@ class myNode(Node):
         if len(self.list_of_value) > 0 and self.message is not None:
             msg = WeighValue()
             # Lấy giá trị trung bình cân và làm tròn
-            msg.value = round(max(self.list_of_value),2)
+            msg.value = round(sum(self.list_of_value)/len(self.list_of_value),2)
             self.get_logger().info(f"--- Server Module_Weigh Max: {max(self.list_of_value)}")
             self.publisher_weigh.publish(msg=msg)
             self.list_of_value.clear()

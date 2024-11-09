@@ -12,8 +12,7 @@ from PIL import ImageTk,Image
 from pyzbar.pyzbar import decode
 import pypyodbc as odbc
 import pandas as pd
-import sys
-import time
+from tkinter import ttk
 #Class Node
 class myNode(Node):
     def __init__(self,name:str):
@@ -146,7 +145,6 @@ class myApp(tk.Tk):
         
         #3. Phần nội dung
         #-Phần chứa bảng
-        
         #a) Phần intro
         self.frame_table_intro = tk.Frame(self.frame_table,width=int(self.window_width/2),height=int(((self.window_height/5)*3)/6),relief='solid',borderwidth=2)
         self.frame_table_intro.pack()
@@ -157,7 +155,26 @@ class myApp(tk.Tk):
         self.frame_table_display_tb = tk.Frame(self.frame_table,width=int(self.window_width/2),height=int((((self.window_height/5)*3)/6)*5),relief='solid',borderwidth=2)
         self.frame_table_display_tb.pack()
         self.frame_table_display_tb.pack_propagate(False)
-        
+        self.frame_table_display_tb.columnconfigure(index=0,weight=1)
+        self.frame_table_display_tb.columnconfigure(index=1,weight=1)
+        self.frame_table_display_tb.rowconfigure(index=0,weight=1)
+        self.frame_table_display_tb.grid_propagate(False)
+        #- Phần bảng
+        self.columns = ('_ID','_typeproduct','_weight')
+        self.data_treeview = ttk.Treeview(self.frame_table_display_tb,columns=self.columns,show='headings')
+        #Hiển thị phần Heading
+        self.data_treeview.heading(self.columns[0],text='ID Product')
+        self.data_treeview.heading(self.columns[1],text='Product Type')
+        self.data_treeview.heading(self.columns[2],text='Weight (g)')
+        self.data_treeview.grid(row=0,column=0,sticky='nw')
+        #Thêm phần scrollbar bảng
+        self.tree_view_scrollbar = ttk.Scrollbar(self.frame_table_display_tb,orient='vertical',command=self.data_treeview.yview)
+        self.data_treeview.configure(yscroll=self.tree_view_scrollbar.set)
+        self.tree_view_scrollbar.grid(row=0,columns=1,sticky='ne')
+        #Điều chỉnh lại kích thước table
+        self.data_treeview.column("_ID",width=int((self.window_width/2)/4))
+        self.data_treeview.column("_typeproduct",width=int((self.window_width/2)/3))
+        self.data_treeview.column("_weight",width=int((self.window_width/2)/4))
         #c) Kết nối CSDL (Điều kiện tiên quyết)
         DRIVER_NAME = 'ODBC Driver 18 for SQL Server'
         SERVER_NAME = '100.118.255.2'
@@ -184,7 +201,7 @@ class myApp(tk.Tk):
             self.node.get_logger().info("----  Server Module_Scanning&Interface: Connect to DB Successfully ----")
         #Queue chứa dữ liệu dạng ["ID_san_pham","Kieu_san_pham","Can_Nang"]
         self.data_queue = []
-
+        
         #-Phần chứa camera
         #Camera
         self.previous_data = None
@@ -194,11 +211,13 @@ class myApp(tk.Tk):
         self.label_camera.pack()
         self.openCameraAndIdentifyCode()
     def addWeightToList(self,msg):
-        # if len(self.data_queue) > 0:
-        #     for block_data in self.data_queue:
-        #         if len(block_data) == 2:
-        #             block_data.append(msg.value)
-        #             break
+        if len(self.data_queue) > 0:
+            for block_data in self.data_queue:
+                if len(block_data) == 2:
+                    block_data.append(msg.value)
+                    #Thêm vào bảng hiển thị
+                    self.data_treeview.insert('',tk.END,values=block_data)
+                    break
             # self.node.get_logger().info(f"----Server Module_Scanning_Interfaces: {self.data_queue}----")
         ToastNotification(self,"weigh",msg.value,3000)
     def openCameraAndIdentifyCode(self):
