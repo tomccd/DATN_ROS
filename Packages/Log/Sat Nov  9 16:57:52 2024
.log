@@ -1,0 +1,67 @@
+1731146271.7037766 [INFO] [launch]: All log files can be found below /home/tomccd/.ros/log/2024-11-09-16-57-51-699978-tomccd-raspberry4b-26312
+1731146271.7043583 [INFO] [launch]: Default logging verbosity is set to INFO
+1731146272.3656404 [INFO] [module_supervisor-1]: process started with pid [26315]
+1731146272.3662949 [INFO] [module_scanning_interface-2]: process started with pid [26316]
+1731146272.3668628 [INFO] [node_io_weigh-3]: process started with pid [26317]
+1731146272.3672900 [INFO] [module_weigh-4]: process started with pid [26318]
+1731146272.3741770 [INFO] [node_dc_motor-5]: process started with pid [26319]
+1731146272.3750236 [INFO] [module_log_file-6]: process started with pid [26320]
+1731146275.3255620 [module_supervisor-1] [INFO] [1731146275.318114534] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Log_File Successfully ----
+1731146275.8478813 [node_io_weigh-3] [ERROR] [1731146275.846303620] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Can't Initalize pigpio ----
+1731146275.8524699 [node_io_weigh-3] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1731146275.8530235 [node_io_weigh-3] Can't connect to pigpio at localhost(8888)
+1731146275.8536608 [node_io_weigh-3] 
+1731146275.8574948 [node_io_weigh-3] Did you start the pigpio daemon? E.g. sudo pigpiod
+1731146275.8580861 [node_io_weigh-3] 
+1731146275.8585811 [node_io_weigh-3] Did you specify the correct Pi host/port in the environment
+1731146275.8590381 [node_io_weigh-3] variables PIGPIO_ADDR/PIGPIO_PORT?
+1731146275.8595395 [node_io_weigh-3] E.g. export PIGPIO_ADDR=soft, export PIGPIO_PORT=8888
+1731146275.8600352 [node_io_weigh-3] 
+1731146275.8635752 [node_io_weigh-3] Did you specify the correct Pi host/port in the
+1731146275.8640201 [node_io_weigh-3] pigpio.pi() function? E.g. pigpio.pi('soft', 8888)
+1731146275.8644905 [node_io_weigh-3] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1731146275.9200459 [node_dc_motor-5] [ERROR] [1731146275.916704162] [node_dc_motor]: ---- Server Server Module_Motor.node_dc_motor: Can't Initalize pigpio ----
+1731146275.9240987 [node_dc_motor-5] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1731146275.9275632 [node_dc_motor-5] Can't connect to pigpio at localhost(8888)
+1731146275.9279680 [node_dc_motor-5] 
+1731146275.9282274 [node_dc_motor-5] Did you start the pigpio daemon? E.g. sudo pigpiod
+1731146275.9284716 [node_dc_motor-5] 
+1731146275.9287286 [node_dc_motor-5] Did you specify the correct Pi host/port in the environment
+1731146275.9289269 [node_dc_motor-5] variables PIGPIO_ADDR/PIGPIO_PORT?
+1731146275.9291325 [node_dc_motor-5] E.g. export PIGPIO_ADDR=soft, export PIGPIO_PORT=8888
+1731146275.9293418 [node_dc_motor-5] 
+1731146275.9302564 [node_dc_motor-5] Did you specify the correct Pi host/port in the
+1731146275.9306054 [node_dc_motor-5] pigpio.pi() function? E.g. pigpio.pi('soft', 8888)
+1731146275.9309809 [node_dc_motor-5] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1731146276.3133621 [ERROR] [node_io_weigh-3]: process has died [pid 26317, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_weigh --ros-args'].
+1731146276.3268394 [module_supervisor-1] [WARN] [1731146276.325581938] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731146276.3693864 [ERROR] [node_dc_motor-5]: process has died [pid 26319, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/module_motor/node_dc_motor --ros-args'].
+1731146277.3304620 [module_supervisor-1] [WARN] [1731146277.329759526] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731146277.5855851 [module_supervisor-1] [INFO] [1731146277.584656837] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Scanning&Interface Successfully ----
+1731146277.9615293 [module_scanning_interface-2] [INFO] [1731146277.960816738] [module_scanning_interface]: ----  Server Module_Scanning&Interface: Connect to DB Successfully ----
+1731146277.9645748 [module_scanning_interface-2] [ WARN:0@2.922] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video0): can't open camera by index
+1731146277.9739702 [module_scanning_interface-2] [ERROR:0@2.931] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
+1731146278.5924480 [module_supervisor-1] [WARN] [1731146278.590250486] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Input.node_io_weigh ----
+1731146279.4442194 [module_scanning_interface-2] [INFO] [1731146279.443089451] [module_scanning_interface]: ---- Server Module_Scanning_Interfaces: Shutdown ----
+1731146279.5966973 [module_supervisor-1] [WARN] [1731146279.595750856] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Input.node_io_weigh ----
+1731146279.6509018 [module_scanning_interface-2] Traceback (most recent call last):
+1731146279.6513262 [module_scanning_interface-2]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/module_scanning_interface/module_scanning_interface", line 33, in <module>
+1731146279.6524606 [module_scanning_interface-2]     sys.exit(load_entry_point('module-scanning-interface==0.0.0', 'console_scripts', 'module_scanning_interface')())
+1731146279.6529217 [module_scanning_interface-2]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1731146279.6532090 [module_scanning_interface-2]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py", line 393, in main
+1731146279.6535449 [module_scanning_interface-2]     app = myApp("Test App")
+1731146279.6539071 [module_scanning_interface-2]           ^^^^^^^^^^^^^^^^^
+1731146279.6542594 [module_scanning_interface-2]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py", line 212, in __init__
+1731146279.6560595 [module_scanning_interface-2]     self.openCameraAndIdentifyCode()
+1731146279.6570456 [module_scanning_interface-2]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py", line 257, in openCameraAndIdentifyCode
+1731146279.6578908 [module_scanning_interface-2]     self.on_closing()
+1731146279.6589773 [module_scanning_interface-2]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py", line 289, in on_closing
+1731146279.6605244 [module_scanning_interface-2]     self.thread_spin.join()
+1731146279.6613550 [module_scanning_interface-2]   File "/usr/lib/python3.12/threading.py", line 1142, in join
+1731146279.6621726 [module_scanning_interface-2]     raise RuntimeError("cannot join thread before it is started")
+1731146279.6629601 [module_scanning_interface-2] RuntimeError: cannot join thread before it is started
+1731146280.1950414 [ERROR] [module_scanning_interface-2]: process has died [pid 26316, exit code 1, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/module_scanning_interface/module_scanning_interface --ros-args'].
+1731146280.6031821 [module_supervisor-1] [WARN] [1731146280.602313141] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Input.node_io_weigh ----
+1731146281.6117463 [module_supervisor-1] [WARN] [1731146281.610705642] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Input.node_io_weigh ----
+1731146281.6157935 [module_supervisor-1] [ERROR] [1731146281.614978223] [Module_Supervisor]: ---- Supervisor: Can't connect to server Module_Input.node_io_weigh ----
+1731146281.6198168 [module_supervisor-1] [ERROR] [1731146281.618941747] [Module_Supervisor]: ---- Supervisor: Initilize System Error ----

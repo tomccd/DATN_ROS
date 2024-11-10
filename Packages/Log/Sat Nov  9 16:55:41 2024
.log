@@ -1,0 +1,59 @@
+1731146139.9508395 [INFO] [launch]: All log files can be found below /home/tomccd/.ros/log/2024-11-09-16-55-39-945475-tomccd-raspberry4b-26052
+1731146139.9516554 [INFO] [launch]: Default logging verbosity is set to INFO
+1731146140.7395740 [INFO] [module_supervisor-1]: process started with pid [26055]
+1731146140.7462258 [INFO] [module_scanning_interface-2]: process started with pid [26056]
+1731146140.7471333 [INFO] [node_io_weigh-3]: process started with pid [26057]
+1731146140.7510722 [INFO] [module_weigh-4]: process started with pid [26058]
+1731146140.7524655 [INFO] [node_dc_motor-5]: process started with pid [26059]
+1731146140.7539039 [INFO] [module_log_file-6]: process started with pid [26060]
+1731146143.8686056 [node_io_weigh-3] [ERROR] [1731146143.867730250] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Can't Initalize pigpio ----
+1731146143.8859386 [node_io_weigh-3] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1731146143.8884468 [node_io_weigh-3] Can't connect to pigpio at localhost(8888)
+1731146143.8897195 [node_io_weigh-3] 
+1731146143.8900416 [node_io_weigh-3] Did you start the pigpio daemon? E.g. sudo pigpiod
+1731146143.8917518 [node_io_weigh-3] 
+1731146143.8920414 [node_io_weigh-3] Did you specify the correct Pi host/port in the environment
+1731146143.8922462 [node_io_weigh-3] variables PIGPIO_ADDR/PIGPIO_PORT?
+1731146143.8924825 [node_io_weigh-3] E.g. export PIGPIO_ADDR=soft, export PIGPIO_PORT=8888
+1731146143.8927095 [node_io_weigh-3] 
+1731146143.8928878 [node_io_weigh-3] Did you specify the correct Pi host/port in the
+1731146143.8951075 [node_io_weigh-3] pigpio.pi() function? E.g. pigpio.pi('soft', 8888)
+1731146143.8969924 [node_io_weigh-3] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1731146144.5409188 [ERROR] [node_io_weigh-3]: process has died [pid 26057, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_weigh --ros-args'].
+1731146144.9108305 [module_supervisor-1] [INFO] [1731146144.910147484] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Log_File Successfully ----
+1731146144.9561579 [node_dc_motor-5] [ERROR] [1731146144.955565902] [node_dc_motor]: ---- Server Server Module_Motor.node_dc_motor: Can't Initalize pigpio ----
+1731146144.9612796 [node_dc_motor-5] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1731146144.9620485 [node_dc_motor-5] Can't connect to pigpio at localhost(8888)
+1731146144.9625311 [node_dc_motor-5] 
+1731146144.9639342 [node_dc_motor-5] Did you start the pigpio daemon? E.g. sudo pigpiod
+1731146144.9648404 [node_dc_motor-5] 
+1731146144.9653792 [node_dc_motor-5] Did you specify the correct Pi host/port in the environment
+1731146144.9663751 [node_dc_motor-5] variables PIGPIO_ADDR/PIGPIO_PORT?
+1731146144.9669425 [node_dc_motor-5] E.g. export PIGPIO_ADDR=soft, export PIGPIO_PORT=8888
+1731146144.9676008 [node_dc_motor-5] 
+1731146144.9681938 [node_dc_motor-5] Did you specify the correct Pi host/port in the
+1731146144.9686913 [node_dc_motor-5] pigpio.pi() function? E.g. pigpio.pi('soft', 8888)
+1731146144.9691229 [node_dc_motor-5] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1731146145.2808166 [ERROR] [node_dc_motor-5]: process has died [pid 26059, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/module_motor/node_dc_motor --ros-args'].
+1731146145.9187040 [module_supervisor-1] [WARN] [1731146145.917803906] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731146146.5981331 [module_scanning_interface-2] [INFO] [1731146146.597479285] [module_scanning_interface]: ----  Server Module_Scanning&Interface: Connect to DB Successfully ----
+1731146146.6011918 [module_scanning_interface-2] [ WARN:0@3.088] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video0): can't open camera by index
+1731146146.6102214 [module_scanning_interface-2] [ERROR:0@3.097] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
+1731146146.7855239 [module_scanning_interface-2] Traceback (most recent call last):
+1731146146.7860153 [module_scanning_interface-2]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/module_scanning_interface/module_scanning_interface", line 33, in <module>
+1731146146.7870989 [module_scanning_interface-2]     sys.exit(load_entry_point('module-scanning-interface==0.0.0', 'console_scripts', 'module_scanning_interface')())
+1731146146.7876081 [module_scanning_interface-2]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1731146146.7879183 [module_scanning_interface-2]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py", line 393, in main
+1731146146.7881598 [module_scanning_interface-2]     app = myApp("Test App")
+1731146146.7885959 [module_scanning_interface-2]           ^^^^^^^^^^^^^^^^^
+1731146146.7896159 [module_scanning_interface-2]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py", line 212, in __init__
+1731146146.7917597 [module_scanning_interface-2]     self.openCameraAndIdentifyCode()
+1731146146.7929747 [module_scanning_interface-2]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py", line 256, in openCameraAndIdentifyCode
+1731146146.7940395 [module_scanning_interface-2]     messagebox.ERROR("Cannot detect your camera")
+1731146146.7950985 [module_scanning_interface-2] TypeError: 'str' object is not callable
+1731146146.9245801 [module_supervisor-1] [WARN] [1731146146.923437731] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731146147.3121781 [ERROR] [module_scanning_interface-2]: process has died [pid 26056, exit code 1, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/module_scanning_interface/module_scanning_interface --ros-args'].
+1731146147.9313750 [module_supervisor-1] [WARN] [1731146147.930383878] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731146148.9367743 [module_supervisor-1] [WARN] [1731146148.935956971] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731146148.9401872 [module_supervisor-1] [ERROR] [1731146148.939484372] [Module_Supervisor]: ---- Supervisor: Can't connect to server Module_Scanning&Interface ----
+1731146148.9438658 [module_supervisor-1] [ERROR] [1731146148.943067107] [Module_Supervisor]: ---- Supervisor: Initilize System Error ----

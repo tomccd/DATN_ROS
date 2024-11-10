@@ -286,6 +286,7 @@ class myApp(tk.Tk):
         else:
             self.node.get_logger().info(f"---- Server Module_Scanning_Interfaces: Receive Message: {msg.a}. Bye Bye.... ----")
         rclpy.shutdown()
+        self.thread_spin.join()
         self.destroy()
         exit(-1)
 #Thông báo nổi

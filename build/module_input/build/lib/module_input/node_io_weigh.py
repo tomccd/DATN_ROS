@@ -3,6 +3,7 @@ from rclpy.node import Node
 import pigpio
 from custom_interfaces.msg import SetWeighIO, TerminateSys
 from custom_interfaces.srv import InitSys
+import sys
 class myNode(Node):
     def __init__(self,name:str):
         super().__init__(name)
@@ -55,7 +56,7 @@ class myNode(Node):
         self.get_logger().info(f"---- Server Module_Input.node_io_weigh: Receive Message: {msg.a}. Bye Bye.... ----")
         rclpy.shutdown()
         self.pi.stop()
-        exit(-1)
+        sys.exit(-1)
 def main(args=None):
     rclpy.init(args=args)
     node = myNode("node_io_weigh")

@@ -11,7 +11,7 @@
 -    [x] Hiển thị bảng với thông tin sản phẩm
 -    [ ] Phần bổ sung khác
 ### 3. Module Motor
--    [ ] Bật Motor_DC và tắt Motor_DC khi hệ thống làm việc với trạng thái tương ứng
+-    [x] Bật Motor_DC và tắt Motor_DC khi hệ thống làm việc với trạng thái tương ứng
 -    [ ] Motor Servor phân loại đồng bộ với Module_Input và Module_Scanning&Interface 
 ### 4. Module Input
 -    [x] Đặt trạng thái Enable, Disable cân thông qua 2 cảm biến
@@ -20,3 +20,5 @@
 ### 5. Module Weigh
 -    [x] Kích hoạt cân khi có trạng thái Enable
 -    [x] Gửi dữ liệu cân
+### 6. Module Log File
+-    [x] Log file khi chạy xong chương trình hoặc khi chương trình bị hủy

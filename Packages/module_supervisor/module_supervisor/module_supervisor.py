@@ -11,6 +11,7 @@ class myNode(Node):
         self.client_io_weigh = self.create_client(InitSys,"node_io_weigh")
         self.client_mw = self.create_client(InitSys,"module_weigh")
         self.client_dc_motor = self.create_client(InitSys,"node_dc_motor")
+        self.client_log_file = self.create_client(InitSys,"module_log_file")
         #Init Publisher
         self.publisher_terminate = self.create_publisher(TerminateSys,"terminate",10)
         #Init status
@@ -23,91 +24,113 @@ class myNode(Node):
             self.timer_ = self.create_timer(2,self.checkStatus)
     def initSystem(self):
         time_counter = 0
-        #Connect to server_module_scanning_interface (Try to connect for 2 seconds)
-        while not self.client_mci.wait_for_service(1):
-            self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----")
+        #Connect to server module_log_file
+        while not self.client_log_file.wait_for_service(1):
+            self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Log_File ----")
             if time_counter > 2:
                 break
-            time_counter+=1
+            time_counter +=1
         if time_counter > 2:
-            self.get_logger().error("---- Supervisor: Can't connect to server Module_Scanning&Interface ----")
+            self.get_logger().error("---- Supevisor: Can't connetc to  server Module_Log_File ----")
             return -1
         else:
-            self.get_logger().info("---- Supervisor: Connect to Server Module_Scanning&Interface Successfully ----")
-            time_counter = 0 #rest time_counter
-            #Connect to server_node_io_weigh (Try to connect for 2 seconds)
-            while not self.client_io_weigh.wait_for_service(1):
-                self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Input.node_io_weigh ----")
+            self.get_logger().info("---- Supervisor: Connect to Server Module_Log_File Successfully ----")
+            time_counter = 0
+            #Connect to server_module_scanning_interface (Try to connect for 2 seconds)
+            while not self.client_mci.wait_for_service(1):
+                self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----")
                 if time_counter > 2:
                     break
                 time_counter+=1
             if time_counter > 2:
-                self.get_logger().error("---- Supervisor: Can't connect to server Module_Input.node_io_weigh ----")
+                self.get_logger().error("---- Supervisor: Can't connect to server Module_Scanning&Interface ----")
                 return -1
             else:
-                self.get_logger().info("---- Supervisor: Connect to Server Module_Input.node_io_weigh Successfully ----")
+                self.get_logger().info("---- Supervisor: Connect to Server Module_Scanning&Interface Successfully ----")
                 time_counter = 0 #rest time_counter
-                while not self.client_mw.wait_for_service(1):
-                    self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Weigh ----")
+                #Connect to server_node_io_weigh (Try to connect for 2 seconds)
+                while not self.client_io_weigh.wait_for_service(1):
+                    self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Input.node_io_weigh ----")
                     if time_counter > 2:
                         break
                     time_counter+=1
                 if time_counter > 2:
-                    self.get_logger().error("---- Supervisor: Can't connect to server Module_Weigh ----")
+                    self.get_logger().error("---- Supervisor: Can't connect to server Module_Input.node_io_weigh ----")
                     return -1
-                self.get_logger().info("---- Supervisor: Connect to Server Module_Weigh Successfully ----")
-                time_counter = 0
-                while not self.client_dc_motor.wait_for_service(1):
-                    self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Motor.node_dc_motor ----")
+                else:
+                    self.get_logger().info("---- Supervisor: Connect to Server Module_Input.node_io_weigh Successfully ----")
+                    time_counter = 0 #rest time_counter
+                    while not self.client_mw.wait_for_service(1):
+                        self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Weigh ----")
+                        if time_counter > 2:
+                            break
+                        time_counter+=1
                     if time_counter > 2:
-                        break
-                    time_counter+=1
-                if time_counter > 2:
-                    self.get_logger().error("---- Supervisor: Can't connect to server Module_Motor.node_dc_motor ----")
-                    return -1
-                #To be continue (May be we will have some modules)
-                #---
-                self.get_logger().info("---- Supervisor: Connect to Server Module_Motor.node_dc_motor Successfully ----")
-                rq = InitSys.Request()
-                rq.a = "Ready"
-                self.get_logger().warn("----Supervisor: Sending Request to Server Module_Scanning&Interface...----")
-                future = self.client_mci.call_async(rq)
-                rclpy.spin_until_future_complete(self,future,timeout_sec=2)
-                try:
-                    rs = future.result()
-                    self.get_logger().info(f"---- Supervisor: Receive Init Respond from Server Module_Scanning&Interface: {rs.b}")
-                    self.get_logger().warn("---- Supervisor: Sending Request to Server Module_Input.node_io_weigh ---- ")
-                    future = self.client_io_weigh.call_async(rq)
+                        self.get_logger().error("---- Supervisor: Can't connect to server Module_Weigh ----")
+                        return -1
+                    self.get_logger().info("---- Supervisor: Connect to Server Module_Weigh Successfully ----")
+                    time_counter = 0
+                    while not self.client_dc_motor.wait_for_service(1):
+                        self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Motor.node_dc_motor ----")
+                        if time_counter > 2:
+                            break
+                        time_counter+=1
+                    if time_counter > 2:
+                        self.get_logger().error("---- Supervisor: Can't connect to server Module_Motor.node_dc_motor ----")
+                        return -1
+                    #To be continue (May be we will have some modules)
+                    #---
+                    self.get_logger().info("---- Supervisor: Connect to Server Module_Motor.node_dc_motor Successfully ----")
+                    rq = InitSys.Request()
+                    rq.a = "Ready"
+                    self.get_logger().warn("----Supervisor: Sending Request to Server Module_Log_File...----")
+                    future = self.client_log_file.call_async(rq)
                     rclpy.spin_until_future_complete(self,future,timeout_sec=2)
                     try:
                         rs = future.result()
-                        self.get_logger().info(f"---- Supervisor: Receive Init Respond from Server Module_Input.node_io_weigh: {rs.b}")
-                        self.get_logger().warn("---- Supervisor: Sending Request to Server Module_Weigh ---- ")
-                        future = self.client_mw.call_async(rq)
+                        self.get_logger().info(f"---- Supervisor: Receive Init Respond from Server Module_Log_File: {rs.b}")
+                        #
+                        self.get_logger().warn("----Supervisor: Sending Request to Server Module_Scanning&Interface...----")
+                        future = self.client_mci.call_async(rq)
                         rclpy.spin_until_future_complete(self,future,timeout_sec=2)
                         try:
                             rs = future.result()
-                            self.get_logger().info(f"---- Supervisor: Receive Init Respond from Server Module_Weigh: {rs.b}")
-                            self.get_logger().warn("---- Supervisor: Sending Request to Server Module_Motor.node_dc_motor ---- ")
-                            future = self.client_dc_motor.call_async(rq)
+                            self.get_logger().info(f"---- Supervisor: Receive Init Respond from Server Module_Scanning&Interface: {rs.b}")
+                            self.get_logger().warn("---- Supervisor: Sending Request to Server Module_Input.node_io_weigh ---- ")
+                            future = self.client_io_weigh.call_async(rq)
                             rclpy.spin_until_future_complete(self,future,timeout_sec=2)
                             try:
                                 rs = future.result()
-                                self.get_logger().info(f"---- Supervisor: Receive Init Respond from Server Module_Motor.node_dc_motor: {rs.b}")
-                                #To be continue (May be we will have some modules)
-                                return 0
+                                self.get_logger().info(f"---- Supervisor: Receive Init Respond from Server Module_Input.node_io_weigh: {rs.b}")
+                                self.get_logger().warn("---- Supervisor: Sending Request to Server Module_Weigh ---- ")
+                                future = self.client_mw.call_async(rq)
+                                rclpy.spin_until_future_complete(self,future,timeout_sec=2)
+                                try:
+                                    rs = future.result()
+                                    self.get_logger().info(f"---- Supervisor: Receive Init Respond from Server Module_Weigh: {rs.b}")
+                                    self.get_logger().warn("---- Supervisor: Sending Request to Server Module_Motor.node_dc_motor ---- ")
+                                    future = self.client_dc_motor.call_async(rq)
+                                    rclpy.spin_until_future_complete(self,future,timeout_sec=2)
+                                    try:
+                                        rs = future.result()
+                                        self.get_logger().info(f"---- Supervisor: Receive Init Respond from Server Module_Motor.node_dc_motor: {rs.b}")
+                                        #To be continue (May be we will have some modules)
+                                        return 0
+                                    except Exception:
+                                        self.get_logger().warn("---- Supervisor: Can't send request to Server Module_Motor.node_dc_motor ----")
+                                        return -1
+                                except Exception:
+                                    self.get_logger().warn("---- Supervisor: Can't send request to Server Module_Weigh ----")
+                                    return -1
                             except Exception:
-                                self.get_logger().warn("---- Supervisor: Can't send request to Server Module_Motor.node_dc_motor ----")
+                                self.get_logger().warn("---- Supervisor: Can't send request to Server Module_Input.node_io_weigh ----")
                                 return -1
                         except Exception:
-                            self.get_logger().warn("---- Supervisor: Can't send request to Server Module_Weigh ----")
+                            self.get_logger().warn("---- Supervisor: Can't send request to Server Module_Scanning&Interface ----")
                             return -1
                     except Exception:
-                        self.get_logger().warn("---- Supervisor: Can't send request to Server Module_Input.node_io_weigh ----")
+                        self.get_logger().warn("---- Supervisor: Can't send request to Server Module_Log_File ----")
                         return -1
-                except Exception:
-                    self.get_logger().warn("---- Supervisor: Can't send request to Server Module_Scanning&Interface ----")
-                    return -1
     def sendTerminate(self):
         msg = TerminateSys()
         msg.a = "Terminate"
