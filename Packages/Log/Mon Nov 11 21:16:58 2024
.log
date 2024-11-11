@@ -1,0 +1,54 @@
+1731334616.5201557 [INFO] [launch]: All log files can be found below /home/tomccd/.ros/log/2024-11-11-21-16-56-514943-tomccd-raspberry4b-16083
+1731334616.5210173 [INFO] [launch]: Default logging verbosity is set to INFO
+1731334617.6714222 [INFO] [module_supervisor-1]: process started with pid [16102]
+1731334617.6722038 [INFO] [module_scanning_interface-2]: process started with pid [16103]
+1731334617.6880970 [INFO] [node_io_weigh-3]: process started with pid [16104]
+1731334617.6889136 [INFO] [module_weigh-4]: process started with pid [16105]
+1731334617.6896274 [INFO] [node_dc_motor-5]: process started with pid [16106]
+1731334617.6903293 [INFO] [module_log_file-6]: process started with pid [16107]
+1731334625.3955078 [module_supervisor-1] [INFO] [1731334625.394031355] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Log_File Successfully ----
+1731334626.4026361 [module_supervisor-1] [WARN] [1731334626.401169119] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731334627.4144959 [module_supervisor-1] [WARN] [1731334627.413468846] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731334628.4227040 [module_supervisor-1] [WARN] [1731334628.421418012] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731334628.5057108 [node_io_weigh-3] [INFO] [1731334628.504747345] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731334628.5479398 [node_io_weigh-3] [INFO] [1731334628.547028576] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731334628.9001958 [node_io_weigh-3] [INFO] [1731334628.896686697] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731334629.2551258 [node_io_weigh-3] [INFO] [1731334629.254024833] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731334629.4509358 [module_supervisor-1] [WARN] [1731334629.447343541] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731334629.4866943 [module_supervisor-1] [ERROR] [1731334629.469315746] [Module_Supervisor]: ---- Supervisor: Can't connect to server Module_Scanning&Interface ----
+1731334629.5029833 [module_supervisor-1] [ERROR] [1731334629.493890967] [Module_Supervisor]: ---- Supervisor: Initilize System Error ----
+1731334629.5097072 [module_log_file-6] [INFO] [1731334629.501294929] [module_log_file]: ---- Server Module_Log_File: Creating Log File... ----
+1731334629.5737016 [node_io_weigh-3] [INFO] [1731334629.554068983] [node_io_weigh]: ---- Server Module_Input.node_io_weigh: Receive Message: Terminate. Bye Bye.... ----
+1731334630.2830472 [module_weigh-4] [INFO] [1731334630.263546687] [module_weigh]: ---- Server Module_Weigh: Receive Message: Terminate. Bye Bye.... ----
+1731334630.5398760 [node_dc_motor-5] [INFO] [1731334630.529847829] [node_dc_motor]: ---- Server Module_Motor.node_dc_motor: Receive Message: Terminate. Bye Bye.... ----
+1731334630.7469890 [module_supervisor-1] Traceback (most recent call last):
+1731334630.7544489 [module_supervisor-1]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/module_supervisor/module_supervisor", line 33, in <module>
+1731334630.7691300 [module_supervisor-1]     sys.exit(load_entry_point('module-supervisor==0.0.0', 'console_scripts', 'module_supervisor')())
+1731334630.7790036 [module_supervisor-1]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1731334630.7798197 [module_supervisor-1]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages/module_supervisor/module_supervisor.py", line 198, in main
+1731334630.7808926 [module_supervisor-1]     rclpy.spin(node)
+1731334630.7824214 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 240, in spin
+1731334630.7839255 [module_supervisor-1]     executor = get_global_executor() if executor is None else executor
+1731334630.7848358 [module_supervisor-1]                ^^^^^^^^^^^^^^^^^^^^^
+1731334630.7856333 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 106, in get_global_executor
+1731334630.7861159 [module_supervisor-1]     __executor = SingleThreadedExecutor()
+1731334630.7876801 [module_supervisor-1]                  ^^^^^^^^^^^^^^^^^^^^^^^^
+1731334630.7887247 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 803, in __init__
+1731334630.7931008 [module_supervisor-1]     super().__init__(context=context)
+1731334630.7941279 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 186, in __init__
+1731334630.7950959 [module_supervisor-1]     self._guard = GuardCondition(
+1731334630.7957957 [module_supervisor-1]                   ^^^^^^^^^^^^^^^
+1731334630.7966225 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/guard_condition.py", line 23, in __init__
+1731334630.7972140 [module_supervisor-1]     with self._context.handle:
+1731334630.7978909 [module_supervisor-1] TypeError: 'NoneType' object does not support the context manager protocol
+1731334630.9564764 [module_supervisor-1] Exception ignored in: <function Executor.__del__ at 0xffffadd7ca40>
+1731334630.9573250 [module_supervisor-1] Traceback (most recent call last):
+1731334630.9587834 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 257, in __del__
+1731334630.9610739 [module_supervisor-1]     if self._sigint_gc is not None:
+1731334630.9627929 [module_supervisor-1]        ^^^^^^^^^^^^^^^
+1731334630.9641571 [module_supervisor-1] AttributeError: 'SingleThreadedExecutor' object has no attribute '_sigint_gc'
+1731334631.5526311 [ERROR] [node_io_weigh-3]: process has died [pid 16104, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_weigh --ros-args'].
+1731334631.7680004 [ERROR] [module_weigh-4]: process has died [pid 16105, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/module_weigh/module_weigh --ros-args'].
+1731334632.3934574 [ERROR] [node_dc_motor-5]: process has died [pid 16106, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/module_motor/node_dc_motor --ros-args'].
+1731334632.6665525 [ERROR] [module_supervisor-1]: process has died [pid 16102, exit code 1, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/module_supervisor/module_supervisor --ros-args'].
+1731334633.2153072 [module_scanning_interface-2] [INFO] [1731334633.211325971] [module_scanning_interface]: ----  Server Module_Scanning&Interface: Connect to DB Successfully ----

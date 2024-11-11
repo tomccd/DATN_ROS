@@ -201,7 +201,8 @@ class myApp(tk.Tk):
             self.node.get_logger().info("----  Server Module_Scanning&Interface: Connect to DB Successfully ----")
         #Queue chứa dữ liệu dạng ["ID_san_pham","Kieu_san_pham","Can_Nang"]
         self.data_queue = []
-        
+        #Cursor
+        self.cursor = self.conn.cursor()
         #-Phần chứa camera
         #Camera
         self.previous_data = None
@@ -210,6 +211,28 @@ class myApp(tk.Tk):
         self.label_camera = tk.Label(self.frame_camera,image='')
         self.label_camera.pack()
         self.openCameraAndIdentifyCode()
+    def sendDataToDB(self,block_data):
+        if block_data[1] == "Khac":
+            sql_query = "INSERT INTO [DATN].[dbo].Weigh_Non_Certificate (ID_Product, Weighs) VALUES(?,?);"
+            value = [block_data[0],block_data[2]]
+            try:
+                self.cursor.execute(sql_query,value)
+                self.cursor.commit()
+            except Exception as e:
+                self.node.get_logger().error(f"---- Server Module_Scanning&Interface: Can't send weighs to DB. Error: {e} ----")
+                exit(-1)
+            else:
+                self.cursor.commit()
+        else:
+            sql_query = "INSERT INTO [DATN].[dbo].Weigh_Certificate (ID_Product, Weighs) VALUES(?,?);"
+            value = [block_data[0],block_data[2]]
+            try:
+                self.cursor.execute(sql_query,value)
+            except Exception as e:
+                self.node.get_logger().error(f"---- Server Module_Scanning&Interface: Can't send weighs to DB. Error: {e} ----")
+                exit(-1)
+            else:
+                self.cursor.commit()
     def addWeightToList(self,msg):
         if len(self.data_queue) > 0:
             for block_data in self.data_queue:
@@ -217,8 +240,10 @@ class myApp(tk.Tk):
                     block_data.append(msg.value)
                     #Thêm vào bảng hiển thị
                     self.data_treeview.insert('',tk.END,values=block_data)
-                    break
-            # self.node.get_logger().info(f"----Server Module_Scanning_Interfaces: {self.data_queue}----")
+                    #Thêm vào CSDL
+                    thread_send_data = threading.Thread(target=self.sendDataToDB,args=(block_data,))
+                    thread_send_data.daemon = True
+                    thread_send_data.start()
         ToastNotification(self,"weigh",msg.value,3000)
     def openCameraAndIdentifyCode(self):
         status, frame = self.camera.read()
@@ -286,7 +311,7 @@ class myApp(tk.Tk):
         else:
             self.node.get_logger().info(f"---- Server Module_Scanning_Interfaces: Receive Message: {msg.a}. Bye Bye.... ----")
         rclpy.shutdown()
-        self.thread_spin.join()
+        # self.thread_spin.join()
         self.destroy()
         exit(-1)
 #Thông báo nổi
@@ -326,7 +351,7 @@ class ToastNotification:
             master.after(duration,self.label.destroy)
         elif type=="weigh":
             #Take the image from the path, resize it and convert it into tkinter version
-            self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_2.png').resize((30,20))
+            self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_1.png').resize((30,20))
             self.imgTk = ImageTk.PhotoImage(self.img)
             message = f"Khối lượng nhận được {data} g"
             #Create a lable

@@ -56,6 +56,8 @@ class myNode:public rclcpp::Node{
                 }
                 catch(std::exception &e){
                     RCLCPP_ERROR(this->get_logger(),"---- Server Module_Log_File: Can't Create Log File with error: %s",e.what());
+                    rclcpp::shutdown();
+                    exit(0);
                 }
             }
         }
