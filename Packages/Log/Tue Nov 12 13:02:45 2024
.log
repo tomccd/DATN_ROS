@@ -1,0 +1,116 @@
+1731391362.8619950 [INFO] [launch]: All log files can be found below /home/tomccd/.ros/log/2024-11-12-13-02-42-841316-tomccd-raspberry4b-7307
+1731391362.8626993 [INFO] [launch]: Default logging verbosity is set to INFO
+1731391363.8143129 [INFO] [module_supervisor-1]: process started with pid [7310]
+1731391363.8151963 [INFO] [module_scanning_interface-2]: process started with pid [7311]
+1731391363.8158524 [INFO] [node_dc_servo-3]: process started with pid [7312]
+1731391363.8164098 [INFO] [node_io_servo-4]: process started with pid [7313]
+1731391363.8264813 [INFO] [node_dc_motor-5]: process started with pid [7314]
+1731391363.8273628 [INFO] [node_io_weigh-6]: process started with pid [7315]
+1731391363.8282051 [INFO] [module_weigh-7]: process started with pid [7316]
+1731391363.8289015 [INFO] [module_log_file-8]: process started with pid [7317]
+1731391363.8351147 [INFO] [module_send_email-9]: process started with pid [7318]
+1731391365.9467804 [module_send_email-9] Traceback (most recent call last):
+1731391365.9514487 [module_send_email-9]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/module_send_email/module_send_email", line 33, in <module>
+1731391365.9785907 [module_send_email-9]     sys.exit(load_entry_point('module-send-email==0.0.0', 'console_scripts', 'module_send_email')())
+1731391365.9823165 [module_send_email-9]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1731391365.9869728 [module_send_email-9]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/module_send_email/module_send_email", line 25, in importlib_load_entry_point
+1731391365.9945621 [module_send_email-9]     return next(matches).load()
+1731391366.0002947 [module_send_email-9]            ^^^^^^^^^^^^^^^^^^^^
+1731391366.0054426 [module_send_email-9]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 205, in load
+1731391366.0093153 [module_send_email-9]     module = import_module(match.group('module'))
+1731391366.0127602 [module_send_email-9]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1731391366.0179722 [module_send_email-9]   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+1731391366.0334787 [module_send_email-9]     return _bootstrap._gcd_import(name[level:], package, level)
+1731391366.0396299 [module_send_email-9]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1731391366.0435567 [module_send_email-9]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+1731391366.0474112 [module_send_email-9]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+1731391366.0484922 [module_send_email-9]   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+1731391366.0515308 [module_send_email-9]   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+1731391366.0558572 [module_send_email-9]   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+1731391366.0667391 [module_send_email-9]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+1731391366.0802648 [module_send_email-9]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/python3.12/site-packages/module_send_email/module_send_email.py", line 3, in <module>
+1731391366.0808585 [module_send_email-9]     from email.mime.base import MINEBase
+1731391366.0814438 [module_send_email-9] ImportError: cannot import name 'MINEBase' from 'email.mime.base' (/usr/lib/python3.12/email/mime/base.py). Did you mean: 'MIMEBase'?
+1731391366.4836600 [ERROR] [module_send_email-9]: process has died [pid 7318, exit code 1, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/module_send_email/module_send_email --ros-args'].
+1731391369.0961528 [node_dc_servo-3] [INFO] [1731391369.095362374] [node_servo_motor]: ---- Server Module_Motor.node_dc_motor: Init Server ----
+1731391369.1893346 [module_supervisor-1] [INFO] [1731391369.188623582] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Log_File Successfully ----
+1731391369.4119668 [node_io_weigh-6] [INFO] [1731391369.411293739] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391369.5284607 [node_io_servo-4] [INFO] [1731391369.527788157] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391369.6596055 [node_io_weigh-6] [INFO] [1731391369.658824963] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391369.7795138 [node_io_servo-4] [INFO] [1731391369.778710226] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391370.0086696 [node_io_weigh-6] [INFO] [1731391370.007894128] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391370.1310029 [node_io_servo-4] [INFO] [1731391370.130037447] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391370.1940536 [module_supervisor-1] [WARN] [1731391370.193328256] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731391370.3573351 [node_io_weigh-6] [INFO] [1731391370.356710554] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391370.4807281 [node_io_servo-4] [INFO] [1731391370.479982846] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391370.7100775 [node_io_weigh-6] [INFO] [1731391370.708985899] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391370.8293028 [node_io_servo-4] [INFO] [1731391370.828525015] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391371.0606945 [node_io_weigh-6] [INFO] [1731391371.059089056] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391371.1802800 [node_io_servo-4] [INFO] [1731391371.179328760] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391371.1989865 [module_supervisor-1] [WARN] [1731391371.198262762] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731391371.4076977 [node_io_weigh-6] [INFO] [1731391371.406965600] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391371.5295420 [node_io_servo-4] [INFO] [1731391371.528749070] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391371.7581079 [node_io_weigh-6] [INFO] [1731391371.757362551] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391371.8800907 [node_io_servo-4] [INFO] [1731391371.879298094] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391372.1094315 [node_io_weigh-6] [INFO] [1731391372.108242240] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391372.2055135 [module_supervisor-1] [WARN] [1731391372.204277130] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731391372.2294304 [node_io_servo-4] [INFO] [1731391372.228625646] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391372.4584792 [node_io_weigh-6] [INFO] [1731391372.457711513] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391372.5789821 [node_io_servo-4] [INFO] [1731391372.578251974] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391372.8093216 [node_io_weigh-6] [INFO] [1731391372.808411832] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391372.9325466 [node_io_servo-4] [INFO] [1731391372.930767927] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391373.1567125 [node_io_weigh-6] [INFO] [1731391373.156126637] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391373.2111967 [module_supervisor-1] [WARN] [1731391373.210308609] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731391373.2782869 [node_io_servo-4] [INFO] [1731391373.277674479] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391373.5066795 [node_io_weigh-6] [INFO] [1731391373.506112702] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391373.6309719 [node_io_servo-4] [INFO] [1731391373.630019341] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391373.8577909 [node_io_weigh-6] [INFO] [1731391373.857104982] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391373.9804335 [node_io_servo-4] [INFO] [1731391373.978455715] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391374.2096303 [node_io_weigh-6] [INFO] [1731391374.206630181] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1731391374.2162054 [module_supervisor-1] [WARN] [1731391374.215105542] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1731391374.3309767 [node_io_servo-4] [INFO] [1731391374.330002491] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1731391374.4715605 [module_supervisor-1] [ERROR] [1731391374.470541835] [Module_Supervisor]: ---- Supervisor: Can't connect to server Module_Scanning&Interface ----
+1731391374.4762845 [module_supervisor-1] [ERROR] [1731391374.474996838] [Module_Supervisor]: ---- Supervisor: Initilize System Error ----
+1731391374.5122328 [module_log_file-8] [INFO] [1731391374.478613736] [module_log_file]: ---- Server Module_Log_File: Creating Log File... ----
+1731391374.5341637 [node_io_weigh-6] [INFO] [1731391374.484924854] [node_io_weigh]: ---- Server Module_Input.node_io_weigh: Receive Message: Terminate. Bye Bye.... ----
+1731391374.5360553 [node_dc_servo-3] [INFO] [1731391374.487873146] [node_servo_motor]: ---- Server Module_Motor.node_servo_motor: Receive Message: Terminate. Bye Bye.... ----
+1731391374.5371399 [node_io_servo-4] [INFO] [1731391374.505749768] [node_io_servo]: ---- Server Module_Input.node_io_servo: Receive Message: Terminate. Bye Bye.... ----
+1731391374.6294975 [node_dc_motor-5] [INFO] [1731391374.628482323] [node_dc_motor]: ---- Server Module_Motor.node_dc_motor: Receive Message: Terminate. Bye Bye.... ----
+1731391374.7777982 [module_supervisor-1] Traceback (most recent call last):
+1731391374.7784371 [module_supervisor-1]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/module_supervisor/module_supervisor", line 33, in <module>
+1731391374.7826595 [module_supervisor-1]     sys.exit(load_entry_point('module-supervisor==0.0.0', 'console_scripts', 'module_supervisor')())
+1731391374.7871983 [module_supervisor-1]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1731391374.7890062 [module_supervisor-1]   File "/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages/module_supervisor/module_supervisor.py", line 210, in main
+1731391374.7910435 [module_supervisor-1]     rclpy.spin(node)
+1731391374.7922268 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 240, in spin
+1731391374.7954030 [module_supervisor-1]     executor = get_global_executor() if executor is None else executor
+1731391374.7967825 [module_supervisor-1]                ^^^^^^^^^^^^^^^^^^^^^
+1731391374.7978723 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 106, in get_global_executor
+1731391374.7990959 [module_supervisor-1]     __executor = SingleThreadedExecutor()
+1731391374.8000607 [module_supervisor-1]                  ^^^^^^^^^^^^^^^^^^^^^^^^
+1731391374.8010664 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 803, in __init__
+1731391374.8021443 [module_supervisor-1]     super().__init__(context=context)
+1731391374.8031325 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 186, in __init__
+1731391374.8041098 [module_supervisor-1]     self._guard = GuardCondition(
+1731391374.8051670 [module_supervisor-1]                   ^^^^^^^^^^^^^^^
+1731391374.8062751 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/guard_condition.py", line 23, in __init__
+1731391374.8084226 [module_supervisor-1]     with self._context.handle:
+1731391374.8144286 [module_supervisor-1] TypeError: 'NoneType' object does not support the context manager protocol
+1731391374.8203814 [module_weigh-7] [INFO] [1731391374.817915587] [module_weigh]: ---- Server Module_Weigh: Receive Message: Terminate. Bye Bye.... ----
+1731391374.8638947 [module_supervisor-1] Exception ignored in: <function Executor.__del__ at 0xffffa7d79a80>
+1731391374.8685274 [module_supervisor-1] Traceback (most recent call last):
+1731391374.8691924 [module_supervisor-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 257, in __del__
+1731391374.8697844 [module_supervisor-1]     if self._sigint_gc is not None:
+1731391374.8707490 [module_supervisor-1]        ^^^^^^^^^^^^^^^
+1731391374.8766265 [module_supervisor-1] AttributeError: 'SingleThreadedExecutor' object has no attribute '_sigint_gc'
+1731391375.2861838 [ERROR] [node_io_servo-4]: process has died [pid 7313, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_servo --ros-args'].
+1731391375.4525414 [module_scanning_interface-2] [INFO] [1731391375.426656217] [module_scanning_interface]: ----  Server Module_Scanning&Interface: Connect to DB Successfully ----
+1731391375.4645989 [module_scanning_interface-2] [ WARN:0@5.925] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video0): can't open camera by index
+1731391375.5016232 [module_scanning_interface-2] [ERROR:0@5.960] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
+1731391375.6230614 [ERROR] [node_io_weigh-6]: process has died [pid 7315, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_weigh --ros-args'].
+1731391375.8401592 [ERROR] [node_dc_servo-3]: process has died [pid 7312, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/module_motor/node_dc_servo --ros-args'].
+1731391375.8432286 [ERROR] [module_weigh-7]: process has died [pid 7316, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/module_weigh/module_weigh --ros-args'].
+1731391375.9415503 [ERROR] [module_supervisor-1]: process has died [pid 7310, exit code 1, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/module_supervisor/module_supervisor --ros-args'].
+1731391375.9546785 [ERROR] [node_dc_motor-5]: process has died [pid 7314, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/module_motor/node_dc_motor --ros-args'].
+1731391377.9759791 [module_scanning_interface-2] [INFO] [1731391377.975143713] [module_scanning_interface]: ---- Server Module_Scanning_Interfaces: Shutdown ----
+1731391378.7532117 [ERROR] [module_scanning_interface-2]: process has died [pid 7311, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/module_scanning_interface/module_scanning_interface --ros-args'].

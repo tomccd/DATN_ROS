@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "node_dc_motor=module_motor.node_dc_motor:main"
+            "node_dc_motor=module_motor.node_dc_motor:main",
+            "node_dc_servo=module_motor.node_dc_servo:main"
         ],
     },
 )

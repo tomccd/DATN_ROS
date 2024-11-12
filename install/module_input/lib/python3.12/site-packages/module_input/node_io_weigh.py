@@ -45,7 +45,8 @@ class myNode(Node):
                 self.publisher_weigh.publish(msg)
                 self.weigh_status = False #Reset
         except Exception as e:
-            self.get_logger().error("---- Server Server Module_Input.node_io_weigh: Can't read IO ----")
+            self.get_logger().error(f"---- Server Server Module_Input.node_io_weigh: Can't read IO. Error {e} ----")
+            rclpy.shutdown()
             exit(-1)
     def callBack(self,req,res):
         self.get_logger().info(f"---- Server Module_Input.node_io_weigh: Receive Intialized Request: {req.a} ----")

@@ -238,6 +238,15 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_ge
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__type_support.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__struct.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__functions.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_servo_io__type_support.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_servo_io__struct.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_servo_io__functions.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_servo_rotate__struct.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_servo_rotate__functions.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/send_file_name__type_support.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/send_file_name__struct.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/send_file_name__functions.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/init_sys__type_support.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/init_sys__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \

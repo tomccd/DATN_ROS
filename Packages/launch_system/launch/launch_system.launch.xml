@@ -1,8 +1,11 @@
 <launch>
     <node pkg="module_supervisor" exec="module_supervisor"/>
     <node pkg="module_scanning_interface" exec="module_scanning_interface"/>
+    <node pkg="module_motor" exec="node_dc_servo" />
+    <node pkg="module_input" exec="node_io_servo" />
+    <node pkg="module_motor" exec="node_dc_motor" />
     <node pkg="module_input" exec="node_io_weigh" />
     <node pkg="module_weigh" exec="module_weigh" />
-    <node pkg="module_motor" exec="node_dc_motor" />
     <node pkg="module_log_file" exec="module_log_file"/>
+    <node pkg="module_send_email" exec="module_send_email" />
 </launch>

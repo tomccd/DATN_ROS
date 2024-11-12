@@ -70,6 +70,9 @@ CMakeFiles/custom_interfaces: /home/tomccd/Documents/Code/Python/DATN/Packages/c
 CMakeFiles/custom_interfaces: /home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/srv/InitSys.srv
 CMakeFiles/custom_interfaces: /home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/msg/SetWeighIO.msg
 CMakeFiles/custom_interfaces: /home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/msg/WeighValue.msg
+CMakeFiles/custom_interfaces: /home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/msg/SetServoIO.msg
+CMakeFiles/custom_interfaces: /home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/msg/SetServoRotate.msg
+CMakeFiles/custom_interfaces: /home/tomccd/Documents/Code/Python/DATN/Packages/custom_interfaces/msg/SendFileName.msg
 CMakeFiles/custom_interfaces: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 
 custom_interfaces: CMakeFiles/custom_interfaces

@@ -1,5 +1,5 @@
 from custom_interfaces.srv import InitSys
-from custom_interfaces.msg import TerminateSys, WeighValue
+from custom_interfaces.msg import TerminateSys, WeighValue, SetServoIO, SetServoRotate
 import tkinter as tk
 from tkinter import StringVar
 from tkinter import messagebox
@@ -37,6 +37,10 @@ class myApp(tk.Tk):
         self.subcriber_terminate = self.node.create_subscription(TerminateSys,"terminate",self.on_closing,10)
         #Tạo 1 Subcriber cho việc lấy dữ liệu cân
         self.subcriber_weigh = self.node.create_subscription(WeighValue,"get_weigh",self.addWeightToList,10)
+        #Tạo 1 Subcriber cho việc lấy dữ liệu IO Servo
+        self.subcriber_io_servo = self.node.create_subscription(SetServoIO,"node_io_servo",self.receiveIO_Servo,10)
+        #Tạo 1 Publisher cho việc ra tín hiệu cho Servo quay
+        self.publisher_rotate_servo = self.node.create_publisher(SetServoRotate,"rotate_servo",10)
         #Tạo 1 Thread chịu trách nhiệm cho việc luôn spin
         self.thread_spin = threading.Thread(target=rclpy.spin,args=(self.node,))
         #-- Thiết kế giao diện  --
@@ -211,6 +215,45 @@ class myApp(tk.Tk):
         self.label_camera = tk.Label(self.frame_camera,image='')
         self.label_camera.pack()
         self.openCameraAndIdentifyCode()
+    def receiveIO_Servo(self,msg):
+        if len(self.data_queue) > 0:
+            msg = SetServoRotate()
+            if len(self.data_queue[0]) > 2:     
+                if msg.iosmsg == "Thiet bi dien tu":
+                    if msg.iomsg == (self.data_queue[0])[1]:
+                        msg.rotatemsg = "1_YES"
+                        self.publisher_rotate_servo.publish(msg)
+                    else:
+                        msg.rotatemsg = "1_NO"
+                        self.publisher_rotate_servo.publish(msg)
+                    #Pop element from Data Queue
+                    self.data_queue.pop(0)
+                elif msg.iomsg == "Quan ao":
+                    if msg.iomsg == (self.data_queue[0])[1]:
+                        msg.rotatemsg = "2_YES"
+                        self.publisher_rotate_servo.publish(msg)
+                    else:
+                        msg.rotatemsg = "2_NO"
+                        self.publisher_rotate_servo.publish(msg)
+                else:
+                    #Hiển thị kết quả phân loại ?
+                    pass
+                    #Pop element from Data Queue
+                self.data_queue.pop(0)                    
+            #Nếu bị nhiễu hoặc sản phẩm không cân được
+            else:
+                if msg.iomsg == "Thiet bi dien tu":
+                    msg.rotatemsg = "1_NO"
+                    self.publisher_rotate_servo.publish(msg)
+                    self.data_queue.pop(0)
+                elif msg.iomsg == "Quan ao":
+                    msg.rotatemsg = "2_NO"
+                    self.publisher_rotate_servo.publish(msg)
+                    self.data_queue.pop(0)
+                else:
+                    #Hiển thị kết quả phân loại ?
+                    pass  
+                self.node.get_logger().warn(f"---- Server Module_Scanning&Interface: Detect Product didn't weigh. ID: {(self.data_queue[0])[0]} ----")
     def sendDataToDB(self,block_data):
         if block_data[1] == "Khac":
             sql_query = "INSERT INTO [DATN].[dbo].Weigh_Non_Certificate (ID_Product, Weighs) VALUES(?,?);"

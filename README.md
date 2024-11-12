@@ -22,3 +22,5 @@
 -    [x] Gửi dữ liệu cân
 ### 6. Module Log File
 -    [x] Log file khi chạy xong chương trình hoặc khi chương trình bị hủy
+### 7. Module Send Email
+-    [x] Gửi file log qua email khi hệ thống bị ngắt đột ngột

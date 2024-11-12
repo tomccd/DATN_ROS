@@ -1,0 +1,629 @@
+[0.000000] (-) TimerEvent: {}
+[0.002118] (-) JobUnselected: {'identifier': 'custom_interfaces'}
+[0.004138] (-) JobUnselected: {'identifier': 'launch_system'}
+[0.005659] (-) JobUnselected: {'identifier': 'module_input'}
+[0.006934] (-) JobUnselected: {'identifier': 'module_motor'}
+[0.007172] (-) JobUnselected: {'identifier': 'module_scanning_interface'}
+[0.007894] (-) JobUnselected: {'identifier': 'module_supervisor'}
+[0.009079] (-) JobUnselected: {'identifier': 'module_weigh'}
+[0.009285] (module_log_file) JobQueued: {'identifier': 'module_log_file', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.009918] (module_send_email) JobQueued: {'identifier': 'module_send_email', 'dependencies': OrderedDict({'custom_interfaces': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces'})}
+[0.010860] (module_log_file) JobStarted: {'identifier': 'module_log_file'}
+[0.062326] (module_send_email) JobStarted: {'identifier': 'module_send_email'}
+[0.099644] (-) TimerEvent: {}
+[0.130059] (module_log_file) JobProgress: {'identifier': 'module_log_file', 'progress': 'cmake'}
+[0.134432] (module_log_file) JobProgress: {'identifier': 'module_log_file', 'progress': 'build'}
+[0.137775] (module_log_file) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tomccd/Documents/Code/Python/DATN/build/module_log_file', '--', '-j4', '-l4'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/build/module_log_file', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 62339 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/install', 'TERM_PROGRAM_VERSION': '1.95.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-4bdf16c2-da42-42f8-82a7-b6dd2c55f122.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/module_motor:/home/tomccd/Documents/Code/Python/DATN/install/module_log_file:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/module_log_file', 'SSH_CONNECTION': '100.118.255.2 62339 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_log_file:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/module_motor:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/opt/ros/jazzy'}), 'shell': False}
+[0.200065] (-) TimerEvent: {}
+[0.301852] (-) TimerEvent: {}
+[0.404076] (-) TimerEvent: {}
+[0.507682] (-) TimerEvent: {}
+[0.610171] (-) TimerEvent: {}
+[0.700234] (module_log_file) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/module_log_file.dir/src/module_log_file.cpp.o\x1b[0m\n'}
+[0.710382] (-) TimerEvent: {}
+[0.812077] (-) TimerEvent: {}
+[0.914657] (-) TimerEvent: {}
+[1.020321] (-) TimerEvent: {}
+[1.122150] (-) TimerEvent: {}
+[1.226210] (-) TimerEvent: {}
+[1.329626] (-) TimerEvent: {}
+[1.432525] (-) TimerEvent: {}
+[1.538165] (-) TimerEvent: {}
+[1.639449] (-) TimerEvent: {}
+[1.740281] (-) TimerEvent: {}
+[1.841407] (-) TimerEvent: {}
+[1.942685] (-) TimerEvent: {}
+[2.046473] (-) TimerEvent: {}
+[2.149561] (-) TimerEvent: {}
+[2.253481] (-) TimerEvent: {}
+[2.360975] (-) TimerEvent: {}
+[2.463653] (-) TimerEvent: {}
+[2.566292] (-) TimerEvent: {}
+[2.668683] (-) TimerEvent: {}
+[2.773512] (-) TimerEvent: {}
+[2.877017] (-) TimerEvent: {}
+[2.977913] (-) TimerEvent: {}
+[3.078906] (-) TimerEvent: {}
+[3.181345] (-) TimerEvent: {}
+[3.283598] (-) TimerEvent: {}
+[3.386095] (-) TimerEvent: {}
+[3.499117] (-) TimerEvent: {}
+[3.601438] (-) TimerEvent: {}
+[3.705278] (-) TimerEvent: {}
+[3.807065] (-) TimerEvent: {}
+[3.910153] (-) TimerEvent: {}
+[4.012040] (-) TimerEvent: {}
+[4.112949] (-) TimerEvent: {}
+[4.213804] (-) TimerEvent: {}
+[4.318049] (-) TimerEvent: {}
+[4.419427] (-) TimerEvent: {}
+[4.521370] (-) TimerEvent: {}
+[4.624000] (-) TimerEvent: {}
+[4.724928] (-) TimerEvent: {}
+[4.827300] (-) TimerEvent: {}
+[4.930175] (-) TimerEvent: {}
+[5.033619] (-) TimerEvent: {}
+[5.134567] (-) TimerEvent: {}
+[5.237035] (-) TimerEvent: {}
+[5.338378] (-) TimerEvent: {}
+[5.443096] (-) TimerEvent: {}
+[5.547186] (-) TimerEvent: {}
+[5.651827] (-) TimerEvent: {}
+[5.755471] (-) TimerEvent: {}
+[5.865470] (-) TimerEvent: {}
+[5.967240] (-) TimerEvent: {}
+[6.068391] (-) TimerEvent: {}
+[6.170118] (-) TimerEvent: {}
+[6.270993] (-) TimerEvent: {}
+[6.373036] (-) TimerEvent: {}
+[6.473935] (-) TimerEvent: {}
+[6.576290] (-) TimerEvent: {}
+[6.678229] (-) TimerEvent: {}
+[6.779230] (-) TimerEvent: {}
+[6.880014] (-) TimerEvent: {}
+[6.981943] (-) TimerEvent: {}
+[7.084303] (-) TimerEvent: {}
+[7.185747] (-) TimerEvent: {}
+[7.287711] (-) TimerEvent: {}
+[7.388614] (-) TimerEvent: {}
+[7.489593] (-) TimerEvent: {}
+[7.592451] (-) TimerEvent: {}
+[7.695235] (-) TimerEvent: {}
+[7.746109] (module_send_email) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/module_send_email', 'build', '--build-base', '/home/tomccd/Documents/Code/Python/DATN/build/module_send_email/build', 'install', '--record', '/home/tomccd/Documents/Code/Python/DATN/build/module_send_email/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/Packages/module_send_email', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 62339 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/install', 'TERM_PROGRAM_VERSION': '1.95.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-4bdf16c2-da42-42f8-82a7-b6dd2c55f122.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/module_motor:/home/tomccd/Documents/Code/Python/DATN/install/module_log_file:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/module_send_email', 'SSH_CONNECTION': '100.118.255.2 62339 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/build/module_send_email/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_log_file:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[7.797063] (-) TimerEvent: {}
+[7.898244] (-) TimerEvent: {}
+[7.999723] (-) TimerEvent: {}
+[8.105079] (-) TimerEvent: {}
+[8.206657] (-) TimerEvent: {}
+[8.310755] (-) TimerEvent: {}
+[8.412435] (-) TimerEvent: {}
+[8.515257] (-) TimerEvent: {}
+[8.616545] (-) TimerEvent: {}
+[8.717536] (-) TimerEvent: {}
+[8.820997] (-) TimerEvent: {}
+[8.924083] (-) TimerEvent: {}
+[9.024985] (-) TimerEvent: {}
+[9.129541] (-) TimerEvent: {}
+[9.231198] (-) TimerEvent: {}
+[9.332110] (-) TimerEvent: {}
+[9.433035] (-) TimerEvent: {}
+[9.533845] (-) TimerEvent: {}
+[9.634977] (-) TimerEvent: {}
+[9.735702] (-) TimerEvent: {}
+[9.837155] (-) TimerEvent: {}
+[9.940280] (-) TimerEvent: {}
+[10.041112] (-) TimerEvent: {}
+[10.141958] (-) TimerEvent: {}
+[10.242827] (-) TimerEvent: {}
+[10.343695] (-) TimerEvent: {}
+[10.385188] (module_send_email) StdoutLine: {'line': b'running egg_info\n'}
+[10.444333] (-) TimerEvent: {}
+[10.547015] (-) TimerEvent: {}
+[10.576073] (module_send_email) StdoutLine: {'line': b'writing ../../build/module_send_email/module_send_email.egg-info/PKG-INFO\n'}
+[10.576989] (module_send_email) StdoutLine: {'line': b'writing dependency_links to ../../build/module_send_email/module_send_email.egg-info/dependency_links.txt\n'}
+[10.587007] (module_send_email) StdoutLine: {'line': b'writing entry points to ../../build/module_send_email/module_send_email.egg-info/entry_points.txt\n'}
+[10.588051] (module_send_email) StdoutLine: {'line': b'writing requirements to ../../build/module_send_email/module_send_email.egg-info/requires.txt\n'}
+[10.588989] (module_send_email) StdoutLine: {'line': b'writing top-level names to ../../build/module_send_email/module_send_email.egg-info/top_level.txt\n'}
+[10.647189] (-) TimerEvent: {}
+[10.748110] (-) TimerEvent: {}
+[10.850906] (-) TimerEvent: {}
+[10.953072] (-) TimerEvent: {}
+[10.958152] (module_send_email) StdoutLine: {'line': b"reading manifest file '../../build/module_send_email/module_send_email.egg-info/SOURCES.txt'\n"}
+[10.965719] (module_send_email) StdoutLine: {'line': b"writing manifest file '../../build/module_send_email/module_send_email.egg-info/SOURCES.txt'\n"}
+[10.969935] (module_send_email) StdoutLine: {'line': b'running build\n'}
+[10.971024] (module_send_email) StdoutLine: {'line': b'running build_py\n'}
+[10.978898] (module_send_email) StdoutLine: {'line': b'copying module_send_email/module_send_email.py -> /home/tomccd/Documents/Code/Python/DATN/build/module_send_email/build/lib/module_send_email\n'}
+[10.981193] (module_send_email) StdoutLine: {'line': b'running install\n'}
+[11.003646] (module_send_email) StdoutLine: {'line': b'running install_lib\n'}
+[11.053467] (-) TimerEvent: {}
+[11.154391] (-) TimerEvent: {}
+[11.223795] (module_send_email) StdoutLine: {'line': b'copying /home/tomccd/Documents/Code/Python/DATN/build/module_send_email/build/lib/module_send_email/module_send_email.py -> /home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/python3.12/site-packages/module_send_email\n'}
+[11.228125] (module_send_email) StdoutLine: {'line': b'byte-compiling /home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/python3.12/site-packages/module_send_email/module_send_email.py to module_send_email.cpython-312.pyc\n'}
+[11.234397] (module_send_email) StdoutLine: {'line': b'running install_data\n'}
+[11.238799] (module_send_email) StdoutLine: {'line': b'running install_egg_info\n'}
+[11.255995] (-) TimerEvent: {}
+[11.358093] (-) TimerEvent: {}
+[11.462034] (-) TimerEvent: {}
+[11.507967] (module_send_email) StdoutLine: {'line': b"removing '/home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/python3.12/site-packages/module_send_email-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[11.513477] (module_send_email) StdoutLine: {'line': b'Copying ../../build/module_send_email/module_send_email.egg-info to /home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/python3.12/site-packages/module_send_email-0.0.0-py3.12.egg-info\n'}
+[11.529477] (module_send_email) StdoutLine: {'line': b'running install_scripts\n'}
+[11.562280] (-) TimerEvent: {}
+[11.663572] (-) TimerEvent: {}
+[11.767248] (-) TimerEvent: {}
+[11.871061] (-) TimerEvent: {}
+[11.973852] (-) TimerEvent: {}
+[12.075617] (-) TimerEvent: {}
+[12.178022] (-) TimerEvent: {}
+[12.279072] (-) TimerEvent: {}
+[12.381923] (-) TimerEvent: {}
+[12.483821] (-) TimerEvent: {}
+[12.586199] (-) TimerEvent: {}
+[12.690299] (-) TimerEvent: {}
+[12.795061] (-) TimerEvent: {}
+[12.896567] (-) TimerEvent: {}
+[12.979083] (module_send_email) StdoutLine: {'line': b'Installing module_send_email script to /home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/module_send_email\n'}
+[12.982859] (module_send_email) StdoutLine: {'line': b"writing list of installed files to '/home/tomccd/Documents/Code/Python/DATN/build/module_send_email/install.log'\n"}
+[12.997066] (-) TimerEvent: {}
+[13.102921] (-) TimerEvent: {}
+[13.204211] (module_send_email) CommandEnded: {'returncode': 0}
+[13.207619] (-) TimerEvent: {}
+[13.301616] (module_send_email) JobEnded: {'identifier': 'module_send_email', 'rc': 0}
+[13.307892] (-) TimerEvent: {}
+[13.409399] (-) TimerEvent: {}
+[13.511632] (-) TimerEvent: {}
+[13.613099] (-) TimerEvent: {}
+[13.716977] (-) TimerEvent: {}
+[13.817814] (-) TimerEvent: {}
+[13.918706] (-) TimerEvent: {}
+[14.019582] (-) TimerEvent: {}
+[14.120410] (-) TimerEvent: {}
+[14.221275] (-) TimerEvent: {}
+[14.322131] (-) TimerEvent: {}
+[14.423008] (-) TimerEvent: {}
+[14.523848] (-) TimerEvent: {}
+[14.626031] (-) TimerEvent: {}
+[14.726834] (-) TimerEvent: {}
+[14.827712] (-) TimerEvent: {}
+[14.928511] (-) TimerEvent: {}
+[15.029456] (-) TimerEvent: {}
+[15.130280] (-) TimerEvent: {}
+[15.231053] (-) TimerEvent: {}
+[15.331848] (-) TimerEvent: {}
+[15.432668] (-) TimerEvent: {}
+[15.533534] (-) TimerEvent: {}
+[15.634349] (-) TimerEvent: {}
+[15.735186] (-) TimerEvent: {}
+[15.836000] (-) TimerEvent: {}
+[15.936819] (-) TimerEvent: {}
+[16.037688] (-) TimerEvent: {}
+[16.138507] (-) TimerEvent: {}
+[16.239406] (-) TimerEvent: {}
+[16.342519] (-) TimerEvent: {}
+[16.443643] (-) TimerEvent: {}
+[16.544843] (-) TimerEvent: {}
+[16.646118] (-) TimerEvent: {}
+[16.746985] (-) TimerEvent: {}
+[16.847821] (-) TimerEvent: {}
+[16.948641] (-) TimerEvent: {}
+[17.049522] (-) TimerEvent: {}
+[17.150394] (-) TimerEvent: {}
+[17.251273] (-) TimerEvent: {}
+[17.352069] (-) TimerEvent: {}
+[17.453408] (-) TimerEvent: {}
+[17.554657] (-) TimerEvent: {}
+[17.655821] (-) TimerEvent: {}
+[17.756660] (-) TimerEvent: {}
+[17.857466] (-) TimerEvent: {}
+[17.959432] (-) TimerEvent: {}
+[18.060247] (-) TimerEvent: {}
+[18.161055] (-) TimerEvent: {}
+[18.262317] (-) TimerEvent: {}
+[18.363238] (-) TimerEvent: {}
+[18.464232] (-) TimerEvent: {}
+[18.565174] (-) TimerEvent: {}
+[18.666214] (-) TimerEvent: {}
+[18.767113] (-) TimerEvent: {}
+[18.867992] (-) TimerEvent: {}
+[18.968742] (-) TimerEvent: {}
+[19.069578] (-) TimerEvent: {}
+[19.170419] (-) TimerEvent: {}
+[19.271217] (-) TimerEvent: {}
+[19.372030] (-) TimerEvent: {}
+[19.472806] (-) TimerEvent: {}
+[19.573648] (-) TimerEvent: {}
+[19.674449] (-) TimerEvent: {}
+[19.775286] (-) TimerEvent: {}
+[19.876048] (-) TimerEvent: {}
+[19.976811] (-) TimerEvent: {}
+[20.077612] (-) TimerEvent: {}
+[20.178428] (-) TimerEvent: {}
+[20.279243] (-) TimerEvent: {}
+[20.380028] (-) TimerEvent: {}
+[20.480817] (-) TimerEvent: {}
+[20.581629] (-) TimerEvent: {}
+[20.682433] (-) TimerEvent: {}
+[20.783250] (-) TimerEvent: {}
+[20.884011] (-) TimerEvent: {}
+[20.984784] (-) TimerEvent: {}
+[21.085609] (-) TimerEvent: {}
+[21.186465] (-) TimerEvent: {}
+[21.287297] (-) TimerEvent: {}
+[21.388165] (-) TimerEvent: {}
+[21.490041] (-) TimerEvent: {}
+[21.590791] (-) TimerEvent: {}
+[21.691632] (-) TimerEvent: {}
+[21.792474] (-) TimerEvent: {}
+[21.893455] (-) TimerEvent: {}
+[21.994302] (-) TimerEvent: {}
+[22.095272] (-) TimerEvent: {}
+[22.196066] (-) TimerEvent: {}
+[22.296936] (-) TimerEvent: {}
+[22.397738] (-) TimerEvent: {}
+[22.498610] (-) TimerEvent: {}
+[22.599795] (-) TimerEvent: {}
+[22.700636] (-) TimerEvent: {}
+[22.801503] (-) TimerEvent: {}
+[22.902383] (-) TimerEvent: {}
+[23.003208] (-) TimerEvent: {}
+[23.104016] (-) TimerEvent: {}
+[23.204782] (-) TimerEvent: {}
+[23.305612] (-) TimerEvent: {}
+[23.406462] (-) TimerEvent: {}
+[23.507329] (-) TimerEvent: {}
+[23.608151] (-) TimerEvent: {}
+[23.708967] (-) TimerEvent: {}
+[23.809713] (-) TimerEvent: {}
+[23.910579] (-) TimerEvent: {}
+[24.011408] (-) TimerEvent: {}
+[24.112230] (-) TimerEvent: {}
+[24.213032] (-) TimerEvent: {}
+[24.313825] (-) TimerEvent: {}
+[24.414634] (-) TimerEvent: {}
+[24.515452] (-) TimerEvent: {}
+[24.616254] (-) TimerEvent: {}
+[24.717178] (-) TimerEvent: {}
+[24.818007] (-) TimerEvent: {}
+[24.918934] (-) TimerEvent: {}
+[25.019708] (-) TimerEvent: {}
+[25.121156] (-) TimerEvent: {}
+[25.222020] (-) TimerEvent: {}
+[25.322923] (-) TimerEvent: {}
+[25.423834] (-) TimerEvent: {}
+[25.524767] (-) TimerEvent: {}
+[25.625686] (-) TimerEvent: {}
+[25.726671] (-) TimerEvent: {}
+[25.827627] (-) TimerEvent: {}
+[25.928477] (-) TimerEvent: {}
+[26.029329] (-) TimerEvent: {}
+[26.130161] (-) TimerEvent: {}
+[26.236176] (-) TimerEvent: {}
+[26.338586] (-) TimerEvent: {}
+[26.439596] (-) TimerEvent: {}
+[26.541739] (-) TimerEvent: {}
+[26.643487] (-) TimerEvent: {}
+[26.744405] (-) TimerEvent: {}
+[26.845258] (-) TimerEvent: {}
+[26.946140] (-) TimerEvent: {}
+[27.046948] (-) TimerEvent: {}
+[27.147713] (-) TimerEvent: {}
+[27.248590] (-) TimerEvent: {}
+[27.349457] (-) TimerEvent: {}
+[27.450282] (-) TimerEvent: {}
+[27.551132] (-) TimerEvent: {}
+[27.652316] (-) TimerEvent: {}
+[27.753202] (-) TimerEvent: {}
+[27.853995] (-) TimerEvent: {}
+[27.954760] (-) TimerEvent: {}
+[28.055608] (-) TimerEvent: {}
+[28.156497] (-) TimerEvent: {}
+[28.257347] (-) TimerEvent: {}
+[28.358267] (-) TimerEvent: {}
+[28.459179] (-) TimerEvent: {}
+[28.560075] (-) TimerEvent: {}
+[28.660977] (-) TimerEvent: {}
+[28.761765] (-) TimerEvent: {}
+[28.862607] (-) TimerEvent: {}
+[28.963466] (-) TimerEvent: {}
+[29.064329] (-) TimerEvent: {}
+[29.165148] (-) TimerEvent: {}
+[29.265988] (-) TimerEvent: {}
+[29.366785] (-) TimerEvent: {}
+[29.467643] (-) TimerEvent: {}
+[29.568558] (-) TimerEvent: {}
+[29.669686] (-) TimerEvent: {}
+[29.770937] (-) TimerEvent: {}
+[29.873135] (-) TimerEvent: {}
+[29.974000] (-) TimerEvent: {}
+[30.074800] (-) TimerEvent: {}
+[30.175787] (-) TimerEvent: {}
+[30.276517] (-) TimerEvent: {}
+[30.377339] (-) TimerEvent: {}
+[30.478031] (-) TimerEvent: {}
+[30.580207] (-) TimerEvent: {}
+[30.680988] (-) TimerEvent: {}
+[30.781728] (-) TimerEvent: {}
+[30.882639] (-) TimerEvent: {}
+[30.983510] (-) TimerEvent: {}
+[31.084500] (-) TimerEvent: {}
+[31.185314] (-) TimerEvent: {}
+[31.286190] (-) TimerEvent: {}
+[31.387007] (-) TimerEvent: {}
+[31.487853] (-) TimerEvent: {}
+[31.588809] (-) TimerEvent: {}
+[31.689784] (-) TimerEvent: {}
+[31.791168] (-) TimerEvent: {}
+[31.891993] (-) TimerEvent: {}
+[31.992767] (-) TimerEvent: {}
+[32.093653] (-) TimerEvent: {}
+[32.194722] (-) TimerEvent: {}
+[32.295520] (-) TimerEvent: {}
+[32.397164] (-) TimerEvent: {}
+[32.499711] (-) TimerEvent: {}
+[32.600575] (-) TimerEvent: {}
+[32.701418] (-) TimerEvent: {}
+[32.802201] (-) TimerEvent: {}
+[32.903525] (-) TimerEvent: {}
+[33.004539] (-) TimerEvent: {}
+[33.105343] (-) TimerEvent: {}
+[33.206143] (-) TimerEvent: {}
+[33.306985] (-) TimerEvent: {}
+[33.407764] (-) TimerEvent: {}
+[33.508603] (-) TimerEvent: {}
+[33.609399] (-) TimerEvent: {}
+[33.710144] (-) TimerEvent: {}
+[33.810843] (-) TimerEvent: {}
+[33.911817] (-) TimerEvent: {}
+[34.012660] (-) TimerEvent: {}
+[34.114022] (-) TimerEvent: {}
+[34.215306] (-) TimerEvent: {}
+[34.317142] (-) TimerEvent: {}
+[34.418751] (-) TimerEvent: {}
+[34.519996] (-) TimerEvent: {}
+[34.621766] (-) TimerEvent: {}
+[34.722990] (-) TimerEvent: {}
+[34.823941] (-) TimerEvent: {}
+[34.925820] (-) TimerEvent: {}
+[35.026623] (-) TimerEvent: {}
+[35.127676] (-) TimerEvent: {}
+[35.228471] (-) TimerEvent: {}
+[35.329392] (-) TimerEvent: {}
+[35.430196] (-) TimerEvent: {}
+[35.531025] (-) TimerEvent: {}
+[35.631925] (-) TimerEvent: {}
+[35.732759] (-) TimerEvent: {}
+[35.833657] (-) TimerEvent: {}
+[35.934830] (-) TimerEvent: {}
+[36.035623] (-) TimerEvent: {}
+[36.136447] (-) TimerEvent: {}
+[36.237380] (-) TimerEvent: {}
+[36.339923] (-) TimerEvent: {}
+[36.440719] (-) TimerEvent: {}
+[36.541553] (-) TimerEvent: {}
+[36.642382] (-) TimerEvent: {}
+[36.743189] (-) TimerEvent: {}
+[36.844030] (-) TimerEvent: {}
+[36.944820] (-) TimerEvent: {}
+[37.045727] (-) TimerEvent: {}
+[37.146516] (-) TimerEvent: {}
+[37.247378] (-) TimerEvent: {}
+[37.348372] (-) TimerEvent: {}
+[37.449200] (-) TimerEvent: {}
+[37.550444] (-) TimerEvent: {}
+[37.651305] (-) TimerEvent: {}
+[37.752128] (-) TimerEvent: {}
+[37.852939] (-) TimerEvent: {}
+[37.953660] (-) TimerEvent: {}
+[38.054583] (-) TimerEvent: {}
+[38.155470] (-) TimerEvent: {}
+[38.256284] (-) TimerEvent: {}
+[38.357060] (-) TimerEvent: {}
+[38.457916] (-) TimerEvent: {}
+[38.558677] (-) TimerEvent: {}
+[38.659462] (-) TimerEvent: {}
+[38.760303] (-) TimerEvent: {}
+[38.861147] (-) TimerEvent: {}
+[38.961966] (-) TimerEvent: {}
+[39.062800] (-) TimerEvent: {}
+[39.163608] (-) TimerEvent: {}
+[39.264461] (-) TimerEvent: {}
+[39.365300] (-) TimerEvent: {}
+[39.466224] (-) TimerEvent: {}
+[39.566986] (-) TimerEvent: {}
+[39.667763] (-) TimerEvent: {}
+[39.768550] (-) TimerEvent: {}
+[39.869355] (-) TimerEvent: {}
+[39.970140] (-) TimerEvent: {}
+[40.071285] (-) TimerEvent: {}
+[40.172087] (-) TimerEvent: {}
+[40.272857] (-) TimerEvent: {}
+[40.373662] (-) TimerEvent: {}
+[40.474487] (-) TimerEvent: {}
+[40.575263] (-) TimerEvent: {}
+[40.676020] (-) TimerEvent: {}
+[40.776780] (-) TimerEvent: {}
+[40.877635] (-) TimerEvent: {}
+[40.978454] (-) TimerEvent: {}
+[41.079244] (-) TimerEvent: {}
+[41.180137] (-) TimerEvent: {}
+[41.280859] (-) TimerEvent: {}
+[41.381708] (-) TimerEvent: {}
+[41.482555] (-) TimerEvent: {}
+[41.583359] (-) TimerEvent: {}
+[41.684151] (-) TimerEvent: {}
+[41.784933] (-) TimerEvent: {}
+[41.885696] (-) TimerEvent: {}
+[41.986537] (-) TimerEvent: {}
+[42.087318] (-) TimerEvent: {}
+[42.188054] (-) TimerEvent: {}
+[42.288999] (-) TimerEvent: {}
+[42.389742] (-) TimerEvent: {}
+[42.490606] (-) TimerEvent: {}
+[42.591453] (-) TimerEvent: {}
+[42.692289] (-) TimerEvent: {}
+[42.793061] (-) TimerEvent: {}
+[42.894023] (-) TimerEvent: {}
+[42.994787] (-) TimerEvent: {}
+[43.095587] (-) TimerEvent: {}
+[43.196331] (-) TimerEvent: {}
+[43.297142] (-) TimerEvent: {}
+[43.397856] (-) TimerEvent: {}
+[43.498609] (-) TimerEvent: {}
+[43.599487] (-) TimerEvent: {}
+[43.700360] (-) TimerEvent: {}
+[43.801180] (-) TimerEvent: {}
+[43.902006] (-) TimerEvent: {}
+[44.002790] (-) TimerEvent: {}
+[44.103612] (-) TimerEvent: {}
+[44.204417] (-) TimerEvent: {}
+[44.305207] (-) TimerEvent: {}
+[44.406009] (-) TimerEvent: {}
+[44.506777] (-) TimerEvent: {}
+[44.607573] (-) TimerEvent: {}
+[44.708361] (-) TimerEvent: {}
+[44.809167] (-) TimerEvent: {}
+[44.909960] (-) TimerEvent: {}
+[45.010707] (-) TimerEvent: {}
+[45.111517] (-) TimerEvent: {}
+[45.212338] (-) TimerEvent: {}
+[45.313235] (-) TimerEvent: {}
+[45.414021] (-) TimerEvent: {}
+[45.514808] (-) TimerEvent: {}
+[45.615628] (-) TimerEvent: {}
+[45.716638] (-) TimerEvent: {}
+[45.817451] (-) TimerEvent: {}
+[45.918267] (-) TimerEvent: {}
+[46.019111] (-) TimerEvent: {}
+[46.120022] (-) TimerEvent: {}
+[46.220764] (-) TimerEvent: {}
+[46.321622] (-) TimerEvent: {}
+[46.422453] (-) TimerEvent: {}
+[46.524143] (-) TimerEvent: {}
+[46.624995] (-) TimerEvent: {}
+[46.725853] (-) TimerEvent: {}
+[46.826660] (-) TimerEvent: {}
+[46.927553] (-) TimerEvent: {}
+[47.028355] (-) TimerEvent: {}
+[47.129317] (-) TimerEvent: {}
+[47.230119] (-) TimerEvent: {}
+[47.330859] (-) TimerEvent: {}
+[47.431674] (-) TimerEvent: {}
+[47.532502] (-) TimerEvent: {}
+[47.633704] (-) TimerEvent: {}
+[47.734501] (-) TimerEvent: {}
+[47.835337] (-) TimerEvent: {}
+[47.936135] (-) TimerEvent: {}
+[48.037021] (-) TimerEvent: {}
+[48.137799] (-) TimerEvent: {}
+[48.238628] (-) TimerEvent: {}
+[48.339461] (-) TimerEvent: {}
+[48.440344] (-) TimerEvent: {}
+[48.541093] (-) TimerEvent: {}
+[48.642052] (-) TimerEvent: {}
+[48.742845] (-) TimerEvent: {}
+[48.843698] (-) TimerEvent: {}
+[48.944994] (-) TimerEvent: {}
+[49.045793] (-) TimerEvent: {}
+[49.146580] (-) TimerEvent: {}
+[49.247592] (-) TimerEvent: {}
+[49.348440] (-) TimerEvent: {}
+[49.449320] (-) TimerEvent: {}
+[49.550171] (-) TimerEvent: {}
+[49.651020] (-) TimerEvent: {}
+[49.751846] (-) TimerEvent: {}
+[49.852952] (-) TimerEvent: {}
+[49.953720] (-) TimerEvent: {}
+[50.054644] (-) TimerEvent: {}
+[50.155476] (-) TimerEvent: {}
+[50.256301] (-) TimerEvent: {}
+[50.357085] (-) TimerEvent: {}
+[50.458013] (-) TimerEvent: {}
+[50.559004] (-) TimerEvent: {}
+[50.660096] (-) TimerEvent: {}
+[50.761211] (-) TimerEvent: {}
+[50.862266] (-) TimerEvent: {}
+[50.963216] (-) TimerEvent: {}
+[51.064391] (-) TimerEvent: {}
+[51.165498] (-) TimerEvent: {}
+[51.266298] (-) TimerEvent: {}
+[51.367039] (-) TimerEvent: {}
+[51.467822] (-) TimerEvent: {}
+[51.568613] (-) TimerEvent: {}
+[51.669446] (-) TimerEvent: {}
+[51.770299] (-) TimerEvent: {}
+[51.871061] (-) TimerEvent: {}
+[51.971940] (-) TimerEvent: {}
+[52.072747] (-) TimerEvent: {}
+[52.173569] (-) TimerEvent: {}
+[52.274413] (-) TimerEvent: {}
+[52.375249] (-) TimerEvent: {}
+[52.476126] (-) TimerEvent: {}
+[52.577833] (-) TimerEvent: {}
+[52.678667] (-) TimerEvent: {}
+[52.779598] (-) TimerEvent: {}
+[52.880434] (-) TimerEvent: {}
+[52.981256] (-) TimerEvent: {}
+[53.082035] (-) TimerEvent: {}
+[53.183559] (-) TimerEvent: {}
+[53.285035] (-) TimerEvent: {}
+[53.386037] (-) TimerEvent: {}
+[53.487039] (-) TimerEvent: {}
+[53.588946] (-) TimerEvent: {}
+[53.690231] (-) TimerEvent: {}
+[53.791018] (-) TimerEvent: {}
+[53.891717] (-) TimerEvent: {}
+[53.945408] (module_log_file) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable module_log_file\x1b[0m\n'}
+[53.991947] (-) TimerEvent: {}
+[54.092719] (-) TimerEvent: {}
+[54.193842] (-) TimerEvent: {}
+[54.296799] (-) TimerEvent: {}
+[54.398202] (-) TimerEvent: {}
+[54.499654] (-) TimerEvent: {}
+[54.600857] (-) TimerEvent: {}
+[54.702451] (-) TimerEvent: {}
+[54.803542] (-) TimerEvent: {}
+[54.904956] (-) TimerEvent: {}
+[55.006452] (-) TimerEvent: {}
+[55.108403] (-) TimerEvent: {}
+[55.210271] (-) TimerEvent: {}
+[55.312180] (-) TimerEvent: {}
+[55.415110] (-) TimerEvent: {}
+[55.517649] (-) TimerEvent: {}
+[55.618739] (-) TimerEvent: {}
+[55.720466] (-) TimerEvent: {}
+[55.821148] (-) TimerEvent: {}
+[55.921854] (-) TimerEvent: {}
+[56.022593] (-) TimerEvent: {}
+[56.123449] (-) TimerEvent: {}
+[56.153468] (module_log_file) StdoutLine: {'line': b'[100%] Built target module_log_file\n'}
+[56.223672] (-) TimerEvent: {}
+[56.234738] (module_log_file) CommandEnded: {'returncode': 0}
+[56.323937] (-) TimerEvent: {}
+[56.414794] (module_log_file) JobProgress: {'identifier': 'module_log_file', 'progress': 'install'}
+[56.424089] (-) TimerEvent: {}
+[56.468353] (module_log_file) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/tomccd/Documents/Code/Python/DATN/build/module_log_file'], 'cwd': '/home/tomccd/Documents/Code/Python/DATN/build/module_log_file', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'tomccd', 'SSH_CLIENT': '100.118.255.2 62339 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/bin/helpers/browser.sh', 'HOME': '/home/tomccd', 'OLDPWD': '/home/tomccd/Documents/Code/Python/DATN/install', 'TERM_PROGRAM_VERSION': '1.95.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-4bdf16c2-da42-42f8-82a7-b6dd2c55f122.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tomccd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'PATH': '/home/tomccd/.local/bin:/opt/ros/jazzy/bin:/home/tomccd/miniforge3/bin:/home/tomccd/miniconda3/bin:/home/tomccd/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin:/opt/mssql-tools18/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-3defd5753f.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/module_motor:/home/tomccd/Documents/Code/Python/DATN/install/module_log_file:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/tomccd/Documents/Code/Python/DATN/build/module_log_file', 'SSH_CONNECTION': '100.118.255.2 62339 100.108.95.105 22', 'PYTHONPATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/python3.12/site-packages:/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/tomccd/Documents/Code/Python/DATN/install/custom_interfaces:/home/tomccd/Documents/Code/Python/DATN/install/launch_system:/home/tomccd/Documents/Code/Python/DATN/install/module_log_file:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/module_motor:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/opt/ros/jazzy'}), 'shell': False}
+[56.517275] (module_log_file) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[56.518828] (module_log_file) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/lib/module_log_file/module_log_file\n'}
+[56.524531] (-) TimerEvent: {}
+[56.619442] (module_log_file) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/tomccd/Documents/Code/Python/DATN/install/module_log_file/lib/module_log_file/module_log_file" to ""\n'}
+[56.620767] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/ament_index/resource_index/package_run_dependencies/module_log_file\n'}
+[56.621935] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/ament_index/resource_index/parent_prefix_path/module_log_file\n'}
+[56.623033] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/environment/ament_prefix_path.sh\n'}
+[56.624576] (-) TimerEvent: {}
+[56.625504] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/environment/ament_prefix_path.dsv\n'}
+[56.626580] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/environment/path.sh\n'}
+[56.627392] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/environment/path.dsv\n'}
+[56.628498] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/local_setup.bash\n'}
+[56.629355] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/local_setup.sh\n'}
+[56.631085] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/local_setup.zsh\n'}
+[56.632275] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/local_setup.dsv\n'}
+[56.635955] (module_log_file) StdoutLine: {'line': b'-- Installing: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/package.dsv\n'}
+[56.637080] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/ament_index/resource_index/packages/module_log_file\n'}
+[56.639950] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/cmake/module_log_fileConfig.cmake\n'}
+[56.641014] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/cmake/module_log_fileConfig-version.cmake\n'}
+[56.641888] (module_log_file) StdoutLine: {'line': b'-- Up-to-date: /home/tomccd/Documents/Code/Python/DATN/install/module_log_file/share/module_log_file/package.xml\n'}
+[56.650621] (module_log_file) CommandEnded: {'returncode': 0}
+[56.727335] (-) TimerEvent: {}
+[56.828293] (-) TimerEvent: {}
+[56.929508] (-) TimerEvent: {}
+[56.980033] (module_log_file) JobEnded: {'identifier': 'module_log_file', 'rc': 0}
+[56.984347] (-) EventReactorShutdown: {}

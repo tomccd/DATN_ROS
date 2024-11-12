@@ -1,0 +1,79 @@
+[0.082s] Invoking command in '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/module_motor:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/opt/ros/jazzy /usr/bin/cmake --build /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces -- -j4 -l4
+[0.572s] [  1%] Built target custom_interfaces__rosidl_generator_type_description
+[0.643s] [  1%] Built target ament_cmake_python_copy_custom_interfaces
+[0.906s] [ 25%] Built target custom_interfaces__rosidl_generator_c
+[0.907s] [ 26%] Built target custom_interfaces__cpp
+[1.528s] [ 41%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c
+[1.548s] [ 45%] Built target custom_interfaces__rosidl_typesupport_c
+[1.564s] [ 54%] Built target custom_interfaces__rosidl_typesupport_introspection_c
+[1.915s] [ 64%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.042s] [ 73%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp
+[2.624s] [ 83%] Built target custom_interfaces__rosidl_typesupport_cpp
+[2.912s] [ 83%] Built target custom_interfaces
+[3.371s] Traceback (most recent call last):
+[3.400s]   File "/usr/lib/python3.12/pathlib.py", line 441, in __str__
+[3.408s]     return self._str
+[3.415s]            ^^^^^^^^^
+[3.432s] AttributeError: 'PosixPath' object has no attribute '_str'
+[3.463s] 
+[3.467s] During handling of the above exception, another exception occurred:
+[3.478s] 
+[3.479s] Traceback (most recent call last):
+[3.496s]   File "/usr/lib/python3.12/pathlib.py", line 555, in drive
+[3.508s]     return self._drv
+[3.509s]            ^^^^^^^^^
+[3.527s] AttributeError: 'PosixPath' object has no attribute '_drv'
+[3.529s] 
+[3.530s] During handling of the above exception, another exception occurred:
+[3.559s] 
+[3.560s] Traceback (most recent call last):
+[3.565s]   File "/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/ament_cmake_python/custom_interfaces/setup.py", line 4, in <module>
+[3.566s] gmake[1]: *** [CMakeFiles/Makefile2:622: custom_interfaces__py/CMakeFiles/custom_interfaces__py.dir/all] Interrupt
+[3.571s]     setup(
+[3.572s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 107, in setup
+[3.573s]     return distutils.core.setup(**attrs)
+[3.603s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[3.605s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 147, in setup
+[3.616s]     _setup_distribution = dist = klass(attrs)
+[3.618s]                                  ^^^^^^^^^^^^
+[3.655s]   File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 485, in __init__
+[3.656s]     _Distribution.__init__(
+[3.680s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 283, in __init__
+[3.681s]     self.finalize_options()
+[3.689s]   File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 922, in finalize_options
+[3.691s]     defined = metadata.entry_points(group=group)
+[3.719s]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[3.730s]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 913, in entry_points
+[3.732s]     return EntryPoints(eps).select(**params)
+[3.751s]            ^^^^^^^^^^^^^^^^
+[3.771s]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 911, in <genexpr>
+[3.794s]     dist.entry_points for dist in _unique(distributions())
+[3.849s]     ^^^^^^^^^^^^^^^^^
+[3.931s]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 471, in entry_points
+[3.932s]     return EntryPoints._from_text_for(self.read_text('entry_points.txt'), self)
+[4.002s]                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[4.003s]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 819, in read_text
+[4.012s]     return self._path.joinpath(filename).read_text(encoding='utf-8')
+[4.023s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[4.024s]   File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+[4.025s]     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[4.049s]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[4.050s]   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[4.072s]     return io.open(self, mode, buffering, encoding, errors, newline)
+[4.075s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[4.099s]   File "/usr/lib/python3.12/pathlib.py", line 448, in __fspath__
+[4.123s]     return str(self)
+[4.130s]            ^^^^^^^^^
+[4.162s]   File "/usr/lib/python3.12/pathlib.py", line 443, in __str__
+[4.185s]     self._str = self._format_parsed_parts(self.drive, self.root,
+[4.189s]                                           ^^^^^^^^^^
+[4.190s]   File "/usr/lib/python3.12/pathlib.py", line 557, in drive
+[4.199s]     self._load_parts()
+[4.204s]   File "/usr/lib/python3.12/pathlib.py", line 407, in _load_parts
+[4.208s]     def _load_parts(self):
+[4.228s] 
+[4.229s] KeyboardInterrupt
+[4.230s] gmake[2]: *** [CMakeFiles/ament_cmake_python_build_custom_interfaces_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_custom_interfaces_egg] Interrupt
+[4.239s] gmake[1]: *** [CMakeFiles/Makefile2:478: CMakeFiles/ament_cmake_python_build_custom_interfaces_egg.dir/all] Interrupt
+[4.240s] gmake: *** [Makefile:146: all] Interrupt
+[4.245s] Invoked command in '/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tomccd/Documents/Code/Python/DATN/install/module_weigh:/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor:/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface:/home/tomccd/Documents/Code/Python/DATN/install/module_motor:/home/tomccd/Documents/Code/Python/DATN/install/module_input:/opt/ros/jazzy /usr/bin/cmake --build /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces -- -j4 -l4

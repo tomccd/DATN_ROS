@@ -81,6 +81,9 @@ rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__r
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/srv/InitSys.idl
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/msg/SetWeighIO.idl
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/msg/WeighValue.idl
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/msg/SetServoIO.idl
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/msg/SetServoRotate.idl
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/msg/SendFileName.idl
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -96,6 +99,15 @@ rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_weigh_io__ro
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__type_support.c: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__type_support.c
 
@@ -107,6 +119,15 @@ rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_weigh_io__ty
 
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__type_support.c: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__type_support.c
+
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c
+
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c
+
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c
 
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__type_support.c.o: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__type_support.c
@@ -164,12 +185,57 @@ CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_type
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__type_support.c -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__type_support.c.s
 
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.o: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.o -c /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c
+
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c > CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.i
+
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.s
+
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.o: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.o -c /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c
+
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c > CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.i
+
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.s
+
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.o: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.o -MF CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.o.d -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.o -c /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c
+
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c > CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.i
+
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.s
+
 # Object files for target custom_interfaces__rosidl_typesupport_introspection_c
 custom_interfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__type_support.c.o" \
 "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/init_sys__type_support.c.o" \
 "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_weigh_io__type_support.c.o" \
-"CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__type_support.c.o"
+"CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__type_support.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.o"
 
 # External object files for target custom_interfaces__rosidl_typesupport_introspection_c
 custom_interfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
@@ -178,6 +244,9 @@ libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_i
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/init_sys__type_support.c.o
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_weigh_io__type_support.c.o
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/weigh_value__type_support.c.o
+libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c.o
+libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c.o
+libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c.o
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/build.make
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: libcustom_interfaces__rosidl_generator_c.so
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_introspection_c.so
@@ -188,7 +257,7 @@ libcustom_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/librcutils.so
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libcustom_interfaces__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library libcustom_interfaces__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -199,6 +268,12 @@ CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/clean
 
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__rosidl_typesupport_introspection_c.h
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/send_file_name__type_support.c
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__rosidl_typesupport_introspection_c.h
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_io__type_support.c
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__rosidl_typesupport_introspection_c.h
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.c
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_weigh_io__rosidl_typesupport_introspection_c.h
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_weigh_io__type_support.c
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/terminate_sys__rosidl_typesupport_introspection_c.h
