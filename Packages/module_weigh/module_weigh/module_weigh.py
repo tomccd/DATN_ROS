@@ -18,7 +18,7 @@ class myNode(Node):
         #Create a io subcriber
         self.subcriber_io = self.create_subscription(SetWeighIO,"weigh_io",self.receiveIOStatus,10)
         #Init HX711
-        self.hx = SimpleHX711(2,3,-413, 579886,Rate.HZ_80)
+        self.hx = SimpleHX711(2,3,-385, 543491,Rate.HZ_80)
         #Set Unit
         self.hx.setUnit(Mass.Unit.G)
         #Create a weigh Event

@@ -50,24 +50,20 @@ class myNode(Node):
     #Quay Servo khi phân loại theo pin
     def rotateServo_Distinguish(self,pin):
         if pin == self.PULSE_PIN_TBDT:
-            #Delay để vật trôi xuống
-            time.sleep(0.5)
             #Thiết lập servo quay về vị trí ban đầu
             try:
                 self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(5))
                 self.rotate_status = True
-                time.sleep(0.5)
+                time.sleep(1)
             except Exception as e:
                 self.get_logger().error(f"---- Server Module_Motor.node_servo_motor can't rotate at Servo 1st. Error: {e} ----")
                 self.rotate_status = False
         elif pin  == self.PULSE_PIN_QA:
-            #Delay để vật trôi xuống
-            time.sleep(0.5)
             #Thiết lập servo quay về vị trí ban đầu
             try:
                 self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(30))
                 self.rotate_status = True
-                time.sleep(0.5)
+                time.sleep(1)
             except Exception as e:
                 self.get_logger().error(f"---- Server Module_Motor.node_servo_motor can't rotate at Servo 2nd. Error: {e} ----")
                 self.rotate_status = False
@@ -77,12 +73,13 @@ class myNode(Node):
             try:
                 #Tránh vật
                 self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(60))
-                time.sleep(0.5)
+                time.sleep(2)
                 try:
                     #Thiết lập servo quay về vị trí ban đầu
                     self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(5))
                     self.rotate_status = True
-                    time.sleep(0.5)
+                    
+                    time.sleep(2)
                 except Exception as e:
                     self.get_logger().error(f"---- Server Module_Motor.node_servo_motor can't rotate at Servo 1st. Error: {e} ----")
                     self.rotate_status = False
@@ -93,12 +90,12 @@ class myNode(Node):
             try:
                 #Tránh vật
                 self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(95))
-                time.sleep(0.5)
+                time.sleep(2)
                 try:
                     #Thiết lập servo quay về vị trí ban đầu
                     self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(30))
                     self.rotate_status = True
-                    time.sleep(0.5)
+                    time.sleep(2)
                 except Exception as e:
                     self.get_logger().error(f"---- Server Module_Motor.node_servo_motor can't rotate at Servo 2nd. Error: {e} ----")
                     self.rotate_status = False
@@ -108,21 +105,25 @@ class myNode(Node):
             
     def setActuator(self,msg):
         #Tìm chuỗi nhỏ
-        if msg.rotatemsg.find("YES"):
-            if msg.rotatemsg.find("1"):
+        if msg.rotatemsg.find("YES") != -1:
+            if msg.rotatemsg.find("1") != -1:
+                self.get_logger().info("---- Node_DC_Servo: Rotate Servo TBDT DSG ----")
                 thread_rotate = threading.Thread(target=self.rotateServo_Distinguish,args=(self.PULSE_PIN_TBDT,))
                 thread_rotate.daemon = True
                 thread_rotate.start()
-            elif msg.rotatemsg.find("2"):
+            elif msg.rotatemsg.find("2") != -1:
+                self.get_logger().info("---- Node_DC_Servo: Rotate Servo QA DSG ----")
                 thread_rotate = threading.Thread(target=self.rotateServo_Distinguish,args=(self.PULSE_PIN_QA,))
                 thread_rotate.daemon = True
                 thread_rotate.start()
-        elif msg.rotatemsg.find("NO"):
-            if msg.rotatemsg.find("1"):
+        elif msg.rotatemsg.find("NO") != -1:
+            if msg.rotatemsg.find("1") != -1:
+                self.get_logger().info("---- Node_DC_Servo: Rotate Servo TBDT AVD ----")
                 thread_rotate = threading.Thread(target=self.rotateServo_Avoid,args=(self.PULSE_PIN_TBDT,))
                 thread_rotate.daemon = True
                 thread_rotate.start()
-            elif msg.rotatemsg.find("2"):
+            elif msg.rotatemsg.find("2") != -1:
+                self.get_logger().info("---- Node_DC_Servo: Rotate Servo QA AVD ----")
                 thread_rotate = threading.Thread(target=self.rotateServo_Avoid,args=(self.PULSE_PIN_QA,))
                 thread_rotate.daemon = True
                 thread_rotate.start()
