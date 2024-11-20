@@ -4,6 +4,7 @@ import pigpio
 from custom_interfaces.msg import TerminateSys, SetServoIO
 from custom_interfaces.srv import InitSys
 import sys
+import time
 class myNode(Node):
     def __init__(self,name:str):
         super().__init__(name)
@@ -26,7 +27,7 @@ class myNode(Node):
         #Define GPIO_CB_Diff
         self.GPIO_CB_Diff = 16
         #Create a timer
-        self.timer_ = self.create_timer(0.35,self.checkIOStatus)
+        self.timer_ = self.create_timer(0.25,self.checkIOStatus)
     def callBack(self,req,res):
         self.get_logger().info(f"---- Server Module_Input.node_io_servo: Receive Intialized Request: {req.a} ----")
         self.init_status = True
@@ -35,6 +36,7 @@ class myNode(Node):
     def checkIOStatus(self):
         msg = SetServoIO()
         try:
+            # time.sleep(0.25) #Chống nhiễu
             #Trạng thái cảm biến TBDT
             detect_TBDT = self.pi.read(self.GPIO_CB_TBDT)
             #Trạng thái cảm biến QA

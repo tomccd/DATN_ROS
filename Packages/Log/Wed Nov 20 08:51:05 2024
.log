@@ -1,0 +1,983 @@
+1732067464.0108728 [INFO] [launch]: All log files can be found below /home/tomccd/.ros/log/2024-11-20-08-51-04-006643-tomccd-raspberry4b-16651
+1732067464.0114620 [INFO] [launch]: Default logging verbosity is set to INFO
+1732067464.7812741 [INFO] [module_supervisor-1]: process started with pid [16654]
+1732067464.7858686 [INFO] [module_scanning_interface-2]: process started with pid [16655]
+1732067464.7886424 [INFO] [node_dc_servo-3]: process started with pid [16656]
+1732067464.7984712 [INFO] [node_io_servo-4]: process started with pid [16657]
+1732067464.7992992 [INFO] [node_dc_motor-5]: process started with pid [16658]
+1732067464.7998757 [INFO] [node_io_weigh-6]: process started with pid [16659]
+1732067464.8004873 [INFO] [module_weigh-7]: process started with pid [16660]
+1732067464.8200626 [INFO] [module_log_file-8]: process started with pid [16661]
+1732067464.8209202 [INFO] [module_send_email-9]: process started with pid [16662]
+1732067471.2303863 [module_supervisor-1] [INFO] [1732067471.219091996] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Log_File Successfully ----
+1732067471.3317649 [node_io_servo-4] [INFO] [1732067471.315294709] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067471.5162098 [node_io_weigh-6] [INFO] [1732067471.512724454] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067471.5460908 [node_io_weigh-6] [INFO] [1732067471.541438283] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067471.7281840 [module_supervisor-1] [INFO] [1732067471.726505437] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Scanning&Interface Successfully ----
+1732067471.7309361 [module_supervisor-1] [INFO] [1732067471.729354764] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Input.node_io_weigh Successfully ----
+1732067471.7334223 [module_supervisor-1] [INFO] [1732067471.732453852] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Weigh Successfully ----
+1732067471.7382040 [module_supervisor-1] [INFO] [1732067471.735968719] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Motor.node_dc_motor Successfully ----
+1732067471.7438281 [node_dc_servo-3] [INFO] [1732067471.739299492] [node_servo_motor]: ---- Server Module_Motor.node_dc_motor: Init Server ----
+1732067471.7469270 [module_supervisor-1] [INFO] [1732067471.739886476] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Input.node_io_servo Successfully ----
+1732067471.7601109 [module_supervisor-1] [INFO] [1732067471.751948899] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Motor.node_dc_servo Successfully ----
+1732067471.7681081 [module_supervisor-1] [INFO] [1732067471.760604585] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Send_Email Successfully ----
+1732067471.7904742 [node_io_weigh-6] [INFO] [1732067471.789598136] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067471.8349652 [node_io_servo-4] [INFO] [1732067471.832747083] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067471.8858955 [node_dc_motor-5] [INFO] [1732067471.884890624] [node_dc_motor]: ---- Server Module_Motor.node_dc_motor: Receive Intialized Request: Ready ----
+1732067471.8974659 [module_supervisor-1] [INFO] [1732067471.895826467] [Module_Supervisor]: ---- Supervisor: Receive Init Respond from Server Module_Motor.node_dc_motor: OK
+1732067472.0994232 [module_scanning_interface-2] [INFO] [1732067472.098459326] [module_scanning_interface]: ----  Server Module_Scanning&Interface: Connect to DB Successfully ----
+1732067472.1420484 [node_io_weigh-6] [INFO] [1732067472.140674545] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067472.3427091 [node_io_servo-4] [INFO] [1732067472.341021003] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067472.4906833 [node_io_weigh-6] [INFO] [1732067472.489416033] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067472.8403232 [node_io_weigh-6] [INFO] [1732067472.839119729] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067472.8486257 [node_io_servo-4] [INFO] [1732067472.847622044] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067473.1904855 [node_io_weigh-6] [INFO] [1732067473.189280146] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067473.3546660 [node_io_servo-4] [INFO] [1732067473.353356982] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067473.5386326 [node_io_weigh-6] [INFO] [1732067473.537646646] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067473.8587420 [node_io_servo-4] [INFO] [1732067473.857860820] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067473.8884296 [node_io_weigh-6] [INFO] [1732067473.887592818] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067473.9036396 [module_supervisor-1] [INFO] [1732067473.900298225] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067473.9077609 [module_supervisor-1] [INFO] [1732067473.905474340] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067473.9106119 [module_supervisor-1] [INFO] [1732067473.909066874] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067473.9145887 [module_supervisor-1] [INFO] [1732067473.912832242] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067473.9213037 [module_supervisor-1] [INFO] [1732067473.918089894] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067473.9253221 [module_supervisor-1] [INFO] [1732067473.922485450] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067474.2410042 [node_io_weigh-6] [INFO] [1732067474.239956016] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067474.3631990 [node_io_servo-4] [INFO] [1732067474.362226189] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067474.5910494 [node_io_weigh-6] [INFO] [1732067474.589951147] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067474.8675199 [node_io_servo-4] [INFO] [1732067474.866587018] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067474.9406564 [node_io_weigh-6] [INFO] [1732067474.938709605] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067475.2894766 [node_io_weigh-6] [INFO] [1732067475.288584638] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067475.3720129 [node_io_servo-4] [INFO] [1732067475.371000805] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067475.6386533 [node_io_weigh-6] [INFO] [1732067475.637648981] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067475.8766441 [node_io_servo-4] [INFO] [1732067475.875527071] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067475.9022901 [module_supervisor-1] [INFO] [1732067475.900368770] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067475.9060910 [module_supervisor-1] [INFO] [1732067475.904619307] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067475.9096265 [module_supervisor-1] [INFO] [1732067475.908448194] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067475.9129167 [module_supervisor-1] [INFO] [1732067475.911993746] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067475.9164941 [module_supervisor-1] [INFO] [1732067475.915475390] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067475.9205627 [module_supervisor-1] [INFO] [1732067475.919509111] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067475.9885702 [node_io_weigh-6] [INFO] [1732067475.987606384] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067476.3405290 [node_io_weigh-6] [INFO] [1732067476.339285047] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067476.3833544 [node_io_servo-4] [INFO] [1732067476.381664672] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067476.6886785 [node_io_weigh-6] [INFO] [1732067476.687629993] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067476.8886042 [node_io_servo-4] [INFO] [1732067476.887314732] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067477.0400121 [node_io_weigh-6] [INFO] [1732067477.039019432] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067477.3919058 [node_io_weigh-6] [INFO] [1732067477.390229774] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067477.3955917 [node_io_servo-4] [INFO] [1732067477.394499606] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067477.7413759 [node_io_weigh-6] [INFO] [1732067477.738255601] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067477.9017479 [module_supervisor-1] [INFO] [1732067477.900479271] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067477.9029765 [node_io_servo-4] [INFO] [1732067477.900474696] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067477.9083903 [module_supervisor-1] [INFO] [1732067477.906081276] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067477.9106724 [module_supervisor-1] [INFO] [1732067477.909672124] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067477.9196844 [module_supervisor-1] [INFO] [1732067477.916593820] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067477.9284451 [module_supervisor-1] [INFO] [1732067477.925227764] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067477.9335277 [module_supervisor-1] [INFO] [1732067477.931987478] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067478.0891869 [node_io_weigh-6] [INFO] [1732067478.088032398] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067478.4211314 [node_io_servo-4] [INFO] [1732067478.415637078] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067478.4476521 [node_io_weigh-6] [INFO] [1732067478.443120342] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067478.7884452 [node_io_weigh-6] [INFO] [1732067478.787575187] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067478.9243186 [node_io_servo-4] [INFO] [1732067478.922953629] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067479.1384885 [node_io_weigh-6] [INFO] [1732067479.137611811] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067479.4292004 [node_io_servo-4] [INFO] [1732067479.428244979] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067479.4897656 [node_io_weigh-6] [INFO] [1732067479.488926049] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067479.8397584 [node_io_weigh-6] [INFO] [1732067479.838928022] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067479.9006424 [module_supervisor-1] [INFO] [1732067479.899625982] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067479.9036629 [module_supervisor-1] [INFO] [1732067479.902378419] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067479.9069748 [module_supervisor-1] [INFO] [1732067479.905970508] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067479.9103563 [module_supervisor-1] [INFO] [1732067479.909439578] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067479.9172893 [module_supervisor-1] [INFO] [1732067479.914676489] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067479.9226983 [module_supervisor-1] [INFO] [1732067479.921618556] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067479.9390457 [node_io_servo-4] [INFO] [1732067479.935679096] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067480.1898468 [node_io_weigh-6] [INFO] [1732067480.188400657] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067480.4465563 [node_io_servo-4] [INFO] [1732067480.444712584] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067480.5408638 [node_io_weigh-6] [INFO] [1732067480.538485162] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067480.7758384 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067480.7763133 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067480.8146644 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:350: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067480.8152659 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067480.8667443 [module_scanning_interface-2] [INFO] [1732067480.865795294] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao']]
+1732067480.8914053 [node_io_weigh-6] [INFO] [1732067480.890381563] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067480.9510207 [node_io_servo-4] [INFO] [1732067480.950149425] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067480.9747474 [module_scanning_interface-2] [INFO] [1732067480.973557783] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao']]
+1732067481.0842371 [module_scanning_interface-2] [INFO] [1732067481.083094296] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao']]
+1732067481.1910710 [module_scanning_interface-2] [INFO] [1732067481.189968020] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao']]
+1732067481.2384739 [node_io_weigh-6] [INFO] [1732067481.237653034] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067481.3117080 [module_scanning_interface-2] [INFO] [1732067481.310583765] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao']]
+1732067481.4260187 [module_scanning_interface-2] [INFO] [1732067481.424965409] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao']]
+1732067481.4554381 [node_io_servo-4] [INFO] [1732067481.454330643] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067481.5375865 [module_scanning_interface-2] [INFO] [1732067481.536569635] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao']]
+1732067481.5884333 [node_io_weigh-6] [INFO] [1732067481.587569255] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067481.6470525 [module_scanning_interface-2] [INFO] [1732067481.645626313] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao']]
+1732067481.7640800 [module_scanning_interface-2] [INFO] [1732067481.763045988] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao']]
+1732067481.9002299 [module_supervisor-1] [INFO] [1732067481.899306169] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067481.9031572 [module_supervisor-1] [INFO] [1732067481.902150366] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067481.9177175 [module_supervisor-1] [INFO] [1732067481.907895075] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067481.9184470 [module_supervisor-1] [INFO] [1732067481.913945452] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067481.9219007 [module_supervisor-1] [INFO] [1732067481.918293748] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067481.9260054 [module_supervisor-1] [INFO] [1732067481.924675979] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067481.9427471 [node_io_weigh-6] [INFO] [1732067481.941701068] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067481.9638832 [node_io_servo-4] [INFO] [1732067481.959627680] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067482.2915149 [node_io_weigh-6] [INFO] [1732067482.290650984] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067482.4689944 [node_io_servo-4] [INFO] [1732067482.467759758] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067482.6385434 [node_io_weigh-6] [INFO] [1732067482.637578410] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067482.9753850 [node_io_servo-4] [INFO] [1732067482.972523841] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067482.9906018 [node_io_weigh-6] [INFO] [1732067482.989713857] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067483.3405781 [node_io_weigh-6] [INFO] [1732067483.337942671] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067483.4806271 [node_io_servo-4] [INFO] [1732067483.479454461] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067483.6901143 [node_io_weigh-6] [INFO] [1732067483.688284494] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067483.9003763 [module_supervisor-1] [INFO] [1732067483.899409777] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067483.9032917 [module_supervisor-1] [INFO] [1732067483.902212066] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067483.9065037 [module_supervisor-1] [INFO] [1732067483.905476024] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067483.9127169 [module_supervisor-1] [INFO] [1732067483.908573481] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067483.9219558 [module_supervisor-1] [INFO] [1732067483.915239102] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067483.9256954 [module_supervisor-1] [INFO] [1732067483.919279192] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067483.9853523 [node_io_servo-4] [INFO] [1732067483.984256536] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067484.0411382 [node_io_weigh-6] [INFO] [1732067484.037877795] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067484.3887465 [node_io_weigh-6] [INFO] [1732067484.387879333] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067484.4904008 [node_io_servo-4] [INFO] [1732067484.489168899] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067484.7383931 [node_io_weigh-6] [INFO] [1732067484.737514499] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067484.9953747 [node_io_servo-4] [INFO] [1732067484.993892521] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067485.0886662 [node_io_weigh-6] [INFO] [1732067485.087701333] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067485.4384856 [node_io_weigh-6] [INFO] [1732067485.437607903] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067485.4994154 [node_io_servo-4] [INFO] [1732067485.498585117] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067485.5901539 [module_scanning_interface-2] [INFO] [1732067485.589165508] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067485.6849599 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067485.6854374 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067485.7045474 [module_scanning_interface-2] [INFO] [1732067485.703404311] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067485.7848639 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067485.7855496 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067485.7892256 [node_io_weigh-6] [INFO] [1732067485.788248864] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067485.8031034 [module_scanning_interface-2] [INFO] [1732067485.802042069] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067485.8904612 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067485.8909237 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067485.9023840 [module_supervisor-1] [INFO] [1732067485.901298737] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067485.9099643 [module_supervisor-1] [INFO] [1732067485.907539725] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067485.9136114 [module_scanning_interface-2] [INFO] [1732067485.908651286] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067485.9150467 [module_supervisor-1] [INFO] [1732067485.910946480] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067485.9167156 [module_supervisor-1] [INFO] [1732067485.914688514] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067485.9202535 [module_supervisor-1] [INFO] [1732067485.918485400] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067485.9252260 [module_supervisor-1] [INFO] [1732067485.923509810] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067485.9944806 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067485.9949839 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067486.0057209 [node_io_servo-4] [INFO] [1732067486.003755288] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067486.0214117 [module_scanning_interface-2] [INFO] [1732067486.020309819] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067486.1114771 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067486.1119854 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067486.1259935 [module_scanning_interface-2] [INFO] [1732067486.124696506] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067486.1433625 [node_io_weigh-6] [INFO] [1732067486.140512941] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067486.2023053 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067486.2027559 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067486.2234902 [module_scanning_interface-2] [INFO] [1732067486.221595737] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067486.3044875 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067486.3050685 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067486.3338046 [module_scanning_interface-2] [INFO] [1732067486.332637729] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067486.4159477 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067486.4165525 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067486.4320862 [module_scanning_interface-2] [INFO] [1732067486.431091503] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067486.4884772 [node_io_weigh-6] [INFO] [1732067486.487595345] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067486.5134919 [node_io_servo-4] [INFO] [1732067486.512404225] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067486.8396196 [node_io_weigh-6] [INFO] [1732067486.838685692] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067487.0198426 [node_io_servo-4] [INFO] [1732067487.018374651] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067487.1887612 [node_io_weigh-6] [INFO] [1732067487.187844528] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067487.5244792 [node_io_servo-4] [INFO] [1732067487.523605010] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067487.5386629 [node_io_weigh-6] [INFO] [1732067487.537810402] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067487.8903518 [node_io_weigh-6] [INFO] [1732067487.889098225] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067487.9022114 [module_supervisor-1] [INFO] [1732067487.900494753] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067487.9073658 [module_supervisor-1] [INFO] [1732067487.905809164] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067487.9116337 [module_supervisor-1] [INFO] [1732067487.910404997] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067487.9155273 [module_supervisor-1] [INFO] [1732067487.914461347] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067487.9195051 [module_supervisor-1] [INFO] [1732067487.918513864] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067487.9251571 [module_supervisor-1] [INFO] [1732067487.922987401] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067488.0296254 [node_io_servo-4] [INFO] [1732067488.028359219] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067488.2385116 [node_io_weigh-6] [INFO] [1732067488.237609997] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067488.5080481 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067488.5085320 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067488.5334873 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:350: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067488.5345402 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067488.5380340 [node_io_servo-4] [INFO] [1732067488.536523509] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067488.5582421 [module_scanning_interface-2] [INFO] [1732067488.555651161] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac'], ['IP15', 'Thiet bi dien tu']]
+1732067488.5899861 [node_io_weigh-6] [INFO] [1732067488.587837218] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067488.6785259 [module_scanning_interface-2] [INFO] [1732067488.677344804] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac'], ['IP15', 'Thiet bi dien tu']]
+1732067488.8624558 [module_scanning_interface-2] [INFO] [1732067488.860147807] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac'], ['IP15', 'Thiet bi dien tu']]
+1732067488.9546869 [node_io_weigh-6] [INFO] [1732067488.947255495] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067489.0224919 [module_scanning_interface-2] [INFO] [1732067489.020647275] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac'], ['IP15', 'Thiet bi dien tu']]
+1732067489.0483270 [node_io_servo-4] [INFO] [1732067489.046416583] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067489.1586900 [module_scanning_interface-2] [INFO] [1732067489.157419681] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac'], ['IP15', 'Thiet bi dien tu']]
+1732067489.2884653 [node_io_weigh-6] [INFO] [1732067489.287638875] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067489.3635786 [module_scanning_interface-2] [INFO] [1732067489.362459975] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac'], ['IP15', 'Thiet bi dien tu']]
+1732067489.4696884 [module_scanning_interface-2] [INFO] [1732067489.468572220] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao'], ['ABCD', 'Khac'], ['IP15', 'Thiet bi dien tu']]
+1732067489.5525250 [node_io_servo-4] [INFO] [1732067489.551625334] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067489.6384478 [node_io_weigh-6] [INFO] [1732067489.637577942] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067489.9034026 [module_supervisor-1] [INFO] [1732067489.900606619] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067489.9076483 [module_supervisor-1] [INFO] [1732067489.904836043] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067489.9092846 [module_supervisor-1] [INFO] [1732067489.908103260] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067489.9178767 [module_supervisor-1] [INFO] [1732067489.911480811] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067489.9204481 [module_supervisor-1] [INFO] [1732067489.915942755] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067489.9248657 [module_supervisor-1] [INFO] [1732067489.920669459] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067489.9885135 [node_io_weigh-6] [INFO] [1732067489.987614657] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067490.0595632 [node_io_servo-4] [INFO] [1732067490.058338276] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067490.3386145 [node_io_weigh-6] [INFO] [1732067490.337654533] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067490.5647109 [node_io_servo-4] [INFO] [1732067490.563541427] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067490.6885242 [node_io_weigh-6] [INFO] [1732067490.687663761] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067491.0393915 [node_io_weigh-6] [INFO] [1732067491.038458417] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067491.0706744 [node_io_servo-4] [INFO] [1732067491.068708872] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067491.3907666 [node_io_weigh-6] [INFO] [1732067491.389758386] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067491.5786459 [node_io_servo-4] [INFO] [1732067491.577654790] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067491.7385426 [node_io_weigh-6] [INFO] [1732067491.737702545] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067491.9006007 [module_supervisor-1] [INFO] [1732067491.899682400] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067491.9037414 [module_supervisor-1] [INFO] [1732067491.902664838] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067491.9074972 [module_supervisor-1] [INFO] [1732067491.906317871] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067491.9114654 [module_supervisor-1] [INFO] [1732067491.910496962] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067491.9184160 [module_supervisor-1] [INFO] [1732067491.915742353] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067491.9244354 [module_supervisor-1] [INFO] [1732067491.923497014] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067492.0833678 [node_io_servo-4] [INFO] [1732067492.082439837] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067492.0891356 [node_io_weigh-6] [INFO] [1732067492.088037249] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067492.4413064 [node_io_weigh-6] [INFO] [1732067492.439871066] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067492.5892520 [node_io_servo-4] [INFO] [1732067492.586987322] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067492.7916372 [node_io_weigh-6] [INFO] [1732067492.790752527] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067493.0923033 [node_io_servo-4] [INFO] [1732067493.091317415] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067493.1385748 [node_io_weigh-6] [INFO] [1732067493.137720008] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067493.4901850 [node_io_weigh-6] [INFO] [1732067493.489163837] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067493.5980463 [node_io_servo-4] [INFO] [1732067493.596992952] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067493.8419709 [node_io_weigh-6] [INFO] [1732067493.840638258] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067493.9028916 [module_supervisor-1] [INFO] [1732067493.900863610] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067493.9063656 [module_supervisor-1] [INFO] [1732067493.905327350] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067493.9128475 [module_supervisor-1] [INFO] [1732067493.911889079] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067493.9171066 [module_supervisor-1] [INFO] [1732067493.916040670] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067493.9221048 [module_supervisor-1] [INFO] [1732067493.920465854] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067493.9298134 [module_supervisor-1] [INFO] [1732067493.925317096] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067494.1033726 [node_io_servo-4] [INFO] [1732067494.102245282] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067494.1899271 [node_io_weigh-6] [INFO] [1732067494.188969682] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067494.5399165 [node_io_weigh-6] [INFO] [1732067494.538968704] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 0. Disable PIN: 1 ----
+1732067494.6108050 [node_io_servo-4] [INFO] [1732067494.609216557] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067494.6537349 [module_weigh-7] [INFO] [1732067494.652056746] [module_weigh]: ---- Server Module Weigh Receive Message: True ----
+1732067494.8902056 [node_io_weigh-6] [INFO] [1732067494.889040429] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067495.1163738 [node_io_servo-4] [INFO] [1732067495.115428827] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067495.2433336 [node_io_weigh-6] [INFO] [1732067495.241534364] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 0 ----
+1732067495.5920646 [node_io_weigh-6] [INFO] [1732067495.590872025] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067495.5976908 [module_weigh-7] [INFO] [1732067495.596743234] [module_weigh]: ---- Server Module Weigh Receive Message: False ----
+1732067495.6216712 [node_io_servo-4] [INFO] [1732067495.619688047] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067495.8477488 [module_weigh-7] [INFO] [1732067495.846468575] [module_weigh]: --- Server Module_Weigh Max: 68.83
+1732067495.9023283 [module_supervisor-1] [INFO] [1732067495.900284917] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067495.9081392 [module_supervisor-1] [INFO] [1732067495.906009755] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067495.9120581 [module_supervisor-1] [INFO] [1732067495.911040367] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067495.9172482 [module_supervisor-1] [INFO] [1732067495.915869720] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067495.9202116 [module_scanning_interface-2] [INFO] [1732067495.916738760] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao', 67.33999633789062], ['ABCD', 'Khac'], ['IP15', 'Thiet bi dien tu']]
+1732067495.9240191 [module_supervisor-1] [INFO] [1732067495.920761276] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067495.9285161 [module_supervisor-1] [INFO] [1732067495.926118316] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067495.9427116 [node_io_weigh-6] [INFO] [1732067495.940518392] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067496.1262522 [node_io_servo-4] [INFO] [1732067496.125016269] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067496.2891982 [node_io_weigh-6] [INFO] [1732067496.288313654] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067496.6306698 [node_io_servo-4] [INFO] [1732067496.629742538] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067496.6414633 [node_io_weigh-6] [INFO] [1732067496.638164793] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 0. Disable PIN: 1 ----
+1732067496.6529782 [module_weigh-7] [INFO] [1732067496.646631549] [module_weigh]: ---- Server Module Weigh Receive Message: True ----
+1732067496.9896898 [node_io_weigh-6] [INFO] [1732067496.988666213] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 0 ----
+1732067496.9976733 [module_weigh-7] [INFO] [1732067496.994240217] [module_weigh]: ---- Server Module Weigh Receive Message: False ----
+1732067497.0815878 [module_weigh-7] [INFO] [1732067497.080678427] [module_weigh]: --- Server Module_Weigh Max: 63.53
+1732067497.1023211 [module_scanning_interface-2] [INFO] [1732067497.097488363] [module_scanning_interface]: Data Collect: [['NK_S1', 'Quan ao', 67.33999633789062], ['ABCD', 'Khac', 63.529998779296875], ['IP15', 'Thiet bi dien tu']]
+1732067497.1351225 [node_io_servo-4] [INFO] [1732067497.133920358] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 0. QA PIN: 1.  Diff PIN: 1----
+1732067497.1867073 [module_scanning_interface-2] [INFO] [1732067497.185799340] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Quan ao
+1732067497.1962237 [node_dc_servo-3] [INFO] [1732067497.194353170] [node_servo_motor]: ---- Node_DC_Servo: Rotate Servo TBDT AVD ----
+1732067497.3390756 [node_io_weigh-6] [INFO] [1732067497.337996772] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 0 ----
+1732067497.6394007 [node_io_servo-4] [INFO] [1732067497.638469471] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067497.6884973 [node_io_weigh-6] [INFO] [1732067497.687712924] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067497.9006982 [module_supervisor-1] [INFO] [1732067497.899670257] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067497.9065700 [module_supervisor-1] [INFO] [1732067497.904162182] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067497.9114861 [module_supervisor-1] [INFO] [1732067497.909669000] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067497.9145544 [module_supervisor-1] [INFO] [1732067497.913266884] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067497.9185846 [module_supervisor-1] [INFO] [1732067497.917251604] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067497.9229209 [module_supervisor-1] [INFO] [1732067497.921491769] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067498.0384974 [node_io_weigh-6] [INFO] [1732067498.037647002] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067498.1439919 [node_io_servo-4] [INFO] [1732067498.142874303] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 0.  Diff PIN: 1----
+1732067498.1490753 [module_scanning_interface-2] [INFO] [1732067498.147205691] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Quan ao
+1732067498.1632531 [module_scanning_interface-2] [INFO] [1732067498.159010163] [module_scanning_interface]: ---- Module_Scanning_Interface: Remain Data: [['ABCD', 'Khac', 63.529998779296875], ['IP15', 'Thiet bi dien tu']]
+1732067498.1681054 [node_dc_servo-3] [INFO] [1732067498.166179487] [node_servo_motor]: ---- Node_DC_Servo: Rotate Servo QA DSG ----
+1732067498.3886850 [node_io_weigh-6] [INFO] [1732067498.387755540] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067498.6491313 [node_io_servo-4] [INFO] [1732067498.648226300] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067498.7385952 [node_io_weigh-6] [INFO] [1732067498.737705576] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067499.0884805 [node_io_weigh-6] [INFO] [1732067499.087636130] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067499.1535709 [node_io_servo-4] [INFO] [1732067499.152560124] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 0. QA PIN: 1.  Diff PIN: 1----
+1732067499.1617303 [module_scanning_interface-2] [INFO] [1732067499.159541559] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Khac
+1732067499.1705840 [node_dc_servo-3] [INFO] [1732067499.166510290] [node_servo_motor]: ---- Node_DC_Servo: Rotate Servo TBDT AVD ----
+1732067499.4394836 [node_io_weigh-6] [INFO] [1732067499.438257590] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067499.6643937 [node_io_servo-4] [INFO] [1732067499.663321913] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067499.7885408 [node_io_weigh-6] [INFO] [1732067499.787710731] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067499.9004183 [module_supervisor-1] [INFO] [1732067499.899442778] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067499.9034047 [module_supervisor-1] [INFO] [1732067499.902400752] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067499.9088871 [module_supervisor-1] [INFO] [1732067499.905947285] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067499.9168215 [module_supervisor-1] [INFO] [1732067499.915651452] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067499.9222674 [module_supervisor-1] [INFO] [1732067499.920623305] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067499.9264963 [module_supervisor-1] [INFO] [1732067499.925292879] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067500.1399417 [node_io_weigh-6] [INFO] [1732067500.138818746] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067500.1691658 [node_io_servo-4] [INFO] [1732067500.168175620] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 0.  Diff PIN: 1----
+1732067500.1739626 [module_scanning_interface-2] [INFO] [1732067500.172840878] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Khac
+1732067500.1800857 [module_scanning_interface-2] [INFO] [1732067500.177989269] [module_scanning_interface]: ---- Module_Scanning_Interface: Remain Data: [['ABCD', 'Khac', 63.529998779296875], ['IP15', 'Thiet bi dien tu']]
+1732067500.1813905 [node_dc_servo-3] [INFO] [1732067500.177989380] [node_servo_motor]: ---- Node_DC_Servo: Rotate Servo QA AVD ----
+1732067500.4886227 [node_io_weigh-6] [INFO] [1732067500.487739361] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067500.6740401 [node_io_servo-4] [INFO] [1732067500.673000488] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067500.8384924 [node_io_weigh-6] [INFO] [1732067500.837553350] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067501.1787105 [node_io_servo-4] [INFO] [1732067501.177754613] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1732067501.1842744 [module_scanning_interface-2] [INFO] [1732067501.183070800] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Khac
+1732067501.1892662 [module_scanning_interface-2] [INFO] [1732067501.188017912] [module_scanning_interface]: ---- Module_Scanning_Interface: Remain Data: [['IP15', 'Thiet bi dien tu']]
+1732067501.1923919 [node_io_weigh-6] [INFO] [1732067501.190472162] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067501.5386190 [node_io_weigh-6] [INFO] [1732067501.537710043] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067501.6844301 [node_io_servo-4] [INFO] [1732067501.683394922] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067501.8900917 [node_io_weigh-6] [INFO] [1732067501.887556915] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067501.9014757 [module_supervisor-1] [INFO] [1732067501.899970908] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067501.9099019 [module_supervisor-1] [INFO] [1732067501.906273210] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067501.9147270 [module_supervisor-1] [INFO] [1732067501.913736202] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067501.9194524 [module_supervisor-1] [INFO] [1732067501.917728717] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067501.9251187 [module_supervisor-1] [INFO] [1732067501.923293091] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067501.9313650 [module_supervisor-1] [INFO] [1732067501.928096554] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067502.1885526 [node_io_servo-4] [INFO] [1732067502.187656055] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067502.2390018 [node_io_weigh-6] [INFO] [1732067502.238061675] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067502.5905087 [node_io_weigh-6] [INFO] [1732067502.589547771] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067502.6927180 [node_io_servo-4] [INFO] [1732067502.691858980] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067502.9392641 [node_io_weigh-6] [INFO] [1732067502.938373468] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067503.1986637 [node_io_servo-4] [INFO] [1732067503.196831053] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067503.2885125 [node_io_weigh-6] [INFO] [1732067503.287614421] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067503.6406929 [node_io_weigh-6] [INFO] [1732067503.639536605] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067503.7066989 [node_io_servo-4] [INFO] [1732067503.703160275] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067503.9003823 [module_supervisor-1] [INFO] [1732067503.899421547] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067503.9033628 [module_supervisor-1] [INFO] [1732067503.902408781] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067503.9209754 [module_supervisor-1] [INFO] [1732067503.905569664] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067503.9214594 [module_supervisor-1] [INFO] [1732067503.913213637] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067503.9229712 [module_supervisor-1] [INFO] [1732067503.918425102] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067503.9235377 [module_supervisor-1] [INFO] [1732067503.922113153] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067503.9893029 [node_io_weigh-6] [INFO] [1732067503.988220685] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067504.2091622 [node_io_servo-4] [INFO] [1732067504.208280749] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067504.3384604 [node_io_weigh-6] [INFO] [1732067504.337624040] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067504.6910903 [node_io_weigh-6] [INFO] [1732067504.688687938] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067504.7157521 [node_io_servo-4] [INFO] [1732067504.714881927] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067505.0386136 [node_io_weigh-6] [INFO] [1732067505.037536586] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067505.2220414 [node_io_servo-4] [INFO] [1732067505.220837155] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067505.3886995 [node_io_weigh-6] [INFO] [1732067505.387840032] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067505.7275496 [node_io_servo-4] [INFO] [1732067505.725652189] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067505.7439260 [node_io_weigh-6] [INFO] [1732067505.741516046] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067505.9019206 [module_supervisor-1] [INFO] [1732067505.900585485] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067505.9076309 [module_supervisor-1] [INFO] [1732067505.905745820] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067505.9145401 [module_supervisor-1] [INFO] [1732067505.910083336] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067505.9211471 [module_supervisor-1] [INFO] [1732067505.913694609] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067505.9216864 [module_supervisor-1] [INFO] [1732067505.917480864] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067505.9236343 [module_supervisor-1] [INFO] [1732067505.921645121] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067506.0893974 [node_io_weigh-6] [INFO] [1732067506.088330181] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067506.2317557 [node_io_servo-4] [INFO] [1732067506.230842333] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067506.4383903 [node_io_weigh-6] [INFO] [1732067506.437531154] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067506.7403641 [node_io_servo-4] [INFO] [1732067506.739122484] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067506.7887151 [node_io_weigh-6] [INFO] [1732067506.787825020] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067507.1386034 [node_io_weigh-6] [INFO] [1732067507.137706698] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067507.2470531 [node_io_servo-4] [INFO] [1732067507.245734143] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067507.4921250 [node_io_weigh-6] [INFO] [1732067507.490747902] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067507.7513082 [node_io_servo-4] [INFO] [1732067507.750330143] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067507.8402598 [node_io_weigh-6] [INFO] [1732067507.839118756] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067507.9016263 [module_supervisor-1] [INFO] [1732067507.900569933] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067507.9051378 [module_supervisor-1] [INFO] [1732067507.903706778] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067507.9091892 [module_supervisor-1] [INFO] [1732067507.907967257] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067507.9134331 [module_supervisor-1] [INFO] [1732067507.912140569] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067507.9177420 [module_supervisor-1] [INFO] [1732067507.916497734] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067507.9236112 [module_supervisor-1] [INFO] [1732067507.920518990] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067508.1887012 [node_io_weigh-6] [INFO] [1732067508.187653404] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067508.2564430 [node_io_servo-4] [INFO] [1732067508.255091010] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067508.5489120 [node_io_weigh-6] [INFO] [1732067508.543237465] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067508.7738307 [node_io_servo-4] [INFO] [1732067508.765082189] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067508.9212904 [node_io_weigh-6] [INFO] [1732067508.914352084] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067509.2397275 [node_io_weigh-6] [INFO] [1732067509.238214059] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067509.2914422 [node_io_servo-4] [INFO] [1732067509.290426885] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067509.5900455 [node_io_weigh-6] [INFO] [1732067509.589115135] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067509.8035975 [node_io_servo-4] [INFO] [1732067509.801368134] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067509.9218216 [module_supervisor-1] [INFO] [1732067509.904511114] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067509.9253464 [module_supervisor-1] [INFO] [1732067509.919749337] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067509.9334028 [module_supervisor-1] [INFO] [1732067509.923708186] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067509.9339778 [module_supervisor-1] [INFO] [1732067509.927488144] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067509.9535911 [module_supervisor-1] [INFO] [1732067509.931667734] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067509.9545467 [module_supervisor-1] [INFO] [1732067509.936068250] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067509.9588549 [node_io_weigh-6] [INFO] [1732067509.952267848] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067510.2890422 [node_io_weigh-6] [INFO] [1732067510.288189252] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067510.3112671 [node_io_servo-4] [INFO] [1732067510.307501491] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067510.6390491 [node_io_weigh-6] [INFO] [1732067510.638115707] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067510.8180354 [node_io_servo-4] [INFO] [1732067510.816885430] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067510.9893806 [node_io_weigh-6] [INFO] [1732067510.988204959] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067511.3239729 [node_io_servo-4] [INFO] [1732067511.321873015] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067511.3424113 [node_io_weigh-6] [INFO] [1732067511.340130305] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067511.6886482 [node_io_weigh-6] [INFO] [1732067511.687766562] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067511.8275232 [node_io_servo-4] [INFO] [1732067511.826520559] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067511.9015393 [module_supervisor-1] [INFO] [1732067511.900518872] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067511.9051812 [module_supervisor-1] [INFO] [1732067511.904050663] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067511.9104087 [module_supervisor-1] [INFO] [1732067511.908868218] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067511.9216573 [module_supervisor-1] [INFO] [1732067511.919338571] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067511.9276109 [module_supervisor-1] [INFO] [1732067511.926500209] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067511.9346015 [module_supervisor-1] [INFO] [1732067511.931081022] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067512.0400105 [node_io_weigh-6] [INFO] [1732067512.038954016] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067512.3320026 [node_io_servo-4] [INFO] [1732067512.330949079] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067512.3883302 [node_io_weigh-6] [INFO] [1732067512.387510807] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067512.7404313 [node_io_weigh-6] [INFO] [1732067512.738964591] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067512.8405287 [node_io_servo-4] [INFO] [1732067512.839245148] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067513.0139196 [module_scanning_interface-2] [INFO] [1732067513.012553290] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067513.0886655 [node_io_weigh-6] [INFO] [1732067513.087816883] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067513.1283216 [module_scanning_interface-2] [INFO] [1732067513.127203454] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067513.2329111 [module_scanning_interface-2] [INFO] [1732067513.231891099] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067513.3379827 [module_scanning_interface-2] [INFO] [1732067513.336750653] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067513.3477151 [node_io_servo-4] [INFO] [1732067513.346592430] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067513.4403267 [node_io_weigh-6] [INFO] [1732067513.439236198] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067513.4453208 [module_scanning_interface-2] [INFO] [1732067513.444239457] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067513.5490925 [module_scanning_interface-2] [INFO] [1732067513.547858932] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067513.6558723 [module_scanning_interface-2] [INFO] [1732067513.654712845] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067513.7692847 [module_scanning_interface-2] [INFO] [1732067513.768130338] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067513.7924285 [node_io_weigh-6] [INFO] [1732067513.791578128] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067513.8537135 [node_io_servo-4] [INFO] [1732067513.852181296] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067513.8871226 [module_scanning_interface-2] [INFO] [1732067513.885900032] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067513.9040999 [module_supervisor-1] [INFO] [1732067513.901747053] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067513.9069839 [module_supervisor-1] [INFO] [1732067513.905996569] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067513.9111614 [module_supervisor-1] [INFO] [1732067513.909889768] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067513.9154401 [module_supervisor-1] [INFO] [1732067513.913979043] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067513.9187212 [module_supervisor-1] [INFO] [1732067513.917672705] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067513.9231732 [module_supervisor-1] [INFO] [1732067513.921688201] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067514.0047555 [module_scanning_interface-2] [INFO] [1732067514.003705022] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu']]
+1732067514.1415567 [node_io_weigh-6] [INFO] [1732067514.139727429] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067514.3582661 [node_io_servo-4] [INFO] [1732067514.356958543] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067514.4902055 [node_io_weigh-6] [INFO] [1732067514.488886361] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067514.8406432 [node_io_weigh-6] [INFO] [1732067514.839820910] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067514.8661194 [node_io_servo-4] [INFO] [1732067514.863289571] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067515.1900899 [node_io_weigh-6] [INFO] [1732067515.189151840] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067515.3723149 [node_io_servo-4] [INFO] [1732067515.371089451] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067515.5384989 [node_io_weigh-6] [INFO] [1732067515.537599968] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067515.8771546 [node_io_servo-4] [INFO] [1732067515.876204985] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067515.8921173 [node_io_weigh-6] [INFO] [1732067515.890581427] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067515.9080131 [module_supervisor-1] [INFO] [1732067515.900709371] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067515.9138660 [module_supervisor-1] [INFO] [1732067515.907750249] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067515.9189680 [module_supervisor-1] [INFO] [1732067515.916671726] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067515.9242203 [module_supervisor-1] [INFO] [1732067515.923270306] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067515.9336121 [module_supervisor-1] [INFO] [1732067515.929590384] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067515.9432609 [module_supervisor-1] [INFO] [1732067515.939394291] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067516.2393441 [node_io_weigh-6] [INFO] [1732067516.238476252] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067516.3842342 [node_io_servo-4] [INFO] [1732067516.383260354] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067516.5899184 [node_io_weigh-6] [INFO] [1732067516.589050123] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067516.8886287 [node_io_servo-4] [INFO] [1732067516.887659101] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067516.9404619 [node_io_weigh-6] [INFO] [1732067516.938208156] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067517.2888966 [node_io_weigh-6] [INFO] [1732067517.287751556] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067517.3956892 [node_io_servo-4] [INFO] [1732067517.394802889] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067517.6388390 [node_io_weigh-6] [INFO] [1732067517.637846309] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067517.9013064 [node_io_servo-4] [INFO] [1732067517.900175725] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067517.9039693 [module_supervisor-1] [INFO] [1732067517.902762771] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067517.9136503 [module_supervisor-1] [INFO] [1732067517.908836701] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067517.9193625 [module_supervisor-1] [INFO] [1732067517.915250150] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067517.9236422 [module_supervisor-1] [INFO] [1732067517.921974304] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067517.9314458 [module_supervisor-1] [INFO] [1732067517.927415602] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067517.9348931 [module_supervisor-1] [INFO] [1732067517.932999548] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067517.9907393 [node_io_weigh-6] [INFO] [1732067517.989613698] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067518.3401098 [node_io_weigh-6] [INFO] [1732067518.339167611] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067518.4079509 [node_io_servo-4] [INFO] [1732067518.406663707] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067518.6235263 [module_scanning_interface-2] [INFO] [1732067518.622556839] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067518.6894667 [node_io_weigh-6] [INFO] [1732067518.688500041] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067518.7311664 [module_scanning_interface-2] [INFO] [1732067518.729999265] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067518.8519816 [module_scanning_interface-2] [INFO] [1732067518.850902202] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067518.9127104 [node_io_servo-4] [INFO] [1732067518.911107939] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067518.9156809 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=275, top=170, width=61, height=64), polygon=[Point(x=275, y=223), Point(x=326, y=234), Point(x=336, y=181), Point(x=281, y=170)], quality=1, orientation='UP')
+1732067518.9182794 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=277, top=170, width=61, height=64), polygon=[Point(x=277, y=223), Point(x=328, y=234), Point(x=338, y=181), Point(x=284, y=170)], quality=1, orientation='UP')
+1732067518.9185221 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=280, top=168, width=61, height=64), polygon=[Point(x=280, y=221), Point(x=331, y=232), Point(x=341, y=179), Point(x=287, y=168)], quality=1, orientation='UP')
+1732067518.9186800 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=282, top=163, width=62, height=65), polygon=[Point(x=282, y=216), Point(x=333, y=228), Point(x=344, y=175), Point(x=290, y=163)], quality=1, orientation='UP')
+1732067518.9188945 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=283, top=159, width=62, height=65), polygon=[Point(x=283, y=213), Point(x=334, y=224), Point(x=345, y=171), Point(x=291, y=159)], quality=1, orientation='UP')
+1732067518.9190507 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=284, top=152, width=63, height=65), polygon=[Point(x=284, y=205), Point(x=335, y=217), Point(x=347, y=164), Point(x=294, y=152)], quality=1, orientation='UP')
+1732067518.9191923 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=287, top=150, width=62, height=65), polygon=[Point(x=287, y=203), Point(x=337, y=215), Point(x=349, y=163), Point(x=296, y=150)], quality=1, orientation='UP')
+1732067518.9193792 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=288, top=154, width=63, height=65), polygon=[Point(x=288, y=206), Point(x=338, y=219), Point(x=351, y=167), Point(x=298, y=154)], quality=1, orientation='UP')
+1732067518.9195187 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=290, top=153, width=62, height=64), polygon=[Point(x=290, y=204), Point(x=339, y=217), Point(x=352, y=166), Point(x=300, y=153)], quality=1, orientation='UP')
+1732067518.9196539 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=241, top=173, width=71, height=75), polygon=[Point(x=241, y=234), Point(x=301, y=248), Point(x=312, y=187), Point(x=246, y=173)], quality=1, orientation='UP')
+1732067518.9211407 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=235, top=166, width=71, height=77), polygon=[Point(x=235, y=229), Point(x=296, y=243), Point(x=306, y=181), Point(x=240, y=166)], quality=1, orientation='UP')
+1732067518.9215209 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=228, top=139, width=71, height=79), polygon=[Point(x=228, y=205), Point(x=290, y=218), Point(x=299, y=153), Point(x=231, y=139)], quality=1, orientation='UP')
+1732067518.9217365 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=235, top=113, width=72, height=81), polygon=[Point(x=235, y=182), Point(x=298, y=194), Point(x=307, y=126), Point(x=238, y=113)], quality=1, orientation='UP')
+1732067518.9219928 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=243, top=101, width=73, height=83), polygon=[Point(x=243, y=172), Point(x=306, y=184), Point(x=316, y=114), Point(x=246, y=101)], quality=1, orientation='UP')
+1732067518.9222786 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=255, top=92, width=74, height=84), polygon=[Point(x=255, y=165), Point(x=319, y=176), Point(x=329, y=104), Point(x=258, y=92)], quality=1, orientation='UP')
+1732067518.9224606 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=256, top=95, width=75, height=84), polygon=[Point(x=256, y=167), Point(x=320, y=179), Point(x=331, y=107), Point(x=261, y=95)], quality=1, orientation='UP')
+1732067518.9226210 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=255, top=104, width=74, height=82), polygon=[Point(x=255, y=174), Point(x=318, y=186), Point(x=329, y=116), Point(x=260, y=104)], quality=1, orientation='UP')
+1732067518.9228005 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=253, top=117, width=75, height=82), polygon=[Point(x=253, y=186), Point(x=316, y=199), Point(x=328, y=130), Point(x=258, y=117)], quality=1, orientation='UP')
+1732067518.9229920 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=232, top=155, width=68, height=74), polygon=[Point(x=232, y=217), Point(x=291, y=229), Point(x=300, y=168), Point(x=235, y=155)], quality=1, orientation='UP')
+1732067518.9231548 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=227, top=153, width=68, height=74), polygon=[Point(x=227, y=217), Point(x=288, y=227), Point(x=295, y=164), Point(x=229, y=153)], quality=1, orientation='UP')
+1732067518.9233122 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=239, top=139, width=71, height=78), polygon=[Point(x=239, y=206), Point(x=301, y=217), Point(x=310, y=151), Point(x=242, y=139)], quality=1, orientation='UP')
+1732067518.9234746 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=246, top=133, width=70, height=77), polygon=[Point(x=246, y=199), Point(x=307, y=210), Point(x=316, y=144), Point(x=248, y=133)], quality=1, orientation='UP')
+1732067518.9236319 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=252, top=121, width=69, height=77), polygon=[Point(x=252, y=188), Point(x=312, y=198), Point(x=321, y=131), Point(x=255, y=121)], quality=1, orientation='UP')
+1732067518.9238243 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=262, top=109, width=69, height=78), polygon=[Point(x=262, y=177), Point(x=322, y=187), Point(x=331, y=119), Point(x=264, y=109)], quality=1, orientation='UP')
+1732067518.9240086 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=264, top=115, width=70, height=76), polygon=[Point(x=264, y=181), Point(x=325, y=191), Point(x=334, y=125), Point(x=267, y=115)], quality=1, orientation='UP')
+1732067518.9241633 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=309, top=183, width=89, height=92), polygon=[Point(x=309, y=191), Point(x=314, y=274), Point(x=398, y=275), Point(x=394, y=183)], quality=1, orientation='UP')
+1732067518.9244475 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=308, top=177, width=92, height=93), polygon=[Point(x=308, y=186), Point(x=314, y=270), Point(x=400, y=269), Point(x=394, y=177)], quality=1, orientation='UP')
+1732067518.9246500 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=310, top=177, width=90, height=92), polygon=[Point(x=310, y=186), Point(x=316, y=269), Point(x=400, y=268), Point(x=396, y=177)], quality=1, orientation='UP')
+1732067518.9249685 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=310, top=174, width=90, height=93), polygon=[Point(x=310, y=183), Point(x=315, y=267), Point(x=400, y=267), Point(x=396, y=174)], quality=1, orientation='UP')
+1732067518.9251668 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=310, top=171, width=90, height=92), polygon=[Point(x=310, y=180), Point(x=316, y=263), Point(x=400, y=262), Point(x=396, y=171)], quality=1, orientation='UP')
+1732067518.9257209 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=314, top=155, width=90, height=94), polygon=[Point(x=314, y=166), Point(x=320, y=249), Point(x=404, y=246), Point(x=400, y=155)], quality=1, orientation='UP')
+1732067518.9263215 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=319, top=147, width=89, height=94), polygon=[Point(x=319, y=158), Point(x=324, y=241), Point(x=408, y=238), Point(x=405, y=147)], quality=1, orientation='UP')
+1732067518.9265342 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=321, top=149, width=89, height=93), polygon=[Point(x=321, y=159), Point(x=326, y=242), Point(x=410, y=240), Point(x=407, y=149)], quality=1, orientation='UP')
+1732067518.9266944 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=324, top=155, width=89, height=92), polygon=[Point(x=324, y=164), Point(x=328, y=247), Point(x=413, y=246), Point(x=410, y=155)], quality=1, orientation='UP')
+1732067518.9269068 [module_scanning_interface-2] Decoded(data=b'IP15', type='QRCODE', rect=Rect(left=327, top=162, width=86, height=90), polygon=[Point(x=327, y=170), Point(x=330, y=251), Point(x=413, y=252), Point(x=413, y=162)], quality=1, orientation='UP')
+1732067518.9270751 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=376, top=203, width=84, height=79), polygon=[Point(x=376, y=222), Point(x=393, y=282), Point(x=460, y=268), Point(x=440, y=203)], quality=1, orientation='UP')
+1732067518.9272294 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=368, top=202, width=83, height=80), polygon=[Point(x=368, y=218), Point(x=381, y=282), Point(x=451, y=273), Point(x=437, y=202)], quality=1, orientation='UP')
+1732067518.9274092 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=362, top=208, width=80, height=76), polygon=[Point(x=362, y=216), Point(x=369, y=284), Point(x=442, y=282), Point(x=435, y=208)], quality=1, orientation='UP')
+1732067518.9651706 [module_scanning_interface-2] [INFO] [1732067518.964030834] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067519.0389745 [node_io_weigh-6] [INFO] [1732067519.037673118] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067519.0720913 [module_scanning_interface-2] [INFO] [1732067519.070631070] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067519.1816044 [module_scanning_interface-2] [INFO] [1732067519.180308910] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067519.2887478 [module_scanning_interface-2] [INFO] [1732067519.287626408] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067519.3892486 [node_io_weigh-6] [INFO] [1732067519.388083103] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067519.4051230 [module_scanning_interface-2] [INFO] [1732067519.403221954] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067519.4167123 [node_io_servo-4] [INFO] [1732067519.415802351] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067519.5242345 [module_scanning_interface-2] [INFO] [1732067519.523196719] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067519.6843023 [module_scanning_interface-2] [INFO] [1732067519.682117199] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao']]
+1732067519.7459950 [node_io_weigh-6] [INFO] [1732067519.741265912] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067519.9005303 [module_supervisor-1] [INFO] [1732067519.899516872] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067519.9045889 [module_supervisor-1] [INFO] [1732067519.903114644] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067519.9139409 [module_supervisor-1] [INFO] [1732067519.909090165] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067519.9156315 [module_supervisor-1] [INFO] [1732067519.914103943] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067519.9260340 [module_supervisor-1] [INFO] [1732067519.922734751] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067519.9329793 [module_supervisor-1] [INFO] [1732067519.929716888] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067519.9347434 [node_io_servo-4] [INFO] [1732067519.929896888] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067520.0885093 [node_io_weigh-6] [INFO] [1732067520.087667067] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067520.4380579 [node_io_servo-4] [INFO] [1732067520.436644745] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067520.4409668 [node_io_weigh-6] [INFO] [1732067520.438857253] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067520.7884035 [node_io_weigh-6] [INFO] [1732067520.787559152] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067520.9433904 [node_io_servo-4] [INFO] [1732067520.942408189] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067521.1407118 [node_io_weigh-6] [INFO] [1732067521.139649210] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067521.4475296 [node_io_servo-4] [INFO] [1732067521.446518306] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067521.4886031 [node_io_weigh-6] [INFO] [1732067521.487713250] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067521.8393102 [node_io_weigh-6] [INFO] [1732067521.838331225] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067521.9012249 [module_supervisor-1] [INFO] [1732067521.900154317] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067521.9050910 [module_supervisor-1] [INFO] [1732067521.903998923] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067521.9118018 [module_supervisor-1] [INFO] [1732067521.910901225] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067521.9154921 [module_supervisor-1] [INFO] [1732067521.914621368] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067521.9186034 [module_supervisor-1] [INFO] [1732067521.917812731] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067521.9220204 [module_supervisor-1] [INFO] [1732067521.921153614] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067521.9537201 [node_io_servo-4] [INFO] [1732067521.952695264] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067522.1945407 [node_io_weigh-6] [INFO] [1732067522.190907890] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067522.4584510 [node_io_servo-4] [INFO] [1732067522.457503728] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067522.5409567 [node_io_weigh-6] [INFO] [1732067522.539885058] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067522.8910239 [node_io_weigh-6] [INFO] [1732067522.890028989] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067522.9668450 [node_io_servo-4] [INFO] [1732067522.965193627] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067523.1422510 [module_scanning_interface-2] [INFO] [1732067523.141349548] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067523.2139950 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067523.2144554 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067523.2299631 [module_scanning_interface-2] [INFO] [1732067523.228805433] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067523.2402332 [node_io_weigh-6] [INFO] [1732067523.238880228] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067523.3013844 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067523.3018713 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067523.3188434 [module_scanning_interface-2] [INFO] [1732067523.317718340] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067523.3899245 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067523.3903790 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067523.4086895 [module_scanning_interface-2] [INFO] [1732067523.407493788] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067523.4716671 [node_io_servo-4] [INFO] [1732067523.470682271] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067523.4886732 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067523.4892228 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067523.5007439 [module_scanning_interface-2] [INFO] [1732067523.499662708] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067523.5714304 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067523.5718973 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067523.5853939 [module_scanning_interface-2] [INFO] [1732067523.583961154] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067523.5912793 [node_io_weigh-6] [INFO] [1732067523.590209454] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067523.6612489 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067523.6617444 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067523.6800473 [module_scanning_interface-2] [INFO] [1732067523.678762472] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067523.7592616 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067523.7632689 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067523.7778487 [module_scanning_interface-2] [INFO] [1732067523.775270592] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067523.8650737 [module_scanning_interface-2] /home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/python3.12/site-packages/module_scanning_interface/module_scanning_interface.py:342: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732067523.8655155 [module_scanning_interface-2]   df = pd.read_sql(sql_query,self.conn)
+1732067523.8822892 [module_scanning_interface-2] [INFO] [1732067523.881059911] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu'], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067523.9023943 [module_supervisor-1] [INFO] [1732067523.901166668] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067523.9070048 [module_supervisor-1] [INFO] [1732067523.905203534] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067523.9118891 [module_supervisor-1] [INFO] [1732067523.911035944] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067523.9176564 [module_supervisor-1] [INFO] [1732067523.914179621] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067523.9222608 [module_supervisor-1] [INFO] [1732067523.917483929] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067523.9253497 [module_supervisor-1] [INFO] [1732067523.921177091] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067523.9441981 [node_io_weigh-6] [INFO] [1732067523.942641796] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067523.9843881 [node_io_servo-4] [INFO] [1732067523.983460515] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067524.2922604 [node_io_weigh-6] [INFO] [1732067524.291275602] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067524.4907417 [node_io_servo-4] [INFO] [1732067524.489620395] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067524.6409016 [node_io_weigh-6] [INFO] [1732067524.639899592] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067524.9903755 [node_io_weigh-6] [INFO] [1732067524.989293751] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067524.9982002 [node_io_servo-4] [INFO] [1732067524.997138372] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067525.3384950 [node_io_weigh-6] [INFO] [1732067525.337620236] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067525.5060954 [node_io_servo-4] [INFO] [1732067525.503443930] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067525.6911077 [node_io_weigh-6] [INFO] [1732067525.687726874] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067525.9013643 [module_supervisor-1] [INFO] [1732067525.899413007] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067525.9057457 [module_supervisor-1] [INFO] [1732067525.902670593] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067525.9108534 [module_supervisor-1] [INFO] [1732067525.909718877] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067525.9158361 [module_supervisor-1] [INFO] [1732067525.913515668] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067525.9191878 [module_supervisor-1] [INFO] [1732067525.917837794] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067525.9249244 [module_supervisor-1] [INFO] [1732067525.922420866] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067526.0099227 [node_io_servo-4] [INFO] [1732067526.008940799] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067526.0387564 [node_io_weigh-6] [INFO] [1732067526.037898327] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067526.3884742 [node_io_weigh-6] [INFO] [1732067526.387598162] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067526.5141053 [node_io_servo-4] [INFO] [1732067526.513152991] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067526.7419026 [node_io_weigh-6] [INFO] [1732067526.740738028] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067527.0194337 [node_io_servo-4] [INFO] [1732067527.018474575] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067527.0890956 [node_io_weigh-6] [INFO] [1732067527.088238855] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067527.4384735 [node_io_weigh-6] [INFO] [1732067527.437608888] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067527.5251789 [node_io_servo-4] [INFO] [1732067527.523817578] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067527.7929027 [node_io_weigh-6] [INFO] [1732067527.791628475] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 0. Disable PIN: 1 ----
+1732067527.7985842 [module_weigh-7] [INFO] [1732067527.797684274] [module_weigh]: ---- Server Module Weigh Receive Message: True ----
+1732067527.9029586 [module_supervisor-1] [INFO] [1732067527.900158094] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067527.9112780 [module_supervisor-1] [INFO] [1732067527.906127892] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067527.9142544 [module_supervisor-1] [INFO] [1732067527.913146695] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067527.9242337 [module_supervisor-1] [INFO] [1732067527.919068289] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067527.9267523 [module_supervisor-1] [INFO] [1732067527.925727035] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067527.9309912 [module_supervisor-1] [INFO] [1732067527.929963735] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067528.0310423 [node_io_servo-4] [INFO] [1732067528.029954694] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067528.1407356 [node_io_weigh-6] [INFO] [1732067528.139819983] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 0 ----
+1732067528.1476481 [module_weigh-7] [INFO] [1732067528.145162854] [module_weigh]: ---- Server Module Weigh Receive Message: False ----
+1732067528.1741543 [module_weigh-7] [INFO] [1732067528.172388800] [module_weigh]: --- Server Module_Weigh Max: 90.23
+1732067528.2206268 [module_scanning_interface-2] [INFO] [1732067528.219622945] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu', 90.2300033569336], ['NK_S1', 'Quan ao'], ['ABCD', 'Khac']]
+1732067528.4904304 [node_io_weigh-6] [INFO] [1732067528.489429105] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067528.5369754 [node_io_servo-4] [INFO] [1732067528.535455524] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067528.8394401 [node_io_weigh-6] [INFO] [1732067528.838069704] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067529.0442867 [node_io_servo-4] [INFO] [1732067529.041884375] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067529.1884925 [node_io_weigh-6] [INFO] [1732067529.187633082] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067529.5404353 [node_io_weigh-6] [INFO] [1732067529.538884631] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 0. Disable PIN: 1 ----
+1732067529.5456350 [module_weigh-7] [INFO] [1732067529.543869703] [module_weigh]: ---- Server Module Weigh Receive Message: True ----
+1732067529.5535469 [node_io_servo-4] [INFO] [1732067529.551665693] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067529.8885579 [node_io_weigh-6] [INFO] [1732067529.887554688] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 0 ----
+1732067529.8974078 [module_weigh-7] [INFO] [1732067529.896362663] [module_weigh]: ---- Server Module Weigh Receive Message: False ----
+1732067529.9043498 [module_supervisor-1] [INFO] [1732067529.903347947] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067529.9087021 [module_supervisor-1] [INFO] [1732067529.907539109] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067529.9150431 [module_supervisor-1] [INFO] [1732067529.912996850] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067529.9176872 [module_supervisor-1] [INFO] [1732067529.916653122] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067529.9255962 [module_supervisor-1] [INFO] [1732067529.920841729] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067529.9324253 [module_supervisor-1] [INFO] [1732067529.931095413] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067529.9703074 [module_weigh-7] [INFO] [1732067529.969464712] [module_weigh]: --- Server Module_Weigh Max: 69.16
+1732067530.0145783 [module_scanning_interface-2] [INFO] [1732067530.013594828] [module_scanning_interface]: Data Collect: [['IP15', 'Thiet bi dien tu', 90.2300033569336], ['NK_S1', 'Quan ao', 69.16000366210938], ['ABCD', 'Khac']]
+1732067530.0607386 [node_io_servo-4] [INFO] [1732067530.059854006] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 0. QA PIN: 1.  Diff PIN: 1----
+1732067530.0894804 [module_scanning_interface-2] [INFO] [1732067530.087462434] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Thiet bi dien tu
+1732067530.0941477 [node_dc_servo-3] [INFO] [1732067530.092640100] [node_servo_motor]: ---- Node_DC_Servo: Rotate Servo TBDT DSG ----
+1732067530.1072900 [module_scanning_interface-2] [INFO] [1732067530.101437538] [module_scanning_interface]: ---- Module_Scanning_Interface: Remain Data: [['NK_S1', 'Quan ao', 69.16000366210938], ['ABCD', 'Khac']]
+1732067530.2384973 [node_io_weigh-6] [INFO] [1732067530.237628840] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067530.5665143 [node_io_servo-4] [INFO] [1732067530.565313821] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067530.5939786 [node_io_weigh-6] [INFO] [1732067530.590616889] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067530.9388902 [node_io_weigh-6] [INFO] [1732067530.937899882] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067531.0729785 [node_io_servo-4] [INFO] [1732067531.071899083] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067531.2884812 [node_io_weigh-6] [INFO] [1732067531.287641230] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067531.5792549 [node_io_servo-4] [INFO] [1732067531.577188705] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 0. QA PIN: 1.  Diff PIN: 1----
+1732067531.5848160 [module_scanning_interface-2] [INFO] [1732067531.581670035] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Quan ao
+1732067531.5924482 [node_dc_servo-3] [INFO] [1732067531.591412606] [node_servo_motor]: ---- Node_DC_Servo: Rotate Servo TBDT AVD ----
+1732067531.6401429 [node_io_weigh-6] [INFO] [1732067531.639176140] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067531.9004321 [module_supervisor-1] [INFO] [1732067531.899433625] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067531.9035122 [module_supervisor-1] [INFO] [1732067531.902370635] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067531.9065447 [module_supervisor-1] [INFO] [1732067531.905577961] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067531.9098995 [module_supervisor-1] [INFO] [1732067531.908997454] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067531.9189215 [module_supervisor-1] [INFO] [1732067531.915680773] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067531.9234104 [module_supervisor-1] [INFO] [1732067531.922304278] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067531.9892435 [node_io_weigh-6] [INFO] [1732067531.988363449] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067532.0835526 [node_io_servo-4] [INFO] [1732067532.082655141] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067532.3385358 [node_io_weigh-6] [INFO] [1732067532.337712290] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067532.5877035 [node_io_servo-4] [INFO] [1732067532.586826956] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 0.  Diff PIN: 1----
+1732067532.5918045 [module_scanning_interface-2] [INFO] [1732067532.590817544] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Quan ao
+1732067532.6016452 [module_scanning_interface-2] [INFO] [1732067532.600244094] [module_scanning_interface]: ---- Module_Scanning_Interface: Remain Data: [['ABCD', 'Khac']]
+1732067532.6092584 [node_dc_servo-3] [INFO] [1732067532.608307937] [node_servo_motor]: ---- Node_DC_Servo: Rotate Servo QA DSG ----
+1732067532.6884341 [node_io_weigh-6] [INFO] [1732067532.687556207] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067533.0385027 [node_io_weigh-6] [INFO] [1732067533.037676421] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067533.0923777 [node_io_servo-4] [INFO] [1732067533.091389141] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067533.3907447 [node_io_weigh-6] [INFO] [1732067533.389810971] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067533.5980186 [node_io_servo-4] [INFO] [1732067533.597040565] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067533.7402074 [node_io_weigh-6] [INFO] [1732067533.739013252] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067533.9005225 [module_supervisor-1] [INFO] [1732067533.899585742] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067533.9068601 [module_supervisor-1] [INFO] [1732067533.903062976] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067533.9082208 [module_supervisor-1] [INFO] [1732067533.906069709] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067533.9104462 [module_supervisor-1] [INFO] [1732067533.909491202] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067533.9146876 [module_supervisor-1] [INFO] [1732067533.913147066] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067533.9191411 [module_supervisor-1] [INFO] [1732067533.917554359] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067534.0884337 [node_io_weigh-6] [INFO] [1732067534.087535454] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067534.1060920 [node_io_servo-4] [INFO] [1732067534.103839195] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067534.4404094 [node_io_weigh-6] [INFO] [1732067534.439217590] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067534.6124785 [node_io_servo-4] [INFO] [1732067534.611125876] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067534.7888675 [node_io_weigh-6] [INFO] [1732067534.787906586] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067535.1174331 [node_io_servo-4] [INFO] [1732067535.116490420] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067535.1385992 [node_io_weigh-6] [INFO] [1732067535.137819751] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067535.4895878 [node_io_weigh-6] [INFO] [1732067535.488582416] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067535.6243932 [node_io_servo-4] [INFO] [1732067535.623272740] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067535.8401513 [node_io_weigh-6] [INFO] [1732067535.839256802] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067535.9039438 [module_supervisor-1] [INFO] [1732067535.903029314] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067535.9183347 [module_supervisor-1] [INFO] [1732067535.916362155] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067535.9224138 [module_supervisor-1] [INFO] [1732067535.920700522] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067535.9298627 [module_supervisor-1] [INFO] [1732067535.925035073] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067535.9337368 [module_supervisor-1] [INFO] [1732067535.932324968] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067535.9409575 [module_supervisor-1] [INFO] [1732067535.937918246] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067536.1297438 [node_io_servo-4] [INFO] [1732067536.128852092] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067536.1905091 [node_io_weigh-6] [INFO] [1732067536.189536315] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067536.5402563 [node_io_weigh-6] [INFO] [1732067536.538956229] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067536.6348023 [node_io_servo-4] [INFO] [1732067536.633820715] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067536.8884766 [node_io_weigh-6] [INFO] [1732067536.887596289] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067537.1389287 [node_io_servo-4] [INFO] [1732067537.138022332] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067537.2397661 [node_io_weigh-6] [INFO] [1732067537.238690910] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067537.5885196 [node_io_weigh-6] [INFO] [1732067537.587689596] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067537.6447659 [node_io_servo-4] [INFO] [1732067537.643920617] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067537.9178629 [module_supervisor-1] [INFO] [1732067537.907659351] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067537.9390833 [module_supervisor-1] [INFO] [1732067537.929656851] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067537.9647558 [module_supervisor-1] [INFO] [1732067537.958015279] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067537.9696293 [module_supervisor-1] [INFO] [1732067537.966205232] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067537.9719143 [node_io_weigh-6] [INFO] [1732067537.968335962] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067537.9764278 [module_supervisor-1] [INFO] [1732067537.974296611] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067537.9826920 [module_supervisor-1] [INFO] [1732067537.979739315] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067538.1523740 [node_io_servo-4] [INFO] [1732067538.150350735] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067538.2885988 [node_io_weigh-6] [INFO] [1732067538.287794841] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067538.6395905 [node_io_weigh-6] [INFO] [1732067538.638596676] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067538.6556821 [node_io_servo-4] [INFO] [1732067538.654818212] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067538.9886551 [node_io_weigh-6] [INFO] [1732067538.987767765] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067539.1604388 [node_io_servo-4] [INFO] [1732067539.159529817] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067539.3384585 [node_io_weigh-6] [INFO] [1732067539.337617926] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067539.6653800 [node_io_servo-4] [INFO] [1732067539.664433732] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067539.6903958 [node_io_weigh-6] [INFO] [1732067539.688657035] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067539.9003179 [module_supervisor-1] [INFO] [1732067539.899378215] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067539.9056754 [module_supervisor-1] [INFO] [1732067539.902263132] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067539.9122443 [module_supervisor-1] [INFO] [1732067539.908811247] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067539.9177167 [module_supervisor-1] [INFO] [1732067539.916664921] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067539.9235764 [module_supervisor-1] [INFO] [1732067539.921952568] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067539.9294829 [module_supervisor-1] [INFO] [1732067539.927586272] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067540.0414238 [node_io_weigh-6] [INFO] [1732067540.040404868] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067540.1843300 [node_io_servo-4] [INFO] [1732067540.183311747] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067540.3942821 [node_io_weigh-6] [INFO] [1732067540.393244996] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067540.6913893 [node_io_servo-4] [INFO] [1732067540.688953732] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067540.7426085 [node_io_weigh-6] [INFO] [1732067540.740860200] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067541.0892103 [node_io_weigh-6] [INFO] [1732067541.088171642] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067541.1945255 [node_io_servo-4] [INFO] [1732067541.193497544] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067541.4385419 [node_io_weigh-6] [INFO] [1732067541.437722866] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067541.6995826 [node_io_servo-4] [INFO] [1732067541.698554057] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067541.7897038 [node_io_weigh-6] [INFO] [1732067541.788665687] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 0. Disable PIN: 1 ----
+1732067541.7967372 [module_weigh-7] [INFO] [1732067541.795681895] [module_weigh]: ---- Server Module Weigh Receive Message: True ----
+1732067541.9020720 [module_supervisor-1] [INFO] [1732067541.900507499] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067541.9058468 [module_supervisor-1] [INFO] [1732067541.904891977] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067541.9138169 [module_supervisor-1] [INFO] [1732067541.908613785] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067541.9225690 [module_supervisor-1] [INFO] [1732067541.912832984] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067541.9264343 [module_supervisor-1] [INFO] [1732067541.918126613] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067541.9290953 [module_supervisor-1] [INFO] [1732067541.923470297] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067542.1397488 [node_io_weigh-6] [INFO] [1732067542.137981612] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 0 ----
+1732067542.1465285 [module_weigh-7] [INFO] [1732067542.142142792] [module_weigh]: ---- Server Module Weigh Receive Message: False ----
+1732067542.2041452 [node_io_servo-4] [INFO] [1732067542.203255511] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067542.2194698 [module_weigh-7] [INFO] [1732067542.217103149] [module_weigh]: --- Server Module_Weigh Max: 68.43
+1732067542.2353790 [module_scanning_interface-2] [INFO] [1732067542.234320390] [module_scanning_interface]: Data Collect: [['ABCD', 'Khac', 68.43000030517578]]
+1732067542.4903572 [node_io_weigh-6] [INFO] [1732067542.489316077] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067542.7082322 [node_io_servo-4] [INFO] [1732067542.707354273] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067542.8401165 [node_io_weigh-6] [INFO] [1732067542.839155427] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067543.1893575 [node_io_weigh-6] [INFO] [1732067543.188339086] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067543.2140086 [node_io_servo-4] [INFO] [1732067543.213078815] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067543.5392225 [node_io_weigh-6] [INFO] [1732067543.538253357] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067543.7193680 [node_io_servo-4] [INFO] [1732067543.718330907] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067543.8884850 [node_io_weigh-6] [INFO] [1732067543.887629534] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067543.9034429 [module_supervisor-1] [INFO] [1732067543.901406134] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067543.9089301 [module_supervisor-1] [INFO] [1732067543.906891430] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067543.9150152 [module_supervisor-1] [INFO] [1732067543.913505914] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067543.9209280 [module_supervisor-1] [INFO] [1732067543.919905046] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067543.9273887 [module_supervisor-1] [INFO] [1732067543.926318623] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067543.9312704 [module_supervisor-1] [INFO] [1732067543.930094839] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067544.2257013 [node_io_servo-4] [INFO] [1732067544.224483981] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 0. QA PIN: 1.  Diff PIN: 1----
+1732067544.2346466 [module_scanning_interface-2] [INFO] [1732067544.232946971] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Khac
+1732067544.2452488 [node_dc_servo-3] [INFO] [1732067544.239559530] [node_servo_motor]: ---- Node_DC_Servo: Rotate Servo TBDT AVD ----
+1732067544.2466280 [node_io_weigh-6] [INFO] [1732067544.241437351] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067544.5884042 [node_io_weigh-6] [INFO] [1732067544.587571086] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067544.7303104 [node_io_servo-4] [INFO] [1732067544.729315268] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067544.9385345 [node_io_weigh-6] [INFO] [1732067544.937664926] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067545.2350717 [node_io_servo-4] [INFO] [1732067545.234172793] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 0.  Diff PIN: 1----
+1732067545.2398758 [module_scanning_interface-2] [INFO] [1732067545.238909272] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Khac
+1732067545.2470710 [module_scanning_interface-2] [INFO] [1732067545.242679432] [module_scanning_interface]: ---- Module_Scanning_Interface: Remain Data: [['ABCD', 'Khac', 68.43000030517578]]
+1732067545.2512944 [node_dc_servo-3] [INFO] [1732067545.248690766] [node_servo_motor]: ---- Node_DC_Servo: Rotate Servo QA AVD ----
+1732067545.2895753 [node_io_weigh-6] [INFO] [1732067545.288515340] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067545.6409304 [node_io_weigh-6] [INFO] [1732067545.639127140] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067545.7393932 [node_io_servo-4] [INFO] [1732067545.738527147] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067545.9026771 [module_supervisor-1] [INFO] [1732067545.901422988] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067545.9089615 [module_supervisor-1] [INFO] [1732067545.906372004] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067545.9136732 [module_supervisor-1] [INFO] [1732067545.912528654] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067545.9172096 [module_supervisor-1] [INFO] [1732067545.916319073] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067545.9205163 [module_supervisor-1] [INFO] [1732067545.919699473] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067545.9273202 [module_supervisor-1] [INFO] [1732067545.923712986] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067545.9892182 [node_io_weigh-6] [INFO] [1732067545.988351343] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067546.2456844 [node_io_servo-4] [INFO] [1732067546.242861422] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 0----
+1732067546.2557554 [module_scanning_interface-2] [INFO] [1732067546.254531515] [module_scanning_interface]: ---- Module_Scanning_Interface: Type Product: Khac
+1732067546.2628489 [module_scanning_interface-2] [INFO] [1732067546.259292253] [module_scanning_interface]: ---- Module_Scanning_Interface: Remain Data: []
+1732067546.3388135 [node_io_weigh-6] [INFO] [1732067546.337873228] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067546.6885667 [node_io_weigh-6] [INFO] [1732067546.687721428] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067546.7523258 [node_io_servo-4] [INFO] [1732067546.751402634] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067547.0404105 [node_io_weigh-6] [INFO] [1732067547.039437190] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067547.2572961 [node_io_servo-4] [INFO] [1732067547.256250218] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067547.3901620 [node_io_weigh-6] [INFO] [1732067547.388146660] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067547.7384572 [node_io_weigh-6] [INFO] [1732067547.737548187] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067547.7614722 [node_io_servo-4] [INFO] [1732067547.760521872] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067547.9014943 [module_supervisor-1] [INFO] [1732067547.900517988] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067547.9048855 [module_supervisor-1] [INFO] [1732067547.903584905] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067547.9089901 [module_supervisor-1] [INFO] [1732067547.907953715] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067547.9154220 [module_supervisor-1] [INFO] [1732067547.912071210] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067547.9209545 [module_supervisor-1] [INFO] [1732067547.918987473] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067547.9269993 [module_supervisor-1] [INFO] [1732067547.924938807] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067548.0911312 [node_io_weigh-6] [INFO] [1732067548.089626111] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067548.2683380 [node_io_servo-4] [INFO] [1732067548.266857381] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067548.4390259 [node_io_weigh-6] [INFO] [1732067548.438076057] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067548.7736926 [node_io_servo-4] [INFO] [1732067548.772720532] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067548.7916248 [node_io_weigh-6] [INFO] [1732067548.790727571] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067549.1385646 [node_io_weigh-6] [INFO] [1732067549.137683770] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067549.2792053 [node_io_servo-4] [INFO] [1732067549.278208438] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067549.4893937 [node_io_weigh-6] [INFO] [1732067549.488433495] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067549.7850833 [node_io_servo-4] [INFO] [1732067549.784097194] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067549.8408551 [node_io_weigh-6] [INFO] [1732067549.839557352] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067549.9033341 [module_supervisor-1] [INFO] [1732067549.901387252] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067549.9066744 [module_supervisor-1] [INFO] [1732067549.905518377] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067549.9101496 [module_supervisor-1] [INFO] [1732067549.909154259] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067549.9147093 [module_supervisor-1] [INFO] [1732067549.912619529] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067549.9183059 [module_supervisor-1] [INFO] [1732067549.917445433] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067549.9229167 [module_supervisor-1] [INFO] [1732067549.921302631] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067550.1886604 [node_io_weigh-6] [INFO] [1732067550.187729864] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067550.2895262 [node_io_servo-4] [INFO] [1732067550.288562812] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067550.5405097 [node_io_weigh-6] [INFO] [1732067550.539113772] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067550.7962501 [node_io_servo-4] [INFO] [1732067550.795354601] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067550.8890383 [node_io_weigh-6] [INFO] [1732067550.887798449] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067551.2384636 [node_io_weigh-6] [INFO] [1732067551.237620238] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067551.3003547 [node_io_servo-4] [INFO] [1732067551.299471878] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067551.5884302 [node_io_weigh-6] [INFO] [1732067551.587595601] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067551.8074794 [node_io_servo-4] [INFO] [1732067551.806515661] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067551.9025555 [module_supervisor-1] [INFO] [1732067551.901211755] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067551.9091969 [module_supervisor-1] [INFO] [1732067551.907890925] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067551.9130256 [module_supervisor-1] [INFO] [1732067551.911741752] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067551.9160669 [module_supervisor-1] [INFO] [1732067551.915148318] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067551.9195263 [module_supervisor-1] [INFO] [1732067551.918614236] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067551.9273708 [module_supervisor-1] [INFO] [1732067551.923975901] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067551.9436090 [node_io_weigh-6] [INFO] [1732067551.942548163] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067552.2892494 [node_io_weigh-6] [INFO] [1732067552.288221156] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067552.3143616 [node_io_servo-4] [INFO] [1732067552.312579844] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067552.6398559 [node_io_weigh-6] [INFO] [1732067552.638145902] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067552.8196027 [node_io_servo-4] [INFO] [1732067552.818633116] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067552.9925094 [node_io_weigh-6] [INFO] [1732067552.989902061] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067553.3271255 [node_io_servo-4] [INFO] [1732067553.323398399] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067553.3415296 [node_io_weigh-6] [INFO] [1732067553.340299989] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067553.6901934 [node_io_weigh-6] [INFO] [1732067553.689297783] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067553.8305817 [node_io_servo-4] [INFO] [1732067553.829643462] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067553.9003808 [module_supervisor-1] [INFO] [1732067553.899453384] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067553.9030542 [module_supervisor-1] [INFO] [1732067553.902204022] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067553.9174185 [module_supervisor-1] [INFO] [1732067553.914422171] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067553.9293828 [module_supervisor-1] [INFO] [1732067553.925500910] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067553.9334786 [module_supervisor-1] [INFO] [1732067553.930639278] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067553.9377074 [module_supervisor-1] [INFO] [1732067553.935449978] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067554.0388718 [node_io_weigh-6] [INFO] [1732067554.037587333] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067554.3348691 [node_io_servo-4] [INFO] [1732067554.333943718] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067554.3896241 [node_io_weigh-6] [INFO] [1732067554.388362184] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067554.7391832 [node_io_weigh-6] [INFO] [1732067554.738124253] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067554.8392105 [node_io_servo-4] [INFO] [1732067554.838259657] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067555.0883911 [node_io_weigh-6] [INFO] [1732067555.087542301] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067555.3439887 [node_io_servo-4] [INFO] [1732067555.342963963] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067555.4399571 [node_io_weigh-6] [INFO] [1732067555.438572370] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067555.7903461 [node_io_weigh-6] [INFO] [1732067555.788854177] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067555.8500495 [node_io_servo-4] [INFO] [1732067555.847621636] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067555.9030149 [module_supervisor-1] [INFO] [1732067555.901906267] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067555.9076149 [module_supervisor-1] [INFO] [1732067555.906618949] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067555.9115200 [module_supervisor-1] [INFO] [1732067555.910159997] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067555.9152315 [module_supervisor-1] [INFO] [1732067555.913988786] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067555.9237602 [module_supervisor-1] [INFO] [1732067555.918658338] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067555.9268236 [module_supervisor-1] [INFO] [1732067555.924486911] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067556.1385529 [node_io_weigh-6] [INFO] [1732067556.137579217] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067556.3547673 [node_io_servo-4] [INFO] [1732067556.353822736] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067556.4894083 [node_io_weigh-6] [INFO] [1732067556.488440281] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067556.8422892 [node_io_weigh-6] [INFO] [1732067556.839947809] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067556.8631446 [node_io_servo-4] [INFO] [1732067556.862033321] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067557.1888394 [node_io_weigh-6] [INFO] [1732067557.187869249] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067557.3675480 [node_io_servo-4] [INFO] [1732067557.366689391] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067557.5398984 [node_io_weigh-6] [INFO] [1732067557.538585826] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067557.8730466 [node_io_servo-4] [INFO] [1732067557.871129457] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067557.8945477 [node_io_weigh-6] [INFO] [1732067557.890084256] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067557.9042048 [module_supervisor-1] [INFO] [1732067557.903029370] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067557.9095011 [module_supervisor-1] [INFO] [1732067557.907019160] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067557.9142046 [module_supervisor-1] [INFO] [1732067557.911894805] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067557.9185581 [module_supervisor-1] [INFO] [1732067557.916730320] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067557.9251785 [module_supervisor-1] [INFO] [1732067557.923492692] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067557.9322927 [module_supervisor-1] [INFO] [1732067557.930306102] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067558.2384646 [node_io_weigh-6] [INFO] [1732067558.237595357] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067558.3780551 [node_io_servo-4] [INFO] [1732067558.377108987] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067558.5900927 [node_io_weigh-6] [INFO] [1732067558.588059242] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067558.8823316 [node_io_servo-4] [INFO] [1732067558.881402639] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067558.9423769 [node_io_weigh-6] [INFO] [1732067558.941426933] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067559.2894077 [node_io_weigh-6] [INFO] [1732067559.288554398] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067559.3866022 [node_io_servo-4] [INFO] [1732067559.385602452] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067559.6402118 [node_io_weigh-6] [INFO] [1732067559.639354687] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067559.8908961 [node_io_servo-4] [INFO] [1732067559.889945357] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067559.9038258 [module_supervisor-1] [INFO] [1732067559.901149743] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067559.9117525 [module_supervisor-1] [INFO] [1732067559.908308839] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067559.9154897 [module_supervisor-1] [INFO] [1732067559.914364894] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067559.9198656 [module_supervisor-1] [INFO] [1732067559.918673222] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067559.9253380 [module_supervisor-1] [INFO] [1732067559.924116202] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067559.9340341 [module_supervisor-1] [INFO] [1732067559.930697796] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067559.9903371 [node_io_weigh-6] [INFO] [1732067559.987728525] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067560.3396113 [node_io_weigh-6] [INFO] [1732067560.338061345] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067560.3995347 [node_io_servo-4] [INFO] [1732067560.398240250] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067560.6890612 [node_io_weigh-6] [INFO] [1732067560.688125535] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067560.9115295 [node_io_servo-4] [INFO] [1732067560.910416968] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067561.0406950 [node_io_weigh-6] [INFO] [1732067561.039644674] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067561.3896356 [node_io_weigh-6] [INFO] [1732067561.387800927] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067561.4172690 [node_io_servo-4] [INFO] [1732067561.416272031] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067561.7397032 [node_io_weigh-6] [INFO] [1732067561.738711763] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067561.9009242 [module_supervisor-1] [INFO] [1732067561.899907268] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732067561.9076889 [module_supervisor-1] [INFO] [1732067561.906573362] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732067561.9121428 [module_supervisor-1] [INFO] [1732067561.910926393] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732067561.9161727 [module_supervisor-1] [INFO] [1732067561.914622812] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732067561.9237080 [module_supervisor-1] [INFO] [1732067561.920401255] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732067561.9285421 [node_io_servo-4] [INFO] [1732067561.925007177] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067561.9299459 [module_supervisor-1] [INFO] [1732067561.926227458] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732067562.0896957 [node_io_weigh-6] [INFO] [1732067562.088213594] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067562.4351187 [node_io_servo-4] [INFO] [1732067562.434006280] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067562.4397564 [node_io_weigh-6] [INFO] [1732067562.438921128] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067562.7896628 [node_io_weigh-6] [INFO] [1732067562.788731752] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067562.9396856 [node_io_servo-4] [INFO] [1732067562.938762795] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067563.1385741 [node_io_weigh-6] [INFO] [1732067563.137724465] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067563.4092243 [module_scanning_interface-2] [INFO] [1732067563.408024698] [module_scanning_interface]: ---- Server Module_Scanning_Interfaces: Shutdown ----
+1732067563.4479811 [node_io_servo-4] [INFO] [1732067563.446925407] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067563.5025022 [node_io_weigh-6] [INFO] [1732067563.499994547] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067563.5284777 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=354, top=217, width=75, height=75), polygon=[Point(x=354, y=217), Point(x=354, y=287), Point(x=427, y=292), Point(x=429, y=217)], quality=1, orientation='UP')
+1732067563.5318654 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=348, top=219, width=78, height=78), polygon=[Point(x=348, y=288), Point(x=421, y=297), Point(x=426, y=222), Point(x=351, y=219)], quality=1, orientation='UP')
+1732067563.5359383 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=331, top=222, width=85, height=87), polygon=[Point(x=331, y=293), Point(x=403, y=309), Point(x=416, y=233), Point(x=339, y=222)], quality=1, orientation='UP')
+1732067563.5372164 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=308, top=221, width=85, height=90), polygon=[Point(x=308, y=292), Point(x=378, y=311), Point(x=393, y=235), Point(x=319, y=221)], quality=1, orientation='UP')
+1732067563.5377383 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=292, top=222, width=86, height=90), polygon=[Point(x=292, y=291), Point(x=362, y=312), Point(x=378, y=237), Point(x=305, y=222)], quality=1, orientation='UP')
+1732067563.5399826 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=289, top=222, width=86, height=91), polygon=[Point(x=289, y=292), Point(x=358, y=313), Point(x=375, y=239), Point(x=302, y=222)], quality=1, orientation='UP')
+1732067563.5420446 [module_scanning_interface-2] Decoded(data=b'NK_S1', type='QRCODE', rect=Rect(left=294, top=218, width=86, height=92), polygon=[Point(x=294, y=289), Point(x=363, y=310), Point(x=380, y=235), Point(x=307, y=218)], quality=1, orientation='UP')
+1732067563.5433815 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=271, top=160, width=108, height=123), polygon=[Point(x=271, y=171), Point(x=274, y=277), Point(x=379, y=283), Point(x=378, y=160)], quality=1, orientation='UP')
+1732067563.5453241 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=271, top=155, width=109, height=124), polygon=[Point(x=271, y=167), Point(x=274, y=273), Point(x=380, y=279), Point(x=378, y=155)], quality=1, orientation='UP')
+1732067563.5462620 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=274, top=149, width=107, height=123), polygon=[Point(x=274, y=161), Point(x=277, y=267), Point(x=381, y=272), Point(x=381, y=149)], quality=1, orientation='UP')
+1732067563.5471225 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=275, top=141, width=106, height=121), polygon=[Point(x=275, y=154), Point(x=278, y=258), Point(x=381, y=262), Point(x=380, y=141)], quality=1, orientation='UP')
+1732067563.5478861 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=273, top=136, width=103, height=118), polygon=[Point(x=273, y=149), Point(x=277, y=251), Point(x=376, y=254), Point(x=375, y=136)], quality=1, orientation='UP')
+1732067563.5490484 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=268, top=134, width=99, height=113), polygon=[Point(x=268, y=146), Point(x=271, y=245), Point(x=367, y=247), Point(x=365, y=134)], quality=1, orientation='UP')
+1732067563.5499759 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=267, top=134, width=96, height=110), polygon=[Point(x=267, y=146), Point(x=271, y=243), Point(x=363, y=244), Point(x=362, y=134)], quality=1, orientation='UP')
+1732067563.5510776 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=277, top=142, width=98, height=111), polygon=[Point(x=277, y=153), Point(x=281, y=250), Point(x=375, y=253), Point(x=374, y=142)], quality=1, orientation='UP')
+1732067563.5516951 [module_scanning_interface-2] Decoded(data=b'ABCD', type='QRCODE', rect=Rect(left=287, top=147, width=99, height=112), polygon=[Point(x=287, y=157), Point(x=290, y=255), Point(x=386, y=259), Point(x=386, y=147)], quality=1, orientation='UP')
+1732067563.8511217 [node_io_weigh-6] [INFO] [1732067563.848607163] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067563.9644270 [node_io_servo-4] [INFO] [1732067563.961169481] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067564.1896188 [node_io_weigh-6] [INFO] [1732067564.188348861] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067564.2088563 [ERROR] [module_scanning_interface-2]: process has died [pid 16655, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_scanning_interface/lib/module_scanning_interface/module_scanning_interface --ros-args'].
+1732067564.4696610 [node_io_servo-4] [INFO] [1732067564.468902029] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067564.5415988 [node_io_weigh-6] [INFO] [1732067564.540662243] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067564.8914807 [node_io_weigh-6] [INFO] [1732067564.890503062] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067564.9027154 [module_supervisor-1] [WARN] [1732067564.901940040] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1732067564.9774029 [node_io_servo-4] [INFO] [1732067564.976303354] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067565.2415407 [node_io_weigh-6] [INFO] [1732067565.240760712] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067565.4845004 [node_io_servo-4] [INFO] [1732067565.483575172] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067565.5915182 [node_io_weigh-6] [INFO] [1732067565.590537581] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067565.9087169 [module_supervisor-1] [WARN] [1732067565.907736706] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1732067565.9408443 [node_io_weigh-6] [INFO] [1732067565.939885097] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067565.9924126 [node_io_servo-4] [INFO] [1732067565.991604473] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067566.2883027 [node_io_weigh-6] [INFO] [1732067566.287726364] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067566.4974668 [node_io_servo-4] [INFO] [1732067566.496756703] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067566.6416893 [node_io_weigh-6] [INFO] [1732067566.640663701] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067566.9153421 [module_supervisor-1] [WARN] [1732067566.913755655] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1732067566.9912610 [node_io_weigh-6] [INFO] [1732067566.990397807] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067567.0041289 [node_io_servo-4] [INFO] [1732067567.003065270] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067567.3407092 [node_io_weigh-6] [INFO] [1732067567.339885722] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067567.5131741 [node_io_servo-4] [INFO] [1732067567.512058820] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067567.6911345 [node_io_weigh-6] [INFO] [1732067567.690227898] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067567.9223766 [module_supervisor-1] [WARN] [1732067567.921195650] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1732067568.0204659 [node_io_servo-4] [INFO] [1732067568.019636013] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067568.0388598 [node_io_weigh-6] [INFO] [1732067568.038156697] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067568.3915677 [node_io_weigh-6] [INFO] [1732067568.390576115] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067568.5284903 [node_io_servo-4] [INFO] [1732067568.527324645] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067568.7416770 [node_io_weigh-6] [INFO] [1732067568.740737305] [node_io_weigh]: ---- Server Server Module_Input.node_io_weigh: Enable PIN: 1. Disable PIN: 1 ----
+1732067568.9289541 [module_supervisor-1] [WARN] [1732067568.927801667] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1732067568.9335339 [module_supervisor-1] [ERROR] [1732067568.932599940] [Module_Supervisor]: ---- Supervisor: Can't connect to Module Scanning&Interface ----
+1732067568.9409571 [module_log_file-8] [INFO] [1732067568.937648621] [module_log_file]: ---- Server Module_Log_File: Creating Log File... ----
+1732067568.9449966 [node_dc_servo-3] [INFO] [1732067568.939125385] [node_servo_motor]: ---- Server Module_Motor.node_servo_motor: Receive Message: Terminate. Bye Bye.... ----
+1732067568.9689980 [node_io_weigh-6] [INFO] [1732067568.956907289] [node_io_weigh]: ---- Server Module_Input.node_io_weigh: Receive Message: Terminate. Bye Bye.... ----
+1732067568.9872339 [node_dc_motor-5] [INFO] [1732067568.957457790] [node_dc_motor]: ---- Server Module_Motor.node_dc_motor: Receive Message: Terminate. Bye Bye.... ----
+1732067568.9972622 [module_weigh-7] [INFO] [1732067568.960435818] [module_weigh]: ---- Server Module_Weigh: Receive Message: Terminate. Bye Bye.... ----
+1732067569.0659132 [node_io_servo-4] [INFO] [1732067569.056459023] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067569.4721851 [ERROR] [module_supervisor-1]: process has died [pid 16654, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/module_supervisor/module_supervisor --ros-args'].
+1732067569.5428743 [ERROR] [node_io_weigh-6]: process has died [pid 16659, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_weigh --ros-args'].
+1732067569.5748587 [node_io_servo-4] [INFO] [1732067569.573052322] [node_io_servo]: ---- Server Server Module_Input.node_io_servo: TBDT PIN: 1. QA PIN: 1.  Diff PIN: 1----
+1732067569.5818608 [node_io_servo-4] [INFO] [1732067569.578493227] [node_io_servo]: ---- Server Module_Input.node_io_servo: Receive Message: Terminate. Bye Bye.... ----
+1732067569.6656475 [ERROR] [module_weigh-7]: process has died [pid 16660, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/module_weigh/module_weigh --ros-args'].
+1732067570.0131865 [ERROR] [node_dc_servo-3]: process has died [pid 16656, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/module_motor/node_dc_servo --ros-args'].
+1732067570.0144701 [ERROR] [node_dc_motor-5]: process has died [pid 16658, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/module_motor/node_dc_motor --ros-args'].
+1732067570.1022358 [ERROR] [node_io_servo-4]: process has died [pid 16657, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_servo --ros-args'].

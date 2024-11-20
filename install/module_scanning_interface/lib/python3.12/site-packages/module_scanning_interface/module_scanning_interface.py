@@ -13,6 +13,7 @@ from pyzbar.pyzbar import decode
 import pypyodbc as odbc
 import pandas as pd
 from tkinter import ttk
+import time
 #Class Node
 class myNode(Node):
     def __init__(self,name:str):
@@ -38,7 +39,7 @@ class myApp(tk.Tk):
         #Tạo 1 Subcriber cho việc lấy dữ liệu cân
         self.subcriber_weigh = self.node.create_subscription(WeighValue,"get_weigh",self.addWeightToList,10)
         #Tạo 1 Subcriber cho việc lấy dữ liệu IO Servo
-        self.subcriber_io_servo = self.node.create_subscription(SetServoIO,"node_io_servo",self.receiveIO_Servo,10)
+        self.subcriber_io_servo = self.node.create_subscription(SetServoIO,"servo_io",self.receiveIO_Servo,10)
         #Tạo 1 Publisher cho việc ra tín hiệu cho Servo quay
         self.publisher_rotate_servo = self.node.create_publisher(SetServoRotate,"rotate_servo",10)
         #Tạo 1 Thread chịu trách nhiệm cho việc luôn spin
@@ -217,40 +218,52 @@ class myApp(tk.Tk):
         self.openCameraAndIdentifyCode()
     def receiveIO_Servo(self,msg):
         if len(self.data_queue) > 0:
-            msg = SetServoRotate()
-            if len(self.data_queue[0]) > 2:     
-                if msg.iosmsg == "Thiet bi dien tu":
-                    if msg.iomsg == (self.data_queue[0])[1]:
-                        msg.rotatemsg = "1_YES"
-                        self.publisher_rotate_servo.publish(msg)
+            msg_rotate = SetServoRotate()
+            tmp_product = self.data_queue[0]
+            if len(tmp_product) > 2:
+                self.node.get_logger().info(f"---- Module_Scanning_Interface: Type Product: {(self.data_queue[0])[1]}")
+                if msg.iomsg == "Thiet bi dien tu":
+                    if msg.iomsg == tmp_product[1]:
+                        msg_rotate.rotatemsg = "1_YES"
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data Before Popping: {self.data_queue}")
+                        #Phân loại xong phải pop dữ liệu
+                        self.data_queue.pop(0)
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data if TBDT was detected: {self.data_queue}")
+                        self.publisher_rotate_servo.publish(msg_rotate)
                     else:
-                        msg.rotatemsg = "1_NO"
-                        self.publisher_rotate_servo.publish(msg)
-                    #Pop element from Data Queue
-                    self.data_queue.pop(0)
+                        msg_rotate.rotatemsg = "1_NO"
+                        self.publisher_rotate_servo.publish(msg_rotate)
                 elif msg.iomsg == "Quan ao":
-                    if msg.iomsg == (self.data_queue[0])[1]:
-                        msg.rotatemsg = "2_YES"
-                        self.publisher_rotate_servo.publish(msg)
+                    if msg.iomsg == tmp_product[1]:
+                        msg_rotate.rotatemsg = "2_YES"
+                        #Phân loại xong phải pop dữ liệu
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data Before Popping: {self.data_queue}")
+                        self.data_queue.pop(0)
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data if QA was detected: {self.data_queue}")
+                        self.publisher_rotate_servo.publish(msg_rotate)
                     else:
-                        msg.rotatemsg = "2_NO"
-                        self.publisher_rotate_servo.publish(msg)
+                        msg_rotate.rotatemsg = "2_NO"
+                        self.publisher_rotate_servo.publish(msg_rotate)
                 else:
+                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data Before Popping: {self.data_queue}")
+                    self.data_queue.pop(0)
+                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data if Diff was detected: {self.data_queue}")
                     #Hiển thị kết quả phân loại ?
                     pass
-                    #Pop element from Data Queue
-                self.data_queue.pop(0)                    
+                                    
             #Nếu bị nhiễu hoặc sản phẩm không cân được
             else:
                 if msg.iomsg == "Thiet bi dien tu":
-                    msg.rotatemsg = "1_NO"
-                    self.publisher_rotate_servo.publish(msg)
-                    self.data_queue.pop(0)
+                    msg_rotate.rotatemsg = "1_NO"
+                    self.publisher_rotate_servo.publish(msg_rotate)
                 elif msg.iomsg == "Quan ao":
-                    msg.rotatemsg = "2_NO"
-                    self.publisher_rotate_servo.publish(msg)
-                    self.data_queue.pop(0)
+                    msg_rotate.rotatemsg = "2_NO"
+                    self.publisher_rotate_servo.publish(msg_rotate)
                 else:
+                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Receive Message: {msg.iomsg}")
+                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data Before Popping: {self.data_queue}")
+                    self.data_queue.pop(0)
+                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in Special Condition: {self.data_queue}")
                     #Hiển thị kết quả phân loại ?
                     pass  
                 self.node.get_logger().warn(f"---- Server Module_Scanning&Interface: Detect Product didn't weigh. ID: {(self.data_queue[0])[0]} ----")
@@ -287,6 +300,8 @@ class myApp(tk.Tk):
                     thread_send_data = threading.Thread(target=self.sendDataToDB,args=(block_data,))
                     thread_send_data.daemon = True
                     thread_send_data.start()
+                    break
+            self.node.get_logger().info(f"Data Collect: {self.data_queue}")
         ToastNotification(self,"weigh",msg.value,3000)
     def openCameraAndIdentifyCode(self):
         status, frame = self.camera.read()

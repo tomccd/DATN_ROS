@@ -34,7 +34,7 @@ class myNode(Node):
                 break
             time_counter +=1
         if time_counter > 4:
-            self.get_logger().error("---- Supevisor: Can't connetc to server Module_Log_File ----")
+            self.get_logger().error("---- Supevisor: Can't connect to server Module_Log_File ----")
             return -1
         else:
             self.get_logger().info("---- Supervisor: Connect to Server Module_Log_File Successfully ----")
