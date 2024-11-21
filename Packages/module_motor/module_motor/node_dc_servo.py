@@ -32,11 +32,11 @@ class myNode(Node):
         self.PULSE_PIN_Diff = 11
         try:
             #-Init Servo
-            self.pi.set_servo_pulsewidth(self.PULSE_PIN_TBDT,self.degrees_to_pwm(8)) #5
+            self.pi.set_servo_pulsewidth(self.PULSE_PIN_TBDT,self.degrees_to_pwm(9)) #5 -> 8 -> 9
             time.sleep(0.5)
-            self.pi.set_servo_pulsewidth(self.PULSE_PIN_QA,self.degrees_to_pwm(40)) #30
+            self.pi.set_servo_pulsewidth(self.PULSE_PIN_QA,self.degrees_to_pwm(39)) #30 -> 40 -> 39
             time.sleep(0.5)
-            self.pi.set_servo_pulsewidth(self.PULSE_PIN_Diff,self.degrees_to_pwm(140)) #145
+            self.pi.set_servo_pulsewidth(self.PULSE_PIN_Diff,self.degrees_to_pwm(141)) #145 -> 140 -> 142
             time.sleep(0.5)
         except Exception as e:
             self.get_logger().error(f"---- Servo Module_Motor.node_servo_motor: Can't Rotate Servo. Error: {e}")
@@ -52,7 +52,7 @@ class myNode(Node):
         if pin == self.PULSE_PIN_TBDT:
             #Thiết lập servo quay về vị trí ban đầu
             try:
-                self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(8))
+                self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(10))
                 self.rotate_status = True
                 time.sleep(2) #6.5
             except Exception as e:
