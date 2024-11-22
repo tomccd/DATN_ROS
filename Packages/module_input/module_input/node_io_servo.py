@@ -27,7 +27,7 @@ class myNode(Node):
         #Define GPIO_CB_Diff
         self.GPIO_CB_Diff = 16
         #Create a timer
-        self.timer_ = self.create_timer(0.475,self.checkIOStatus)
+        self.timer_ = self.create_timer(0.425,self.checkIOStatus)
     def callBack(self,req,res):
         self.get_logger().info(f"---- Server Module_Input.node_io_servo: Receive Intialized Request: {req.a} ----")
         self.init_status = True

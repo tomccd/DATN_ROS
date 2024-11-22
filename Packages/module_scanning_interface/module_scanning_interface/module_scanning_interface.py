@@ -204,8 +204,12 @@ class myApp(tk.Tk):
             self.on_closing()
         else:
             self.node.get_logger().info("----  Server Module_Scanning&Interface: Connect to DB Successfully ----")
-        #Queue chứa dữ liệu dạng ["ID_san_pham","Kieu_san_pham","Can_Nang"]
-        self.data_queue = []
+        #Dictionary chứa các key có giá trị là các Queue chứa dữ liệu dạng ["ID_san_pham","Kieu_san_pham","Can_Nang"]
+        self.dict_contain_data_queue = {
+            "S1": [],
+            "S2": [],
+            "S3": []
+        }
         #Cursor
         self.cursor = self.conn.cursor()
         #-Phần chứa camera
@@ -217,56 +221,82 @@ class myApp(tk.Tk):
         self.label_camera.pack()
         self.openCameraAndIdentifyCode()
     def receiveIO_Servo(self,msg):
-        if len(self.data_queue) > 0:
-            msg_rotate = SetServoRotate()
-            tmp_product = self.data_queue[0]
-            if len(tmp_product) > 2:
-                self.node.get_logger().info(f"---- Module_Scanning_Interface: Type Product: {(self.data_queue[0])[1]}")
-                if msg.iomsg == "Thiet bi dien tu":
-                    if msg.iomsg == tmp_product[1]:
+        msg_rotate = SetServoRotate()
+        #Sử dụng Queue thuộc S1
+        if msg.iomsg == "Thiet bi dien tu":
+            if len(self.dict_contain_data_queue["S1"]) > 0:
+                self.node.get_logger().info(f"---- Module_Scanning_Interface: Type Product: {(self.dict_contain_data_queue["S1"][0])[1]}")
+                #Chia thành 2 trường hợp
+                #TH1: Phần tử đứng đầu Queue thuộc S1 có đủ 3 thuộc tính 
+                if len(self.dict_contain_data_queue["S1"][0]) > 2:
+                    #Nếu đúng loại
+                    if msg.iomsg == (self.dict_contain_data_queue["S1"][0])[1]:
                         msg_rotate.rotatemsg = "1_YES"
-                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data Before Popping: {self.data_queue}")
-                        #Phân loại xong phải pop dữ liệu
-                        self.data_queue.pop(0)
-                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data if TBDT was detected: {self.data_queue}")
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S1 Before Popping: {self.dict_contain_data_queue["S1"]}")
+                        #Loại bỏ phần tử ban đầu của S1 Queue
+                        self.dict_contain_data_queue["S1"].pop(0)
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S1 if TBDT was detected: {self.dict_contain_data_queue["S1"]}")
                         self.publisher_rotate_servo.publish(msg_rotate)
+                        return 0
+                    #Nếu không đúng loại
                     else:
                         msg_rotate.rotatemsg = "1_NO"
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S1 Before Popping and Transfer to S2: {self.dict_contain_data_queue["S1"]}")
+                        #Truyền phần tử ban đầu của S1 Queue sang S2 Queue
+                        self.dict_contain_data_queue["S2"].append(self.dict_contain_data_queue["S1"].pop(0))
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S1 Queue: {self.dict_contain_data_queue["S1"]}")
                         self.publisher_rotate_servo.publish(msg_rotate)
-                elif msg.iomsg == "Quan ao":
-                    if msg.iomsg == tmp_product[1]:
+                        return 0
+                #TH2: Phần tử đứng đầu Queue thuộc S1 không đủ 3 thuộc tính -> avoid và truyền sang Queue kế tiếp
+                else:
+                    self.node.get_logger().warn("---- Module_Scanning_Interface: Avoid in S1 Sensor! May be your product didn't weigh----")
+                    msg_rotate.rotatemsg = "1_NO"
+                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S1 Queue Before Popping and Transfer to S2: {self.dict_contain_data_queue["S1"]}")
+                    self.dict_contain_data_queue["S2"].append(self.dict_contain_data_queue["S1"].pop(0))
+                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S1 Queue: {self.dict_contain_data_queue["S1"]}")
+                    self.publisher_rotate_servo.publish(msg_rotate)
+                    return 0
+        #Sử dụng Queue thuộc S2
+        elif msg.iomsg == "Quan ao":
+            if len(self.dict_contain_data_queue["S2"]) > 0:
+                self.node.get_logger().info(f"---- Module_Scanning_Interface: Type Product: {(self.dict_contain_data_queue["S2"][0])[1]}")
+                #Chia thành 2 trường hợp
+                #TH1: Phần tử đứng đầu Queue thuộc S2 có đủ 3 thuộc tính 
+                if len(self.dict_contain_data_queue["S2"][0]) > 2:
+                    #Nếu đúng loại
+                    if msg.iomsg == (self.dict_contain_data_queue["S2"][0])[1]:
                         msg_rotate.rotatemsg = "2_YES"
-                        #Phân loại xong phải pop dữ liệu
-                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data Before Popping: {self.data_queue}")
-                        self.data_queue.pop(0)
-                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data if QA was detected: {self.data_queue}")
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S2 Before Popping: {self.dict_contain_data_queue["S2"]}")
+                        #Loại bỏ phần tử ban đầu của S2 Queue
+                        self.dict_contain_data_queue["S2"].pop(0)
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S2 if QA was detected: {self.dict_contain_data_queue["S2"]}")
                         self.publisher_rotate_servo.publish(msg_rotate)
+                        return 0
+                    #Nếu không đúng loại
                     else:
                         msg_rotate.rotatemsg = "2_NO"
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S2 Before Popping and Transfer to S3: {self.dict_contain_data_queue["S2"]}")
+                        #Truyền phần tử ban đầu của S1 Queue sang S2 Queue
+                        self.dict_contain_data_queue["S3"].append(self.dict_contain_data_queue["S2"].pop(0))
+                        self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S2 Queue: {self.dict_contain_data_queue["S2"]}")
                         self.publisher_rotate_servo.publish(msg_rotate)
+                        return 0
+                #TH2: Phần tử đứng đầu Queue thuộc S2 không đủ 3 thuộc tính -> avoid và truyền sang Queue kế tiếp
                 else:
-                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data Before Popping: {self.data_queue}")
-                    self.data_queue.pop(0)
-                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data if Diff was detected: {self.data_queue}")
-                    #Hiển thị kết quả phân loại ?
-                    pass
-                                    
-            #Nếu bị nhiễu hoặc sản phẩm không cân được
-            else:
-                if msg.iomsg == "Thiet bi dien tu":
-                    msg_rotate.rotatemsg = "1_NO"
-                    self.publisher_rotate_servo.publish(msg_rotate)
-                elif msg.iomsg == "Quan ao":
+                    self.node.get_logger().warn("---- Module_Scanning_Interface: Avoid in S2 Sensor! May be your product didn't weigh----")
                     msg_rotate.rotatemsg = "2_NO"
+                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S2 Queue Before Popping and Transfer to S3: {self.dict_contain_data_queue["S2"]}")
+                    self.dict_contain_data_queue["S3"].append(self.dict_contain_data_queue["S2"].pop(0))
+                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S2 Queue: {self.dict_contain_data_queue["S2"]}")
                     self.publisher_rotate_servo.publish(msg_rotate)
-                else:
-                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Receive Message: {msg.iomsg}")
-                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data Before Popping: {self.data_queue}")
-                    self.data_queue.pop(0)
-                    self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in Special Condition: {self.data_queue}")
-                    #Hiển thị kết quả phân loại ?
-                    pass  
-                self.node.get_logger().warn(f"---- Server Module_Scanning&Interface: Detect Product didn't weigh. ID: {(self.data_queue[0])[0]} ----")
+                    return 0
+        #Sử dụng Queue thuộc S3
+        else:
+            if len(self.dict_contain_data_queue["S3"]) > 0:
+                self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S3 Queue Before Popping: {self.dict_contain_data_queue["S3"]}")
+                self.dict_contain_data_queue["S3"].pop(0)
+                self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S3 Queue if Diff was detected: {self.dict_contain_data_queue["S3"]}")
+                return 0
     def sendDataToDB(self,block_data):
         if block_data[1] == "Khac":
             sql_query = "INSERT INTO [DATN].[dbo].Weigh_Non_Certificate (ID_Product, Weighs) VALUES(?,?);"
@@ -290,8 +320,8 @@ class myApp(tk.Tk):
             else:
                 self.cursor.commit()
     def addWeightToList(self,msg):
-        if len(self.data_queue) > 0:
-            for block_data in self.data_queue:
+        if len(self.dict_contain_data_queue["S1"]) > 0:
+            for block_data in self.dict_contain_data_queue["S1"]:
                 if len(block_data) == 2:
                     block_data.append(msg.value)
                     #Thêm vào bảng hiển thị
@@ -301,7 +331,7 @@ class myApp(tk.Tk):
                     thread_send_data.daemon = True
                     thread_send_data.start()
                     break
-            self.node.get_logger().info(f"Data Collect: {self.data_queue}")
+            self.node.get_logger().info(f"Data Collect: {self.dict_contain_data_queue["S1"]}")
         ToastNotification(self,"weigh",msg.value,3000)
     def openCameraAndIdentifyCode(self):
         status, frame = self.camera.read()
@@ -326,14 +356,16 @@ class myApp(tk.Tk):
                 if valid and self.previous_data != data_detect:
                     ToastNotification(self,"valid data",data_detect,3000)
                     #Cho vào Queue
-                    self.data_queue.append([data_detect,valid])
+                    # self.data_queue.append([data_detect,valid])
+                    self.dict_contain_data_queue["S1"].append([data_detect,valid])
                     self.previous_data = data_detect
                 elif valid is False and self.previous_data != data_detect:
                     ToastNotification(self,"non valid data",data_detect,3000)
                     #Cho vào Queue
-                    self.data_queue.append([data_detect,"Khac"])
+                    # self.data_queue.append([data_detect,"Khac"])
+                    self.dict_contain_data_queue["S1"].append([data_detect,"Khac"])
                     self.previous_data = data_detect
-                self.node.get_logger().info(f"Data Collect: {self.data_queue}")
+                self.node.get_logger().info(f"Data Collect: {self.dict_contain_data_queue["S1"]}")
             self.label_camera.after(10,self.openCameraAndIdentifyCode)
         else:
             messagebox.showerror("Error","Cannot detect your camera")

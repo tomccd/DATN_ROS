@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "custom_interfaces/msg/detail/set_servo_rotate__type_support.h"
-#include "custom_interfaces/msg/detail/set_servo_rotate__functions.h"
 #include "custom_interfaces/msg/detail/set_servo_rotate__struct.h"
+#include "custom_interfaces/msg/detail/set_servo_rotate__functions.h"
+#include "custom_interfaces/msg/detail/set_servo_rotate__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus

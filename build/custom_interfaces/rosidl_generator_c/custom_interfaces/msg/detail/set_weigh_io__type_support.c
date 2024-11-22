@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "custom_interfaces/msg/detail/set_weigh_io__type_support.h"
-#include "custom_interfaces/msg/detail/set_weigh_io__struct.h"
 #include "custom_interfaces/msg/detail/set_weigh_io__functions.h"
+#include "custom_interfaces/msg/detail/set_weigh_io__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
