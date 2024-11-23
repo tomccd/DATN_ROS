@@ -237,6 +237,12 @@ class myApp(tk.Tk):
                         self.dict_contain_data_queue["S1"].pop(0)
                         self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S1 if TBDT was detected: {self.dict_contain_data_queue["S1"]}")
                         self.publisher_rotate_servo.publish(msg_rotate)
+                        #Cộng dồn giá trị
+                        self.num_product_electric += 1
+                        self.num_product_all += 1
+                        #Hiển thị
+                        self.str_display_product_electric.set(f"Số lượng sản phẩn loại TBDT: \n{self.num_product_electric}")
+                        self.str_display_product_all.set(f"Tổng số lượng phân loại: \n{self.num_product_all}")
                         return 0
                     #Nếu không đúng loại
                     else:
@@ -271,6 +277,12 @@ class myApp(tk.Tk):
                         self.dict_contain_data_queue["S2"].pop(0)
                         self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S2 if QA was detected: {self.dict_contain_data_queue["S2"]}")
                         self.publisher_rotate_servo.publish(msg_rotate)
+                        #Cộng dồn giá trị
+                        self.num_product_clothes += 1
+                        self.num_product_all += 1
+                        #Hiển thị
+                        self.str_display_product_clothes.set(f"Số lượng sản phẩm loại QA: \n{self.num_product_clothes}")
+                        self.str_display_product_all.set(f"Tổng số lượng phân loại: \n{self.num_product_all}")
                         return 0
                     #Nếu không đúng loại
                     else:
@@ -296,6 +308,12 @@ class myApp(tk.Tk):
                 self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S3 Queue Before Popping: {self.dict_contain_data_queue["S3"]}")
                 self.dict_contain_data_queue["S3"].pop(0)
                 self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S3 Queue if Diff was detected: {self.dict_contain_data_queue["S3"]}")
+                #Cộng dồn giá trị
+                self.num_product_diff += 1
+                self.num_product_all += 1
+                #Hiển thị
+                self.str_display_product_diff.set(f"Số lượng sản phẩm khác: \n{self.num_product_diff}")
+                self.str_display_product_all.set(f"Tổng số lượng phân loại: \n{self.num_product_all}")
                 return 0
     def sendDataToDB(self,block_data):
         if block_data[1] == "Khac":

@@ -73,13 +73,13 @@ class myNode(Node):
             try:
                 #Tránh vật
                 self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(60))
-                time.sleep(1.5)
+                time.sleep(1.75)
                 try:
                     #Thiết lập servo quay về vị trí ban đầu
                     self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(8))
                     self.rotate_status = True
                     
-                    time.sleep(1.5)
+                    time.sleep(1.75)
                 except Exception as e:
                     self.get_logger().error(f"---- Server Module_Motor.node_servo_motor can't rotate at Servo 1st. Error: {e} ----")
                     self.rotate_status = False
@@ -90,12 +90,12 @@ class myNode(Node):
             try:
                 #Tránh vật
                 self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(95))
-                time.sleep(1.5)
+                time.sleep(1.75)
                 try:
                     #Thiết lập servo quay về vị trí ban đầu
                     self.pi.set_servo_pulsewidth(pin,self.degrees_to_pwm(40))
                     self.rotate_status = True
-                    time.sleep(1.5)
+                    time.sleep(1.75)
                 except Exception as e:
                     self.get_logger().error(f"---- Server Module_Motor.node_servo_motor can't rotate at Servo 2nd. Error: {e} ----")
                     self.rotate_status = False
