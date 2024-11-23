@@ -26,8 +26,10 @@ class myNode(Node):
         self.GPIO_CB_QA = 24
         #Define GPIO_CB_Diff
         self.GPIO_CB_Diff = 16
+        #Previous Status
+        self.previous_result = None
         #Create a timer
-        self.timer_ = self.create_timer(0.425,self.checkIOStatus)
+        self.timer_ = self.create_timer(0.25,self.checkIOStatus)
     def callBack(self,req,res):
         self.get_logger().info(f"---- Server Module_Input.node_io_servo: Receive Intialized Request: {req.a} ----")
         self.init_status = True
@@ -44,14 +46,18 @@ class myNode(Node):
             detect_diff = self.pi.read(self.GPIO_CB_Diff)
             self.get_logger().info(f"---- Server Server Module_Input.node_io_servo: TBDT PIN: {detect_TBDT}. QA PIN: {detect_QA}.  Diff PIN: {detect_diff}----")
             if detect_TBDT == 0 and detect_QA == 1 and detect_diff == 1:
-                msg.iomsg = "Thiet bi dien tu"
-                self.publisher_servo.publish(msg)
+                if self.previous_result != "Thiet bi dien tu":
+                    self.previous_result = "Thiet bi dien tu"
+                    msg.iomsg = "Thiet bi dien tu"
+                    self.publisher_servo.publish(msg)
             elif detect_TBDT == 1 and detect_QA == 0 and detect_diff == 1:
                 msg.iomsg = "Quan ao"
                 self.publisher_servo.publish(msg)
             elif detect_TBDT == 1 and detect_QA == 1 and detect_diff == 0:
                 msg.iomsg = "Khac"
                 self.publisher_servo.publish(msg)
+            else:
+                self.previous_result = None
         except Exception as e:
             self.get_logger().error(f"---- Server Server Module_Input.node_io_error: Can't read IO. Error {e} ----")
             self.pi.stop()
