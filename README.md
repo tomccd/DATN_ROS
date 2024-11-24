@@ -17,7 +17,7 @@
 -    [x] Đặt trạng thái Enable, Disable cân thông qua 2 cảm biến
 -    [x] Lấy dữ liệu cảm biến IO_Cân
 -    [x] Lấy dữ liệu cảm biến IO_Phanloai
--    [ ] Bổ sung node_io_start_stop_pending
+-    [x] Bổ sung node_io_start_stop_pending
 ### 5. Module Weigh
 -    [x] Kích hoạt cân khi có trạng thái Enable
 -    [x] Gửi dữ liệu cân
