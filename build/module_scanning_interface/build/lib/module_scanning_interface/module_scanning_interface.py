@@ -14,19 +14,45 @@ import pypyodbc as odbc
 import pandas as pd
 from tkinter import ttk
 import time
+import sys
 #Class Node
 class myNode(Node):
     def __init__(self,name:str):
         super().__init__(name)
-        #Initialize Status
-        self.init_status = False
+        #Start,Pending Status
+        self.start_status = False
+        self.pending_status = False
         #Create a Server
         self.server_mci = self.create_service(InitSys,"module_scanning_interface",self.callBack)
     def callBack(self,req,res):
-        self.get_logger().info(f"---- Server Module_Scanning_Interfaces: Receive Intialized Request: {req.a} ----")
-        self.init_status = True
-        res.b = "OK"
-        return res
+        #Nếu nhấn nút Start
+        if req.a == "Ready":          
+            self.get_logger().info(f"---- Server Module_Scanning_Interfaces: Receive Intialized Request: {req.a} ----")
+            self.start_status = True
+            res.b = "OK"
+            return res
+        #Nếu nhấn nút Pending (trước đó chưa nhấn nút Pending)
+        elif req.a == "Pending":
+            #Nếu đã khởi tạo hệ thống
+            if self.start_status == True:
+                self.get_logger().info(f"---- Server Module_Scanning_Interfaces: Receive Pending Request: {req.a} ----")
+                self.pending_status = True
+                res.b = "OK"
+                return res
+            else:
+                res.b = "Nope"
+                return res
+        #Nếu nhấn nút Pending (trước đó đã nhấn nút Pending)
+        elif req.a == "Resume":
+            #Nếu đã khởi tạo hệ thống
+            if self.start_status == True:
+                self.get_logger().info(f"---- Server Module_Scanning_Interfaces: Receive Resume Request: {req.a} ----")
+                self.pending_status = False
+                res.b = "OK"
+                return res
+            else:
+                res.b = "Nope"
+                return res
 #Class Tkinter
 class myApp(tk.Tk):
     def __init__(self,title:str):
@@ -71,6 +97,9 @@ class myApp(tk.Tk):
         #Nội dung của phần frame_text_intro
         self.intro_text_label = tk.Label(self.frame_text_intro,text="Thống kê và giám sát sản phẩm")
         self.intro_text_label.place(relx=0.5,rely=0.5,anchor=tk.CENTER)
+        #Hình vuông có màu sắc thể hiện trạng thái của hệ thống: Đỏ: Chưa khởi tạo, Xanh: Đang chạy, Vàng: Đang chờ   
+        self.square_canvas = tk.Canvas(self.frame_text_intro, width=20, height=20, bg="red")  # Thay đổi kích thước và màu sắc theo ý muốn
+        self.square_canvas.place(relx=1.0, rely=0.0, anchor=tk.NE)  # Đặt ở góc trên bên phải
         
         #Nội dung cho phần frame_product_distiguish
         #1. Chia bố cục
@@ -216,6 +245,11 @@ class myApp(tk.Tk):
         #Camera
         self.previous_data = None
         self.camera = cv.VideoCapture(0)
+        #Trạng thái thông báo
+        self.notify_not_init_status = False
+        self.notify_pending_status = False
+        self.notify_init_showtime = 0
+        self.notify_pending_showtime = 0
         #Label chứa hình ảnh
         self.label_camera = tk.Label(self.frame_camera,image='')
         self.label_camera.pack()
@@ -354,36 +388,63 @@ class myApp(tk.Tk):
     def openCameraAndIdentifyCode(self):
         status, frame = self.camera.read()
         if status == True:
-            arr = np.copy(frame)
-            height,width,_ = frame.shape
-            #Tạo Instance của Class detect_QRCode
-            instance_detect_QrCode = detect_QRCode(arr,frame,width,height)
-            #Kết quả
-            status_detect,result_detect,data_detect = instance_detect_QrCode.detect_qrcode()
-            result = cv.cvtColor(result_detect,cv.COLOR_BGR2RGB)
-            image = Image.fromarray(result).resize((int(self.window_width/2),int((self.window_height/5)*3)))
-            imageTk = ImageTk.PhotoImage(image=image)
-            self.label_camera.configure(
-                image=imageTk
-            )
-            self.label_camera.image = imageTk
-            self.label_camera.pack()
-            valid = False
-            if status_detect:
-                valid = self.is_Valid_Data_DB(data_detect)
-                if valid and self.previous_data != data_detect:
-                    ToastNotification(self,"valid data",data_detect,3000)
-                    #Cho vào Queue
-                    # self.data_queue.append([data_detect,valid])
-                    self.dict_contain_data_queue["S1"].append([data_detect,valid])
-                    self.previous_data = data_detect
-                elif valid is False and self.previous_data != data_detect:
-                    ToastNotification(self,"non valid data",data_detect,3000)
-                    #Cho vào Queue
-                    # self.data_queue.append([data_detect,"Khac"])
-                    self.dict_contain_data_queue["S1"].append([data_detect,"Khac"])
-                    self.previous_data = data_detect
-                self.node.get_logger().info(f"Data Collect: {self.dict_contain_data_queue["S1"]}")
+            #Nếu đã nhấn Start
+            if self.node.start_status == True:
+                self.notify_not_init_status = False
+                self.notify_init_showtime = 0
+                arr = np.copy(frame)
+                height,width,_ = frame.shape
+                #Nếu không pending hệ thống
+                if self.node.pending_status == False:
+                    self.notify_pending_status = False
+                    self.notify_pending_showtime = 0
+                    self.square_canvas.config(bg="green")
+                    #Tạo Instance của Class detect_QRCode
+                    instance_detect_QrCode = detect_QRCode(arr,frame,width,height)
+                    #Kết quả
+                    status_detect,result_detect,data_detect = instance_detect_QrCode.detect_qrcode()
+                    result = cv.cvtColor(result_detect,cv.COLOR_BGR2RGB)
+                    image = Image.fromarray(result).resize((int(self.window_width/2),int((self.window_height/5)*3)))
+                    imageTk = ImageTk.PhotoImage(image=image)
+                    self.label_camera.configure(
+                        image=imageTk
+                    )
+                    self.label_camera.image = imageTk
+                    self.label_camera.pack()
+                    valid = False
+                    if status_detect:
+                        valid = self.is_Valid_Data_DB(data_detect)
+                        if valid and self.previous_data != data_detect:
+                            ToastNotification(self,"valid data",data_detect,3000)
+                            #Cho vào Queue
+                            # self.data_queue.append([data_detect,valid])
+                            self.dict_contain_data_queue["S1"].append([data_detect,valid])
+                            self.previous_data = data_detect
+                        elif valid is False and self.previous_data != data_detect:
+                            ToastNotification(self,"non valid data",data_detect,3000)
+                            #Cho vào Queue
+                            # self.data_queue.append([data_detect,"Khac"])
+                            self.dict_contain_data_queue["S1"].append([data_detect,"Khac"])
+                            self.previous_data = data_detect
+                        self.node.get_logger().info(f"Data Collect: {self.dict_contain_data_queue["S1"]}")
+                else:
+                    if self.notify_pending_status == False and self.notify_pending_showtime == 0:
+                        self.square_canvas.config(bg="yellow")
+                        message = messagebox.showwarning("Warning","Your System is pending! Please try to press OK to reload status")
+                        self.notify_pending_status = True
+                        self.notify_pending_showtime +=1
+                        
+                    image = Image.fromarray(arr).resize((int(self.window_width/2),int((self.window_height/5)*3)))
+                    imageTk = ImageTk.PhotoImage(image=image)
+                    self.label_camera.configure(
+                        image=imageTk
+                    )
+                    self.label_camera.image = imageTk
+                    self.label_camera.pack()
+            else:
+                if self.notify_not_init_status == False and self.notify_init_showtime == 0:
+                    messagebox.showwarning("Warning","Your System didn't Initialize! Please try to press OK to reload status")
+                    self.notify_init_showtime +=1
             self.label_camera.after(10,self.openCameraAndIdentifyCode)
         else:
             messagebox.showerror("Error","Cannot detect your camera")
@@ -416,12 +477,15 @@ class myApp(tk.Tk):
     def on_closing(self,msg=None):
         if msg is None:
             self.node.get_logger().info("---- Server Module_Scanning_Interfaces: Shutdown ----")
+            messagebox.showwarning("Warning","Shutdown the System")
         else:
+            self.square_canvas.config(bg="red")
             self.node.get_logger().info(f"---- Server Module_Scanning_Interfaces: Receive Message: {msg.a}. Bye Bye.... ----")
+            self.node.get_logger().error("---- Server Module_Scanning_Interfaces: Your System has been corrupt. Please check the log file at '/home/tomccd/Documents/Code/Python/DATN/Packages/Log' Directory to check the Issue or waiting the Mail send to the Administartor ----")
         rclpy.shutdown()
-        # self.thread_spin.join()
         self.destroy()
-        exit(-1)
+        time.sleep(2)
+        sys.exit(-1)
 #Thông báo nổi
 class ToastNotification:
     def __init__(self,master,type,data,duration):
@@ -462,6 +526,22 @@ class ToastNotification:
             self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_1.png').resize((30,20))
             self.imgTk = ImageTk.PhotoImage(self.img)
             message = f"Khối lượng nhận được {data} g"
+            #Create a lable
+            self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+            
+            #Để nhãn dán ở phía bên góc phải        
+            self.label.place(relx=1.0,rely=0,anchor="ne")
+            
+            #Tham chiếu lại tham số image phòng nó tự động garbage collect
+            self.label.image = self.imgTk
+            
+            #Đặt thời gian tự động đóng thông báo
+            master.after(duration,self.label.destroy)
+        elif type=="warn":
+            #Take the image from the path, resize it and convert it into tkinter version
+            self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_3.png').resize((30,20))
+            self.imgTk = ImageTk.PhotoImage(self.img)
+            message = f"Warning: {data}"
             #Create a lable
             self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
             
@@ -524,6 +604,7 @@ def main(args=None):
     #Initialize ROS2 Communication
     rclpy.init(args=args)
     app = myApp("Test App")
+    app.thread_spin.daemon = True
     app.thread_spin.start()
     app.protocol('WM_DELETE_WINDOW',app.on_closing)
     app.mainloop()

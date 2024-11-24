@@ -6,6 +6,8 @@ from custom_interfaces.srv import InitSys
 import sys
 class myNode(Node):
     def __init__(self,name:str):
+        #Start status
+        self.start_status = False
         super().__init__(name)
         #Create a server
         self.server_io_weigh = self.create_service(InitSys,"node_io_weigh",self.callBack)
@@ -26,7 +28,7 @@ class myNode(Node):
         # Define the GPIO_DISABLE (PIN 27)
         self.GPIO_DISABLE = 27
         #Create a timer
-        self.timer_ = self.create_timer(0.35,self.checkIOStatus)
+        self.timer_ = None
     def checkIOStatus(self):
         msg = SetWeighIO()
         try:
@@ -49,10 +51,35 @@ class myNode(Node):
             rclpy.shutdown()
             exit(-1)
     def callBack(self,req,res):
-        self.get_logger().info(f"---- Server Module_Input.node_io_weigh: Receive Intialized Request: {req.a} ----")
-        self.init_status = True
-        res.b = "OK"
-        return res
+        #Nếu nhấn nút Start
+        if req.a == "Ready":
+            self.get_logger().info(f"---- Server Module_Input.node_io_weigh: Receive Intialized Request: {req.a} ----")
+            res.b = "OK"
+            self.timer_ = self.create_timer(0.35,self.checkIOStatus)
+            self.start_status = True
+            return res
+        #Nếu nhấn nút Pending (trước đó chưa nhấn nút Pending)
+        elif req.a == "Pending":
+            #Nếu đã khởi tạo hệ thống
+            if self.start_status == True:
+                self.get_logger().info(f"---- Server Module_Input.node_io_weigh: Receive Pending Request: {req.a} ----")
+                res.b = "OK"
+                self.timer_.cancel()
+                return res
+            else:
+                res.b = "Nope"
+                return res
+        #Nếu nhấn nút Pending (trước đó đã nhấn nút Pending)
+        elif req.a == "Resume":
+            #Nếu đã khởi tạo hệ thống
+            if self.start_status == True:
+                self.get_logger().info(f"---- Server Module_Input.node_io_weigh: Receive Resume Request: {req.a} ----")
+                res.b = "OK"
+                self.timer_ = self.create_timer(0.35,self.checkIOStatus)
+                return res
+            else:
+                res.b = "Nope"
+                return res
     def terminateMsg(self,msg):
         self.get_logger().info(f"---- Server Module_Input.node_io_weigh: Receive Message: {msg.a}. Bye Bye.... ----")
         rclpy.shutdown()

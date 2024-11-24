@@ -6,8 +6,8 @@
 
 #include "custom_interfaces/srv/detail/init_sys__type_support.h"
 #include "custom_interfaces/srv/detail/init_sys__functions.h"
-#include "custom_interfaces/srv/detail/init_sys__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "custom_interfaces/srv/detail/init_sys__struct.h"
 
 #ifdef __cplusplus
 extern "C"

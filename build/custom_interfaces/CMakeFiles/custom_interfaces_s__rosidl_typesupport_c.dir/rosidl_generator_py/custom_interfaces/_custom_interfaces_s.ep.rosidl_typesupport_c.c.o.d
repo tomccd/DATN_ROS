@@ -247,6 +247,9 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/cus
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/send_file_name__type_support.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/send_file_name__struct.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/send_file_name__functions.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_start_stop_pending__type_support.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_start_stop_pending__struct.h \
+ /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/set_start_stop_pending__functions.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/init_sys__type_support.h \
  /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_c/custom_interfaces/srv/detail/init_sys__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \

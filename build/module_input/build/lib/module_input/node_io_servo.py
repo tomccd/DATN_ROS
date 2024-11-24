@@ -7,6 +7,8 @@ import sys
 import time
 class myNode(Node):
     def __init__(self,name:str):
+        #Start status
+        self.start_status = False
         super().__init__(name)
         #Create a Server
         self.server_io_servo = self.create_service(InitSys,"node_io_servo",self.callBack)
@@ -29,12 +31,37 @@ class myNode(Node):
         #Previous Status
         self.previous_result = None
         #Create a timer
-        self.timer_ = self.create_timer(0.375,self.checkIOStatus)
+        self.timer_ = None
     def callBack(self,req,res):
-        self.get_logger().info(f"---- Server Module_Input.node_io_servo: Receive Intialized Request: {req.a} ----")
-        self.init_status = True
-        res.b = "OK"
-        return res
+        #Nêu nhấn nút Start
+        if req.a == "Ready":
+            self.get_logger().info(f"---- Server Module_Input.node_io_servo: Receive Intialized Request: {req.a} ----")
+            self.timer_ = self.create_timer(0.375,self.checkIOStatus)
+            res.b = "OK"
+            self.start_status = True
+            return res
+        #Nếu nhấn nút Pending (trước đó chưa nhấn Pending)
+        elif req.a == "Pending":
+            #Nếu trước đó đã khởi tạo hệ thống
+            if self.start_status == True:
+                self.get_logger().info(f"---- Server Module_Input.node_io_servo: Receive Pending Request: {req.a} ----")
+                self.timer_.cancel()
+                res.b = "OK"
+                return res
+            else:
+                res.b = "Nope"
+                return res
+        #Nếu nhấn nút Pending (trước đó đã nhấn Pending)
+        elif req.a == "Resume":
+            #Nếu trước đó đã khởi tạo hệ thống
+            if self.start_status == True:
+                self.get_logger().info(f"---- Server Module_Input.node_io_servo: Receive Resume Request: {req.a} ----")
+                self.timer_ = self.create_timer(0.375,self.checkIOStatus)
+                res.b = "OK"
+                return res
+            else:
+                res.b = "Nope"
+                return res
     def checkIOStatus(self):
         msg = SetServoIO()
         try:

@@ -11,6 +11,9 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
   rosidl_generator_c/custom_interfaces/msg/detail/set_servo_rotate__functions.h \
   rosidl_generator_c/custom_interfaces/msg/detail/set_servo_rotate__struct.h \
   rosidl_generator_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.h \
+  rosidl_generator_c/custom_interfaces/msg/detail/set_start_stop_pending__functions.h \
+  rosidl_generator_c/custom_interfaces/msg/detail/set_start_stop_pending__struct.h \
+  rosidl_generator_c/custom_interfaces/msg/detail/set_start_stop_pending__type_support.h \
   rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__functions.h \
   rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__struct.h \
   rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__type_support.h \
@@ -341,9 +344,7 @@ CMakeFiles/custom_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
 
 /usr/include/python3.12/pystrcmp.h:
 
-/usr/include/aarch64-linux-gnu/bits/uio_lim.h:
-
-/usr/include/aarch64-linux-gnu/bits/uintn-identity.h:
+/usr/include/python3.12/pyport.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/time_t.h:
 
@@ -425,10 +426,6 @@ rosidl_generator_c/custom_interfaces/msg/detail/send_file_name__type_support.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
-/usr/include/aarch64-linux-gnu/bits/sched.h:
-
-/usr/include/python3.12/cpython/modsupport.h:
-
 /usr/include/aarch64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/python3.12/rangeobject.h:
@@ -465,17 +462,31 @@ rosidl_generator_c/custom_interfaces/msg/detail/set_servo_rotate__functions.h:
 
 /usr/include/aarch64-linux-gnu/bits/fp-fast.h:
 
+/usr/include/aarch64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
+/usr/include/aarch64-linux-gnu/bits/environments.h:
+
+/usr/include/aarch64-linux-gnu/bits/floatn.h:
+
+/usr/include/aarch64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/aarch64-linux-gnu/bits/long-double.h:
+
+/usr/include/aarch64-linux-gnu/bits/posix1_lim.h:
+
 /opt/ros/jazzy/include/rcutils/rcutils/macros.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdint-least.h:
-
-/usr/include/aarch64-linux-gnu/bits/typesizes.h:
 
 rosidl_generator_c/custom_interfaces/srv/detail/init_sys__type_support.h:
 
 /usr/include/python3.12/cpython/pyctype.h:
 
 /usr/include/python3.12/memoryobject.h:
+
+/usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/wint_t.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
 
@@ -486,14 +497,6 @@ rosidl_generator_c/custom_interfaces/msg/detail/send_file_name__functions.h:
 /usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
-
-/usr/include/aarch64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/aarch64-linux-gnu/bits/long-double.h:
-
-/usr/include/aarch64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/aarch64-linux-gnu/bits/floatn.h:
 
 rosidl_generator_c/custom_interfaces/msg/detail/terminate_sys__functions.h:
 
@@ -509,11 +512,13 @@ rosidl_generator_c/custom_interfaces/msg/detail/terminate_sys__functions.h:
 
 /usr/include/python3.12/import.h:
 
-rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__type_support.h:
+/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
 
-/usr/include/aarch64-linux-gnu/bits/stdint-uintn.h:
+rosidl_generator_c/custom_interfaces/msg/detail/set_servo_io__functions.h:
 
-/usr/include/aarch64-linux-gnu/asm/types.h:
+/usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__struct.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/locale_t.h:
 
@@ -523,11 +528,13 @@ rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__type_support.h:
 
 /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h:
 
-/usr/include/python3.12/pyconfig.h:
+/usr/include/aarch64-linux-gnu/bits/types/__locale_t.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
+/usr/include/python3.12/cpython/weakrefobject.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
+rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__struct.h:
+
+/usr/include/aarch64-linux-gnu/bits/floatn-common.h:
 
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c:
 
@@ -543,17 +550,17 @@ rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport
 
 rosidl_generator_c/custom_interfaces/msg/detail/terminate_sys__type_support.h:
 
+/usr/include/python3.12/methodobject.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
+
 rosidl_generator_c/custom_interfaces/msg/detail/set_servo_rotate__type_support.h:
 
-/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
-
-rosidl_generator_c/custom_interfaces/msg/detail/set_servo_io__functions.h:
-
-/usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__struct.h:
-
 rosidl_generator_c/custom_interfaces/srv/detail/init_sys__functions.h:
+
+rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__functions.h:
+
+/usr/include/aarch64-linux-gnu/asm/errno.h:
 
 rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__type_support.h:
 
@@ -567,6 +574,10 @@ rosidl_generator_c/custom_interfaces/msg/detail/terminate_sys__struct.h:
 
 /usr/include/aarch64-linux-gnu/bits/confname.h:
 
+rosidl_generator_c/custom_interfaces/msg/detail/set_start_stop_pending__type_support.h:
+
+/usr/include/python3.12/cpython/fileutils.h:
+
 /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
@@ -575,13 +586,29 @@ rosidl_generator_c/custom_interfaces/msg/detail/terminate_sys__struct.h:
 
 /usr/include/python3.12/pyerrors.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
+rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__type_support.h:
 
-/usr/include/aarch64-linux-gnu/asm/errno.h:
+/usr/include/aarch64-linux-gnu/bits/stdint-uintn.h:
 
-rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__functions.h:
+/usr/include/aarch64-linux-gnu/asm/types.h:
 
-/usr/include/python3.12/methodobject.h:
+/usr/include/stdc-predef.h:
+
+/usr/include/python3.12/pystats.h:
+
+rosidl_generator_c/custom_interfaces/msg/detail/set_start_stop_pending__functions.h:
+
+/usr/include/aarch64-linux-gnu/bits/sched.h:
+
+/usr/include/python3.12/cpython/modsupport.h:
+
+rosidl_generator_c/custom_interfaces/msg/detail/set_start_stop_pending__struct.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
+
+/usr/include/python3.12/pyconfig.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
 
@@ -592,14 +619,6 @@ rosidl_generator_c/custom_interfaces/msg/detail/set_weigh_io__functions.h:
 /opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/struct_statx_timestamp.h:
-
-/usr/include/aarch64-linux-gnu/bits/environments.h:
 
 /usr/include/aarch64-linux-gnu/bits/mathcalls.h:
 
@@ -631,13 +650,11 @@ rosidl_generator_c/custom_interfaces/msg/detail/set_servo_io__type_support.h:
 
 /usr/include/aarch64-linux-gnu/bits/errno.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/__locale_t.h:
+/usr/include/aarch64-linux-gnu/bits/typesizes.h:
 
-/usr/include/python3.12/cpython/weakrefobject.h:
+/usr/include/aarch64-linux-gnu/bits/uintn-identity.h:
 
-rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__struct.h:
-
-/usr/include/aarch64-linux-gnu/bits/floatn-common.h:
+/usr/include/aarch64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/aarch64-linux-gnu/bits/wchar.h:
 
@@ -654,8 +671,6 @@ rosidl_generator_c/custom_interfaces/msg/detail/weigh_value__struct.h:
 /usr/include/aarch64-linux-gnu/sys/select.h:
 
 /usr/include/aarch64-linux-gnu/sys/types.h:
-
-/usr/include/python3.12/pyport.h:
 
 /usr/include/asm-generic/types.h:
 
@@ -759,8 +774,6 @@ rosidl_generator_c/custom_interfaces/msg/detail/set_servo_rotate__struct.h:
 
 /usr/include/python3.12/cpython/fileobject.h:
 
-/usr/include/python3.12/cpython/fileutils.h:
-
 /usr/include/python3.12/cpython/floatobject.h:
 
 /usr/include/python3.12/cpython/genobject.h:
@@ -863,12 +876,8 @@ rosidl_generator_c/custom_interfaces/msg/detail/set_servo_io__struct.h:
 
 /usr/include/python3.12/pymacro.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/struct_statx.h:
-
 /usr/include/python3.12/pystate.h:
 
+/usr/include/aarch64-linux-gnu/bits/types/struct_statx.h:
+
 /usr/include/python3.12/pymem.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/python3.12/pystats.h:

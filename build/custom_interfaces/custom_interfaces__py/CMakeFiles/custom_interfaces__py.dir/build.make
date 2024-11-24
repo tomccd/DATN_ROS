@@ -76,6 +76,7 @@ include /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_i
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_servo_io.py
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_servo_rotate.py
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_send_file_name.py
+/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending.py
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/__init__.py
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/srv/__init__.py
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_terminate_sys_s.c
@@ -85,6 +86,7 @@ include /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_i
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_servo_io_s.c
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_servo_rotate_s.c
 /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_send_file_name_s.c
+/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c
 
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -106,6 +108,7 @@ rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/msg/SetServoIO.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/msg/SetServoRotate.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/msg/SendFileName.idl
+rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/custom_interfaces/msg/SetStartStopPending.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -139,6 +142,9 @@ rosidl_generator_py/custom_interfaces/msg/_set_servo_rotate.py: rosidl_generator
 rosidl_generator_py/custom_interfaces/msg/_send_file_name.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_send_file_name.py
 
+rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending.py
+
 rosidl_generator_py/custom_interfaces/msg/__init__.py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/__init__.py
 
@@ -166,6 +172,9 @@ rosidl_generator_py/custom_interfaces/msg/_set_servo_rotate_s.c: rosidl_generato
 rosidl_generator_py/custom_interfaces/msg/_send_file_name_s.c: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_send_file_name_s.c
 
+rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c
+
 custom_interfaces__py: /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/custom_interfaces__py/CMakeFiles/custom_interfaces__py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -177,6 +186,8 @@ custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_servo_io.p
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_servo_io_s.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_servo_rotate.py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_servo_rotate_s.c
+custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending.py
+custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_weigh_io.py
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_set_weigh_io_s.c
 custom_interfaces__py: rosidl_generator_py/custom_interfaces/msg/_terminate_sys.py

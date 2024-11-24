@@ -101,6 +101,11 @@ CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/de
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/send_file_name__struct.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/send_file_name__traits.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/send_file_name__type_support.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/set_start_stop_pending.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__builder.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__struct.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__traits.hpp
+CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__type_support.hpp
 CMakeFiles/custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -129,6 +134,7 @@ rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: rosidl_adapter/cus
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: rosidl_adapter/custom_interfaces/msg/SetServoIO.idl
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: rosidl_adapter/custom_interfaces/msg/SetServoRotate.idl
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: rosidl_adapter/custom_interfaces/msg/SendFileName.idl
+rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: rosidl_adapter/custom_interfaces/msg/SetStartStopPending.idl
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -237,6 +243,21 @@ rosidl_generator_cpp/custom_interfaces/msg/detail/send_file_name__traits.hpp: ro
 rosidl_generator_cpp/custom_interfaces/msg/detail/send_file_name__type_support.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/send_file_name__type_support.hpp
 
+rosidl_generator_cpp/custom_interfaces/msg/set_start_stop_pending.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/set_start_stop_pending.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__builder.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__builder.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__struct.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__struct.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__traits.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__traits.hpp
+
+rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__type_support.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__type_support.hpp
+
 rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
@@ -253,6 +274,10 @@ custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_se
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_servo_rotate__struct.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_servo_rotate__traits.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_servo_rotate__type_support.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__builder.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__struct.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__traits.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_start_stop_pending__type_support.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__builder.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__struct.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/detail/set_weigh_io__traits.hpp
@@ -269,6 +294,7 @@ custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/rosidl_genera
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/send_file_name.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/set_servo_io.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/set_servo_rotate.hpp
+custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/set_start_stop_pending.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/set_weigh_io.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/terminate_sys.hpp
 custom_interfaces__cpp: rosidl_generator_cpp/custom_interfaces/msg/weigh_value.hpp

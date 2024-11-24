@@ -167,6 +167,20 @@ CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_send_file_name_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/_send_file_name_s.c -o CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_send_file_name_s.c.s
 
+CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.o: CMakeFiles/custom_interfaces__rosidl_generator_py.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.o: rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c
+CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.o: CMakeFiles/custom_interfaces__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.o -MF CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.o.d -o CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.o -c /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c
+
+CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c > CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.i
+
+CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c -o CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.s
+
 # Object files for target custom_interfaces__rosidl_generator_py
 custom_interfaces__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_terminate_sys_s.c.o" \
@@ -175,7 +189,8 @@ custom_interfaces__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_weigh_value_s.c.o" \
 "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_servo_io_s.c.o" \
 "CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_servo_rotate_s.c.o" \
-"CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_send_file_name_s.c.o"
+"CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_send_file_name_s.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.o"
 
 # External object files for target custom_interfaces__rosidl_generator_py
 custom_interfaces__rosidl_generator_py_EXTERNAL_OBJECTS =
@@ -187,6 +202,7 @@ libcustom_interfaces__rosidl_generator_py.so: CMakeFiles/custom_interfaces__rosi
 libcustom_interfaces__rosidl_generator_py.so: CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_servo_io_s.c.o
 libcustom_interfaces__rosidl_generator_py.so: CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_servo_rotate_s.c.o
 libcustom_interfaces__rosidl_generator_py.so: CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_send_file_name_s.c.o
+libcustom_interfaces__rosidl_generator_py.so: CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_set_start_stop_pending_s.c.o
 libcustom_interfaces__rosidl_generator_py.so: CMakeFiles/custom_interfaces__rosidl_generator_py.dir/build.make
 libcustom_interfaces__rosidl_generator_py.so: libcustom_interfaces__rosidl_typesupport_c.so
 libcustom_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_fastrtps_c.so
@@ -217,7 +233,7 @@ libcustom_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_inte
 libcustom_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libcustom_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librcutils.so
 libcustom_interfaces__rosidl_generator_py.so: CMakeFiles/custom_interfaces__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library libcustom_interfaces__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tomccd/Documents/Code/Python/DATN/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library libcustom_interfaces__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/custom_interfaces__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

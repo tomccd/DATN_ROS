@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             "node_io_weigh=module_input.node_io_weigh:main",
-            "node_io_servo=module_input.node_io_servo:main"
+            "node_io_servo=module_input.node_io_servo:main",
+            "node_io_start_stop_pending=module_input.node_io_start_stop_pending:main"
         ],
     },
 )
