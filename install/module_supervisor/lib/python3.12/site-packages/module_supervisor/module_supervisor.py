@@ -137,10 +137,10 @@ class myNode(Node):
                                 time_counter = 0
                                 while not self.client_memail.wait_for_service(1):
                                     self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Send_Email ----")
-                                    if time_counter > 4:
+                                    if time_counter > 50:
                                         break
                                     time_counter +=1
-                                if time_counter > 4:
+                                if time_counter > 50:
                                     self.get_logger().error("---- Supervisor: Can't connect to server Module_Send_Email ----")
                                     return -1
                                 else:
@@ -173,66 +173,67 @@ class myNode(Node):
         #Send Request
         req = InitSys.Request()
         req.a = reqContent
-        #Send to Server Module_Motor.node_dc_motor
-        self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server Module_Motor.node_dc_motor ----")
-        future = self.client_dc_motor.call_async(req)
+        #Send to Server Module_Scanning&Interface
+        self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server_Module_Scanning&Interface ----")
+        future = self.client_mci.call_async(req)
         rclpy.spin_until_future_complete(self,future,timeout_sec=1)
         try:
             rs = future.result()
-            self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Motor.node_dc_motor ----")
-            #Send to Server Module_Motor.node_dc_servo
-            self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server Module_Motor.node_dc_servo ----")
-            future = self.client_dc_servo.call_async(req)
+            self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Scanning&Interface ----")
+                #Send to Server Module_Motor.node_dc_motor
+            self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server Module_Motor.node_dc_motor ----")
+            future = self.client_dc_motor.call_async(req)
             rclpy.spin_until_future_complete(self,future,timeout_sec=1)
             try:
                 rs = future.result()
-                self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Motor.node_dc_servo ----")
-                #Send to Server Module_Input.node_io_servo
-                self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server Module_Input.node_io_servo ----")
-                future = self.client_io_servo.call_async(req)
+                self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Motor.node_dc_motor ----")
+                #Send to Server Module_Motor.node_dc_servo
+                self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server Module_Motor.node_dc_servo ----")
+                future = self.client_dc_servo.call_async(req)
                 rclpy.spin_until_future_complete(self,future,timeout_sec=1)
                 try:
                     rs = future.result()
-                    self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Input.node_io_servo ----")
-                    #Send to Server Module_Input.node_io_weigh
-                    self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server Module_Input.node_io_weigh ----")
-                    future = self.client_io_weigh.call_async(req)
+                    self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Motor.node_dc_servo ----")
+                    #Send to Server Module_Input.node_io_servo
+                    self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server Module_Input.node_io_servo ----")
+                    future = self.client_io_servo.call_async(req)
                     rclpy.spin_until_future_complete(self,future,timeout_sec=1)
                     try:
                         rs = future.result()
-                        self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Input.node_io_weigh ----")
-                        #Send to Server Module_Scanning&Interface
-                        self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server_Module_Scanning&Interface ----")
-                        future = self.client_mci.call_async(req)
+                        self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Input.node_io_servo ----")
+                        #Send to Server Module_Input.node_io_weigh
+                        self.get_logger().info(f"---- Supervisor: Sending {reqContent} Request to Server Module_Input.node_io_weigh ----")
+                        future = self.client_io_weigh.call_async(req)
                         rclpy.spin_until_future_complete(self,future,timeout_sec=1)
                         try:
                             rs = future.result()
-                            self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Scanning&Interface ----")
+                            self.get_logger().info(f"---- Supervisor: Receive {reqContent} Respond from Server Module_Input.node_io_weigh ----")
                         except Exception as e:
-                            self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Scanning&Interface with error: {e} ----")
+                            self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Input.node_io_weigh with error: {e} ----")
                             self.sendTerminate()
                             rclpy.shutdown()
                             exit(-1)
                     except Exception as e:
-                        self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Input.node_io_weigh with error: {e} ----")
+                        self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Input.node_io_servo with error: {e} ----")
                         self.sendTerminate()
                         rclpy.shutdown()
                         exit(-1)
                 except Exception as e:
-                    self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Input.node_io_servo with error: {e} ----")
+                    self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Motor.node_dc_servo with error: {e}")
                     self.sendTerminate()
                     rclpy.shutdown()
                     exit(-1)
             except Exception as e:
-                self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Motor.node_dc_servo with error: {e}")
+                self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Motor.node_dc_motor with error: {e}")
                 self.sendTerminate()
                 rclpy.shutdown()
                 exit(-1)
         except Exception as e:
-            self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Motor.node_dc_motor with error: {e}")
+            self.get_logger().error(f"---- Supervisor: Can't send Request {reqContent} to Module_Scanning&Interface with error: {e} ----")
             self.sendTerminate()
             rclpy.shutdown()
             exit(-1)
+        
     def sendTerminate(self):        
         msg = TerminateSys()
         msg.a = "Terminate"

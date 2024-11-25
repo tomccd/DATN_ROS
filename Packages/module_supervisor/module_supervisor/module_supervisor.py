@@ -137,10 +137,10 @@ class myNode(Node):
                                 time_counter = 0
                                 while not self.client_memail.wait_for_service(1):
                                     self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Send_Email ----")
-                                    if time_counter > 4:
+                                    if time_counter > 50:
                                         break
                                     time_counter +=1
-                                if time_counter > 4:
+                                if time_counter > 50:
                                     self.get_logger().error("---- Supervisor: Can't connect to server Module_Send_Email ----")
                                     return -1
                                 else:
