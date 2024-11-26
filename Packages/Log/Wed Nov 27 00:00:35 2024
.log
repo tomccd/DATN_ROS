@@ -1,0 +1,975 @@
+1732640434.2002466 [INFO] [launch]: All log files can be found below /home/tomccd/.ros/log/2024-11-27-00-00-34-196500-tomccd-raspberry4b-4061
+1732640434.2008257 [INFO] [launch]: Default logging verbosity is set to INFO
+1732640434.8125896 [INFO] [module_supervisor-1]: process started with pid [4064]
+1732640434.8235455 [INFO] [module_scanning_interface-2]: process started with pid [4065]
+1732640434.8254793 [INFO] [node_dc_servo-3]: process started with pid [4066]
+1732640434.8261387 [INFO] [node_io_servo-4]: process started with pid [4067]
+1732640434.8390689 [INFO] [node_dc_motor-5]: process started with pid [4068]
+1732640434.8397884 [INFO] [node_io_weigh-6]: process started with pid [4069]
+1732640434.8403671 [INFO] [module_weigh-7]: process started with pid [4070]
+1732640434.8409927 [INFO] [module_log_file-8]: process started with pid [4071]
+1732640434.8482447 [INFO] [module_send_email-9]: process started with pid [4072]
+1732640434.8505244 [INFO] [node_io_start_stop_pending-10]: process started with pid [4073]
+1732640438.5095315 [module_supervisor-1] [INFO] [1732640438.505124426] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Log_File Successfully ----
+1732640439.0351779 [node_io_start_stop_pending-10] [INFO] [1732640439.033236302] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640439.0500729 [node_io_start_stop_pending-10] [INFO] [1732640439.049165241] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640439.2001493 [node_io_start_stop_pending-10] [INFO] [1732640439.197340976] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640439.4408898 [node_io_start_stop_pending-10] [INFO] [1732640439.438513380] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640439.5239320 [module_supervisor-1] [WARN] [1732640439.521914296] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1732640439.6939659 [node_io_start_stop_pending-10] [INFO] [1732640439.689325989] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640439.7137756 [node_dc_servo-3] [INFO] [1732640439.712271457] [node_servo_motor]: ---- Server Module_Motor.node_dc_motor: Init Server ----
+1732640439.9401062 [node_io_start_stop_pending-10] [INFO] [1732640439.939002428] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640440.0990906 [module_send_email-9] [INFO] [1732640440.098306759] [module_send_email]: ----  Server Module_Send_Email: Connect to DB Successfully ----
+1732640440.1092794 [module_send_email-9] /home/tomccd/Documents/Code/Python/DATN/install/module_send_email/lib/python3.12/site-packages/module_send_email/module_send_email.py:64: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+1732640440.1098611 [module_send_email-9]   df = pd.read_sql(sql_query,self.conn)
+1732640440.1882222 [node_io_start_stop_pending-10] [INFO] [1732640440.187549654] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640440.4388874 [node_io_start_stop_pending-10] [INFO] [1732640440.437694395] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640440.5291777 [module_supervisor-1] [WARN] [1732640440.527964697] [Module_Supervisor]: ---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----
+1732640440.6914992 [node_io_start_stop_pending-10] [INFO] [1732640440.690330785] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640440.9421289 [node_io_start_stop_pending-10] [INFO] [1732640440.939709812] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640441.1890640 [node_io_start_stop_pending-10] [INFO] [1732640441.188006437] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640441.2822425 [module_supervisor-1] [INFO] [1732640441.281362433] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Scanning&Interface Successfully ----
+1732640441.2855937 [module_supervisor-1] [INFO] [1732640441.284350172] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Input.node_io_weigh Successfully ----
+1732640441.2895842 [module_supervisor-1] [INFO] [1732640441.287380696] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Weigh Successfully ----
+1732640441.2925458 [module_supervisor-1] [INFO] [1732640441.290577364] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Motor.node_dc_motor Successfully ----
+1732640441.2959785 [module_supervisor-1] [INFO] [1732640441.293840183] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Input.node_io_servo Successfully ----
+1732640441.2992501 [module_supervisor-1] [INFO] [1732640441.297314967] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Motor.node_dc_servo Successfully ----
+1732640441.3019269 [module_supervisor-1] [INFO] [1732640441.300834722] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Send_Email Successfully ----
+1732640441.3054149 [module_supervisor-1] [INFO] [1732640441.304462709] [Module_Supervisor]: ---- Supervisor: Connect to Server Module_Input.node_io_start_stop_pending Successfully ----
+1732640441.4382713 [node_io_start_stop_pending-10] [INFO] [1732640441.437573099] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640441.4891436 [module_scanning_interface-2] [INFO] [1732640441.488295305] [module_scanning_interface]: ----  Server Module_Scanning&Interface: Connect to DB Successfully ----
+1732640441.6901977 [node_io_start_stop_pending-10] [INFO] [1732640441.689255865] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640441.9416363 [node_io_start_stop_pending-10] [INFO] [1732640441.940314822] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640442.1892633 [node_io_start_stop_pending-10] [INFO] [1732640442.188534484] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640442.4411252 [node_io_start_stop_pending-10] [INFO] [1732640442.440353353] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640442.6918716 [node_io_start_stop_pending-10] [INFO] [1732640442.690706229] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640442.9415259 [node_io_start_stop_pending-10] [INFO] [1732640442.940467212] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640443.1907709 [node_io_start_stop_pending-10] [INFO] [1732640443.189721987] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640443.3131039 [module_supervisor-1] [INFO] [1732640443.311359453] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640443.3175683 [module_supervisor-1] [INFO] [1732640443.316353698] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640443.3229730 [module_supervisor-1] [INFO] [1732640443.321756529] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640443.3270569 [module_supervisor-1] [INFO] [1732640443.325899312] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640443.3323102 [module_supervisor-1] [INFO] [1732640443.330298441] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640443.3360245 [module_supervisor-1] [INFO] [1732640443.334938733] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640443.3411222 [module_supervisor-1] [INFO] [1732640443.339543257] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640443.4391024 [node_io_start_stop_pending-10] [INFO] [1732640443.438318307] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640443.6893547 [node_io_start_stop_pending-10] [INFO] [1732640443.688585188] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640443.9387140 [node_io_start_stop_pending-10] [INFO] [1732640443.937920496] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640444.1914864 [node_io_start_stop_pending-10] [INFO] [1732640444.190496448] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640444.4417784 [node_io_start_stop_pending-10] [INFO] [1732640444.440678392] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640444.6917377 [node_io_start_stop_pending-10] [INFO] [1732640444.690587270] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640444.9418757 [node_io_start_stop_pending-10] [INFO] [1732640444.940676199] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640445.1917722 [node_io_start_stop_pending-10] [INFO] [1732640445.190613669] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640445.3116975 [module_supervisor-1] [INFO] [1732640445.310473238] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640445.3161001 [module_supervisor-1] [INFO] [1732640445.315002150] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640445.3206863 [module_supervisor-1] [INFO] [1732640445.319854579] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640445.3238764 [module_supervisor-1] [INFO] [1732640445.323137262] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640445.3273013 [module_supervisor-1] [INFO] [1732640445.326589738] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640445.3309481 [module_supervisor-1] [INFO] [1732640445.330201733] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640445.3347893 [module_supervisor-1] [INFO] [1732640445.334038861] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640445.4420171 [node_io_start_stop_pending-10] [INFO] [1732640445.440834722] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640445.6917686 [node_io_start_stop_pending-10] [INFO] [1732640445.690648740] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640445.9413431 [node_io_start_stop_pending-10] [INFO] [1732640445.940476384] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640446.1908543 [node_io_start_stop_pending-10] [INFO] [1732640446.189843793] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640446.4418228 [node_io_start_stop_pending-10] [INFO] [1732640446.440611454] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640446.6916943 [node_io_start_stop_pending-10] [INFO] [1732640446.690569522] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640446.9417396 [node_io_start_stop_pending-10] [INFO] [1732640446.940606720] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640447.1917398 [node_io_start_stop_pending-10] [INFO] [1732640447.190630826] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640447.3117709 [module_supervisor-1] [INFO] [1732640447.310452958] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640447.3155096 [module_supervisor-1] [INFO] [1732640447.314553650] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640447.3194854 [module_supervisor-1] [INFO] [1732640447.318592374] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640447.3234305 [module_supervisor-1] [INFO] [1732640447.322678680] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640447.3270888 [module_supervisor-1] [INFO] [1732640447.326285075] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640447.3307600 [module_supervisor-1] [INFO] [1732640447.329993947] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640447.3345394 [module_supervisor-1] [INFO] [1732640447.333803482] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640447.4417915 [node_io_start_stop_pending-10] [INFO] [1732640447.440640895] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640447.6917198 [node_io_start_stop_pending-10] [INFO] [1732640447.690728910] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640447.9409378 [node_io_start_stop_pending-10] [INFO] [1732640447.939892279] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640448.1930528 [node_io_start_stop_pending-10] [INFO] [1732640448.190584126] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640448.4418027 [node_io_start_stop_pending-10] [INFO] [1732640448.440655697] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640448.6915798 [node_io_start_stop_pending-10] [INFO] [1732640448.690534218] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640448.9417586 [node_io_start_stop_pending-10] [INFO] [1732640448.940625044] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640449.1911428 [node_io_start_stop_pending-10] [INFO] [1732640449.190093943] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640449.3118424 [module_supervisor-1] [INFO] [1732640449.310420305] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640449.3170958 [module_supervisor-1] [INFO] [1732640449.316191814] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640449.3201575 [module_supervisor-1] [INFO] [1732640449.319435648] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640449.3233466 [module_supervisor-1] [INFO] [1732640449.322631363] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640449.3267794 [module_supervisor-1] [INFO] [1732640449.326041995] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640449.3303633 [module_supervisor-1] [INFO] [1732640449.329658767] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640449.3341691 [module_supervisor-1] [INFO] [1732640449.333453519] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640449.4420788 [node_io_start_stop_pending-10] [INFO] [1732640449.440947679] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640449.6919010 [node_io_start_stop_pending-10] [INFO] [1732640449.690807131] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640449.9419818 [node_io_start_stop_pending-10] [INFO] [1732640449.940868946] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640450.1921043 [node_io_start_stop_pending-10] [INFO] [1732640450.190945301] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640450.4421086 [node_io_start_stop_pending-10] [INFO] [1732640450.440950170] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640450.6919696 [node_io_start_stop_pending-10] [INFO] [1732640450.690855060] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640450.9420829 [node_io_start_stop_pending-10] [INFO] [1732640450.941176769] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640451.1920111 [node_io_start_stop_pending-10] [INFO] [1732640451.190960547] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640451.3122568 [module_supervisor-1] [INFO] [1732640451.310824653] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640451.3167734 [module_supervisor-1] [INFO] [1732640451.315900554] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640451.3202281 [module_supervisor-1] [INFO] [1732640451.319439703] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640451.3239706 [module_supervisor-1] [INFO] [1732640451.323083700] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640451.3274324 [module_supervisor-1] [INFO] [1732640451.326687020] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640451.3310280 [module_supervisor-1] [INFO] [1732640451.330301097] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640451.3349137 [module_supervisor-1] [INFO] [1732640451.334157975] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640451.4411404 [node_io_start_stop_pending-10] [INFO] [1732640451.440288751] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640451.6916184 [node_io_start_stop_pending-10] [INFO] [1732640451.690717078] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640451.9409266 [node_io_start_stop_pending-10] [INFO] [1732640451.939863339] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640452.1923578 [node_io_start_stop_pending-10] [INFO] [1732640452.191262403] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640452.4427183 [node_io_start_stop_pending-10] [INFO] [1732640452.441158815] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640452.6918008 [node_io_start_stop_pending-10] [INFO] [1732640452.690639073] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640452.9410989 [node_io_start_stop_pending-10] [INFO] [1732640452.940049345] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640453.1918328 [node_io_start_stop_pending-10] [INFO] [1732640453.190698517] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640453.3117909 [module_supervisor-1] [INFO] [1732640453.310419159] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640453.3157780 [module_supervisor-1] [INFO] [1732640453.314834471] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640453.3201711 [module_supervisor-1] [INFO] [1732640453.319200755] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640453.3238916 [module_supervisor-1] [INFO] [1732640453.323150068] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640453.3272760 [module_supervisor-1] [INFO] [1732640453.326557435] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640453.3309107 [module_supervisor-1] [INFO] [1732640453.330167946] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640453.3347952 [module_supervisor-1] [INFO] [1732640453.334031814] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640453.4422719 [node_io_start_stop_pending-10] [INFO] [1732640453.441163777] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640453.6928074 [node_io_start_stop_pending-10] [INFO] [1732640453.691659197] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640453.9416578 [node_io_start_stop_pending-10] [INFO] [1732640453.940425132] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640454.1910882 [node_io_start_stop_pending-10] [INFO] [1732640454.190061130] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640454.4417138 [node_io_start_stop_pending-10] [INFO] [1732640454.440511360] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640454.6912363 [node_io_start_stop_pending-10] [INFO] [1732640454.690270172] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640454.9406960 [node_io_start_stop_pending-10] [INFO] [1732640454.939648596] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640455.1911366 [node_io_start_stop_pending-10] [INFO] [1732640455.190085128] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640455.3119700 [module_supervisor-1] [INFO] [1732640455.310488948] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640455.3172238 [module_supervisor-1] [INFO] [1732640455.316356803] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640455.3211486 [module_supervisor-1] [INFO] [1732640455.320268281] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640455.3250604 [module_supervisor-1] [INFO] [1732640455.324253799] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640455.3283715 [module_supervisor-1] [INFO] [1732640455.327645286] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640455.3320146 [module_supervisor-1] [INFO] [1732640455.331257247] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640455.3358462 [module_supervisor-1] [INFO] [1732640455.335086908] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640455.4419165 [node_io_start_stop_pending-10] [INFO] [1732640455.440818776] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640455.6918833 [node_io_start_stop_pending-10] [INFO] [1732640455.690975425] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640455.9420431 [node_io_start_stop_pending-10] [INFO] [1732640455.941232406] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640456.1917939 [node_io_start_stop_pending-10] [INFO] [1732640456.190794794] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640456.4418874 [node_io_start_stop_pending-10] [INFO] [1732640456.440613651] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640456.6917684 [node_io_start_stop_pending-10] [INFO] [1732640456.690625971] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640456.9420197 [node_io_start_stop_pending-10] [INFO] [1732640456.940758990] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640457.1920545 [node_io_start_stop_pending-10] [INFO] [1732640457.190930246] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640457.3119037 [module_supervisor-1] [INFO] [1732640457.310558781] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640457.3167667 [module_supervisor-1] [INFO] [1732640457.315697350] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640457.3212845 [module_supervisor-1] [INFO] [1732640457.320547769] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640457.3244915 [module_supervisor-1] [INFO] [1732640457.323739668] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640457.3279095 [module_supervisor-1] [INFO] [1732640457.327160264] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640457.3315556 [module_supervisor-1] [INFO] [1732640457.330803281] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640457.3353524 [module_supervisor-1] [INFO] [1732640457.334629894] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640457.4417861 [node_io_start_stop_pending-10] [INFO] [1732640457.440653325] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640457.6911309 [node_io_start_stop_pending-10] [INFO] [1732640457.690102214] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640457.9413211 [node_io_start_stop_pending-10] [INFO] [1732640457.940363413] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640458.1902857 [node_io_start_stop_pending-10] [INFO] [1732640458.189326624] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640458.4417925 [node_io_start_stop_pending-10] [INFO] [1732640458.440833821] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640458.6921730 [node_io_start_stop_pending-10] [INFO] [1732640458.690890806] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640458.9417629 [node_io_start_stop_pending-10] [INFO] [1732640458.940619906] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640459.1918948 [node_io_start_stop_pending-10] [INFO] [1732640459.190606999] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640459.3111966 [module_supervisor-1] [INFO] [1732640459.310000318] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640459.3156395 [module_supervisor-1] [INFO] [1732640459.314557489] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640459.3197687 [module_supervisor-1] [INFO] [1732640459.319003106] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640459.3230278 [module_supervisor-1] [INFO] [1732640459.322242980] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640459.3265395 [module_supervisor-1] [INFO] [1732640459.325764950] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640459.3301802 [module_supervisor-1] [INFO] [1732640459.329452557] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640459.3341663 [module_supervisor-1] [INFO] [1732640459.333365049] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640459.4418273 [node_io_start_stop_pending-10] [INFO] [1732640459.440691082] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640459.6883278 [node_io_start_stop_pending-10] [INFO] [1732640459.687601983] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640459.9410975 [node_io_start_stop_pending-10] [INFO] [1732640459.940045322] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640460.1919577 [node_io_start_stop_pending-10] [INFO] [1732640460.191091744] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640460.4421690 [node_io_start_stop_pending-10] [INFO] [1732640460.441220707] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640460.6917148 [node_io_start_stop_pending-10] [INFO] [1732640460.690596083] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640460.9419355 [node_io_start_stop_pending-10] [INFO] [1732640460.940697717] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640461.1908805 [node_io_start_stop_pending-10] [INFO] [1732640461.189846911] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640461.3118258 [module_supervisor-1] [INFO] [1732640461.310687230] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640461.3159609 [module_supervisor-1] [INFO] [1732640461.314912914] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640461.3202546 [module_supervisor-1] [INFO] [1732640461.319274740] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640461.3237338 [module_supervisor-1] [INFO] [1732640461.322938801] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640461.3273697 [module_supervisor-1] [INFO] [1732640461.326637077] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640461.3313413 [module_supervisor-1] [INFO] [1732640461.330566110] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640461.3350995 [module_supervisor-1] [INFO] [1732640461.334359814] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640461.4418530 [node_io_start_stop_pending-10] [INFO] [1732640461.440647780] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640461.6917241 [node_io_start_stop_pending-10] [INFO] [1732640461.690598076] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640461.9412549 [node_io_start_stop_pending-10] [INFO] [1732640461.940238574] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640462.1920807 [node_io_start_stop_pending-10] [INFO] [1732640462.190943080] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640462.4420903 [node_io_start_stop_pending-10] [INFO] [1732640462.440962282] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640462.6920695 [node_io_start_stop_pending-10] [INFO] [1732640462.690924698] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640462.9420242 [node_io_start_stop_pending-10] [INFO] [1732640462.941066231] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640463.1918533 [node_io_start_stop_pending-10] [INFO] [1732640463.190857342] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640463.3119028 [module_supervisor-1] [INFO] [1732640463.310483661] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640463.3162298 [module_supervisor-1] [INFO] [1732640463.315423194] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640463.3197076 [module_supervisor-1] [INFO] [1732640463.318866407] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640463.3233259 [module_supervisor-1] [INFO] [1732640463.322522324] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640463.3269382 [module_supervisor-1] [INFO] [1732640463.326158634] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640463.3305881 [module_supervisor-1] [INFO] [1732640463.329831697] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640463.3344197 [module_supervisor-1] [INFO] [1732640463.333650772] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640463.4417882 [node_io_start_stop_pending-10] [INFO] [1732640463.440814684] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640463.6915975 [node_io_start_stop_pending-10] [INFO] [1732640463.690659970] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640463.9416428 [node_io_start_stop_pending-10] [INFO] [1732640463.940620107] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640464.1902292 [node_io_start_stop_pending-10] [INFO] [1732640464.189307168] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640464.4418149 [node_io_start_stop_pending-10] [INFO] [1732640464.440655950] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640464.6917355 [node_io_start_stop_pending-10] [INFO] [1732640464.690611575] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640464.9417799 [node_io_start_stop_pending-10] [INFO] [1732640464.940645187] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640465.1915879 [node_io_start_stop_pending-10] [INFO] [1732640465.190543470] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640465.3119454 [module_supervisor-1] [INFO] [1732640465.310507645] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640465.3160121 [module_supervisor-1] [INFO] [1732640465.315187750] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640465.3194935 [module_supervisor-1] [INFO] [1732640465.318673384] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640465.3231435 [module_supervisor-1] [INFO] [1732640465.322304846] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640465.3269238 [module_supervisor-1] [INFO] [1732640465.326150031] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640465.3306253 [module_supervisor-1] [INFO] [1732640465.329848926] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640465.3344758 [module_supervisor-1] [INFO] [1732640465.333727903] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640465.4417353 [node_io_start_stop_pending-10] [INFO] [1732640465.440797891] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640465.6916332 [node_io_start_stop_pending-10] [INFO] [1732640465.690723107] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640465.9410655 [node_io_start_stop_pending-10] [INFO] [1732640465.940027925] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640466.1911018 [node_io_start_stop_pending-10] [INFO] [1732640466.190051783] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640466.4418218 [node_io_start_stop_pending-10] [INFO] [1732640466.440697496] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640466.6920443 [node_io_start_stop_pending-10] [INFO] [1732640466.690931293] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640466.9410002 [node_io_start_stop_pending-10] [INFO] [1732640466.939868039] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640467.1919513 [node_io_start_stop_pending-10] [INFO] [1732640467.190652641] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640467.3120093 [module_supervisor-1] [INFO] [1732640467.310640427] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640467.3159497 [module_supervisor-1] [INFO] [1732640467.314985816] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640467.3202894 [module_supervisor-1] [INFO] [1732640467.319333315] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640467.3242095 [module_supervisor-1] [INFO] [1732640467.323472180] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640467.3276584 [module_supervisor-1] [INFO] [1732640467.326885771] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640467.3313382 [module_supervisor-1] [INFO] [1732640467.330606276] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640467.3351731 [module_supervisor-1] [INFO] [1732640467.334441245] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640467.4420626 [node_io_start_stop_pending-10] [INFO] [1732640467.440885706] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640467.6922336 [node_io_start_stop_pending-10] [INFO] [1732640467.690965629] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640467.9415348 [node_io_start_stop_pending-10] [INFO] [1732640467.940371473] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640468.1919186 [node_io_start_stop_pending-10] [INFO] [1732640468.190656339] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640468.4411771 [node_io_start_stop_pending-10] [INFO] [1732640468.440216024] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640468.6910183 [node_io_start_stop_pending-10] [INFO] [1732640468.689979456] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640468.9420266 [node_io_start_stop_pending-10] [INFO] [1732640468.941055518] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640469.1919601 [node_io_start_stop_pending-10] [INFO] [1732640469.190836804] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640469.3119133 [module_supervisor-1] [INFO] [1732640469.310526730] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640469.3171687 [module_supervisor-1] [INFO] [1732640469.316000655] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640469.3211768 [module_supervisor-1] [INFO] [1732640469.320451737] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640469.3243763 [module_supervisor-1] [INFO] [1732640469.323658397] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640469.3277221 [module_supervisor-1] [INFO] [1732640469.326982928] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640469.3314793 [module_supervisor-1] [INFO] [1732640469.330664904] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640469.3352385 [module_supervisor-1] [INFO] [1732640469.334511819] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640469.4411557 [node_io_start_stop_pending-10] [INFO] [1732640469.440118647] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640469.6910706 [node_io_start_stop_pending-10] [INFO] [1732640469.690047299] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640469.9420583 [node_io_start_stop_pending-10] [INFO] [1732640469.940927842] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640470.1910985 [node_io_start_stop_pending-10] [INFO] [1732640470.190065497] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640470.4425428 [node_io_start_stop_pending-10] [INFO] [1732640470.441323573] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640470.6920388 [node_io_start_stop_pending-10] [INFO] [1732640470.690896623] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640470.9418983 [node_io_start_stop_pending-10] [INFO] [1732640470.940749484] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640471.1917007 [node_io_start_stop_pending-10] [INFO] [1732640471.190659268] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640471.3119609 [module_supervisor-1] [INFO] [1732640471.310561493] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640471.3159084 [module_supervisor-1] [INFO] [1732640471.314966031] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640471.3202617 [module_supervisor-1] [INFO] [1732640471.319281712] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640471.3241329 [module_supervisor-1] [INFO] [1732640471.323408291] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640471.3279808 [module_supervisor-1] [INFO] [1732640471.327055385] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640471.3317029 [module_supervisor-1] [INFO] [1732640471.330886026] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640471.3355422 [module_supervisor-1] [INFO] [1732640471.334781602] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640471.4421418 [node_io_start_stop_pending-10] [INFO] [1732640471.441008076] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640471.6920187 [node_io_start_stop_pending-10] [INFO] [1732640471.690825572] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640471.9416337 [node_io_start_stop_pending-10] [INFO] [1732640471.940557655] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640472.1917160 [node_io_start_stop_pending-10] [INFO] [1732640472.190556737] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640472.4413118 [node_io_start_stop_pending-10] [INFO] [1732640472.440432308] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640472.6918299 [node_io_start_stop_pending-10] [INFO] [1732640472.690747964] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640472.9417503 [node_io_start_stop_pending-10] [INFO] [1732640472.940605353] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640473.1909823 [node_io_start_stop_pending-10] [INFO] [1732640473.189890130] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640473.3112252 [module_supervisor-1] [INFO] [1732640473.309913834] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640473.3163221 [module_supervisor-1] [INFO] [1732640473.315090730] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640473.3205526 [module_supervisor-1] [INFO] [1732640473.319774696] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640473.3241274 [module_supervisor-1] [INFO] [1732640473.323301937] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640473.3279145 [module_supervisor-1] [INFO] [1732640473.327117193] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640473.3315742 [module_supervisor-1] [INFO] [1732640473.330792154] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640473.3354416 [module_supervisor-1] [INFO] [1732640473.334670346] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640473.4418700 [node_io_start_stop_pending-10] [INFO] [1732640473.440672091] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640473.6919894 [node_io_start_stop_pending-10] [INFO] [1732640473.690697048] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640473.9417725 [node_io_start_stop_pending-10] [INFO] [1732640473.940765202] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640474.1915748 [node_io_start_stop_pending-10] [INFO] [1732640474.190604078] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640474.4409299 [node_io_start_stop_pending-10] [INFO] [1732640474.439886461] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640474.6916909 [node_io_start_stop_pending-10] [INFO] [1732640474.690598330] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640474.9417763 [node_io_start_stop_pending-10] [INFO] [1732640474.940686379] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640475.1911657 [node_io_start_stop_pending-10] [INFO] [1732640475.190132990] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640475.3121674 [module_supervisor-1] [INFO] [1732640475.310733000] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640475.3176820 [module_supervisor-1] [INFO] [1732640475.316768639] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640475.3208876 [module_supervisor-1] [INFO] [1732640475.320117533] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640475.3243120 [module_supervisor-1] [INFO] [1732640475.323480352] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640475.3278410 [module_supervisor-1] [INFO] [1732640475.327081952] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640475.3314717 [module_supervisor-1] [INFO] [1732640475.330705698] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640475.3353372 [module_supervisor-1] [INFO] [1732640475.334581465] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640475.4422362 [node_io_start_stop_pending-10] [INFO] [1732640475.441101917] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640475.6921196 [node_io_start_stop_pending-10] [INFO] [1732640475.691002934] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640475.9413819 [node_io_start_stop_pending-10] [INFO] [1732640475.940421202] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640476.1909156 [node_io_start_stop_pending-10] [INFO] [1732640476.189898760] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640476.4412458 [node_io_start_stop_pending-10] [INFO] [1732640476.440230096] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640476.6912439 [node_io_start_stop_pending-10] [INFO] [1732640476.690255214] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640476.9421959 [node_io_start_stop_pending-10] [INFO] [1732640476.941071041] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640477.1912403 [node_io_start_stop_pending-10] [INFO] [1732640477.190236344] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640477.3111782 [module_supervisor-1] [INFO] [1732640477.309846779] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640477.3152962 [module_supervisor-1] [INFO] [1732640477.314379553] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640477.3192661 [module_supervisor-1] [INFO] [1732640477.318376786] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640477.3235526 [module_supervisor-1] [INFO] [1732640477.322737730] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640477.3272915 [module_supervisor-1] [INFO] [1732640477.326505975] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640477.3308868 [module_supervisor-1] [INFO] [1732640477.330137534] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640477.3348024 [module_supervisor-1] [INFO] [1732640477.334012894] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640477.4417236 [node_io_start_stop_pending-10] [INFO] [1732640477.440556920] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640477.6918347 [node_io_start_stop_pending-10] [INFO] [1732640477.690701408] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640477.9411318 [node_io_start_stop_pending-10] [INFO] [1732640477.940104790] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640478.1915250 [node_io_start_stop_pending-10] [INFO] [1732640478.190354939] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640478.4417889 [node_io_start_stop_pending-10] [INFO] [1732640478.440785896] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640478.6909323 [node_io_start_stop_pending-10] [INFO] [1732640478.689896710] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640478.9416049 [node_io_start_stop_pending-10] [INFO] [1732640478.940628147] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640479.1911490 [node_io_start_stop_pending-10] [INFO] [1732640479.190123024] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640479.3117609 [module_supervisor-1] [INFO] [1732640479.310191248] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640479.3182092 [module_supervisor-1] [INFO] [1732640479.316674758] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640479.3213186 [module_supervisor-1] [INFO] [1732640479.320522196] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640479.3245361 [module_supervisor-1] [INFO] [1732640479.323781375] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640479.3281989 [module_supervisor-1] [INFO] [1732640479.327435152] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640479.3318126 [module_supervisor-1] [INFO] [1732640479.331070487] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640479.3356850 [module_supervisor-1] [INFO] [1732640479.334874560] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640479.4421318 [node_io_start_stop_pending-10] [INFO] [1732640479.440829056] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640479.6921651 [node_io_start_stop_pending-10] [INFO] [1732640479.690774999] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640479.9412475 [node_io_start_stop_pending-10] [INFO] [1732640479.940161845] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640480.1923807 [node_io_start_stop_pending-10] [INFO] [1732640480.191036261] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640480.4423721 [node_io_start_stop_pending-10] [INFO] [1732640480.441169445] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640480.6920974 [node_io_start_stop_pending-10] [INFO] [1732640480.690939879] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640480.9420800 [node_io_start_stop_pending-10] [INFO] [1732640480.940973464] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640481.1919632 [node_io_start_stop_pending-10] [INFO] [1732640481.190846431] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640481.3114629 [module_supervisor-1] [INFO] [1732640481.310292172] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640481.3150926 [module_supervisor-1] [INFO] [1732640481.314082708] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640481.3189223 [module_supervisor-1] [INFO] [1732640481.317970714] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640481.3225391 [module_supervisor-1] [INFO] [1732640481.321743993] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640481.3257976 [module_supervisor-1] [INFO] [1732640481.325041794] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640481.3292952 [module_supervisor-1] [INFO] [1732640481.328544699] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640481.3330450 [module_supervisor-1] [INFO] [1732640481.332276557] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640481.4411118 [node_io_start_stop_pending-10] [INFO] [1732640481.440049948] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640481.6905234 [node_io_start_stop_pending-10] [INFO] [1732640481.689510620] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640481.9387534 [node_io_start_stop_pending-10] [INFO] [1732640481.938045923] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640482.1902235 [node_io_start_stop_pending-10] [INFO] [1732640482.189296168] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640482.4418921 [node_io_start_stop_pending-10] [INFO] [1732640482.440657190] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640482.6918879 [node_io_start_stop_pending-10] [INFO] [1732640482.690586237] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640482.9418471 [node_io_start_stop_pending-10] [INFO] [1732640482.940728109] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640483.1918728 [node_io_start_stop_pending-10] [INFO] [1732640483.190609617] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640483.3117564 [module_supervisor-1] [INFO] [1732640483.310289993] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640483.3165820 [module_supervisor-1] [INFO] [1732640483.315222079] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640483.3207428 [module_supervisor-1] [INFO] [1732640483.319964613] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640483.3239396 [module_supervisor-1] [INFO] [1732640483.323091800] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640483.3273771 [module_supervisor-1] [INFO] [1732640483.326592646] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640483.3309407 [module_supervisor-1] [INFO] [1732640483.330149894] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640483.3346956 [module_supervisor-1] [INFO] [1732640483.333874806] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640483.4418066 [node_io_start_stop_pending-10] [INFO] [1732640483.440681385] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640483.6918874 [node_io_start_stop_pending-10] [INFO] [1732640483.690607985] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640483.9420385 [node_io_start_stop_pending-10] [INFO] [1732640483.940701991] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640484.1917813 [node_io_start_stop_pending-10] [INFO] [1732640484.190455913] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640484.4416699 [node_io_start_stop_pending-10] [INFO] [1732640484.440689837] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640484.6912217 [node_io_start_stop_pending-10] [INFO] [1732640484.690368139] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640484.9410515 [node_io_start_stop_pending-10] [INFO] [1732640484.940100436] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640485.1910374 [node_io_start_stop_pending-10] [INFO] [1732640485.189850949] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640485.3120170 [module_supervisor-1] [INFO] [1732640485.310543487] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640485.3174188 [module_supervisor-1] [INFO] [1732640485.316089932] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640485.3208518 [module_supervisor-1] [INFO] [1732640485.320080997] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640485.3239176 [module_supervisor-1] [INFO] [1732640485.323171202] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640485.3272245 [module_supervisor-1] [INFO] [1732640485.326508082] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640485.3307309 [module_supervisor-1] [INFO] [1732640485.329989002] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640485.3344815 [module_supervisor-1] [INFO] [1732640485.333716542] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640485.4420590 [node_io_start_stop_pending-10] [INFO] [1732640485.440903872] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640485.6917777 [node_io_start_stop_pending-10] [INFO] [1732640485.690640944] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640485.9420269 [node_io_start_stop_pending-10] [INFO] [1732640485.940771749] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640486.1917286 [node_io_start_stop_pending-10] [INFO] [1732640486.190594950] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640486.4410591 [node_io_start_stop_pending-10] [INFO] [1732640486.439997105] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640486.6910536 [node_io_start_stop_pending-10] [INFO] [1732640486.690008026] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640486.9417865 [node_io_start_stop_pending-10] [INFO] [1732640486.940618583] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640487.1908948 [node_io_start_stop_pending-10] [INFO] [1732640487.189857019] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640487.3109913 [module_supervisor-1] [INFO] [1732640487.309618276] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640487.3155777 [module_supervisor-1] [INFO] [1732640487.314441193] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640487.3186669 [module_supervisor-1] [INFO] [1732640487.317833433] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640487.3219392 [module_supervisor-1] [INFO] [1732640487.321151941] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640487.3257353 [module_supervisor-1] [INFO] [1732640487.324894716] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640487.3291643 [module_supervisor-1] [INFO] [1732640487.328444773] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640487.3329122 [module_supervisor-1] [INFO] [1732640487.332131981] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640487.4417527 [node_io_start_stop_pending-10] [INFO] [1732640487.440795932] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640487.6915865 [node_io_start_stop_pending-10] [INFO] [1732640487.690627188] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640487.9417989 [node_io_start_stop_pending-10] [INFO] [1732640487.940655145] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640488.1902487 [node_io_start_stop_pending-10] [INFO] [1732640488.189357152] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640488.4408317 [node_io_start_stop_pending-10] [INFO] [1732640488.439729842] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640488.6912048 [node_io_start_stop_pending-10] [INFO] [1732640488.690222631] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640488.9412854 [node_io_start_stop_pending-10] [INFO] [1732640488.940329128] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640489.1915221 [node_io_start_stop_pending-10] [INFO] [1732640489.190459393] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640489.3117757 [module_supervisor-1] [INFO] [1732640489.310261631] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640489.3157148 [module_supervisor-1] [INFO] [1732640489.314821485] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640489.3192701 [module_supervisor-1] [INFO] [1732640489.318378406] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640489.3230984 [module_supervisor-1] [INFO] [1732640489.322198856] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640489.3271327 [module_supervisor-1] [INFO] [1732640489.326344049] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640489.3308792 [module_supervisor-1] [INFO] [1732640489.330017718] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640489.3346603 [module_supervisor-1] [INFO] [1732640489.333846870] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640489.4412313 [node_io_start_stop_pending-10] [INFO] [1732640489.440306328] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640489.6915808 [node_io_start_stop_pending-10] [INFO] [1732640489.690657303] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640489.9412262 [node_io_start_stop_pending-10] [INFO] [1732640489.940407193] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640490.1919041 [node_io_start_stop_pending-10] [INFO] [1732640490.190730417] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640490.4422884 [node_io_start_stop_pending-10] [INFO] [1732640490.441421094] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640490.6919167 [node_io_start_stop_pending-10] [INFO] [1732640490.690856437] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640490.9421351 [node_io_start_stop_pending-10] [INFO] [1732640490.940986635] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640491.1920190 [node_io_start_stop_pending-10] [INFO] [1732640491.190885208] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640491.3113017 [module_supervisor-1] [INFO] [1732640491.310074850] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640491.3155971 [module_supervisor-1] [INFO] [1732640491.314502234] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640491.3201139 [module_supervisor-1] [INFO] [1732640491.319265011] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640491.3232057 [module_supervisor-1] [INFO] [1732640491.322472426] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640491.3265491 [module_supervisor-1] [INFO] [1732640491.325781499] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640491.3300257 [module_supervisor-1] [INFO] [1732640491.329269886] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640491.3337319 [module_supervisor-1] [INFO] [1732640491.332973103] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640491.4422159 [node_io_start_stop_pending-10] [INFO] [1732640491.441091774] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640491.6920443 [node_io_start_stop_pending-10] [INFO] [1732640491.690855775] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640491.9417584 [node_io_start_stop_pending-10] [INFO] [1732640491.940716913] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640492.1917758 [node_io_start_stop_pending-10] [INFO] [1732640492.190718957] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640492.4386983 [node_io_start_stop_pending-10] [INFO] [1732640492.437950781] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640492.6919992 [node_io_start_stop_pending-10] [INFO] [1732640492.690852301] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640492.9413691 [node_io_start_stop_pending-10] [INFO] [1732640492.940382397] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640493.1908982 [node_io_start_stop_pending-10] [INFO] [1732640493.189837525] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640493.3117318 [module_supervisor-1] [INFO] [1732640493.310251076] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640493.3158231 [module_supervisor-1] [INFO] [1732640493.314987669] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640493.3191125 [module_supervisor-1] [INFO] [1732640493.318308919] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640493.3227670 [module_supervisor-1] [INFO] [1732640493.321843445] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640493.3261530 [module_supervisor-1] [INFO] [1732640493.325415837] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640493.3298728 [module_supervisor-1] [INFO] [1732640493.329066814] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640493.3335760 [module_supervisor-1] [INFO] [1732640493.332808357] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640493.4394538 [node_io_start_stop_pending-10] [INFO] [1732640493.438342878] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640493.6918557 [node_io_start_stop_pending-10] [INFO] [1732640493.690862098] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640493.9412243 [node_io_start_stop_pending-10] [INFO] [1732640493.940407016] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640494.1905799 [node_io_start_stop_pending-10] [INFO] [1732640494.189609875] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640494.4417942 [node_io_start_stop_pending-10] [INFO] [1732640494.440666094] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640494.6917543 [node_io_start_stop_pending-10] [INFO] [1732640494.690660489] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640494.9419165 [node_io_start_stop_pending-10] [INFO] [1732640494.940793445] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640495.1917698 [node_io_start_stop_pending-10] [INFO] [1732640495.190655180] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640495.3117638 [module_supervisor-1] [INFO] [1732640495.310295267] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640495.3159561 [module_supervisor-1] [INFO] [1732640495.314958107] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640495.3201127 [module_supervisor-1] [INFO] [1732640495.319157991] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640495.3232384 [module_supervisor-1] [INFO] [1732640495.322510361] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640495.3265951 [module_supervisor-1] [INFO] [1732640495.325833123] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640495.3300889 [module_supervisor-1] [INFO] [1732640495.329326944] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640495.3340619 [module_supervisor-1] [INFO] [1732640495.333242298] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640495.4418142 [node_io_start_stop_pending-10] [INFO] [1732640495.440618351] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640495.6918828 [node_io_start_stop_pending-10] [INFO] [1732640495.690707695] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640495.9418335 [node_io_start_stop_pending-10] [INFO] [1732640495.940586596] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640496.1917117 [node_io_start_stop_pending-10] [INFO] [1732640496.190662284] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640496.4412131 [node_io_start_stop_pending-10] [INFO] [1732640496.440225461] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640496.6912758 [node_io_start_stop_pending-10] [INFO] [1732640496.690379880] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640496.9408937 [node_io_start_stop_pending-10] [INFO] [1732640496.939859027] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640497.1905153 [node_io_start_stop_pending-10] [INFO] [1732640497.189563119] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640497.3116841 [module_supervisor-1] [INFO] [1732640497.310242244] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640497.3177245 [module_supervisor-1] [INFO] [1732640497.316134286] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640497.3230867 [module_supervisor-1] [INFO] [1732640497.322301785] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640497.3261855 [module_supervisor-1] [INFO] [1732640497.325457945] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640497.3295074 [module_supervisor-1] [INFO] [1732640497.328753740] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640497.3329761 [module_supervisor-1] [INFO] [1732640497.332209817] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640497.3367331 [module_supervisor-1] [INFO] [1732640497.335961200] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640497.4420528 [node_io_start_stop_pending-10] [INFO] [1732640497.440891599] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640497.6917670 [node_io_start_stop_pending-10] [INFO] [1732640497.690634665] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640497.9417284 [node_io_start_stop_pending-10] [INFO] [1732640497.940572770] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640498.1918833 [node_io_start_stop_pending-10] [INFO] [1732640498.190717077] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640498.4416687 [node_io_start_stop_pending-10] [INFO] [1732640498.440358681] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640498.6921093 [node_io_start_stop_pending-10] [INFO] [1732640498.691183366] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640498.9412026 [node_io_start_stop_pending-10] [INFO] [1732640498.940311090] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640499.1916041 [node_io_start_stop_pending-10] [INFO] [1732640499.190664810] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640499.3119037 [module_supervisor-1] [INFO] [1732640499.310451171] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640499.3172886 [module_supervisor-1] [INFO] [1732640499.315959434] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640499.3209374 [module_supervisor-1] [INFO] [1732640499.320162940] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640499.3242486 [module_supervisor-1] [INFO] [1732640499.323496724] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640499.3277321 [module_supervisor-1] [INFO] [1732640499.326964590] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640499.3311973 [module_supervisor-1] [INFO] [1732640499.330471434] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640499.3349438 [module_supervisor-1] [INFO] [1732640499.334148466] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640499.4416444 [node_io_start_stop_pending-10] [INFO] [1732640499.440743880] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640499.6908803 [node_io_start_stop_pending-10] [INFO] [1732640499.689837036] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640499.9418409 [node_io_start_stop_pending-10] [INFO] [1732640499.940653301] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640500.1911919 [node_io_start_stop_pending-10] [INFO] [1732640500.190161482] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640500.4420400 [node_io_start_stop_pending-10] [INFO] [1732640500.440916178] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640500.6913245 [node_io_start_stop_pending-10] [INFO] [1732640500.690341393] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640500.9418168 [node_io_start_stop_pending-10] [INFO] [1732640500.940663477] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640501.1909168 [node_io_start_stop_pending-10] [INFO] [1732640501.189865195] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640501.3117027 [module_supervisor-1] [INFO] [1732640501.310245224] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640501.3165996 [module_supervisor-1] [INFO] [1732640501.315689936] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640501.3200972 [module_supervisor-1] [INFO] [1732640501.319246565] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640501.3239067 [module_supervisor-1] [INFO] [1732640501.323062784] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640501.3272007 [module_supervisor-1] [INFO] [1732640501.326479869] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640501.3309381 [module_supervisor-1] [INFO] [1732640501.330140749] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640501.3346391 [module_supervisor-1] [INFO] [1732640501.333864346] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640501.4407971 [node_io_start_stop_pending-10] [INFO] [1732640501.439739622] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640501.6913774 [node_io_start_stop_pending-10] [INFO] [1732640501.690532436] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640501.9417770 [node_io_start_stop_pending-10] [INFO] [1732640501.940642696] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640502.1917489 [node_io_start_stop_pending-10] [INFO] [1732640502.190619553] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640502.4421694 [node_io_start_stop_pending-10] [INFO] [1732640502.440703429] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640502.6911416 [node_io_start_stop_pending-10] [INFO] [1732640502.690115193] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640502.9417374 [node_io_start_stop_pending-10] [INFO] [1732640502.940594981] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640503.1908944 [node_io_start_stop_pending-10] [INFO] [1732640503.189837525] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640503.3114941 [module_supervisor-1] [INFO] [1732640503.310240315] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640503.3152997 [module_supervisor-1] [INFO] [1732640503.314326765] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640503.3196080 [module_supervisor-1] [INFO] [1732640503.318594275] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640503.3235688 [module_supervisor-1] [INFO] [1732640503.322753941] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640503.3268449 [module_supervisor-1] [INFO] [1732640503.326086322] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640503.3303127 [module_supervisor-1] [INFO] [1732640503.329585449] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640503.3340137 [module_supervisor-1] [INFO] [1732640503.333244378] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640503.4417632 [node_io_start_stop_pending-10] [INFO] [1732640503.440612898] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640503.6919909 [node_io_start_stop_pending-10] [INFO] [1732640503.690665143] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640503.9419358 [node_io_start_stop_pending-10] [INFO] [1732640503.940682780] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640504.1920049 [node_io_start_stop_pending-10] [INFO] [1732640504.190815300] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640504.4421442 [node_io_start_stop_pending-10] [INFO] [1732640504.440980656] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640504.6912384 [node_io_start_stop_pending-10] [INFO] [1732640504.690224066] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640504.9412186 [node_io_start_stop_pending-10] [INFO] [1732640504.940197049] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640505.1911635 [node_io_start_stop_pending-10] [INFO] [1732640505.190152457] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640505.3117518 [module_supervisor-1] [INFO] [1732640505.310223763] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640505.3162024 [module_supervisor-1] [INFO] [1732640505.315336147] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640505.3197601 [module_supervisor-1] [INFO] [1732640505.318893391] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640505.3237135 [module_supervisor-1] [INFO] [1732640505.322813256] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640505.3271475 [module_supervisor-1] [INFO] [1732640505.326430755] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640505.3306744 [module_supervisor-1] [INFO] [1732640505.329920597] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640505.3344336 [module_supervisor-1] [INFO] [1732640505.333659846] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640505.4402652 [node_io_start_stop_pending-10] [INFO] [1732640505.439369018] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640505.6917117 [node_io_start_stop_pending-10] [INFO] [1732640505.690574001] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640505.9408731 [node_io_start_stop_pending-10] [INFO] [1732640505.939836225] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640506.1902103 [node_io_start_stop_pending-10] [INFO] [1732640506.189332074] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640506.4417145 [node_io_start_stop_pending-10] [INFO] [1732640506.440573811] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640506.6919084 [node_io_start_stop_pending-10] [INFO] [1732640506.690633637] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640506.9420910 [node_io_start_stop_pending-10] [INFO] [1732640506.940947555] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640507.1909394 [node_io_start_stop_pending-10] [INFO] [1732640507.189905510] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640507.3116765 [module_supervisor-1] [INFO] [1732640507.310490367] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640507.3159280 [module_supervisor-1] [INFO] [1732640507.314833639] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640507.3205993 [module_supervisor-1] [INFO] [1732640507.319492572] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640507.3239391 [module_supervisor-1] [INFO] [1732640507.323198575] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640507.3272471 [module_supervisor-1] [INFO] [1732640507.326521200] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640507.3307395 [module_supervisor-1] [INFO] [1732640507.329985018] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640507.3344402 [module_supervisor-1] [INFO] [1732640507.333672541] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640507.4410257 [node_io_start_stop_pending-10] [INFO] [1732640507.439932662] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640507.6913123 [node_io_start_stop_pending-10] [INFO] [1732640507.690311325] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640507.9418387 [node_io_start_stop_pending-10] [INFO] [1732640507.940803017] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640508.1918700 [node_io_start_stop_pending-10] [INFO] [1732640508.190647132] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640508.4418499 [node_io_start_stop_pending-10] [INFO] [1732640508.440791760] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640508.6912370 [node_io_start_stop_pending-10] [INFO] [1732640508.690300860] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640508.9418547 [node_io_start_stop_pending-10] [INFO] [1732640508.940668065] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640509.1902583 [node_io_start_stop_pending-10] [INFO] [1732640509.189315152] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640509.3113549 [module_supervisor-1] [INFO] [1732640509.310027321] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640509.3160789 [module_supervisor-1] [INFO] [1732640509.314864366] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640509.3199918 [module_supervisor-1] [INFO] [1732640509.319189189] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640509.3231394 [module_supervisor-1] [INFO] [1732640509.322417015] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640509.3264868 [module_supervisor-1] [INFO] [1732640509.325724002] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640509.3302155 [module_supervisor-1] [INFO] [1732640509.329236086] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640509.3339202 [module_supervisor-1] [INFO] [1732640509.333158048] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640509.4419312 [node_io_start_stop_pending-10] [INFO] [1732640509.440660785] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640509.6918123 [node_io_start_stop_pending-10] [INFO] [1732640509.690577371] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640509.9418800 [node_io_start_stop_pending-10] [INFO] [1732640509.940628077] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640510.1916292 [node_io_start_stop_pending-10] [INFO] [1732640510.190322248] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640510.4413800 [node_io_start_stop_pending-10] [INFO] [1732640510.440237122] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640510.6912725 [node_io_start_stop_pending-10] [INFO] [1732640510.690265858] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640510.9419072 [node_io_start_stop_pending-10] [INFO] [1732640510.940614553] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640511.1914990 [node_io_start_stop_pending-10] [INFO] [1732640511.190440092] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640511.3117383 [module_supervisor-1] [INFO] [1732640511.310242724] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640511.3157873 [module_supervisor-1] [INFO] [1732640511.314895389] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640511.3193498 [module_supervisor-1] [INFO] [1732640511.318501865] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640511.3229530 [module_supervisor-1] [INFO] [1732640511.322045457] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640511.3262961 [module_supervisor-1] [INFO] [1732640511.325569976] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640511.3298032 [module_supervisor-1] [INFO] [1732640511.329058035] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640511.3335321 [module_supervisor-1] [INFO] [1732640511.332768634] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640511.4419758 [node_io_start_stop_pending-10] [INFO] [1732640511.440896988] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640511.6919670 [node_io_start_stop_pending-10] [INFO] [1732640511.690875379] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640511.9418821 [node_io_start_stop_pending-10] [INFO] [1732640511.940585123] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640512.1902273 [node_io_start_stop_pending-10] [INFO] [1732640512.189313179] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640512.4420874 [node_io_start_stop_pending-10] [INFO] [1732640512.440849835] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640512.6918120 [node_io_start_stop_pending-10] [INFO] [1732640512.690671662] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640512.9409254 [node_io_start_stop_pending-10] [INFO] [1732640512.939881640] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640513.1909478 [node_io_start_stop_pending-10] [INFO] [1732640513.189988523] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640513.3116963 [module_supervisor-1] [INFO] [1732640513.310250033] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640513.3154175 [module_supervisor-1] [INFO] [1732640513.314530698] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640513.3192744 [module_supervisor-1] [INFO] [1732640513.318166331] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640513.3230526 [module_supervisor-1] [INFO] [1732640513.322166773] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640513.3267050 [module_supervisor-1] [INFO] [1732640513.325942322] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640513.3302062 [module_supervisor-1] [INFO] [1732640513.329469240] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640513.3341248 [module_supervisor-1] [INFO] [1732640513.333287713] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640513.4415011 [node_io_start_stop_pending-10] [INFO] [1732640513.440329327] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640513.6915073 [node_io_start_stop_pending-10] [INFO] [1732640513.690433332] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640513.9419291 [node_io_start_stop_pending-10] [INFO] [1732640513.940874111] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640514.1917601 [node_io_start_stop_pending-10] [INFO] [1732640514.190590102] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640514.4418745 [node_io_start_stop_pending-10] [INFO] [1732640514.440578602] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640514.6917858 [node_io_start_stop_pending-10] [INFO] [1732640514.690659077] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640514.9418707 [node_io_start_stop_pending-10] [INFO] [1732640514.940636152] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640515.1908462 [node_io_start_stop_pending-10] [INFO] [1732640515.189834807] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640515.3116975 [module_supervisor-1] [INFO] [1732640515.310234021] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640515.3160195 [module_supervisor-1] [INFO] [1732640515.315195062] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640515.3193021 [module_supervisor-1] [INFO] [1732640515.318501947] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640515.3229163 [module_supervisor-1] [INFO] [1732640515.322037744] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640515.3265178 [module_supervisor-1] [INFO] [1732640515.325751956] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640515.3300428 [module_supervisor-1] [INFO] [1732640515.329226275] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640515.3337648 [module_supervisor-1] [INFO] [1732640515.332921081] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640515.4417226 [node_io_start_stop_pending-10] [INFO] [1732640515.440677069] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640515.6917107 [node_io_start_stop_pending-10] [INFO] [1732640515.690731121] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640515.9418314 [node_io_start_stop_pending-10] [INFO] [1732640515.940944941] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640516.1917458 [node_io_start_stop_pending-10] [INFO] [1732640516.190860862] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640516.4419186 [node_io_start_stop_pending-10] [INFO] [1732640516.440803213] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640516.6920402 [node_io_start_stop_pending-10] [INFO] [1732640516.690862723] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640516.9420111 [node_io_start_stop_pending-10] [INFO] [1732640516.940896569] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640517.1920505 [node_io_start_stop_pending-10] [INFO] [1732640517.190910920] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640517.3117301 [module_supervisor-1] [INFO] [1732640517.310267271] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640517.3153329 [module_supervisor-1] [INFO] [1732640517.314436835] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640517.3191729 [module_supervisor-1] [INFO] [1732640517.318257124] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640517.3234265 [module_supervisor-1] [INFO] [1732640517.322372173] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640517.3269870 [module_supervisor-1] [INFO] [1732640517.326223553] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640517.3305142 [module_supervisor-1] [INFO] [1732640517.329755563] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640517.3342640 [module_supervisor-1] [INFO] [1732640517.333444323] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640517.4419844 [node_io_start_stop_pending-10] [INFO] [1732640517.440855891] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640517.6923828 [node_io_start_stop_pending-10] [INFO] [1732640517.691324682] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640517.9419916 [node_io_start_stop_pending-10] [INFO] [1732640517.940880491] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640518.1908224 [node_io_start_stop_pending-10] [INFO] [1732640518.189855354] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640518.4411495 [node_io_start_stop_pending-10] [INFO] [1732640518.440266413] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640518.6919644 [node_io_start_stop_pending-10] [INFO] [1732640518.691070004] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640518.9418414 [node_io_start_stop_pending-10] [INFO] [1732640518.940817990] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640519.1920464 [node_io_start_stop_pending-10] [INFO] [1732640519.190904861] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640519.3111076 [module_supervisor-1] [INFO] [1732640519.309938588] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640519.3152823 [module_supervisor-1] [INFO] [1732640519.314228415] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640519.3199353 [module_supervisor-1] [INFO] [1732640519.318881555] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640519.3236485 [module_supervisor-1] [INFO] [1732640519.322885454] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640519.3269167 [module_supervisor-1] [INFO] [1732640519.326177820] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640519.3304813 [module_supervisor-1] [INFO] [1732640519.329725561] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640519.3341241 [module_supervisor-1] [INFO] [1732640519.333404608] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640519.4420133 [node_io_start_stop_pending-10] [INFO] [1732640519.440883370] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640519.6919534 [node_io_start_stop_pending-10] [INFO] [1732640519.690851713] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640519.9419651 [node_io_start_stop_pending-10] [INFO] [1732640519.940800186] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640520.1919849 [node_io_start_stop_pending-10] [INFO] [1732640520.190851277] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640520.4419131 [node_io_start_stop_pending-10] [INFO] [1732640520.440796986] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640520.6919811 [node_io_start_stop_pending-10] [INFO] [1732640520.690883556] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640520.9419765 [node_io_start_stop_pending-10] [INFO] [1732640520.940862967] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640521.1916502 [node_io_start_stop_pending-10] [INFO] [1732640521.190512755] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640521.3117094 [module_supervisor-1] [INFO] [1732640521.310221921] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640521.3152974 [module_supervisor-1] [INFO] [1732640521.314363305] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640521.3191476 [module_supervisor-1] [INFO] [1732640521.318221425] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640521.3233678 [module_supervisor-1] [INFO] [1732640521.322357549] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640521.3269539 [module_supervisor-1] [INFO] [1732640521.326195542] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640521.3304591 [module_supervisor-1] [INFO] [1732640521.329698812] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640521.3341005 [module_supervisor-1] [INFO] [1732640521.333356018] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640521.4419696 [node_io_start_stop_pending-10] [INFO] [1732640521.440810878] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640521.6916461 [node_io_start_stop_pending-10] [INFO] [1732640521.690602399] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640521.9417274 [node_io_start_stop_pending-10] [INFO] [1732640521.940756900] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640522.1916604 [node_io_start_stop_pending-10] [INFO] [1732640522.190685030] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640522.4417901 [node_io_start_stop_pending-10] [INFO] [1732640522.440822720] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640522.6919787 [node_io_start_stop_pending-10] [INFO] [1732640522.690959614] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640522.9421971 [node_io_start_stop_pending-10] [INFO] [1732640522.941026179] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640523.1919086 [node_io_start_stop_pending-10] [INFO] [1732640523.190791372] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640523.3113093 [module_supervisor-1] [INFO] [1732640523.310130324] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640523.3155003 [module_supervisor-1] [INFO] [1732640523.314452134] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640523.3201301 [module_supervisor-1] [INFO] [1732640523.319075408] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640523.3233721 [module_supervisor-1] [INFO] [1732640523.322619351] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640523.3266490 [module_supervisor-1] [INFO] [1732640523.325882179] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640523.3301373 [module_supervisor-1] [INFO] [1732640523.329410086] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640523.3338404 [module_supervisor-1] [INFO] [1732640523.333089614] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640523.4416614 [node_io_start_stop_pending-10] [INFO] [1732640523.440497417] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640523.6916883 [node_io_start_stop_pending-10] [INFO] [1732640523.690581868] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640523.9417059 [node_io_start_stop_pending-10] [INFO] [1732640523.940586675] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640524.1909072 [node_io_start_stop_pending-10] [INFO] [1732640524.189859981] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640524.4414971 [node_io_start_stop_pending-10] [INFO] [1732640524.440475732] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640524.6919897 [node_io_start_stop_pending-10] [INFO] [1732640524.691036133] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640524.9419477 [node_io_start_stop_pending-10] [INFO] [1732640524.940828612] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640525.1921048 [node_io_start_stop_pending-10] [INFO] [1732640525.190986084] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640525.3117127 [module_supervisor-1] [INFO] [1732640525.310235390] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640525.3170452 [module_supervisor-1] [INFO] [1732640525.315706021] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640525.3213418 [module_supervisor-1] [INFO] [1732640525.320605275] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640525.3244462 [module_supervisor-1] [INFO] [1732640525.323689527] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640525.3277347 [module_supervisor-1] [INFO] [1732640525.326951029] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640525.3311396 [module_supervisor-1] [INFO] [1732640525.330417576] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640525.3348346 [module_supervisor-1] [INFO] [1732640525.334072337] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640525.4419508 [node_io_start_stop_pending-10] [INFO] [1732640525.440810217] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640525.6920841 [node_io_start_stop_pending-10] [INFO] [1732640525.690953018] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640525.9420114 [node_io_start_stop_pending-10] [INFO] [1732640525.940895145] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640526.1919708 [node_io_start_stop_pending-10] [INFO] [1732640526.190823485] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640526.4425199 [node_io_start_stop_pending-10] [INFO] [1732640526.441226666] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640526.6917753 [node_io_start_stop_pending-10] [INFO] [1732640526.690725614] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640526.9422228 [node_io_start_stop_pending-10] [INFO] [1732640526.941362043] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640527.1910589 [node_io_start_stop_pending-10] [INFO] [1732640527.189995539] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640527.3118029 [module_supervisor-1] [INFO] [1732640527.310326559] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640527.3170025 [module_supervisor-1] [INFO] [1732640527.316006730] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640527.3199306 [module_supervisor-1] [INFO] [1732640527.319170948] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640527.3231018 [module_supervisor-1] [INFO] [1732640527.322313518] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640527.3267021 [module_supervisor-1] [INFO] [1732640527.325881032] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640527.3301463 [module_supervisor-1] [INFO] [1732640527.329419843] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640527.3338764 [module_supervisor-1] [INFO] [1732640527.333117387] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640527.4418845 [node_io_start_stop_pending-10] [INFO] [1732640527.440756054] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640527.6917737 [node_io_start_stop_pending-10] [INFO] [1732640527.690628760] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640527.9417455 [node_io_start_stop_pending-10] [INFO] [1732640527.940554242] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640528.1915748 [node_io_start_stop_pending-10] [INFO] [1732640528.190432302] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640528.4415376 [node_io_start_stop_pending-10] [INFO] [1732640528.440472531] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640528.6912816 [node_io_start_stop_pending-10] [INFO] [1732640528.690378471] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640528.9413579 [node_io_start_stop_pending-10] [INFO] [1732640528.940501771] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640529.1921179 [node_io_start_stop_pending-10] [INFO] [1732640529.191083530] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640529.3117416 [module_supervisor-1] [INFO] [1732640529.310242271] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640529.3156888 [module_supervisor-1] [INFO] [1732640529.314749063] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640529.3195362 [module_supervisor-1] [INFO] [1732640529.318603997] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640529.3237846 [module_supervisor-1] [INFO] [1732640529.322923095] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640529.3270612 [module_supervisor-1] [INFO] [1732640529.326314939] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640529.3305724 [module_supervisor-1] [INFO] [1732640529.329807871] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640529.3342390 [module_supervisor-1] [INFO] [1732640529.333503367] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640529.4415674 [node_io_start_stop_pending-10] [INFO] [1732640529.440431633] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640529.6915069 [node_io_start_stop_pending-10] [INFO] [1732640529.690451928] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640529.9402196 [node_io_start_stop_pending-10] [INFO] [1732640529.938271473] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640530.1929753 [node_io_start_stop_pending-10] [INFO] [1732640530.190504255] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640530.4383576 [node_io_start_stop_pending-10] [INFO] [1732640530.437677701] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640530.6889911 [node_io_start_stop_pending-10] [INFO] [1732640530.688224607] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640530.9382734 [node_io_start_stop_pending-10] [INFO] [1732640530.937568288] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640531.1881406 [node_io_start_stop_pending-10] [INFO] [1732640531.187478806] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640531.3084528 [module_supervisor-1] [INFO] [1732640531.307578199] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640531.3115044 [module_supervisor-1] [INFO] [1732640531.310603066] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640531.3143342 [module_supervisor-1] [INFO] [1732640531.313566084] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640531.3176446 [module_supervisor-1] [INFO] [1732640531.316733501] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640531.3209329 [module_supervisor-1] [INFO] [1732640531.320126296] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640531.3247170 [module_supervisor-1] [INFO] [1732640531.323879465] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640531.3286078 [module_supervisor-1] [INFO] [1732640531.327809274] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640531.4382851 [node_io_start_stop_pending-10] [INFO] [1732640531.437582102] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640531.6921539 [node_io_start_stop_pending-10] [INFO] [1732640531.689674867] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640531.9418058 [node_io_start_stop_pending-10] [INFO] [1732640531.940657014] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640532.1917734 [node_io_start_stop_pending-10] [INFO] [1732640532.190623862] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640532.4420345 [node_io_start_stop_pending-10] [INFO] [1732640532.440715545] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640532.6909912 [node_io_start_stop_pending-10] [INFO] [1732640532.689953893] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640532.9417517 [node_io_start_stop_pending-10] [INFO] [1732640532.940627143] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640533.1912112 [node_io_start_stop_pending-10] [INFO] [1732640533.190292942] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640533.3116710 [module_supervisor-1] [INFO] [1732640533.310261974] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640533.3158998 [module_supervisor-1] [INFO] [1732640533.314886206] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640533.3200526 [module_supervisor-1] [INFO] [1732640533.319085826] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640533.3237975 [module_supervisor-1] [INFO] [1732640533.323025550] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640533.3271041 [module_supervisor-1] [INFO] [1732640533.326358040] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640533.3306220 [module_supervisor-1] [INFO] [1732640533.329862245] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640533.3343353 [module_supervisor-1] [INFO] [1732640533.333608996] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640533.4418170 [node_io_start_stop_pending-10] [INFO] [1732640533.440764842] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640533.6916780 [node_io_start_stop_pending-10] [INFO] [1732640533.690693690] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640533.9414792 [node_io_start_stop_pending-10] [INFO] [1732640533.940532228] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640534.1918237 [node_io_start_stop_pending-10] [INFO] [1732640534.190657053] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640534.4416664 [node_io_start_stop_pending-10] [INFO] [1732640534.440635573] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640534.6916292 [node_io_start_stop_pending-10] [INFO] [1732640534.690591464] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640534.9416103 [node_io_start_stop_pending-10] [INFO] [1732640534.940638759] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640535.1916869 [node_io_start_stop_pending-10] [INFO] [1732640535.190675202] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640535.3116107 [module_supervisor-1] [INFO] [1732640535.310309112] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640535.3164403 [module_supervisor-1] [INFO] [1732640535.315144771] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640535.3195195 [module_supervisor-1] [INFO] [1732640535.318763589] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640535.3226318 [module_supervisor-1] [INFO] [1732640535.321877002] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640535.3259726 [module_supervisor-1] [INFO] [1732640535.325191111] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640535.3294706 [module_supervisor-1] [INFO] [1732640535.328691638] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640535.3332694 [module_supervisor-1] [INFO] [1732640535.332414082] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640535.4410913 [node_io_start_stop_pending-10] [INFO] [1732640535.440015084] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640535.6918259 [node_io_start_stop_pending-10] [INFO] [1732640535.690666135] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640535.9418035 [node_io_start_stop_pending-10] [INFO] [1732640535.940686064] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640536.1911542 [node_io_start_stop_pending-10] [INFO] [1732640536.190052034] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640536.4411054 [node_io_start_stop_pending-10] [INFO] [1732640536.440022445] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640536.6911876 [node_io_start_stop_pending-10] [INFO] [1732640536.690337029] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640536.9412787 [node_io_start_stop_pending-10] [INFO] [1732640536.940341217] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640537.1911285 [node_io_start_stop_pending-10] [INFO] [1732640537.190003634] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640537.3117926 [module_supervisor-1] [INFO] [1732640537.310303321] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640537.3162010 [module_supervisor-1] [INFO] [1732640537.315358073] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640537.3195236 [module_supervisor-1] [INFO] [1732640537.318712279] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640537.3230667 [module_supervisor-1] [INFO] [1732640537.322225645] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640537.3265889 [module_supervisor-1] [INFO] [1732640537.325796547] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640537.3302884 [module_supervisor-1] [INFO] [1732640537.329513461] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640537.3340020 [module_supervisor-1] [INFO] [1732640537.333244856] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640537.4418089 [node_io_start_stop_pending-10] [INFO] [1732640537.440762178] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640537.6918273 [node_io_start_stop_pending-10] [INFO] [1732640537.690829988] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640537.9412715 [node_io_start_stop_pending-10] [INFO] [1732640537.940458038] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640538.1915231 [node_io_start_stop_pending-10] [INFO] [1732640538.190625466] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640538.4386339 [node_io_start_stop_pending-10] [INFO] [1732640538.437841875] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640538.6910658 [node_io_start_stop_pending-10] [INFO] [1732640538.688601208] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640538.9477532 [node_io_start_stop_pending-10] [INFO] [1732640538.944943612] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640539.1883311 [node_io_start_stop_pending-10] [INFO] [1732640539.187622230] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640539.3087125 [module_supervisor-1] [INFO] [1732640539.307820254] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640539.3116591 [module_supervisor-1] [INFO] [1732640539.310810831] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640539.3148513 [module_supervisor-1] [INFO] [1732640539.314033788] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640539.3184648 [module_supervisor-1] [INFO] [1732640539.317651972] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640539.3221116 [module_supervisor-1] [INFO] [1732640539.321297600] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640539.3263681 [module_supervisor-1] [INFO] [1732640539.325479060] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640539.3306744 [module_supervisor-1] [INFO] [1732640539.329707851] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640539.4384558 [node_io_start_stop_pending-10] [INFO] [1732640539.437701243] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640539.6882086 [node_io_start_stop_pending-10] [INFO] [1732640539.687531357] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640539.9382539 [node_io_start_stop_pending-10] [INFO] [1732640539.937564483] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640540.1883509 [node_io_start_stop_pending-10] [INFO] [1732640540.187651127] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640540.4386792 [node_io_start_stop_pending-10] [INFO] [1732640540.437817474] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640540.6887259 [node_io_start_stop_pending-10] [INFO] [1732640540.687926507] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640540.9410930 [node_io_start_stop_pending-10] [INFO] [1732640540.940025545] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640541.1885056 [node_io_start_stop_pending-10] [INFO] [1732640541.187735885] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640541.3083804 [module_supervisor-1] [INFO] [1732640541.307541378] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640541.3110664 [module_supervisor-1] [INFO] [1732640541.310281877] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640541.3140295 [module_supervisor-1] [INFO] [1732640541.313243349] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640541.3172092 [module_supervisor-1] [INFO] [1732640541.316457664] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640541.3206310 [module_supervisor-1] [INFO] [1732640541.319801790] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640541.3246019 [module_supervisor-1] [INFO] [1732640541.323665657] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640541.3287866 [module_supervisor-1] [INFO] [1732640541.327924955] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640541.4400454 [node_io_start_stop_pending-10] [INFO] [1732640541.437642481] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640541.6887002 [node_io_start_stop_pending-10] [INFO] [1732640541.687821438] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640541.9385219 [node_io_start_stop_pending-10] [INFO] [1732640541.937772681] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640542.1912918 [node_io_start_stop_pending-10] [INFO] [1732640542.190103062] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640542.4411387 [node_io_start_stop_pending-10] [INFO] [1732640542.439790051] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640542.6915739 [node_io_start_stop_pending-10] [INFO] [1732640542.690676147] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640542.9418805 [node_io_start_stop_pending-10] [INFO] [1732640542.941013929] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640543.1919141 [node_io_start_stop_pending-10] [INFO] [1732640543.190939054] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640543.3112743 [module_supervisor-1] [INFO] [1732640543.309823693] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640543.3166509 [module_supervisor-1] [INFO] [1732640543.315675298] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640543.3197238 [module_supervisor-1] [INFO] [1732640543.318937488] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640543.3230233 [module_supervisor-1] [INFO] [1732640543.322233084] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640543.3266196 [module_supervisor-1] [INFO] [1732640543.325830948] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640543.3301623 [module_supervisor-1] [INFO] [1732640543.329436497] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640543.3338833 [module_supervisor-1] [INFO] [1732640543.333124469] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640543.4421623 [node_io_start_stop_pending-10] [INFO] [1732640543.441181961] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640543.6923506 [node_io_start_stop_pending-10] [INFO] [1732640543.691291558] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640543.9415302 [node_io_start_stop_pending-10] [INFO] [1732640543.940475334] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640544.1912038 [node_io_start_stop_pending-10] [INFO] [1732640544.190173659] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640544.4412310 [node_io_start_stop_pending-10] [INFO] [1732640544.440208674] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640544.6917329 [node_io_start_stop_pending-10] [INFO] [1732640544.690779190] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640544.9412279 [node_io_start_stop_pending-10] [INFO] [1732640544.940333295] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640545.1909211 [node_io_start_stop_pending-10] [INFO] [1732640545.189940054] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640545.3117042 [module_supervisor-1] [INFO] [1732640545.310235145] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640545.3167784 [module_supervisor-1] [INFO] [1732640545.315798214] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640545.3198788 [module_supervisor-1] [INFO] [1732640545.319083760] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640545.3231506 [module_supervisor-1] [INFO] [1732640545.322374251] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640545.3267093 [module_supervisor-1] [INFO] [1732640545.325913641] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640545.3301983 [module_supervisor-1] [INFO] [1732640545.329464143] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640545.3344579 [module_supervisor-1] [INFO] [1732640545.333653106] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640545.4418328 [node_io_start_stop_pending-10] [INFO] [1732640545.440740124] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640545.6918132 [node_io_start_stop_pending-10] [INFO] [1732640545.690646147] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640545.9417574 [node_io_start_stop_pending-10] [INFO] [1732640545.940590466] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640546.1918216 [node_io_start_stop_pending-10] [INFO] [1732640546.190663713] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640546.4409690 [node_io_start_stop_pending-10] [INFO] [1732640546.439903999] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640546.6909528 [node_io_start_stop_pending-10] [INFO] [1732640546.689928686] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640546.9419868 [node_io_start_stop_pending-10] [INFO] [1732640546.941048008] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640547.1917441 [node_io_start_stop_pending-10] [INFO] [1732640547.190822208] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640547.3120084 [module_supervisor-1] [INFO] [1732640547.310548419] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640547.3173721 [module_supervisor-1] [INFO] [1732640547.316056499] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640547.3209829 [module_supervisor-1] [INFO] [1732640547.320206229] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640547.3242865 [module_supervisor-1] [INFO] [1732640547.323536409] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640547.3278999 [module_supervisor-1] [INFO] [1732640547.327139618] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640547.3314481 [module_supervisor-1] [INFO] [1732640547.330664181] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640547.3350825 [module_supervisor-1] [INFO] [1732640547.334328703] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640547.4415598 [node_io_start_stop_pending-10] [INFO] [1732640547.440623160] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640547.6921897 [node_io_start_stop_pending-10] [INFO] [1732640547.691206441] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640547.9419956 [node_io_start_stop_pending-10] [INFO] [1732640547.941108242] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640548.1904616 [node_io_start_stop_pending-10] [INFO] [1732640548.189585735] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640548.4420376 [node_io_start_stop_pending-10] [INFO] [1732640548.441173408] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640548.6915257 [node_io_start_stop_pending-10] [INFO] [1732640548.690640050] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640548.9409118 [node_io_start_stop_pending-10] [INFO] [1732640548.939926697] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640549.1907418 [node_io_start_stop_pending-10] [INFO] [1732640549.189792030] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640549.3117366 [module_supervisor-1] [INFO] [1732640549.310245780] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640549.3157852 [module_supervisor-1] [INFO] [1732640549.314897596] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640549.3190691 [module_supervisor-1] [INFO] [1732640549.318229170] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640549.3226280 [module_supervisor-1] [INFO] [1732640549.321789812] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640549.3262343 [module_supervisor-1] [INFO] [1732640549.325504079] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640549.3298390 [module_supervisor-1] [INFO] [1732640549.329055981] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640549.3337910 [module_supervisor-1] [INFO] [1732640549.332922707] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640549.4394956 [node_io_start_stop_pending-10] [INFO] [1732640549.438568534] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640549.6918206 [node_io_start_stop_pending-10] [INFO] [1732640549.690648984] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640549.9417899 [node_io_start_stop_pending-10] [INFO] [1732640549.940660731] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640550.1915722 [node_io_start_stop_pending-10] [INFO] [1732640550.190441002] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640550.4414811 [node_io_start_stop_pending-10] [INFO] [1732640550.440438887] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640550.6914945 [node_io_start_stop_pending-10] [INFO] [1732640550.690450420] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640550.9416049 [node_io_start_stop_pending-10] [INFO] [1732640550.940701483] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640551.1909528 [node_io_start_stop_pending-10] [INFO] [1732640551.189934050] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640551.3120070 [module_supervisor-1] [INFO] [1732640551.310287857] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640551.3175316 [module_supervisor-1] [INFO] [1732640551.316055687] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640551.3208277 [module_supervisor-1] [INFO] [1732640551.320060879] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640551.3239582 [module_supervisor-1] [INFO] [1732640551.323167390] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640551.3272080 [module_supervisor-1] [INFO] [1732640551.326473137] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640551.3307588 [module_supervisor-1] [INFO] [1732640551.329986581] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640551.3343809 [module_supervisor-1] [INFO] [1732640551.333652115] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640551.4419453 [node_io_start_stop_pending-10] [INFO] [1732640551.440671920] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640551.6917932 [node_io_start_stop_pending-10] [INFO] [1732640551.690640032] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640551.9419250 [node_io_start_stop_pending-10] [INFO] [1732640551.940670180] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640552.1912279 [node_io_start_stop_pending-10] [INFO] [1732640552.190119911] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640552.4417589 [node_io_start_stop_pending-10] [INFO] [1732640552.440416405] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640552.6909726 [node_io_start_stop_pending-10] [INFO] [1732640552.689983899] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640552.9409428 [node_io_start_stop_pending-10] [INFO] [1732640552.939851016] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640553.1920228 [node_io_start_stop_pending-10] [INFO] [1732640553.190852390] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640553.3119473 [module_supervisor-1] [INFO] [1732640553.310526374] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640553.3170183 [module_supervisor-1] [INFO] [1732640553.315974813] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640553.3199365 [module_supervisor-1] [INFO] [1732640553.319172197] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640553.3230810 [module_supervisor-1] [INFO] [1732640553.322285954] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640553.3263540 [module_supervisor-1] [INFO] [1732640553.325626778] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640553.3299062 [module_supervisor-1] [INFO] [1732640553.329103137] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640553.3336279 [module_supervisor-1] [INFO] [1732640553.332858377] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640553.4420309 [node_io_start_stop_pending-10] [INFO] [1732640553.440894705] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640553.6919248 [node_io_start_stop_pending-10] [INFO] [1732640553.690806577] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640553.9419436 [node_io_start_stop_pending-10] [INFO] [1732640553.940826003] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640554.1909192 [node_io_start_stop_pending-10] [INFO] [1732640554.189975754] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640554.4409854 [node_io_start_stop_pending-10] [INFO] [1732640554.439954380] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640554.6912053 [node_io_start_stop_pending-10] [INFO] [1732640554.690292294] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640554.9418108 [node_io_start_stop_pending-10] [INFO] [1732640554.940875943] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640555.1908417 [node_io_start_stop_pending-10] [INFO] [1732640555.189869838] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640555.3117666 [module_supervisor-1] [INFO] [1732640555.310271496] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640555.3159783 [module_supervisor-1] [INFO] [1732640555.315121383] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640555.3193121 [module_supervisor-1] [INFO] [1732640555.318501230] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640555.3228745 [module_supervisor-1] [INFO] [1732640555.322021166] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640555.3267260 [module_supervisor-1] [INFO] [1732640555.325800245] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640555.3301942 [module_supervisor-1] [INFO] [1732640555.329449623] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640555.3339560 [module_supervisor-1] [INFO] [1732640555.333152444] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640555.4408667 [node_io_start_stop_pending-10] [INFO] [1732640555.439852235] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640555.6910086 [node_io_start_stop_pending-10] [INFO] [1732640555.689981943] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640555.9400003 [node_io_start_stop_pending-10] [INFO] [1732640555.939017621] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640556.1918776 [node_io_start_stop_pending-10] [INFO] [1732640556.190727148] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640556.4418366 [node_io_start_stop_pending-10] [INFO] [1732640556.440685387] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640556.6915159 [node_io_start_stop_pending-10] [INFO] [1732640556.690473593] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640556.9416249 [node_io_start_stop_pending-10] [INFO] [1732640556.940582810] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640557.1913066 [node_io_start_stop_pending-10] [INFO] [1732640557.190274241] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640557.3118665 [module_supervisor-1] [INFO] [1732640557.310383276] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640557.3169143 [module_supervisor-1] [INFO] [1732640557.315987339] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640557.3201456 [module_supervisor-1] [INFO] [1732640557.319317747] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640557.3234565 [module_supervisor-1] [INFO] [1732640557.322656692] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640557.3268962 [module_supervisor-1] [INFO] [1732640557.326144727] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640557.3304508 [module_supervisor-1] [INFO] [1732640557.329683501] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640557.3341453 [module_supervisor-1] [INFO] [1732640557.333406253] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640557.4416397 [node_io_start_stop_pending-10] [INFO] [1732640557.440606978] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640557.6919229 [node_io_start_stop_pending-10] [INFO] [1732640557.690804107] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640557.9416184 [node_io_start_stop_pending-10] [INFO] [1732640557.940513561] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640558.1917419 [node_io_start_stop_pending-10] [INFO] [1732640558.190613469] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640558.4417310 [node_io_start_stop_pending-10] [INFO] [1732640558.440569754] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640558.6915586 [node_io_start_stop_pending-10] [INFO] [1732640558.690608092] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640558.9417825 [node_io_start_stop_pending-10] [INFO] [1732640558.940563007] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640559.1917255 [node_io_start_stop_pending-10] [INFO] [1732640559.190582659] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640559.3113523 [module_supervisor-1] [INFO] [1732640559.310181958] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640559.3155808 [module_supervisor-1] [INFO] [1732640559.314501592] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640559.3201518 [module_supervisor-1] [INFO] [1732640559.319111571] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640559.3237839 [module_supervisor-1] [INFO] [1732640559.323024972] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640559.3270514 [module_supervisor-1] [INFO] [1732640559.326318682] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640559.3306251 [module_supervisor-1] [INFO] [1732640559.329854257] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640559.3343096 [module_supervisor-1] [INFO] [1732640559.333569496] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640559.4417138 [node_io_start_stop_pending-10] [INFO] [1732640559.440586573] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640559.6917353 [node_io_start_stop_pending-10] [INFO] [1732640559.690594061] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640559.9416680 [node_io_start_stop_pending-10] [INFO] [1732640559.940532921] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640560.1910744 [node_io_start_stop_pending-10] [INFO] [1732640560.190010563] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640560.4419465 [node_io_start_stop_pending-10] [INFO] [1732640560.440817348] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640560.6914666 [node_io_start_stop_pending-10] [INFO] [1732640560.690415861] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640560.9419265 [node_io_start_stop_pending-10] [INFO] [1732640560.940965095] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640561.1909914 [node_io_start_stop_pending-10] [INFO] [1732640561.189683378] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640561.3117127 [module_supervisor-1] [INFO] [1732640561.310222686] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640561.3156519 [module_supervisor-1] [INFO] [1732640561.314540269] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640561.3194647 [module_supervisor-1] [INFO] [1732640561.318533377] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640561.3237855 [module_supervisor-1] [INFO] [1732640561.322748611] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640561.3271930 [module_supervisor-1] [INFO] [1732640561.326446836] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640561.3307369 [module_supervisor-1] [INFO] [1732640561.329949806] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640561.3347175 [module_supervisor-1] [INFO] [1732640561.333881786] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640561.4421282 [node_io_start_stop_pending-10] [INFO] [1732640561.441005352] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640561.6916461 [node_io_start_stop_pending-10] [INFO] [1732640561.690581064] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640561.9408958 [node_io_start_stop_pending-10] [INFO] [1732640561.939828726] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640562.1899738 [node_io_start_stop_pending-10] [INFO] [1732640562.189100342] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640562.4398093 [node_io_start_stop_pending-10] [INFO] [1732640562.438867765] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640562.6898158 [node_io_start_stop_pending-10] [INFO] [1732640562.688874628] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640562.9413719 [node_io_start_stop_pending-10] [INFO] [1732640562.940368815] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640563.1893780 [node_io_start_stop_pending-10] [INFO] [1732640563.188621088] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640563.3117595 [module_supervisor-1] [INFO] [1732640563.310223678] [Module_Supervisor]: ---- Supervisor: Connect to Module_Scanning&Interface Successfully----
+1732640563.3171122 [module_supervisor-1] [INFO] [1732640563.316013277] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node Successfully----
+1732640563.3206298 [module_supervisor-1] [INFO] [1732640563.319749488] [Module_Supervisor]: ---- Supervisor: Connect to Module_Weigh Successfully----
+1732640563.3243387 [module_supervisor-1] [INFO] [1732640563.323559938] [Module_Supervisor]: ---- Supervisor: Connect to Module_Motor.node_dc_motor Successfully----
+1732640563.3276746 [module_supervisor-1] [INFO] [1732640563.326892341] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_servo Successfully----
+1732640563.3311958 [module_supervisor-1] [INFO] [1732640563.330374315] [Module_Supervisor]: ---- Supervisor: Connect to Module_Send_Email Successfully----
+1732640563.3349450 [module_supervisor-1] [INFO] [1732640563.334087767] [Module_Supervisor]: ---- Supervisor: Connect to Module_Input.node_io_start_stop_pending Successfully ----
+1732640563.4408109 [node_io_start_stop_pending-10] [INFO] [1732640563.439965103] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640563.6911540 [node_io_start_stop_pending-10] [INFO] [1732640563.690243488] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640563.9397886 [node_io_start_stop_pending-10] [INFO] [1732640563.938897180] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 0----
+1732640564.1899097 [node_io_start_stop_pending-10] [INFO] [1732640564.188846355] [node_io_start_stop_pending]: ---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: 0. Pending PIN: 0.  Stop PIN: 1----
+1732640564.1950338 [module_log_file-8] [INFO] [1732640564.193059393] [module_log_file]: ---- Server Module_Log_File: Creating Log File... ----
+1732640564.2034745 [node_dc_servo-3] [INFO] [1732640564.198224581] [node_servo_motor]: ---- Server Module_Motor.node_servo_motor: Receive Message: Terminate. Bye Bye.... ----
+1732640564.2046900 [node_io_start_stop_pending-10] [INFO] [1732640564.202140494] [node_io_start_stop_pending]: ---- Server Module_Input.node_io_start_stop_pending: Receive Message: Terminate. Bye Bye.... ----
+1732640564.2425561 [module_scanning_interface-2] [INFO] [1732640564.238132387] [module_scanning_interface]: ---- Server Module_Scanning_Interfaces: Receive Message: Terminate. Bye Bye.... ----
+1732640564.2532544 [module_scanning_interface-2] [ERROR] [1732640564.250885425] [module_scanning_interface]: ---- Server Module_Scanning_Interfaces: Your System has been corrupt. Please check the log file at '/home/tomccd/Documents/Code/Python/DATN/Packages/Log' Directory to check the Issue or waiting the Mail send to the Administartor ----
+1732640564.3729103 [node_dc_motor-5] [INFO] [1732640564.367074665] [node_dc_motor]: ---- Server Module_Motor.node_dc_motor: Receive Message: Terminate. Bye Bye.... ----
+1732640564.5735724 [node_io_weigh-6] [INFO] [1732640564.567758400] [node_io_weigh]: ---- Server Module_Input.node_io_weigh: Receive Message: Terminate. Bye Bye.... ----
+1732640564.7046177 [node_io_servo-4] [INFO] [1732640564.687721223] [node_io_servo]: ---- Server Module_Input.node_io_servo: Receive Message: Terminate. Bye Bye.... ----
+1732640564.7270157 [module_weigh-7] [INFO] [1732640564.722366195] [module_weigh]: ---- Server Module_Weigh: Receive Message: Terminate. Bye Bye.... ----
+1732640565.1983814 [ERROR] [node_io_start_stop_pending-10]: process has died [pid 4073, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_start_stop_pending --ros-args'].
+1732640565.5707741 [ERROR] [module_supervisor-1]: process has died [pid 4064, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_supervisor/lib/module_supervisor/module_supervisor --ros-args'].
+1732640565.7165031 [INFO] [module_scanning_interface-2]: process has finished cleanly [pid 4065]
+1732640565.7518911 [ERROR] [node_dc_servo-3]: process has died [pid 4066, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/module_motor/node_dc_servo --ros-args'].
+1732640565.7783086 [ERROR] [node_io_weigh-6]: process has died [pid 4069, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_weigh --ros-args'].
+1732640565.8859096 [ERROR] [node_io_servo-4]: process has died [pid 4067, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_input/lib/module_input/node_io_servo --ros-args'].
+1732640565.9224138 [ERROR] [module_weigh-7]: process has died [pid 4070, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_weigh/lib/module_weigh/module_weigh --ros-args'].
+1732640565.9297352 [ERROR] [node_dc_motor-5]: process has died [pid 4068, exit code 255, cmd '/home/tomccd/Documents/Code/Python/DATN/install/module_motor/lib/module_motor/node_dc_motor --ros-args'].

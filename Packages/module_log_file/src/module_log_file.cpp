@@ -78,9 +78,9 @@ class myNode:public rclcpp::Node{
         }
     private:
         /*Default Log Directory*/
-        std::string log_dir_ros = "/home/" + std::string(getlogin()) + "/.ros/log/latest";
+        std::string log_dir_ros = (std::string)"/home/tomccd/.ros/log/latest";
         /*Current Log Directory*/
-        std::string log_dir_current = "/home/tomccd/Documents/Code/Python/DATN/Packages/Log";
+        std::string log_dir_current = (std::string)"/home/tomccd/Documents/Code/Python/DATN/Packages/Log";
         //Current date/time based  on current system
         time_t now = time(0);
         /*Create a Server*/

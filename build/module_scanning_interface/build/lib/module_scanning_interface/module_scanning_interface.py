@@ -76,7 +76,7 @@ class myApp(tk.Tk):
         self.window_width = 800
         self.window_height = 480
         self.geometry(f'{self.window_width}x{self.window_height}')
-        
+        self.wm_attributes("-zoomed", True)
         #-- Chia frame
         #Frame chứa text intro
         self.frame_text_intro = tk.Frame(self,borderwidth=2,width=self.window_width,height=int(self.window_height/5),relief='solid') 

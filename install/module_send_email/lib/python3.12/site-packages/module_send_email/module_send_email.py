@@ -1,4 +1,5 @@
 import smtplib
+import subprocess
 from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
@@ -108,6 +109,7 @@ class myNode(Node):
         return rs
     def on_closing(self):
         rclpy.shutdown()
+        # subprocess.call('echo $MY_SUDO_PASS | sudo -S shutdown now',shell=True) #Shutdown -> mở comment khi và chỉ khi hoàn thành ứng dụng
         exit(-1)
 def main(args=None):
     rclpy.init(args=args)
