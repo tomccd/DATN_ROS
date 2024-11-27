@@ -59,11 +59,11 @@ class myNode(Node):
         #Tạo 1 Timer để update danh sách email của các admin khác nhau
         self.timer_ = self.create_timer(5,self.collect_Admin_Email)
     def collect_Admin_Email(self):
-        sql_query = f"SELECT * FROM [DATN].[dbo].Admin_Account"
+        sql_query = f"SELECT * FROM [DATN].[dbo].Admin"
         try:
             df = pd.read_sql(sql_query,self.conn)
             #Lấy tất cả dữ liệu từ cột email
-            list_email = df['email'].values.tolist()
+            list_email = df['admin_email'].values.tolist()
             if len(list_email) > 0:
                 set_a = set(self.list_admin_email)
                 set_b = set(list_email)

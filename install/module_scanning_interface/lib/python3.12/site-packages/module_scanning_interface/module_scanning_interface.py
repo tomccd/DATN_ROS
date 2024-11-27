@@ -15,6 +15,7 @@ import pandas as pd
 from tkinter import ttk
 import time
 import sys
+import socket
 #Class Node
 class myNode(Node):
     def __init__(self,name:str):
@@ -76,7 +77,7 @@ class myApp(tk.Tk):
         self.window_width = 800
         self.window_height = 480
         self.geometry(f'{self.window_width}x{self.window_height}')
-        self.wm_attributes("-zoomed", True)
+        self.attributes("-zoomed", True)
         #-- Chia frame
         #Frame chứa text intro
         self.frame_text_intro = tk.Frame(self,borderwidth=2,width=self.window_width,height=int(self.window_height/5),relief='solid') 
@@ -245,6 +246,9 @@ class myApp(tk.Tk):
         #Camera
         self.previous_data = None
         self.camera = cv.VideoCapture(0)
+        #IP Address
+        self.hostname = socket.gethostname()
+        self.ip_address = ((socket.gethostbyname_ex(self.hostname))[2])[1]
         #Trạng thái thông báo
         self.notify_not_init_status = False
         self.notify_pending_status = False
@@ -253,7 +257,90 @@ class myApp(tk.Tk):
         #Label chứa hình ảnh
         self.label_camera = tk.Label(self.frame_camera,image='')
         self.label_camera.pack()
+        self.insertInitData2DB()
         self.openCameraAndIdentifyCode()
+    def updateValueOfProductivityDB(self,type:str):
+        if type == "electric":
+            sql_query = f"""
+                UPDATE [DATN].[dbo].Devices_Productivity
+                SET
+                    Electric_Product = Electric_Product + 1,
+                    Total_Product = Total_Product + 1
+                WHERE IP_Address = '{self.ip_address}'
+            """
+            try:
+                self.cursor.execute(sql_query)
+            except Exception as e:
+                self.node.get_logger(f"---- Module_Scanning&Interface: Can't use query UPDATE in Electric_Product and Total_Product columns in Table Devices_Productivity with error: {e} ----")
+            else:
+                self.cursor.commit()
+        elif type == "clothes":
+            sql_query = f"""
+                UPDATE [DATN].[dbo].Devices_Productivity
+                SET
+                    Clothes_Product = Clothes_Product + 1,
+                    Total_Product = Total_Product + 1
+                WHERE IP_Address = '{self.ip_address}'
+            """
+            try:
+                self.cursor.execute(sql_query)
+            except Exception as e:
+                self.node.get_logger(f"---- Module_Scanning&Interface: Can't use query UPDATE in Clothes_Product and Total_Product columns in Table Devices_Productivity with error: {e} ----")
+            else:
+                self.cursor.commit()
+        elif type == "diff":
+            sql_query = f"""
+                UPDATE [DATN].[dbo].Devices_Productivity
+                SET
+                    Diff_Product = Diff_Product + 1,
+                    Total_Product = Total_Product + 1
+                WHERE IP_Address = '{self.ip_address}'
+            """
+            try:
+                self.cursor.execute(sql_query)
+            except Exception as e:
+                self.node.get_logger(f"---- Module_Scanning&Interface: Can't use query UPDATE in Diff_Product and Total_Product columns in Table Devices_Productivity with error: {e} ----")
+            else:
+                self.cursor.commit()
+    def insertInitData2DB(self):
+        #Truy vấn CSDL để kiểm tra liệu IP có nằm trong Bảng Devices không ?
+        sql_query = f"SELECT * FROM [DATN].[dbo].Devices WHERE IP_Address = '{self.ip_address}';"
+        try:
+            df = pd.read_sql(sql_query,self.conn)
+            #Lấy tất cả dữ liệu từ cột ip_address
+            list_ip = df['ip_address'].values.tolist()
+            self.node.get_logger().info(f"---- Server_Module_Scanning&Interface: {list_ip}")
+            if len(list_ip) > 0:
+                sql_query = f"SELECT * FROM [DATN].[dbo].Devices WHERE IP_Address = '{self.ip_address}' AND IP_Address IN (SELECT IP_Address FROM [DATN].[dbo].Devices_Productivity);"
+                try:
+                    #Truy vấn CSDL xem IP này đã có trong bảng Devices_Productivity chưa -> Nếu chưa thì INSERT vào DataBase
+                    df = pd.read_sql(sql_query,self.conn)
+                    self.node.get_logger().info(f"---- Server_Module_Scanning&Interface: {list_ip}")
+                    #Lấy tất cả dữ liệu từ cột ip_address
+                    list_ip = df['ip_address'].values.tolist()
+                    if len(list_ip) == 0:
+                        sql_query = f"INSERT INTO [DATN].[dbo].Devices_Productivity VALUES (?,?,?,?,?);"
+                        values = [self.ip_address,self.num_product_all,self.num_product_electric,self.num_product_clothes,self.num_product_diff]
+                        try:
+                            self.node.get_logger().info("---- Server Module_Scanning&Interface: Init Data in DataBase ----")
+                            self.cursor.execute(sql_query,values)
+                        except Exception as e:
+                            self.node.get_logger().error(f"---- Server Module_Scanning&Interface: Can't send weighs to DB. Error: {e} ----")
+                            exit(-1)
+                        else:
+                            self.cursor.commit()
+                except Exception as e:
+                    self.node.get_logger().error(f"Can't make query to DataBase with error: {e}")
+                    messagebox.showerror("Error",f"---- Server Module_Scanning&Interface: Can't make query data to DataBase {e} ----")
+                    self.on_closing()
+            else:
+                self.node.get_logger().error(f"---- Server Module_Scanning&Interface: This Device with IP: {self.ip_address} was not registered to DB ----")
+                messagebox.showerror("Error",f"This Device with IP: {self.ip_address} was not registered to DB")
+        except Exception as e:
+            self.node.get_logger().error(f"---- Server Module_Scanning&Interface:Can't make query to DataBase with error: {e} ----")
+            messagebox.showerror("Error",f"---- Can't make query data to DataBase {e} ----")
+            self.on_closing()
+        
     def receiveIO_Servo(self,msg):
         msg_rotate = SetServoRotate()
         #Sử dụng Queue thuộc S1
@@ -274,6 +361,10 @@ class myApp(tk.Tk):
                         #Cộng dồn giá trị
                         self.num_product_electric += 1
                         self.num_product_all += 1
+                        #Sử dụng Thread để send data
+                        thread_send_data = threading.Thread(target=self.updateValueOfProductivityDB,args=("electric",))
+                        thread_send_data.daemon = True
+                        thread_send_data.start()
                         #Hiển thị
                         self.str_display_product_electric.set(f"Số lượng sản phẩn loại TBDT: \n{self.num_product_electric}")
                         self.str_display_product_all.set(f"Tổng số lượng phân loại: \n{self.num_product_all}")
@@ -314,6 +405,10 @@ class myApp(tk.Tk):
                         #Cộng dồn giá trị
                         self.num_product_clothes += 1
                         self.num_product_all += 1
+                        #Sử dụng Thread để send data
+                        thread_send_data = threading.Thread(target=self.updateValueOfProductivityDB,args=("clothes",))
+                        thread_send_data.daemon = True
+                        thread_send_data.start()
                         #Hiển thị
                         self.str_display_product_clothes.set(f"Số lượng sản phẩm loại QA: \n{self.num_product_clothes}")
                         self.str_display_product_all.set(f"Tổng số lượng phân loại: \n{self.num_product_all}")
@@ -345,6 +440,10 @@ class myApp(tk.Tk):
                 #Cộng dồn giá trị
                 self.num_product_diff += 1
                 self.num_product_all += 1
+                #Sử dụng Thread để send data
+                thread_send_data = threading.Thread(target=self.updateValueOfProductivityDB,args=("diff",))
+                thread_send_data.daemon = True
+                thread_send_data.start()
                 #Hiển thị
                 self.str_display_product_diff.set(f"Số lượng sản phẩm khác: \n{self.num_product_diff}")
                 self.str_display_product_all.set(f"Tổng số lượng phân loại: \n{self.num_product_all}")
