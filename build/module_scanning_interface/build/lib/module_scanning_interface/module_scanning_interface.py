@@ -72,7 +72,7 @@ class myApp(tk.Tk):
         #Tạo 1 Thread chịu trách nhiệm cho việc luôn spin
         self.thread_spin = threading.Thread(target=rclpy.spin,args=(self.node,))
         #-- Thiết kế giao diện  --
-        self.title = title
+        self.title(title)
         #Giao diện có kích thước là 800x480
         self.window_width = 800
         self.window_height = 480
@@ -702,7 +702,7 @@ class detect_QRCode:
 def main(args=None):
     #Initialize ROS2 Communication
     rclpy.init(args=args)
-    app = myApp("Test App")
+    app = myApp("Giao diện Thống Kê Và Giám Sát Sản Phẩm")
     app.thread_spin.daemon = True
     app.thread_spin.start()
     app.protocol('WM_DELETE_WINDOW',app.on_closing)

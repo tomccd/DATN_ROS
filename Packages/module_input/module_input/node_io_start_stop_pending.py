@@ -15,6 +15,8 @@ class myNode(Node):
         self.publisher_setStartStopPending = self.create_publisher(SetStartStopPending,"set_start_stop_pending",10)
         #Initalize pigio 
         self.pi = pigpio.pi()
+        #Previous Status
+        self.previous_status = []
         if not self.pi.connected:
             self.get_logger().error("---- Server Server Module_Input.node_io_start_stop_pending: Can't Initalize pigpio ----")
             rclpy.shutdown()
@@ -34,10 +36,13 @@ class myNode(Node):
         detect_Start = self.pi.read(self.GPIO_Start)
         detect_Pending = self.pi.read(self.GPIO_Pending)
         detect_Stop = self.pi.read(self.GPIO_Stop)
-        self.get_logger().info(f"---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: {detect_Start}. Pending PIN: {detect_Pending}.  Stop PIN: {detect_Stop}----")
         self.list_gpio_status = [detect_Start,detect_Pending,detect_Stop]
+        self.get_logger().info(f"---- Server Server Module_Input.node_io_start_stop_pending: Start PIN: {self.list_gpio_status[0]}. Pending PIN: {self.list_gpio_status[1]}.  Stop PIN: {self.list_gpio_status[2]}----")
+        self.get_logger().info(f"---- Server Module_Input.node_io_start_stop_pending: Previous Input Status: {self.previous_status}")
+        compare_status = (set(self.list_gpio_status) == set(self.previous_status))
+        self.get_logger().info(f"---- Server Module_Input.node_io_start_stop_pending: Constraint Status: {compare_status}")
         #Nếu tổng trạng thái = 1 -> send Message
-        if sum(self.list_gpio_status) == 1:
+        if sum(self.list_gpio_status) == 1 and compare_status == False:
             msg = SetStartStopPending()
             if detect_Start == 1:
                 msg.command = "Init"
@@ -45,7 +50,10 @@ class myNode(Node):
                 msg.command = "Stop"
             elif detect_Pending == 1:
                 msg.command = "Pending"
+                self.get_logger().info(f"---- Server Module_Input.node_io_start_stop_pending: Sending Pending Message")
             self.publisher_setStartStopPending.publish(msg)
+        self.previous_status = self.list_gpio_status.copy()
+        
     def callBack(self,req,res):
         self.get_logger().info(f"---- Server Module_Input.node_io_start_stop_pending: Receive Intialized Request: {req.a} ----")
         self.init_status = True

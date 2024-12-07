@@ -32,7 +32,6 @@ class myNode(Node):
         self.PULSE_PIN_QA = 9
         #Define PULSE_PIN_DIFF
         self.PULSE_PIN_Diff = 11
-        self.initServo()
     def initServo(self):
         try:
             #-Init Servo
@@ -41,24 +40,6 @@ class myNode(Node):
             self.pi.set_servo_pulsewidth(self.PULSE_PIN_QA,self.degrees_to_pwm(39)) #30 -> 40 -> 39
             time.sleep(0.5)
             self.pi.set_servo_pulsewidth(self.PULSE_PIN_Diff,self.degrees_to_pwm(141)) #145 -> 140 -> 142
-            time.sleep(0.5)
-        except Exception as e:
-            self.get_logger().error(f"---- Servo Module_Motor.node_servo_motor: Can't Rotate Servo. Error: {e}")
-            rclpy.shutdown()
-            self.pi.stop()
-            time.sleep(0.5)
-            sys.exit(-1)
-        else:
-            #Create a timer
-            pass
-    def pendingServo(self):
-        try:
-            #-Init Servo
-            self.pi.set_servo_pulsewidth(self.PULSE_PIN_TBDT,self.degrees_to_pwm(0)) #5 -> 8 -> 9
-            time.sleep(0.5)
-            self.pi.set_servo_pulsewidth(self.PULSE_PIN_QA,self.degrees_to_pwm(0)) #30 -> 40 -> 39
-            time.sleep(0.5)
-            self.pi.set_servo_pulsewidth(self.PULSE_PIN_Diff,self.degrees_to_pwm(0)) #145 -> 140 -> 142
             time.sleep(0.5)
         except Exception as e:
             self.get_logger().error(f"---- Servo Module_Motor.node_servo_motor: Can't Rotate Servo. Error: {e}")

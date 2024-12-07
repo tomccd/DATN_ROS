@@ -43,7 +43,7 @@ class myNode:public rclcpp::Node{
         }
         void terminateMsg(const custom_interfaces::msg::TerminateSys msg){
             RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Creating Log File... ----");
-            sleep(5);
+            sleep(3);
             //Create Log Directory if not existed
             if (!fs::exists(log_dir_current)){
                 fs::create_directories(log_dir_current);

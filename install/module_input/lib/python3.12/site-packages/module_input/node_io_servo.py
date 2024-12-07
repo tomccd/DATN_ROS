@@ -71,7 +71,7 @@ class myNode(Node):
             detect_QA  = self.pi.read(self.GPIO_CB_QA)
             #Trạng thái cảm biến khác
             detect_diff = self.pi.read(self.GPIO_CB_Diff)
-            self.get_logger().info(f"---- Server Server Module_Input.node_io_servo: TBDT PIN: {detect_TBDT}. QA PIN: {detect_QA}.  Diff PIN: {detect_diff}----")
+            self.get_logger().info(f"---- Server Module_Input.node_io_servo: TBDT PIN: {detect_TBDT}. QA PIN: {detect_QA}.  Diff PIN: {detect_diff}----")
             if detect_TBDT == 0 and detect_QA == 1 and detect_diff == 1:
                 if self.previous_result != "Thiet bi dien tu":
                     self.previous_result = "Thiet bi dien tu"
@@ -86,7 +86,7 @@ class myNode(Node):
             else:
                 self.previous_result = None
         except Exception as e:
-            self.get_logger().error(f"---- Server Server Module_Input.node_io_error: Can't read IO. Error {e} ----")
+            self.get_logger().error(f"---- Server Module_Input.node_io_error: Can't read IO. Error {e} ----")
             self.pi.stop()
             rclpy.shutdown()
             exit(-1)    
