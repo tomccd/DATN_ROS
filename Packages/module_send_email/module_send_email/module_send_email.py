@@ -1,3 +1,10 @@
+'''
+********************************************
+# Chương trình này được viết bởi tomccd (Nguyễn Huy Hoàng)
+# Tên file: module_send_email.py
+# Ngày sửa đổi gần nhất: 29/12/2024
+********************************************
+'''
 import smtplib
 import subprocess
 from email import encoders

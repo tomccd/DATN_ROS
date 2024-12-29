@@ -354,6 +354,8 @@ class myApp(tk.Tk):
                     if msg.iomsg == (self.dict_contain_data_queue["S1"][0])[1]:
                         msg_rotate.rotatemsg = "1_YES"
                         self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S1 Before Popping: {self.dict_contain_data_queue["S1"]}")
+                        #Hiển thị thông báo nổi
+                        ToastNotification(self,"dst",1,1000,id_product=(self.dict_contain_data_queue["S1"][0])[0])
                         #Loại bỏ phần tử ban đầu của S1 Queue
                         self.dict_contain_data_queue["S1"].pop(0)
                         self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S1 if TBDT was detected: {self.dict_contain_data_queue["S1"]}")
@@ -398,6 +400,8 @@ class myApp(tk.Tk):
                     if msg.iomsg == (self.dict_contain_data_queue["S2"][0])[1]:
                         msg_rotate.rotatemsg = "2_YES"
                         self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S2 Before Popping: {self.dict_contain_data_queue["S2"]}")
+                        #Hiển thị thông báo nổi
+                        ToastNotification(self,"dst",2,1000,id_product=self.dict_contain_data_queue["S2"][0][0])
                         #Loại bỏ phần tử ban đầu của S2 Queue
                         self.dict_contain_data_queue["S2"].pop(0)
                         self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S2 if QA was detected: {self.dict_contain_data_queue["S2"]}")
@@ -435,6 +439,8 @@ class myApp(tk.Tk):
         else:
             if len(self.dict_contain_data_queue["S3"]) > 0:
                 self.node.get_logger().info(f"---- Module_Scanning_Interface: Total Data in S3 Queue Before Popping: {self.dict_contain_data_queue["S3"]}")
+                #Hiển thị thông báo nổi
+                ToastNotification(self,"dst",3,1000,id_product=self.dict_contain_data_queue["S3"][0][0])
                 self.dict_contain_data_queue["S3"].pop(0)
                 self.node.get_logger().info(f"---- Module_Scanning_Interface: Remain Data in S3 Queue if Diff was detected: {self.dict_contain_data_queue["S3"]}")
                 #Cộng dồn giá trị
@@ -491,7 +497,9 @@ class myApp(tk.Tk):
             if self.node.start_status == True:
                 self.notify_not_init_status = False
                 self.notify_init_showtime = 0
-                arr = np.copy(frame)
+                brightness_value = 0
+                frame_convert = cv.convertScaleAbs(frame,alpha=1,beta=brightness_value)            
+                arr = np.copy(frame_convert)
                 height,width,_ = frame.shape
                 #Nếu không pending hệ thống
                 if self.node.pending_status == False:
@@ -499,7 +507,7 @@ class myApp(tk.Tk):
                     self.notify_pending_showtime = 0
                     self.square_canvas.config(bg="green")
                     #Tạo Instance của Class detect_QRCode
-                    instance_detect_QrCode = detect_QRCode(arr,frame,width,height)
+                    instance_detect_QrCode = detect_QRCode(arr,frame_convert,width,height)
                     #Kết quả
                     status_detect,result_detect,data_detect = instance_detect_QrCode.detect_qrcode()
                     result = cv.cvtColor(result_detect,cv.COLOR_BGR2RGB)
@@ -587,71 +595,91 @@ class myApp(tk.Tk):
         sys.exit(-1)
 #Thông báo nổi
 class ToastNotification:
-    def __init__(self,master,type,data,duration):
+    def __init__(self,master,type,data,duration,id_product=None):
+        #Thông báo nổi kiểm tra tính hợp lệ của mã QR
         if type == "valid data":
             #Take the image from the path, resize it and convert it into tkinter version
             self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_1.png').resize((30,20))
             self.imgTk = ImageTk.PhotoImage(self.img)
             message = f"Sản phẩm với ID : {data} hợp lệ"
             #Create a lable
-            self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+            self.label_valid_data = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
             
             #Để nhãn dán ở phía bên góc phải        
-            self.label.place(relx=1.0,rely=0,anchor="ne")
+            self.label_valid_data.place(relx=1.0,rely=0,anchor="ne")
             
             #Tham chiếu lại tham số image phòng nó tự động garbage collect
-            self.label.image = self.imgTk
+            self.label_valid_data.image = self.imgTk
             
             #Đặt thời gian tự động đóng thông báo
-            master.after(duration,self.label.destroy)
+            master.after(duration,self.label_valid_data.destroy)
         elif type == "non valid data":
             #Take the image from the path, resize it and convert it into tkinter version
             self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_2.png').resize((30,20))
             self.imgTk = ImageTk.PhotoImage(self.img)
             message = f"Sản phẩm với ID : {data} không hợp lệ"
             #Create a lable
-            self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+            self.label_non_valid_data = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
             
             #Để nhãn dán ở phía bên góc phải        
-            self.label.place(relx=1.0,rely=0,anchor="ne")
+            self.label_non_valid_data.place(relx=1.0,rely=0,anchor="ne")
             
             #Tham chiếu lại tham số image phòng nó tự động garbage collect
-            self.label.image = self.imgTk
+            self.label_non_valid_data.image = self.imgTk
             
             #Đặt thời gian tự động đóng thông báo
-            master.after(duration,self.label.destroy)
+            master.after(duration,self.label_non_valid_data.destroy)
+        #Thông báo nổi 
         elif type=="weigh":
             #Take the image from the path, resize it and convert it into tkinter version
-            self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_1.png').resize((30,20))
+            self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/weight.png').resize((30,20))
             self.imgTk = ImageTk.PhotoImage(self.img)
             message = f"Khối lượng nhận được {data} g"
             #Create a lable
-            self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+            self.label_weigh = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
             
             #Để nhãn dán ở phía bên góc phải        
-            self.label.place(relx=1.0,rely=0,anchor="ne")
+            self.label_weigh.place(relx=1.0,rely=0,anchor="ne")
             
             #Tham chiếu lại tham số image phòng nó tự động garbage collect
-            self.label.image = self.imgTk
+            self.label_weigh.image = self.imgTk
             
             #Đặt thời gian tự động đóng thông báo
-            master.after(duration,self.label.destroy)
+            master.after(duration,self.label_weigh.destroy)
         elif type=="warn":
             #Take the image from the path, resize it and convert it into tkinter version
             self.img = Image.open('/home/tomccd/Documents/Code/Python/DATN/Packages/icon/icon_3.png').resize((30,20))
             self.imgTk = ImageTk.PhotoImage(self.img)
             message = f"Warning: {data}"
             #Create a lable
-            self.label = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+            self.label_warn = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
             
             #Để nhãn dán ở phía bên góc phải        
-            self.label.place(relx=1.0,rely=0,anchor="ne")
+            self.label_warn.place(relx=1.0,rely=0,anchor="ne")
             
             #Tham chiếu lại tham số image phòng nó tự động garbage collect
-            self.label.image = self.imgTk
+            self.label_warn.image = self.imgTk
             
             #Đặt thời gian tự động đóng thông báo
-            master.after(duration,self.label.destroy)
+            master.after(duration,self.label_warn.destroy)
+        #Thông báo nổi cảnh báo vào khoang phân loại
+        elif type=="dst":
+            if id_product is not None:
+                path = f"/home/tomccd/Documents/Code/Python/DATN/Packages/icon/num_{data}.png"
+                #Take the image from the path, resize it and convert it into tkinter version
+                self.img = Image.open(path).resize((30,20))
+                self.imgTk = ImageTk.PhotoImage(self.img)
+                message = f"Sản phẩm có ID: {id_product} được phân loại vào khoang {data}"
+                
+                #Create a label
+                self.label_dst = tk.Label(master,image=self.imgTk,text=message,bg="lightyellow",padx=10,pady=6,compound="left")
+                
+                #Để nhãn dán ở góc bên trái màn hình
+                self.label_dst.place(relx=0.0,rely=0,anchor="nw")
+                
+                #Đặt thời gian tự động đóng thông báo
+                master.after(duration,self.label_dst.destroy)
+
 #Class dùng để nhận biết được QRCode
 class detect_QRCode:
     def __init__(self,analyzed_arr,dest_arr,width_analyzed_arr,height_analyzed_arr):
@@ -694,7 +722,7 @@ class detect_QRCode:
             #Mỗi không gian chứa 2 điểm, do đó cần reshape
             pts = pts.reshape((-1,1,2))
             #Vẽ đa giác trên frame
-            cv.polylines(self.dest_arr,[pts],True,color=(0,255,0),thickness=2)
+            cv.polylines(self.dest_arr,[pts],True,color=(0,255,0),thickness=5)
             #Lấy dữ liệu, chuyển dữ liệu gốc về dạng UTF-8
             data = DecodedObject.data.decode('utf-8')
         return recognize_status,self.dest_arr,data

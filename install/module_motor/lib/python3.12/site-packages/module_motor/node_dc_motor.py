@@ -46,7 +46,7 @@ class myNode(Node):
             self.pi.write(self.PIN_IN_1,0)
             self.pi.write(self.PIN_IN_2,1)
                 #Set PWM
-            self.pi.set_PWM_dutycycle(self.PIN_MOTOR_1,int(0.45*255))
+            self.pi.set_PWM_dutycycle(self.PIN_MOTOR_1,int(0.35*255))
             self.pi.set_PWM_dutycycle(self.PIN_MOTOR_2,int(0.575*255))
                 # self.init_status = True
             res.b = "OK"
@@ -92,7 +92,7 @@ class myNode(Node):
                 self.pi.write(self.PIN_IN_1,0)
                 self.pi.write(self.PIN_IN_2,1)
                     #Set PWM
-                self.pi.set_PWM_dutycycle(self.PIN_MOTOR_1,int(0.45*255))
+                self.pi.set_PWM_dutycycle(self.PIN_MOTOR_1,int(0.35*255))
                 self.pi.set_PWM_dutycycle(self.PIN_MOTOR_2,int(0.575*255))
                     # self.init_status = True
                 res.b = "OK"

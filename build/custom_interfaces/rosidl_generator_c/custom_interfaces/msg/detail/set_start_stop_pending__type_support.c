@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "custom_interfaces/msg/detail/set_start_stop_pending__type_support.h"
+#include "custom_interfaces/msg/detail/set_start_stop_pending__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "custom_interfaces/msg/detail/set_start_stop_pending__struct.h"
-#include "custom_interfaces/msg/detail/set_start_stop_pending__functions.h"
+#include "custom_interfaces/msg/detail/set_start_stop_pending__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

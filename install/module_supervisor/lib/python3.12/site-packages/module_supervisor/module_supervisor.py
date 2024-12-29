@@ -71,10 +71,10 @@ class myNode(Node):
             #Connect to server_module_scanning_interface (Try to connect for 2 seconds)
             while not self.client_mci.wait_for_service(1):
                 self.get_logger().warn("---- Supervisor: Waiting to connect to server Module_Scanning&Interface ----")
-                if time_counter > 50:
+                if time_counter > 75:
                     break
                 time_counter+=1
-            if time_counter > 50:
+            if time_counter > 75:
                 self.get_logger().error("---- Supervisor: Can't connect to server Module_Scanning&Interface ----")
                 return -1
             else:
