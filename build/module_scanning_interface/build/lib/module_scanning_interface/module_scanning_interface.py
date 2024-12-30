@@ -1,3 +1,11 @@
+'''
+********************************************
+# Chương trình này được viết bởi tomccd (Nguyễn Huy Hoàng)
+# Tên file: module_scanning_interface.py
+# Ngày sửa đổi gần nhất: 29/12/2024
+********************************************
+
+'''
 from custom_interfaces.srv import InitSys
 from custom_interfaces.msg import TerminateSys, WeighValue, SetServoIO, SetServoRotate
 import tkinter as tk
@@ -665,9 +673,8 @@ class ToastNotification:
         #Thông báo nổi cảnh báo vào khoang phân loại
         elif type=="dst":
             if id_product is not None:
-                path = f"/home/tomccd/Documents/Code/Python/DATN/Packages/icon/num_{data}.png"
                 #Take the image from the path, resize it and convert it into tkinter version
-                self.img = Image.open(path).resize((30,20))
+                self.img = Image.open(f"/home/tomccd/Documents/Code/Python/DATN/Packages/icon/num_{data}.png").resize((30,20))
                 self.imgTk = ImageTk.PhotoImage(self.img)
                 message = f"Sản phẩm có ID: {id_product} được phân loại vào khoang {data}"
                 
@@ -676,6 +683,9 @@ class ToastNotification:
                 
                 #Để nhãn dán ở góc bên trái màn hình
                 self.label_dst.place(relx=0.0,rely=0,anchor="nw")
+                
+                #Tham chiếu lại tham số image phòng chương trình tự động garbage collect
+                self.label_dst.image = self.imgTk
                 
                 #Đặt thời gian tự động đóng thông báo
                 master.after(duration,self.label_dst.destroy)

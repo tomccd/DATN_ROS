@@ -1,3 +1,11 @@
+'''
+********************************************
+# Chương trình này được viết bởi tomccd (Nguyễn Huy Hoàng)
+# Tên file: module_supervisor.py
+# Ngày sửa đổi gần nhất: 29/12/2024
+********************************************
+
+'''
 from custom_interfaces.srv import InitSys
 from custom_interfaces.msg import TerminateSys, SetStartStopPending
 import rclpy

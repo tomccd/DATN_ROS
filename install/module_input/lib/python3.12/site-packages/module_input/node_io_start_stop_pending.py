@@ -1,3 +1,11 @@
+'''
+********************************************
+# Chương trình này được viết bởi tomccd (Nguyễn Huy Hoàng)
+# Tên file: node_io_start_stop_pending.py
+# Ngày sửa đổi gần nhất: 29/12/2024
+********************************************
+
+'''
 import rclpy
 import pigpio
 from rclpy.node import Node

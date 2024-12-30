@@ -1,3 +1,11 @@
+'''
+********************************************
+# Chương trình này được viết bởi tomccd (Nguyễn Huy Hoàng)
+# Tên file: node_dc_motor.py
+# Ngày sửa đổi gần nhất: 29/12/2024
+********************************************
+
+'''
 import rclpy
 from rclpy.node import Node
 import pigpio

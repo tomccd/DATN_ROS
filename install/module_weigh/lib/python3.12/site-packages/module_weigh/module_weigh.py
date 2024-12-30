@@ -1,3 +1,11 @@
+'''
+********************************************
+# Chương trình này được viết bởi tomccd (Nguyễn Huy Hoàng)
+# Tên file: module_weigh.py
+# Ngày sửa đổi gần nhất: 29/12/2024
+********************************************
+
+'''
 from HX711 import *
 import rclpy
 from rclpy.node import Node
