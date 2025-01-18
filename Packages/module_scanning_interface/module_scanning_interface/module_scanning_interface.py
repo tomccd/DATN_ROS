@@ -472,18 +472,15 @@ class myApp(tk.Tk):
             except Exception as e:
                 self.node.get_logger().error(f"---- Server Module_Scanning&Interface: Can't send weighs to DB. Error: {e} ----")
                 exit(-1)
-            else:
-                self.cursor.commit()
         else:
             sql_query = "INSERT INTO [DATN].[dbo].Weigh_Certificate (ID_Product, Weighs) VALUES(?,?);"
             value = [block_data[0],block_data[2]]
             try:
                 self.cursor.execute(sql_query,value)
+                self.cursor.commit()
             except Exception as e:
                 self.node.get_logger().error(f"---- Server Module_Scanning&Interface: Can't send weighs to DB. Error: {e} ----")
                 exit(-1)
-            else:
-                self.cursor.commit()
     def addWeightToList(self,msg):
         if len(self.dict_contain_data_queue["S1"]) > 0:
             for block_data in self.dict_contain_data_queue["S1"]:

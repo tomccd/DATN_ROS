@@ -69,20 +69,26 @@ class myNode:public rclcpp::Node{
                     fs::copy_file(cpy_log_file,log_file_name);
                     RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Creating Log File Successfully ! ----");
                     RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Compressing Log File with name..... ----");
-                    std::string cpressFileName = compressFile(log_file_name);
-                    if (cpressFileName != ""){
-                        RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Compressing Log File Successfully ----");
-                        RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Sending Email.... ! ----");
-                        this->sendFileName(cpressFileName);
-                        sleep(5);
-                        RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Receive Message: %s. Bye Bye... ----",msg.a.c_str());
-                    }
-                    else{
-                        RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Compressing Log File Error. Instead of that, sending the log file ----");
-                        RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Sending Email.... ! ----");
-                        this->sendFileName(log_file_name);
-                        sleep(5);
-                        RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Receive Message: %s. Bye Bye... ----",msg.a.c_str());
+                    int status = compressFile(log_file_name);
+                    std::string compress_file_path = "";
+                    switch(status){
+                        case FileNotFound:
+                            RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Can't create Log File ----");
+                            break;
+                        case CompressedFailed:
+                            RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Compressing Log File Error. Instead of that, sending the log file ----");
+                            RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Sending Email.... ! ----");
+                            this->sendFileName(log_file_name);
+                            sleep(5);
+                            RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Receive Message: %s. Bye Bye... ----",msg.a.c_str());
+                            break;
+                        case CompressedSuccessfully:
+                            RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Compressing Log File Successfully ----");
+                            RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Sending Email.... ! ----");
+                            this->sendFileName(cpressFileName);
+                            sleep(5);
+                            RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Receive Message: %s. Bye Bye... ----",msg.a.c_str());
+                            break;
                     }
                     rclcpp::shutdown();
                     exit(0);
@@ -100,6 +106,11 @@ class myNode:public rclcpp::Node{
             this->publisher_send_fname->publish(msg);
         }
     private:
+        typedef enum _compressStatus{
+            FileNotFound = -1,
+            CompressedFailed = 0,
+            CompressedSuccessfully = 1
+        }CompressStatus;
         /*Default Log Directory*/
         std::string log_dir_ros = (std::string)"/home/tomccd/.ros/log/latest";
         /*Current Log Directory*/
@@ -148,18 +159,22 @@ class myNode:public rclcpp::Node{
             }
         }
         /*Nén file sử dụng tar*/
-        std::string compressFile(std::string file_name){
+        CompressStatus compressFile(std::string file_name, std::string &compressed_file_name){
             if(fs::exists(file_name)){
                 std::string compressedFileNamePath = log_dir_current + "/" + "logFile.tar.gz";
                 std::string file_dir = fs::path(file_name).parent_path().string();
                 std::string file_name_only = fs::path(file_name).filename().string();
-
                 // Sử dụng -C để chỉ định thư mục chứa tệp cần nén
                 std::string str_cmd = "tar -czvf " + compressedFileNamePath + " -C " + file_dir + " " + file_name_only;
-                system(str_cmd.c_str()); //may be cause vulnerbility
-                return compressedFileNamePath;
+                if(system(str_cmd.c_str()) == -1){ // may be caused vulnerbility
+                    return CompressedFailed;
+                }
+                else{
+                    compressed_file_name = compressedFileNamePath;
+                    return CompressedSuccessfully;
+                }
             }
-            return "";
+            return FileNotFound;
         }
         /*Lấy thời gian hiện tại*/
         std::string getCurrentTimeFormatted() {
