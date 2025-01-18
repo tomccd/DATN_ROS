@@ -69,8 +69,8 @@ class myNode:public rclcpp::Node{
                     fs::copy_file(cpy_log_file,log_file_name);
                     RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Creating Log File Successfully ! ----");
                     RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Compressing Log File with name..... ----");
-                    int status = compressFile(log_file_name);
-                    std::string compress_file_path = "";
+                    std::string cpressFileName = "";
+                    int status = compressFile(log_file_name,cpressFileName);
                     switch(status){
                         case FileNotFound:
                             RCLCPP_INFO(this->get_logger(),"---- Server Module_Log_File: Can't create Log File ----");
