@@ -26,11 +26,11 @@ class myNode(Node):
         #Create a Subcriber
         self.subcriber_send_fname = self.create_subscription(SendFileName,"sendfilename",self.sendEmail,10)
         #Sender Email
-        self.sender_email = "botdatn2k2@gmail.com"
+        self.sender_email = "example@mail.com"
         #Sender Password
-        self.sender_password = "oksibxyidrthszbf"
+        self.sender_password = "1234"
         #Recipient Email: DB ?
-        self.recipient_email = "hoangnguyenhuy18012002@gmail.com"
+        self.recipient_email = "recipient_email@gmail.com"
         #Kết nối với CSDL
         DRIVER_NAME = 'ODBC Driver 18 for SQL Server'
         SERVER_NAME = '100.118.255.2'
