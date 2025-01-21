@@ -12,7 +12,7 @@
   ```
       pip3 install -r requirement.txt --break-system-packages 
   ```
-- Cài đặt thư việc HX711:
+- Cài đặt thư viện HX711:
   ```
       sudo apt-get install -y liblgpio-dev
   ```
