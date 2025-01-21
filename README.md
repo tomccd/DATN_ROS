@@ -8,6 +8,14 @@
 - Raspberry PI 4B
 - ROS2 Jazzy
 ## III. How to build
+- Cài đặt pigpio:
+  ```
+      wget https://github.com/joan2937/pigpio/archive/master.zip
+      unzip master.zip
+      cd pigpio-master
+      make
+      sudo make install
+  ```
 - Cài đặt những các packages cần thiết trong pip:
   ```
       pip3 install -r requirement.txt --break-system-packages 
@@ -19,6 +27,10 @@
 - Truy cập vào thư mục install và chạy câu lệnh để khởi tạo các module được cài đặt:
   ```
       cd install & source setup.bash
+  ```
+- Kích hoạt pigpio daemon:
+  ```
+      sudo pigpiod
   ```
 - Trở về thư mục root của project và tiến hành chạy câu lệnh để build
   ```
